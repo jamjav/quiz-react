@@ -1,1285 +1,810 @@
 export const allQuestions = [
   {
-    question: "¿Cuál de los siguientes es un tipo primitivo en Java?",
-    options: [
-      "int",
-      "String",
-      "Integer",
-      "ArrayList",
-      "float",
-      "double",
-      "char",
-      "boolean",
-    ],
-    answer: 0,
+    question: "¿Cuál de los siguientes es un tipo de dato primitivo en Java?",
+    options: ["String", "int", "Integer", "Scanner"],
+    answer: 1,
     explanation:
-      "`int` es un tipo primitivo en Java, mientras que `String` y `Integer` son clases.",
-    subtheme: "Tipos primitivos",
+      "int es un tipo primitivo, mientras que los demás son clases u objetos.",
+    subtheme: "Tipos de Datos",
     group: "Java",
+    level: "Junior",
   },
   {
-    question: "¿Qué tipo de dato en Java puede almacenar valores nulos?",
-    options: ["int", "boolean", "char", "Integer"],
+    question:
+      "¿Qué tipo de dato se usa para almacenar un solo carácter en Java?",
+    options: ["char", "String", "Character", "boolean"],
+    answer: 0,
+    explanation: "char almacena un único carácter utilizando comillas simples.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question:
+      "¿Cuál de estos tipos primitivos puede contener números decimales?",
+    options: ["boolean", "int", "double", "char"],
+    answer: 2,
+    explanation:
+      "double se utiliza para representar números de punto flotante (decimales).",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Cuál es el tamaño en bits de una variable tipo `byte` en Java?",
+    options: ["32 bits", "16 bits", "8 bits", "64 bits"],
+    answer: 2,
+    explanation: "El tipo byte ocupa 8 bits de memoria.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Qué tipo de dato se usa para valores true o false?",
+    options: ["boolean", "int", "char", "short"],
+    answer: 0,
+    explanation: "El tipo boolean representa solo dos valores: true o false.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes tipos de datos tiene mayor precisión para decimales?",
+    options: ["float", "double", "int", "short"],
+    answer: 1,
+    explanation:
+      "double tiene más precisión que float al manejar números decimales.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question:
+      "¿Qué tipo de dato usarías para representar números enteros grandes?",
+    options: ["short", "byte", "long", "float"],
+    answer: 2,
+    explanation:
+      "long permite almacenar números enteros grandes (hasta 64 bits).",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Cuál es el valor por defecto de un `boolean` en Java?",
+    options: ["true", "0", "false", "null"],
+    answer: 2,
+    explanation: "El valor por defecto de boolean es false.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Cuál de los siguientes no es un tipo de dato primitivo?",
+    options: ["int", "float", "String", "char"],
+    answer: 2,
+    explanation: "String es un objeto, no un tipo primitivo.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Qué tipo primitivo es más adecuado para almacenar edades?",
+    options: ["int", "double", "char", "boolean"],
+    answer: 0,
+    explanation: "int es ideal para almacenar enteros como edades.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question:
+      "¿Qué tipo primitivo se debe usar para representar números pequeños entre -128 y 127?",
+    options: ["byte", "int", "short", "char"],
+    answer: 0,
+    explanation: "El tipo byte cubre ese rango de valores.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Qué representa el tipo `char` en Java?",
+    options: [
+      "Una cadena de caracteres",
+      "Un número decimal",
+      "Un carácter Unicode",
+      "Un valor booleano",
+    ],
+    answer: 2,
+    explanation: "char representa un solo carácter Unicode.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question: "¿Cuál es el tipo de dato por defecto para números decimales?",
+    options: ["float", "double", "int", "BigDecimal"],
+    answer: 1,
+    explanation:
+      "double es el tipo por defecto para literales decimales en Java.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question:
+      "¿Qué ocurre si intentas almacenar un número decimal en una variable tipo `int`?",
+    options: [
+      "Se redondea",
+      "Se lanza un error en tiempo de compilación",
+      "Se convierte automáticamente",
+      "Se convierte en String",
+    ],
+    answer: 1,
+    explanation:
+      "Se necesita un cast explícito; de lo contrario, se lanza un error de compilación.",
+    subtheme: "Tipos de Datos",
+    group: "Java",
+    level: "Junior",
+  },
+  {
+    question:
+      "¿Qué tipo de dato se usa para representar una colección de caracteres?",
+    options: ["char", "String", "char[]", "Ambos String y char[]"],
     answer: 3,
     explanation:
-      "El tipo `Integer` es un tipo de referencia y puede almacenar `null`, a diferencia de los tipos primitivos como `int`.",
-    subtheme: "Tipos de datos",
+      "Tanto String como char[] pueden representar colecciones de caracteres, aunque String es inmutable.",
+    subtheme: "Tipos de Datos",
     group: "Java",
+    level: "Junior",
   },
+
   {
-    question: "¿Cuál de los siguientes no es un tipo primitivo en Java?",
-    options: ["byte", "long", "String", "char"],
-    answer: 2,
-    explanation: "`String` es un tipo de referencia, no un tipo primitivo.",
-    subtheme: "Tipos de datos",
+    question:
+      "¿Cuál es el propósito principal de la clase Phaser en java.util.concurrent?",
+    options: [
+      "Permitir múltiples fases de sincronización reutilizable",
+      "Controlar la visibilidad de variables compartidas",
+      "Evitar la creación de deadlocks",
+      "Sincronizar tareas usando semáforos",
+    ],
+    answer: 0,
+    explanation:
+      "Phaser permite sincronizar múltiples tareas en diferentes fases de ejecución, más flexible que CyclicBarrier o CountDownLatch.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué tipo de dato es utilizado para representar valores booleanos en Java?",
-    options: ["boolean", "int", "char", "String"],
-    answer: 0,
-    explanation:
-      "`boolean` es el tipo de dato utilizado para representar valores de verdad (true/false) en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de los siguientes tipos de datos es utilizado para almacenar texto en Java?",
-    options: ["char", "String", "int", "boolean"],
-    answer: 1,
-    explanation: "`String` es utilizado para almacenar texto en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de dato es utilizado para almacenar valores numéricos enteros en Java?",
-    options: ["float", "double", "int", "boolean"],
-    answer: 2,
-    explanation:
-      "`int` es utilizado para almacenar valores numéricos enteros en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de dato es utilizado para almacenar valores decimales en Java?",
-    options: ["int", "char", "double", "String"],
-    answer: 2,
-    explanation:
-      "`double` es utilizado para almacenar valores decimales en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question: "¿Cuál es el valor por defecto de un tipo `boolean` en Java?",
-    options: ["true", "false", "null", "0"],
-    answer: 1,
-    explanation:
-      "El valor por defecto de un tipo `boolean` es `false` en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de dato es utilizado para almacenar caracteres individuales en Java?",
-    options: ["char", "String", "int", "boolean"],
-    answer: 0,
-    explanation:
-      "`char` es utilizado para almacenar caracteres individuales en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de los siguientes es un tipo de dato por referencia en Java?",
-    options: ["int", "char", "String", "boolean"],
-    answer: 2,
-    explanation: "`String` es un tipo de referencia en Java.",
-    subtheme: "Tipos de referencia",
-    group: "Java",
-  },
-  {
-    question: "¿Cuál es el valor por defecto de un tipo `int` en Java?",
-    options: ["0", "null", "false", "1"],
-    answer: 0,
-    explanation: "El valor por defecto de un tipo `int` es `0` en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de dato almacena direcciones de memoria en lugar de valores directamente en Java?",
-    options: ["int", "String", "boolean", "char"],
-    answer: 1,
-    explanation:
-      "`String` es un tipo de dato por referencia que almacena la dirección de memoria de un objeto.",
-    subtheme: "Tipos de referencia",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál es la diferencia principal entre los tipos primitivos y los tipos de referencia en Java?",
+      "¿Qué ventaja ofrece ForkJoinPool sobre ThreadPoolExecutor en cargas recursivas?",
     options: [
-      "Los primitivos no pueden ser `null`, los de referencia sí.",
-      "Los primitivos son más flexibles.",
-      "Los primitivos son más lentos.",
-      "Los tipos de referencia no son objetos.",
-    ],
-    answer: 0,
-    explanation:
-      "Los tipos primitivos no pueden ser `null`, mientras que los tipos de referencia sí pueden serlo.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de dato en Java se utiliza para almacenar valores flotantes con doble precisión?",
-    options: ["float", "double", "long", "char"],
-    answer: 1,
-    explanation:
-      "`double` es el tipo de dato utilizado para valores flotantes con doble precisión en Java.",
-    subtheme: "Tipos de datos",
-    group: "Java",
-  },
-  {
-    question: "¿Qué hace la palabra clave `var` en Java 10+?",
-    options: [
-      "Declara una variable con tipo inferido",
-      "Declara una variable sin inicializar",
-      "Declara una variable global",
-      "Declara una constante",
-    ],
-    answer: 0,
-    explanation:
-      "La palabra clave `var` permite que el compilador infiera el tipo de la variable a partir del valor asignado.",
-    subtheme: "Inferencia",
-    group: "Java",
-  },
-  {
-    question: "¿Cuál es el tipo de dato inferido cuando se usa `var`?",
-    options: [
-      "El tipo de dato de la expresión asignada",
-      "Siempre es Object",
-      "Siempre es int",
-      "Depende del contexto",
-    ],
-    answer: 0,
-    explanation: "El tipo inferido es el del valor asignado a la variable.",
-    subtheme: "Inferencia",
-    group: "Java",
-  },
-  {
-    question: "¿Se puede usar `var` para declarar variables de tipo primitivo?",
-    options: [
-      "Sí, `var` puede inferir tipos primitivos",
-      "No, solo se usa para objetos",
-      "Solo en versiones anteriores a Java 10",
-      "Solo en interfaces",
-    ],
-    answer: 0,
-    explanation:
-      "`var` puede ser usado para cualquier tipo, incluyendo tipos primitivos, siempre que la variable sea inicializada.",
-    subtheme: "Inferencia",
-    group: "Java",
-  },
-  {
-    question: "¿Qué es el proceso de *casting* en Java?",
-    options: [
-      "La conversión explícita de un tipo de dato a otro",
-      "La inferencia de tipos en tiempo de compilación",
-      "La declaración de variables sin especificar el tipo",
-      "La conversión automática de tipos",
-    ],
-    answer: 0,
-    explanation:
-      "El casting es la conversión explícita de un tipo de dato a otro en Java.",
-    subtheme: "Casting",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cómo se realiza el *casting* de un tipo primitivo `double` a `int`?",
-    options: [
-      "Usando paréntesis: (int) miDouble",
-      "Asignándolo directamente",
-      "Usando la función parseInt",
-      "No es posible",
-    ],
-    answer: 0,
-    explanation:
-      "Para convertir un `double` a `int`, se utiliza el casting explícito: (int) miDouble.",
-    subtheme: "Casting",
-    group: "Java",
-  },
-  {
-    question: "¿Qué es el *widening casting* y el *narrowing casting* en Java?",
-    options: [
-      "Widening casting es la conversión de un tipo más pequeño a uno más grande, y narrowing casting es lo contrario",
-      "Ambos son lo mismo",
-      "Widening es para conversiones automáticas y narrowing para conversiones manuales",
-      "Ninguno de los anteriores",
-    ],
-    answer: 0,
-    explanation:
-      "El widening casting convierte un tipo de dato a uno de mayor capacidad, mientras que el narrowing casting requiere una conversión explícita.",
-    subtheme: "Casting",
-    group: "Java",
-  },
-  {
-    question: "¿Qué es el autoboxing en Java?",
-    options: [
-      "La conversión automática de un tipo primitivo a su objeto envolvente",
-      "La conversión de un objeto a un tipo primitivo",
-      "La inferencia de tipos en variables",
-      "La declaración de variables sin tipo",
-    ],
-    answer: 0,
-    explanation:
-      "El autoboxing es la conversión automática de un tipo primitivo a su correspondiente objeto envolvente.",
-    subtheme: "Autoboxing",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo se realiza el unboxing de un `Integer` a un `int`?",
-    options: [
-      "Asignando el objeto `Integer` a una variable `int`",
-      "Usando un método especial",
-      "No es posible",
-      "Mediante casting explícito",
-    ],
-    answer: 0,
-    explanation:
-      "El unboxing se realiza asignando un objeto `Integer` a una variable `int`, lo que extrae el valor primitivo.",
-    subtheme: "Autoboxing",
-    group: "Java",
-  },
-  {
-    question: "¿El autoboxing y el unboxing afectan el rendimiento en Java?",
-    options: [
-      "Sí, pueden introducir sobrecarga en operaciones intensivas",
-      "No, son optimizados por el compilador",
-      "Solo en versiones antiguas de Java",
-      "Solo en aplicaciones móviles",
-    ],
-    answer: 0,
-    explanation:
-      "El autoboxing y unboxing pueden afectar el rendimiento si se usan en exceso en operaciones críticas.",
-    subtheme: "Autoboxing",
-    group: "Java",
-  },
-  {
-    question: "¿Qué es un `record` en Java 14+?",
-    options: [
-      "Una clase mutable",
-      "Una clase inmutable",
-      "Un tipo primitivo",
-      "Un tipo de dato por referencia",
-    ],
-    answer: 1,
-    explanation:
-      "`record` es una clase especial en Java 14+ que es inmutable por defecto y se usa para almacenar datos sin necesidad de escribir mucho código.",
-    subtheme: "Record en Java",
-    group: "Java",
-  },
-  {
-    question: "¿Qué ventaja principal ofrece el uso de `records` en Java?",
-    options: [
-      "Menos código",
-      "Mayor rendimiento",
-      "Mayor flexibilidad",
-      "Más facilidad de uso",
-    ],
-    answer: 0,
-    explanation:
-      "Los `records` permiten crear objetos inmutables con menos código, sin necesidad de escribir constructores o métodos `toString()`, `hashCode()` y `equals()` manualmente.",
-    subtheme: "Record en Java",
-    group: "Java",
-  },
-  {
-    question: "¿Cuál de los siguientes es un ejemplo de un `record` en Java?",
-    options: [
-      "class Persona {}",
-      "interface Persona {}",
-      "record Persona(String nombre, int edad) {}",
-      "enum Persona {}",
+      "Mayor visibilidad de errores",
+      "Menor consumo de memoria heap",
+      "Trabajo robado (work stealing) eficiente entre hilos",
+      "Bloqueo sincrónico garantizado",
     ],
     answer: 2,
     explanation:
-      "Un `record` en Java se define con la palabra clave `record` seguida de los atributos que tendrá.",
-    subtheme: "Record en Java",
+      "ForkJoinPool implementa work-stealing, donde hilos inactivos 'roban' trabajo de colas de otros, ideal para tareas recursivas.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
-    question: "¿Qué característica define a los objetos inmutables en Java?",
+    question: "¿Cuál es el objetivo de la anotación @Contended en Java 8+?",
     options: [
-      "Pueden cambiar su estado después de la creación",
-      "No pueden cambiar su estado después de la creación",
-      "Pueden ser modificados por otras clases",
-      "Solo pueden ser usados por una instancia",
-    ],
-    answer: 1,
-    explanation:
-      "Los objetos inmutables no pueden cambiar su estado después de haber sido creados, lo que significa que sus atributos no pueden modificarse.",
-    subtheme: "Inmutabilidad vs Mutabilidad",
-    group: "Java",
-  },
-  {
-    question: "¿Qué tipo de objetos permite la mutabilidad en Java?",
-    options: [
-      "Objetos cuyo estado no puede cambiar",
-      "Objetos cuyo estado puede cambiar",
-      "Objetos que no pueden ser modificados",
-      "Ninguno",
-    ],
-    answer: 1,
-    explanation:
-      "Los objetos mutables pueden cambiar su estado después de haber sido creados, lo que permite modificar sus atributos.",
-    subtheme: "Inmutabilidad vs Mutabilidad",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de las siguientes clases es un ejemplo de un objeto inmutable en Java?",
-    options: ["String", "ArrayList", "HashMap", "Date"],
-    answer: 0,
-    explanation:
-      "La clase `String` en Java es un ejemplo clásico de un objeto inmutable. Una vez que se crea un objeto `String`, no puede modificarse.",
-    subtheme: "Inmutabilidad vs Mutabilidad",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál es la principal diferencia entre un objeto mutable e inmutable?",
-    options: [
-      "Los objetos mutables pueden cambiar su estado, los inmutables no",
-      "Los objetos inmutables pueden cambiar su estado",
-      "Los objetos inmutables son más rápidos",
-      "No hay diferencia",
+      "Evitar el false sharing entre campos de variables",
+      "Marcar variables como no compartidas",
+      "Sincronizar el acceso a variables volátiles",
+      "Restringir el acceso desde otros hilos",
     ],
     answer: 0,
     explanation:
-      "La principal diferencia es que los objetos mutables pueden cambiar su estado después de su creación, mientras que los inmutables no pueden hacerlo.",
-    subtheme: "Inmutabilidad vs Mutabilidad",
+      "@Contended se utiliza para evitar el false sharing, agregando padding entre campos accedidos por diferentes hilos.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
-    question:
-      "¿Qué modificador de acceso tienen los atributos de un `record` en Java?",
-    options: ["private", "public", "protected", "final"],
-    answer: 3,
-    explanation:
-      "Los atributos de un `record` en Java son automáticamente `final`, lo que significa que no pueden modificarse después de la creación del objeto.",
-    subtheme: "Record en Java",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo se crea un `record` en Java?",
+    question: "¿Qué afirmación es cierta sobre CompletableFuture?",
     options: [
-      "record Nombre {}",
-      "class Nombre {}",
-      "interface Nombre {}",
-      "enum Nombre {}",
-    ],
-    answer: 0,
-    explanation:
-      "Para crear un `record` en Java se utiliza la palabra clave `record` seguida del nombre del `record` y los parámetros del constructor.",
-    subtheme: "Record en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de las siguientes características NO es típica de los objetos inmutables?",
-    options: [
-      "No pueden cambiar su estado después de la creación",
-      "Son más seguros para su uso en entornos multi-hilo",
-      "Pueden ser modificados por otros objetos",
-      "Son más fáciles de depurar",
+      "No puede encadenarse como Promise",
+      "No es compatible con programación funcional",
+      "Puede combinar múltiples tareas asincrónicas",
+      "Solo puede ejecutarse en el hilo principal",
     ],
     answer: 2,
     explanation:
-      "Los objetos inmutables no pueden ser modificados por otros objetos, lo que los hace más seguros y fáciles de depurar.",
-    subtheme: "Inmutabilidad vs Mutabilidad",
+      "CompletableFuture permite componer y combinar tareas asincrónicas de forma funcional, similar a Promises en JavaScript.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué palabra clave se utiliza para definir un `record` en Java 14+?",
-    options: ["record", "class", "interface", "enum"],
-    answer: 0,
-    explanation:
-      "En Java 14+, se utiliza la palabra clave `record` para definir un tipo especial de clase inmutable.",
-    subtheme: "Record en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Por qué los `records` son más eficientes que las clases tradicionales para almacenar datos?",
+      "¿Cuál es el comportamiento de un StampedLock en modo de lectura optimista?",
     options: [
-      "Porque ocupan menos memoria",
-      "Porque tienen menos sobrecarga de métodos",
-      "Porque no permiten herencia",
-      "Porque no pueden ser modificados",
+      "Bloquea todos los hilos de escritura",
+      "Puede invalidarse si otro hilo escribe",
+      "Impide el acceso concurrente",
+      "Lanza excepción si otro hilo accede al mismo recurso",
     ],
     answer: 1,
     explanation:
-      "Los `records` eliminan la necesidad de escribir métodos como `toString()`, `hashCode()` y `equals()`, lo que reduce la sobrecarga de código y mejora la eficiencia.",
-    subtheme: "Record en Java",
+      "El modo de lectura optimista no bloquea otros hilos, pero debe validarse porque puede invalidarse si otro hilo escribe.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
-  },
-  {
-    question: "¿Cómo se define un `record` con múltiples campos?",
-    options: [
-      "record Persona(String nombre, int edad) {}",
-      "record Persona(String nombre) {}",
-      "class Persona(String nombre, int edad) {}",
-      "interface Persona(String nombre, int edad) {}",
-    ],
-    answer: 0,
-    explanation:
-      "Un `record` con múltiples campos se define usando la palabra clave `record`, seguida de los campos entre paréntesis.",
-    subtheme: "Record en Java",
-    group: "Java",
-  },
-  {
-    question: "¿Cuándo debe ser usado un `record` en Java?",
-    options: [
-      "Cuando se necesita una clase inmutable para almacenar datos",
-      "Cuando se necesita una clase mutable",
-      "Cuando se necesita herencia",
-      "Cuando se necesita almacenar solo un tipo de datos",
-    ],
-    answer: 0,
-    explanation:
-      "Los `records` deben usarse cuando se necesita una clase inmutable para almacenar datos de manera eficiente.",
-    subtheme: "Record en Java",
-    group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Cómo se realiza el cambio de un objeto mutable a inmutable en Java?",
+      "¿Cuál es la diferencia clave entre Lock.readLock() y Lock.tryLock()?",
     options: [
-      "Usando el modificador `final` en las clases",
-      "Utilizando `records`",
-      "Utilizando `String` en lugar de `StringBuilder`",
-      "No es posible",
+      "readLock() es bloqueante y tryLock() no",
+      "tryLock() lanza excepción al fallar",
+      "readLock() siempre bloquea todos los accesos",
+      "tryLock() es exclusivo para hilos daemon",
+    ],
+    answer: 0,
+    explanation:
+      "readLock() bloquea hasta obtener acceso; tryLock() intenta obtener el lock sin bloquear y puede fallar silenciosamente.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question:
+      "¿Qué clase usarías para implementar una estructura de datos concurrente no bloqueante?",
+    options: ["ConcurrentLinkedQueue", "Vector", "ArrayList", "Hashtable"],
+    answer: 0,
+    explanation:
+      "ConcurrentLinkedQueue es una cola no bloqueante que utiliza algoritmos basados en CAS (Compare-And-Swap).",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué garantiza el uso del método volatile en una variable?",
+    options: [
+      "Sincronización de acceso mutuo",
+      "Visibilidad de cambios entre hilos",
+      "Evita race conditions automáticamente",
+      "Bloqueo explícito en todos los núcleos",
     ],
     answer: 1,
     explanation:
-      "Una forma de hacer un objeto inmutable es usar un `record`, que define un objeto que no puede cambiar después de su creación.",
-    subtheme: "Inmutabilidad vs Mutabilidad",
+      "Volatile garantiza visibilidad: los cambios hechos por un hilo son visibles por otros inmediatamente.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué clase en Java se utiliza para representar secuencias de caracteres inmutables?",
+      "¿Qué ocurre si dos hilos obtienen un lock recíprocamente en diferente orden?",
     options: [
-      "String",
-      "StringBuilder",
-      "StringBuffer",
-      "Character",
-      "CharSequence",
-    ],
-    answer: 0,
-    explanation:
-      "`String` es la clase inmutable en Java que representa secuencias de caracteres.",
-    subtheme: "String en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de las siguientes clases es mutable y permite la manipulación eficiente de cadenas de texto?",
-    options: [
-      "StringBuilder",
-      "String",
-      "StringBuffer",
-      "CharSequence",
-      "TextBlock",
-    ],
-    answer: 0,
-    explanation:
-      "`StringBuilder` es mutable y está diseñada para la manipulación eficiente de cadenas.",
-    subtheme: "StringBuilder y StringBuffer en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál es la diferencia principal entre `StringBuilder` y `StringBuffer`?",
-    options: [
-      "`StringBuilder` es más rápido que `StringBuffer` porque no es sincronizado",
-      "`StringBuilder` es inmutable",
-      "`StringBuffer` es más rápido",
-      "No hay diferencia",
-      "`StringBuilder` no permite concatenación",
-    ],
-    answer: 0,
-    explanation:
-      "`StringBuilder` es más rápido que `StringBuffer` porque no es sincronizado, lo que lo hace más eficiente en entornos no concurrentes.",
-    subtheme: "StringBuilder y StringBuffer en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué operación se realiza cuando concatenas dos objetos `String`?",
-    options: [
-      "Se crea un nuevo objeto String",
-      "Se modifica el objeto original",
-      "El objeto original se reemplaza",
-      "No ocurre ninguna operación",
-    ],
-    answer: 0,
-    explanation:
-      "Cuando concatenas dos objetos `String`, se crea un nuevo objeto `String` debido a la inmutabilidad de la clase `String`.",
-    subtheme: "String en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de los siguientes métodos de la clase `String` no modifica el objeto original?",
-    options: [
-      "toLowerCase()",
-      "concat()",
-      "replace()",
-      "trim()",
-      "substring()",
-    ],
-    answer: 0,
-    explanation:
-      "Métodos como `toLowerCase()`, `replace()`, `substring()`, etc., no modifican el objeto `String` original. En su lugar, devuelven una nueva instancia de `String`.",
-    subtheme: "String en Java",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué clase es recomendada para la manipulación de cadenas en entornos de alto rendimiento donde las cadenas son modificadas frecuentemente?",
-    options: [
-      "String",
-      "StringBuffer",
-      "StringBuilder",
-      "CharSequence",
-      "TextBlock",
+      "Se produce un starve",
+      "Ambos se ejecutan sin bloqueo",
+      "Se genera un deadlock",
+      "El segundo hilo es suspendido automáticamente",
     ],
     answer: 2,
     explanation:
-      "`StringBuilder` es la opción recomendada para manipular cadenas de texto de forma eficiente en entornos de alto rendimiento.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "Cuando dos hilos esperan locks que el otro posee, se produce un deadlock: ambos quedan bloqueados indefinidamente.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Cómo se puede comparar dos objetos `String` para verificar si son iguales?",
+      "¿Cuál es la mejor manera de evitar deadlocks en estructuras sincronizadas complejas?",
     options: [
-      "Con el operador `==`",
-      "Con el método `equals()`",
-      "Con el método `compareTo()`",
-      "Con el operador `!=`",
-      "Con el método `compare()`",
+      "Sincronizar solo métodos públicos",
+      "Adquirir locks siempre en el mismo orden",
+      "Evitar el uso de synchronized",
+      "Ignorar interbloqueos menores",
     ],
     answer: 1,
     explanation:
-      "Para comparar el contenido de dos objetos `String` se debe usar el método `equals()`, ya que el operador `==` compara referencias, no el contenido.",
-    subtheme: "String en Java",
+      "Adquirir locks en el mismo orden evita deadlocks al eliminar ciclos de espera circular.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué clase se debe usar para realizar concatenaciones de cadenas en un entorno de alta concurrencia?",
+      "¿Qué método de ExecutorService espera la terminación de todas las tareas antes de continuar?",
     options: [
-      "StringBuilder",
-      "StringBuffer",
-      "String",
-      "CharSequence",
-      "String.concat()",
+      "shutdownNow()",
+      "terminateAll()",
+      "awaitTermination()",
+      "stopAndWait()",
+    ],
+    answer: 2,
+    explanation:
+      "awaitTermination() espera un tiempo máximo para que todas las tareas finalicen antes de continuar.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question:
+      "¿Qué patrón de diseño es más comúnmente asociado con multithreading en Java?",
+    options: ["Strategy", "Observer", "Producer-Consumer", "Singleton"],
+    answer: 2,
+    explanation:
+      "El patrón Producer-Consumer es común para implementar colas de tareas multihilo usando buffers compartidos.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué ventaja ofrece ReentrantLock sobre synchronized?",
+    options: [
+      "Menor consumo de CPU",
+      "Mayor seguridad con variables compartidas",
+      "Soporte para interrupciones y timeout",
+      "Evita el false sharing automáticamente",
+    ],
+    answer: 2,
+    explanation:
+      "ReentrantLock permite timeouts e interrupciones, algo que synchronized no soporta.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question:
+      "¿Qué mecanismo usa java.util.concurrent.atomic para garantizar atomicidad?",
+    options: [
+      "Synchronized internamente",
+      "Bloqueo de bajo nivel",
+      "Operaciones CAS (Compare-And-Swap)",
+      "Reintentos por backoff exponencial",
+    ],
+    answer: 2,
+    explanation:
+      "Las clases de java.util.concurrent.atomic usan operaciones CAS, evitando bloqueos explícitos.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Cuál es el principal beneficio de usar un CyclicBarrier?",
+    options: [
+      "Sincronizar tareas sin conocer su número",
+      "Ejecutar tareas en orden secuencial",
+      "Coordinar un número fijo de hilos para reunirse en un punto común",
+      "Evitar la condición de carrera en variables globales",
+    ],
+    answer: 2,
+    explanation:
+      "CyclicBarrier permite que múltiples hilos esperen hasta que todos hayan alcanzado una barrera común antes de continuar.",
+    subtheme: "Concurrencia y Multithreading Avanzado",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question:
+      "¿Cuál es el propósito principal del método `flatMap` en Streams?",
+    options: [
+      "Aplicar una función a cada elemento y devolver un Stream de resultados.",
+      "Combinar múltiples Streams en un solo Stream.",
+      "Eliminar duplicados de un Stream.",
+      "Aplicar operaciones terminales sobre un Stream.",
     ],
     answer: 1,
     explanation:
-      "`StringBuffer` es la clase adecuada para entornos de alta concurrencia, ya que es sincronizada.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "El método `flatMap` transforma cada elemento en un Stream y luego los concatena en un solo Stream plano.",
+    subtheme: "Operaciones funcionales",
     group: "Java",
+    level: "Expert",
   },
   {
-    question:
-      "¿Qué clase debe usarse cuando no es necesario preocuparse por la concurrencia, pero se requiere un rendimiento optimizado en la manipulación de cadenas?",
-    options: [
-      "StringBuilder",
-      "StringBuffer",
-      "String",
-      "String",
-      "CharSequence",
-    ],
+    question: "¿Qué resultado produce este código?",
+    code: `Stream.of(1, 2, 3).reduce(0, Integer::sum)`,
+    options: ["6", "0", "3", "Error de compilación"],
     answer: 0,
     explanation:
-      "`StringBuilder` es más eficiente que `StringBuffer` en la manipulación de cadenas cuando no se necesita sincronización.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "La operación `reduce` acumula los valores del Stream usando la suma, comenzando en 0.",
+    subtheme: "Operaciones funcionales",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Cuál es el propósito del método `append()` en la clase `StringBuilder`?",
-    options: [
-      "Agregar texto al final de una cadena",
-      "Reemplazar un substring",
-      "Eliminar una cadena",
-      "Concatenar dos objetos String",
-      "Convertir un objeto String en mayúsculas",
-    ],
+      "¿Qué operación funcional se usa para convertir un Stream en una estructura de colección?",
+    options: ["collect()", "map()", "reduce()", "filter()"],
     answer: 0,
     explanation:
-      "`append()` agrega texto al final de la cadena en `StringBuilder` de manera eficiente.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "`collect()` es una operación terminal que permite transformar el Stream en listas, mapas u otras estructuras.",
+    subtheme: "Operaciones funcionales",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Cuál de las siguientes afirmaciones sobre la clase `String` es incorrecta?",
+      "¿Cuál de las siguientes afirmaciones sobre `map()` y `flatMap()` es verdadera?",
     options: [
-      "`String` es una clase inmutable",
-      "`String` es eficiente para modificaciones frecuentes de texto",
-      "`String` está diseñado para usarse principalmente en entornos de bajo rendimiento",
-      "`String` puede ser concatenado usando el operador `+`",
+      "`map()` aplana estructuras anidadas, `flatMap()` no.",
+      "`flatMap()` devuelve un Stream para cada elemento y los fusiona.",
+      "`map()` solo puede usarse con números.",
+      "Ambos métodos son operaciones terminales.",
     ],
     answer: 1,
     explanation:
-      "`String` no es eficiente para modificaciones frecuentes de texto debido a su inmutabilidad. Para ello, se deben usar `StringBuilder` o `StringBuffer`.",
-    subtheme: "String en Java",
+      "`flatMap()` aplica una función a cada elemento que devuelve un Stream y luego aplana todos los Streams resultantes.",
+    subtheme: "Operaciones funcionales",
     group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué hace el siguiente código?`",
+    code: `Stream.of("a", "b", "c").collect(Collectors.joining(","))`,
+    options: ['"abc"', '"a,b,c"', '["a", "b", "c"]', "Lanza una excepción"],
+    answer: 1,
+    explanation:
+      '`Collectors.joining(",")` concatena todos los elementos usando la coma como delimitador.',
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué método de `StringBuilder` se usa para eliminar una porción de texto?",
+      "¿Qué interfaz funcional representa una operación que acepta un argumento y no devuelve nada?",
+    options: ["Supplier", "Consumer", "Function", "Predicate"],
+    answer: 1,
+    explanation:
+      "`Consumer<T>` representa una operación que acepta un solo argumento y no devuelve un resultado.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué hace el método `peek()` en un Stream?",
     options: [
-      "delete()",
-      "deleteCharAt()",
-      "replace()",
-      "trimToSize()",
-      "insert()",
+      "Filtra los elementos del Stream.",
+      "Aplica una transformación a los elementos.",
+      "Permite realizar acciones sin modificar los elementos.",
+      "Reduce el Stream a un solo valor.",
+    ],
+    answer: 2,
+    explanation:
+      "`peek()` permite realizar acciones intermedias para propósitos como depuración, sin afectar el flujo.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes combinaciones representa una pipeline válida en Streams?",
+    options: [
+      "map -> peek -> filter -> collect",
+      "filter -> reduce -> map -> collect",
+      "collect -> map -> filter",
+      "reduce -> map -> forEach",
     ],
     answer: 0,
     explanation:
-      "`delete()` se utiliza para eliminar una porción de texto en `StringBuilder`.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "Una pipeline válida incluye operaciones intermedias seguidas por una terminal como `collect` o `reduce`.",
+    subtheme: "Operaciones funcionales",
     group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué hace `Collectors.partitioningBy(Predicate)`?",
+    options: [
+      "Agrupa los elementos en una lista.",
+      "Agrupa los elementos en dos listas según el predicado.",
+      "Ordena los elementos por el predicado.",
+      "Aplica una operación de reducción.",
+    ],
+    answer: 1,
+    explanation:
+      "`partitioningBy` divide los elementos en dos grupos: los que cumplen el predicado y los que no.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué método de `StringBuffer` permite insertar texto en una posición específica?",
+      "¿Cuál es el resultado de `Stream.empty().map(x -> x.toString()).count()`?",
+    options: ["1", "0", "null", "Excepción"],
+    answer: 1,
+    explanation:
+      "El Stream está vacío, por lo tanto no hay elementos que mapear ni contar.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué ventaja ofrece usar `parallelStream()`?",
     options: [
-      "insert()",
-      "append()",
-      "replace()",
-      "substring()",
-      "trimToSize()",
+      "Mayor control sobre los hilos.",
+      "Mayor rendimiento en colecciones pequeñas.",
+      "Posibilidad de procesamiento concurrente para grandes volúmenes de datos.",
+      "Evita la necesidad de operaciones terminales.",
+    ],
+    answer: 2,
+    explanation:
+      "`parallelStream()` permite procesamiento paralelo, lo que mejora el rendimiento con colecciones grandes.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué ocurre si una operación de Stream lanza una excepción?",
+    options: [
+      "Se ignora y el Stream continúa.",
+      "El Stream se cierra inmediatamente.",
+      "Se lanza una excepción que debe manejarse.",
+      "La operación se reinicia automáticamente.",
+    ],
+    answer: 2,
+    explanation:
+      "Cualquier excepción lanzada en una operación intermedia detiene el procesamiento del Stream.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Cuál es el propósito de `Collectors.toMap()`?",
+    options: [
+      "Crear una lista a partir del Stream.",
+      "Crear un conjunto sin duplicados.",
+      "Convertir un Stream en un Map clave-valor.",
+      "Ordenar el Stream por claves.",
+    ],
+    answer: 2,
+    explanation:
+      "`Collectors.toMap()` permite construir un Map a partir de pares clave-valor generados desde los elementos del Stream.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué hace `distinct()` en un Stream?",
+    options: [
+      "Ordena los elementos.",
+      "Elimina elementos duplicados usando `equals()`.",
+      "Agrupa elementos similares.",
+      "Convierte el Stream en Set.",
+    ],
+    answer: 1,
+    explanation:
+      "`distinct()` elimina elementos duplicados comparándolos con `equals()`.",
+    subtheme: "Operaciones funcionales",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes es una interfaz funcional personalizada válida?",
+    options: [
+      "`@FunctionalInterface interface Converter<T, R> { R convert(T input); }`",
+      "`interface MyFunction { void execute(); void stop(); }`",
+      "`interface Marker {}`",
+      "`interface Duplicator<T> extends Function<T, T>`",
     ],
     answer: 0,
     explanation:
-      "`insert()` permite insertar texto en una posición específica en `StringBuffer`.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "Una interfaz funcional debe tener un único método abstracto. La primera opción cumple con esto.",
+    subtheme: "Operaciones funcionales",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué diferencia fundamental existe entre `StringBuilder` y `StringBuffer`?",
+      "¿Cuál de los siguientes tipos primitivos de Java puede representar un valor más grande?",
+    code: "",
+    options: ["int", "long", "short", "byte"],
+    answer: 1,
+    explanation:
+      "El tipo 'long' es un entero de 64 bits con signo, capaz de almacenar un rango mucho mayor que 'int', 'short' o 'byte'.",
+    subtheme: "Tipo de datos Primitivos",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Cuál es el resultado del siguiente fragmento de código?",
+    code: `
+  byte a = 127;
+  a += 1;
+  System.out.println(a);`,
+    options: ["0", "-128", "128", "Error de compilación"],
+    answer: 1,
+    explanation:
+      "El tipo 'byte' va de -128 a 127. Al sumar 1 a 127, ocurre un overflow y el valor se convierte en -128.",
+    subtheme: "Tipo de datos Primitivos",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Cuál es el tamaño en bits de un tipo 'char' en Java?",
+    code: "",
+    options: ["8 bits", "16 bits", "32 bits", "Dependiente de la plataforma"],
+    answer: 1,
+    explanation:
+      "El tipo 'char' en Java es de 16 bits y representa un solo carácter Unicode.",
+    subtheme: "Tipo de datos Primitivos",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué sucede al ejecutar el siguiente código?",
+    code: `
+  int x = 1_000_000;
+  System.out.println(x);`,
     options: [
-      "`StringBuilder` es más rápido que `StringBuffer` porque no es sincronizado",
-      "`StringBuffer` es más rápido que `StringBuilder`",
-      "`StringBuilder` permite operaciones sincronizadas",
-      "`StringBuffer` permite operaciones no sincronizadas",
+      "Compila y muestra 1000000",
+      "Error de compilación",
+      "Compila pero lanza excepción",
+      "Imprime '1_000_000'",
     ],
     answer: 0,
     explanation:
-      "`StringBuilder` es más rápido que `StringBuffer` porque no está sincronizado, lo que lo hace más adecuado para entornos de un solo hilo.",
-    subtheme: "StringBuilder y StringBuffer en Java",
+      "Los guiones bajos se pueden usar para mejorar la legibilidad de números desde Java 7. Compila y muestra 1000000.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué estructura condicional en Java se utiliza cuando solo necesitas tomar una decisión simple?",
-    options: ["if", "switch", "for", "while"],
+      "¿Cuál es el valor por defecto de una variable tipo `boolean` en una clase?",
+    code: "",
+    options: ["false", "true", "null", "Depende del compilador"],
     answer: 0,
     explanation:
-      "La estructura `if` es la más sencilla para tomar decisiones simples en Java.",
-    subtheme: "Estructuras de control condicional",
+      "El valor por defecto de un `boolean` como campo de clase es `false`.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Cuál es la diferencia principal entre `if-else` y `if-else-if` en Java?",
+      "¿Cuál de las siguientes asignaciones produce una pérdida de precisión?",
+    code: "",
     options: [
-      "`if-else-if` permite evaluar varias condiciones secuenciales",
-      "`if-else` permite más de dos opciones",
-      "`if-else-if` es más rápido",
-      "`if-else` solo acepta una condición",
+      "float f = 10.0f;",
+      "int i = (int) 3.9;",
+      "double d = 100L;",
+      "long l = 200;",
     ],
-    answer: 0,
+    answer: 1,
     explanation:
-      "`if-else-if` permite evaluar múltiples condiciones de manera secuencial, mientras que `if-else` solo maneja dos caminos (verdadero o falso).",
-    subtheme: "Estructuras de control condicional",
+      "Al convertir 3.9 (double) a int, se trunca la parte decimal, resultando en una pérdida de precisión.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué imprime este código?",
+    code: `
+  int a = 5;
+  int b = 2;
+  System.out.println(a / b);`,
+    options: ["2.5", "2", "3", "Error de compilación"],
+    answer: 1,
+    explanation:
+      "La división entre enteros en Java descarta la parte decimal. 5 / 2 = 2.",
+    subtheme: "Tipo de datos Primitivos",
+    group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "¿Qué estructura condicional se recomienda utilizar cuando se tienen múltiples opciones de valor constante?",
-    options: ["switch", "if-else", "for", "while"],
+      "¿Cuál es el rango válido para el tipo primitivo 'short' en Java?",
+    code: "",
+    options: ["-32768 a 32767", "0 a 65535", "-128 a 127", "-2^31 a 2^31-1"],
     answer: 0,
     explanation:
-      "El `switch` es ideal para comparar múltiples valores constantes y seleccionar entre ellos.",
-    subtheme: "Estructuras de control condicional",
+      "El tipo 'short' es un entero de 16 bits con signo, por lo tanto su rango es de -32,768 a 32,767.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
-    question:
-      "En un `switch`, ¿qué sucede si no se incluye un `break` al final de un `case`?",
+    question: "¿Qué ocurre al ejecutar el siguiente código?",
+    code: `
+  float f = 1.0;
+  System.out.println(f);`,
     options: [
-      "Se ejecutan todos los `case` posteriores hasta encontrar un `break`",
-      "El código se detiene",
-      "El programa lanza una excepción",
-      "Nada especial sucede",
+      "1.0",
+      "Error de compilación",
+      "1.0f",
+      "Lanza excepción en tiempo de ejecución",
     ],
-    answer: 0,
+    answer: 1,
     explanation:
-      "Si no se incluye un `break`, el flujo del programa continuará ejecutando los `case` posteriores, lo que se llama *fall-through*.",
-    subtheme: "Estructuras de control condicional",
+      "El valor 1.0 es considerado double por defecto. Para asignarlo a un float, se requiere el sufijo 'f' o un casting explícito.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
-    question:
-      "¿Cómo se puede mejorar el rendimiento de un `switch` en Java 12+?",
+    question: "¿Cuál es el literal correcto para declarar un `long` en Java?",
+    code: "",
     options: [
-      "Usando el `switch` mejorado que soporta expresiones `String`",
-      "Usando `if-else-if` en lugar de `switch`",
-      "Convirtiendo el `switch` en un `for`",
-      "Usando un `switch` tradicional con `break`",
-    ],
-    answer: 0,
-    explanation:
-      "El `switch` mejorado en Java 12+ permite usar expresiones `String` y otras características, lo que mejora su flexibilidad y rendimiento.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de datos puede manejar un `switch` tradicional en Java?",
-    options: [
-      "int, char, byte, short, enum",
-      "String, char, Object",
-      "boolean, char",
-      "int, String, double",
-    ],
-    answer: 0,
-    explanation:
-      "El `switch` tradicional en Java maneja tipos como `int`, `char`, `byte`, `short` y `enum`.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "En un `if-else`, ¿qué sucede si la condición del `if` no se cumple?",
-    options: [
-      "Se ejecuta el bloque de código en el `else`",
-      "Se lanza una excepción",
-      "El programa termina",
-      "El bloque `else` se omite",
-    ],
-    answer: 0,
-    explanation:
-      "Si la condición del `if` no se cumple, el bloque de código en el `else` se ejecuta.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo se puede mejorar un `switch` tradicional en Java 12+?",
-    options: [
-      "Utilizando un `switch` mejorado con expresiones como `String`",
-      "Cambiarlo a `if-else` para mayor flexibilidad",
-      "Usar `switch-case` con operadores lógicos",
-      "Nada se puede mejorar",
-    ],
-    answer: 0,
-    explanation:
-      "El `switch` mejorado en Java 12+ permite trabajar con más tipos de datos y expresiones como `String`.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cómo puedes manejar un caso específico cuando usas `switch` y necesitas que se ejecute un bloque de código solo cuando se cumpla una condición?",
-    options: [
-      "Usar un `break` después del `case` correspondiente",
-      "Incluir un `default` al final",
-      "Agregar una condición `if` dentro del `case`",
-      "Llamar a un método de retorno",
-    ],
-    answer: 0,
-    explanation:
-      "Al usar `switch`, el `break` se utiliza para evitar que el flujo de ejecución continúe en los `case` siguientes.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "En una estructura `if-else`, ¿cómo verificarías si un número es negativo?",
-    options: [
-      "if (num < 0) { ... }",
-      "if (num > 0) { ... }",
-      "if (num != 0) { ... }",
-      "if (num == 0) { ... }",
-    ],
-    answer: 0,
-    explanation: "La condición `num < 0` verifica si el número es negativo.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué palabra clave se utiliza en un `switch` para manejar un caso por defecto, si ninguno de los valores coincide?",
-    options: ["default", "else", "otherwise", "catch"],
-    answer: 0,
-    explanation:
-      "La palabra clave `default` se usa para manejar cualquier valor que no coincida con los casos especificados en un `switch`.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "En un `switch` mejorado en Java 12+, ¿qué tipos de valores pueden ser utilizados como `case`?",
-    options: [
-      "String, Enum, expresiones constantes",
-      "Solo enteros y caracteres",
-      "Solo cadenas de texto",
-      "Solo valores booleanos",
-    ],
-    answer: 0,
-    explanation:
-      "En el `switch` mejorado en Java 12+, se pueden utilizar valores como `String`, `Enum` y expresiones constantes.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "Si en un `if` deseas verificar si una variable `x` es mayor que 10 y menor que 20, ¿cuál es la condición correcta?",
-    options: [
-      "if (x > 10 && x < 20)",
-      "if (x > 10 || x < 20)",
-      "if (x >= 10 && x <= 20)",
-      "if (x != 10 && x != 20)",
-    ],
-    answer: 0,
-    explanation:
-      "La condición correcta es `if (x > 10 && x < 20)` para verificar si `x` está entre 10 y 20.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cómo se evita la ejecución de múltiples bloques en un `switch` cuando se usa `fall-through`?",
-    options: [
-      "Incluir un `break` al final de cada `case`",
-      "Usar un `return` dentro del `case`",
-      "Agregar un `continue` dentro del `case`",
-      "Colocar el `default` al final",
-    ],
-    answer: 0,
-    explanation:
-      "El uso de un `break` después de cada `case` evita que el flujo de ejecución continúe con los siguientes casos.",
-    subtheme: "Estructuras de control condicional",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué estructura iterativa se utiliza cuando conocemos cuántas veces se debe ejecutar el bucle?",
-    options: ["for", "while", "do-while", "for-each"],
-    answer: 3,
-    explanation:
-      "El bucle `for` es adecuado cuando conocemos el número exacto de iteraciones.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál de las siguientes estructuras de control es ideal para recorrer una colección como un `List`, `Set` o `Map`?",
-    options: ["for-each", "while", "do-while", "for"],
-    answer: 0,
-    explanation:
-      "El bucle `for-each` es ideal para recorrer colecciones en Java de manera sencilla.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question: "En un bucle `while`, ¿cuándo se evalúa la condición?",
-    options: [
-      "Antes de cada iteración",
-      "Después de cada iteración",
-      "Solo al principio",
-      "Nunca se evalúa",
-    ],
-    answer: 0,
-    explanation:
-      "La condición del bucle `while` se evalúa antes de cada iteración, por lo que es posible que el bloque de código no se ejecute si la condición es falsa desde el principio.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué sucede si la condición de un bucle `while` es falsa desde el principio?",
-    options: [
-      "El bloque de código dentro del `while` no se ejecutará",
-      "El bucle entra en un bucle infinito",
-      "El código se ejecutará al menos una vez",
-      "Se ejecuta una vez y luego se detiene",
+      "long x = 100000L;",
+      "long x = 100000l;",
+      "long x = 100000;",
+      "Todas las anteriores son válidas",
     ],
     answer: 3,
     explanation:
-      "Si la condición del `while` es falsa desde el principio, el bloque de código no se ejecutará ni una vez.",
-    subtheme: "Estructuras de control Iterativas",
+      "Java acepta tanto `L` como `l` como sufijo para literales long, aunque se recomienda `L` por claridad. También acepta literales sin sufijo si están dentro del rango de int.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
-    question:
-      "¿Cuál es la principal diferencia entre un bucle `while` y un bucle `do-while`?",
-    options: [
-      "En un `do-while`, el bloque de código siempre se ejecuta al menos una vez",
-      "El `while` evalúa la condición después de cada iteración",
-      "El `do-while` evalúa la condición antes de la primera iteración",
-      "No hay diferencia, ambos funcionan igual",
-    ],
+    question: "¿Qué resultado imprime este código?",
+    code: `
+  char c = 65;
+  System.out.println(c);`,
+    options: ["65", "A", "Error de compilación", "Undefined"],
+    answer: 1,
+    explanation:
+      "El valor 65 corresponde al carácter 'A' en Unicode. El tipo 'char' puede asignarse desde un valor entero.",
+    subtheme: "Tipo de datos Primitivos",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Qué imprime este fragmento?",
+    code: `
+  double d = 0.1 + 0.2;
+  System.out.println(d == 0.3);`,
+    options: ["true", "false", "Error en compilación", "NaN"],
+    answer: 1,
+    explanation:
+      "Debido a la representación binaria de los valores en coma flotante, 0.1 + 0.2 no es exactamente igual a 0.3.",
+    subtheme: "Tipo de datos Primitivos",
+    group: "Java",
+    level: "Expert",
+  },
+  {
+    question: "¿Cuál es el resultado del siguiente código?",
+    code: `
+  boolean b = true;
+  b = b ^ true;
+  System.out.println(b);`,
+    options: ["false", "true", "0", "Error de compilación"],
     answer: 0,
     explanation:
-      "La principal diferencia es que en el bucle `do-while`, el bloque de código se ejecuta al menos una vez, ya que la condición se evalúa después de la ejecución.",
-    subtheme: "Estructuras de control Iterativas",
+      "El operador '^' (XOR) retorna true solo si los operandos son diferentes. `true ^ true` es false.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
     question:
-      "En un bucle `for-each`, ¿qué tipo de variable se utiliza para iterar sobre la colección?",
+      "¿Qué ocurre si se intenta asignar un `long` a una variable `int` sin casting?",
+    code: `
+  long l = 100000L;
+  int i = l;`,
     options: [
-      "Una variable de tipo adecuado para los elementos de la colección",
-      "Una variable `int` para los índices",
-      "Una variable `boolean` para la condición",
-      "Una variable `String`",
+      "Compila sin problemas",
+      "Error de compilación",
+      "Se convierte automáticamente",
+      "Se trunca el valor",
     ],
     answer: 1,
     explanation:
-      "El bucle `for-each` utiliza una variable de tipo adecuado para los elementos de la colección, como `int`, `String`, o cualquier tipo que sea compatible.",
-    subtheme: "Estructuras de control Iterativas",
+      "No se puede asignar un 'long' a un 'int' sin un cast explícito, debido a la posible pérdida de información.",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
+    level: "Expert",
   },
   {
-    question:
-      "¿Qué tipo de ciclo se utiliza cuando no sabemos cuántas veces necesitamos ejecutar un bloque de código, pero sí sabemos que debemos ejecutar al menos una vez?",
-    options: ["do-while", "while", "for-each", "for"],
+    question: "¿Cuál de los siguientes pares tiene el mismo tamaño en bits?",
+    code: "",
+    options: ["float y int", "double y long", "byte y char", "short y float"],
     answer: 0,
     explanation:
-      "El bucle `do-while` es útil cuando necesitamos ejecutar al menos una vez, ya que la condición se evalúa después de la ejecución.",
-    subtheme: "Estructuras de control Iterativas",
+      "Tanto 'float' como 'int' ocupan 32 bits, aunque representan datos de distinto tipo (coma flotante vs enteros).",
+    subtheme: "Tipo de datos Primitivos",
     group: "Java",
-  },
-  {
-    question:
-      "¿Qué hará un bucle `for` si no se especifica una condición de salida?",
-    options: [
-      "Entrará en un bucle infinito",
-      "Se ejecutará una vez",
-      "Detendrá la ejecución inmediatamente",
-      "Nada, es necesario especificar una condición",
-    ],
-    answer: 0,
-    explanation:
-      "Si no se especifica una condición de salida, el bucle `for` continuará ejecutándose indefinidamente, lo que resultará en un bucle infinito.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué tipo de bucle se recomienda para recorrer un array de longitud fija?",
-    options: ["for", "while", "do-while", "for-each"],
-    answer: 2,
-    explanation:
-      "El bucle `for` es ideal para recorrer arrays de longitud fija cuando sabemos cuántas iteraciones necesitamos.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "En el siguiente código: `for (int i = 0; i < 10; i++) { System.out.println(i); }`, ¿qué hará el bucle?",
-    options: [
-      "Imprime los números del 0 al 9",
-      "Imprime los números del 1 al 10",
-      "Imprime solo el número 0",
-      "Causa un bucle infinito",
-    ],
-    answer: 0,
-    explanation:
-      "El bucle `for` imprimirá los números del 0 al 9, ya que la condición es `i < 10`.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo se puede evitar un bucle infinito en un `while`?",
-    options: [
-      "Asegurando que la condición se vuelva falsa en algún momento",
-      "Asegurando que el bucle se ejecute infinitamente",
-      "Usando un `break` al inicio del bucle",
-      "No es posible evitarlo",
-    ],
-    answer: 0,
-    explanation:
-      "Para evitar un bucle infinito, es necesario asegurarse de que la condición se vuelva falsa en algún momento, lo que interrumpirá la ejecución.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "En el siguiente código, ¿qué imprimirá? `int[] arr = {1, 2, 3}; for (int num : arr) { System.out.println(num); }`",
-    options: ["1, 2, 3", "0, 1, 2", "1, 2", "Error de sintaxis"],
-    answer: 0,
-    explanation:
-      "El bucle `for-each` recorrerá cada elemento del array y lo imprimirá en orden, resultando en `1, 2, 3`.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál es la forma correcta de declarar un bucle `while` en Java?",
-    options: [
-      "while (condición) { bloque de código }",
-      "while { bloque de código }",
-      "for { bloque de código }",
-      "if (condición) { bloque de código }",
-    ],
-    answer: 1,
-    explanation:
-      "La forma correcta es `while (condición) { bloque de código }`, donde `condición` se evalúa antes de cada iteración.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cómo se detendría un bucle `for-each` antes de que termine todas las iteraciones?",
-    options: [
-      "Usando `break`",
-      "Usando `return`",
-      "Usando `continue`",
-      "No es posible detenerlo",
-    ],
-    answer: 3,
-    explanation:
-      "El bucle `for-each` puede detenerse antes de que termine todas las iteraciones usando la palabra clave `break`.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué hará un bucle `do-while` si la condición es falsa desde el principio?",
-    options: [
-      "Ejecutará el bloque de código al menos una vez",
-      "No ejecutará el bloque de código",
-      "Entrará en un bucle infinito",
-      "Detendrá la ejecución",
-    ],
-    answer: 0,
-    explanation:
-      "El bucle `do-while` ejecuta el bloque de código al menos una vez, incluso si la condición es falsa desde el principio.",
-    subtheme: "Estructuras de control Iterativas",
-    group: "Java",
-  },
-  {
-    question: "¿Qué hace la instrucción `break` en un bucle?",
-    options: [
-      "Sigue con la siguiente iteración",
-      "Finaliza la ejecución del método",
-      "Finaliza el bucle o el `switch`",
-      "Ignora la iteración actual",
-    ],
-    answer: 2,
-    explanation:
-      "La instrucción `break` se utiliza para salir de un bucle o un `switch` antes de que finalice su ejecución normal.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo funciona la instrucción `continue`?",
-    options: [
-      "Finaliza la ejecución del método",
-      "Reinicia el bucle desde el principio",
-      "Sigue con la siguiente iteración del bucle",
-      "Finaliza el bucle inmediatamente",
-    ],
-    answer: 2,
-    explanation:
-      "La instrucción `continue` salta la iteración actual del bucle y pasa a la siguiente iteración.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Qué valor devuelve un método que tiene una instrucción `return`?",
-    options: [
-      "No devuelve nada",
-      "Un valor o no devuelve nada, dependiendo de la firma del método",
-      "Siempre devuelve un `null`",
-      "Siempre retorna un valor vacío",
-    ],
-    answer: 1,
-    explanation:
-      "La instrucción `return` finaliza la ejecución del método y puede devolver un valor dependiendo de su tipo de retorno.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Qué sucede si un `continue` se encuentra en un `switch`?",
-    options: [
-      "Se salta a la siguiente declaración `case`",
-      "Se detiene la ejecución del `switch`",
-      "No tiene ningún efecto",
-      "Se omiten las iteraciones siguientes del bucle",
-    ],
-    answer: 2,
-    explanation:
-      "La instrucción `continue` no tiene efecto en un `switch`, ya que está diseñada para los bucles.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Qué hará un `break` dentro de un `for`?",
-    options: [
-      "Finaliza la ejecución del bucle inmediatamente",
-      "Sigue ejecutando el bucle normalmente",
-      "Pasa a la siguiente iteración del bucle",
-      "Ignora el bloque de código en el que se encuentra",
-    ],
-    answer: 0,
-    explanation:
-      "La instrucción `break` termina la ejecución del bucle inmediatamente y sale del mismo.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question:
-      "¿Cuál es el resultado de ejecutar `return` en un método que no tiene un tipo de retorno?",
-    options: [
-      "Generará un error de compilación",
-      "El método terminará sin devolver nada",
-      "El método devolverá un `null`",
-      "El método no terminará de ejecutarse",
-    ],
-    answer: 0,
-    explanation:
-      "Si un método no tiene un tipo de retorno, no se puede utilizar `return`, ya que genera un error de compilación.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Qué pasa cuando un `continue` se encuentra en un bucle `for`?",
-    options: [
-      "Ignora la condición del bucle",
-      "El bucle se detiene",
-      "La iteración actual se omite y pasa a la siguiente iteración",
-      "El bucle retrocede una iteración",
-    ],
-    answer: 2,
-    explanation:
-      "La instrucción `continue` omite el resto de la iteración y pasa a la siguiente iteración del bucle.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo se utiliza `break` en un `switch`?",
-    options: [
-      "Para ejecutar todas las opciones dentro del `switch`",
-      "Para omitir el `case` actual",
-      "Para salir de la declaración `switch` después de ejecutar un caso",
-      "Para saltar a otro `case`",
-    ],
-    answer: 2,
-    explanation:
-      "En un `switch`, `break` se utiliza para salir del bloque `switch` después de ejecutar un caso.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿En qué tipo de estructuras no se puede usar `continue`?",
-    options: [
-      "En estructuras `for` y `switch`",
-      "En estructuras `if` y `switch`",
-      "En estructuras `for`, `while` y `do-while`",
-      "En todas las estructuras",
-    ],
-    answer: 1,
-    explanation:
-      "`continue` solo puede usarse dentro de bucles, como `for`, `while` y `do-while`, no tiene efecto en estructuras como `if` o `switch`.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Qué sucede si un `return` se encuentra dentro de un bucle?",
-    options: [
-      "El bucle continúa ejecutándose",
-      "El bucle retrocede una iteración",
-      "El método termina inmediatamente y el flujo se transfiere a la llamada al método",
-      "El método vuelve al inicio y reinicia el bucle",
-    ],
-    answer: 2,
-    explanation:
-      "Cuando se ejecuta un `return` en un método dentro de un bucle, el método termina y el control se transfiere a la llamada al método.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo puede un `break` influir en un bucle `while`?",
-    options: [
-      "Detiene la ejecución del bucle",
-      "Omite la iteración actual y pasa a la siguiente",
-      "No tiene efecto",
-      "Reinicia el bucle desde el principio",
-    ],
-    answer: 0,
-    explanation:
-      "`break` detiene la ejecución de cualquier bucle, incluyendo `while`, y sale del mismo inmediatamente.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Es posible usar un `return` en un método `void`?",
-    options: [
-      "Sí, pero solo con un valor `null`",
-      "No, los métodos `void` no pueden usar `return`",
-      "Sí, para salir del método sin retornar un valor",
-      "No, generará un error de compilación",
-    ],
-    answer: 2,
-    explanation:
-      "En un método `void` se puede usar `return` sin retornar un valor, simplemente para salir del método.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿En qué momento se ejecuta el `return` en un método?",
-    options: [
-      "Después de completar todas las iteraciones de un bucle",
-      "Al final del método, automáticamente",
-      "Solo cuando se llama explícitamente",
-      "Cuando el flujo del programa lo encuentra",
-    ],
-    answer: 3,
-    explanation:
-      "`return` se ejecuta cuando el flujo del programa lo encuentra y termina la ejecución del método.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
-  },
-  {
-    question: "¿Cómo se comporta el `continue` en un bucle `while`?",
-    options: [
-      "Omite la iteración actual y pasa a la siguiente",
-      "Hace que el bucle se ejecute indefinidamente",
-      "Detiene la ejecución del bucle",
-      "Reinicia el bucle desde el principio",
-    ],
-    answer: 0,
-    explanation:
-      "`continue` en un bucle `while` omite la iteración actual y pasa a la siguiente evaluación de la condición.",
-    subtheme: "Estructuras de control de salto",
-    group: "Java",
+    level: "Expert",
   },
 ];

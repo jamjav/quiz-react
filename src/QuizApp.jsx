@@ -4,12 +4,13 @@ import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Progress } from "./components/ui/progress";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ErrorBoundary from './components/ErrorBoundary'; // adjust the path as needed
 
 export default function QuizApp() {
     const [selectedMainTag, setSelectedMainTag] = useState(null);
     const [selectedSubTags, setSelectedSubTags] = useState([]);
+    const [selectedLevel, setSelectedLevel] = useState(null);
     const [numQuestions, setNumQuestions] = useState(5);
     const [quizStarted, setQuizStarted] = useState(false);
     const [questions, setQuestions] = useState([]);
@@ -17,12 +18,19 @@ export default function QuizApp() {
     const [selected, setSelected] = useState(null);
     const [score, setScore] = useState(0);
     const [results, setResults] = useState([]);
-    const [timeLeft, setTimeLeft] = useState(60);
+    const [timeLeft, setTimeLeft] = useState(30);
+    const [timeLeftInitial, setTimeLeftInitial] = useState(30);
 
     const mainTags = [...new Set(allQuestions.map(q => q.group))];
-    const subTags = selectedMainTag
+    const levels = selectedMainTag
         ? [...new Set(allQuestions
             .filter(q => q.group === selectedMainTag)
+            .map(q => q.level))].filter(Boolean)
+        : [];
+    
+    const subTags = selectedMainTag && selectedLevel
+        ? [...new Set(allQuestions
+            .filter(q => q.group === selectedMainTag && q.level === selectedLevel)
             .map(q => q.subtheme))]
         : [];
 
@@ -43,13 +51,15 @@ export default function QuizApp() {
     const startQuiz = () => {
         const filtered = allQuestions.filter(q =>
             (selectedMainTag === null || q.group === selectedMainTag) &&
-            (selectedSubTags.length === 0 || (q.subtheme && selectedSubTags.includes(q.subtheme)))
+            (selectedSubTags.length === 0 || (q.subtheme && selectedSubTags.includes(q.subtheme))) &&
+            (selectedLevel === null || q.level === selectedLevel)
         );
 
         const shuffled = filtered.sort(() => 0.5 - Math.random()).slice(0, numQuestions);
         setQuestions(shuffled);
+        setTimeLeftInitial(timeLeft);
         setQuizStarted(true);
-        setTimeLeft(20);
+        setTimeLeft(timeLeft);
     };
 
     const handleNext = () => {
@@ -97,7 +107,7 @@ export default function QuizApp() {
         // Avanzamos a la siguiente pregunta
         setSelected(null);
         setCurrent(current + 1);
-        setTimeLeft(20);
+        setTimeLeft(timeLeftInitial);
     };
 
     const toggleSubTag = (subTag) => {
@@ -128,6 +138,7 @@ export default function QuizApp() {
                                     key={tag}
                                     onClick={() => {
                                         setSelectedMainTag(tag);
+                                        setSelectedLevel(null);
                                         setSelectedSubTags([]);
                                     }}
                                     className={`px-4 py-2 rounded-lg text-base ${selectedMainTag === tag ? 'bg-blue-500' : 'bg-gray-700'} transition-all duration-200`}
@@ -137,6 +148,25 @@ export default function QuizApp() {
                             ))}
                         </div>
                     </div>
+
+                    {selectedMainTag && levels.length > 0 && (
+                        <div className="mb-4 flex justify-center">
+                            <div className="w-full flex justify-center gap-4 flex-wrap">
+                                {levels.map((level, index) => (
+                                    <Button
+                                        key={index}
+                                        onClick={() => {
+                                            setSelectedLevel(level);
+                                            setSelectedSubTags([]);
+                                        }}
+                                        className={`px-3 py-1.5 rounded-lg text-sm ${selectedLevel === level ? 'bg-blue-500' : 'bg-gray-700'} transition-all duration-200`}
+                                    >
+                                        {level}
+                                    </Button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
 
                     {selectedMainTag && subTags.length > 0 && (
                         <ErrorBoundary>
@@ -158,12 +188,25 @@ export default function QuizApp() {
 
                     <select
                         className="mb-4 px-4 py-2 border rounded bg-gray-700 text-white"
+                        value={timeLeft}
+                        onChange={(e) => setTimeLeft(parseInt(e.target.value))}
+                    >
+                        {[30, 40, 50, 60].map(t => (
+                            <option key={t} value={t}>
+                                {t} segundos por pregunta
+                            </option>
+                        ))}
+                    </select>
+                    <br />
+                    <select
+                        className="mb-4 px-4 py-2 border rounded bg-gray-700 text-white"
                         value={numQuestions}
                         onChange={(e) => setNumQuestions(parseInt(e.target.value))}
                     >
-                        {[5, 10, 15, 20, 30].map(n => <option key={n} value={n}>{n} preguntas</option>)}
+                        {[10, 15, 20, 30, 60].map(n => <option key={n} value={n}>{n} preguntas</option>)}
                     </select>
-                    <Button onClick={startQuiz} className="bg-blue-600 hover:bg-blue-700" disabled={selectedMainTag === null || selectedSubTags.length === 0}>Comenzar Quiz</Button>
+                    <br />
+                    <Button onClick={startQuiz} className="bg-blue-600 hover:bg-blue-700" disabled={selectedMainTag === null || selectedSubTags.length === 0 || selectedLevel === null}>Comenzar Quiz</Button>
                 </div>
             </div>
         );
@@ -173,13 +216,13 @@ export default function QuizApp() {
         return (
             <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
                 <div className="max-w-xl mx-auto mt-10">
-                    <h1 className="text-2xl font-bold mb-4">Resultados del Quiz</h1>
+                    <h1 className="text-2xl font-bold mb-4 text-white">Resultados del Quiz</h1>
                     <p className="mb-2">Puntaje final: {score} / {results.length}</p>
                     <p className="mb-6">Tiempo restante: {timeLeft}s</p>
                     {results.map((res, idx) => (
                         <Card key={idx} className="mb-4 bg-gray-800">
                             <CardContent className="p-4">
-                                <p className="font-semibold">{res.question}</p>
+                                <p className="font-semibold text-white bg-gray-800 p-2 rounded">{res.question}</p>
                                 <p className={`text-sm mt-1 ${res.isCorrect ? 'text-green-600' : 'text-red-600'}`}>Tu respuesta: {res.selectedAnswer}</p>
                                 {!res.isCorrect && <p className="text-sm text-green-700">Respuesta correcta: {res.correctAnswer}</p>}
                                 <div className="text-lg mt-2 p-4 bg-gray-200 text-gray-900 rounded-md shadow-md flex items-center">
@@ -206,24 +249,29 @@ export default function QuizApp() {
                 <p className="text-xl font-bold mb-2 bg-gray-800 text-white p-2 rounded-md shadow-md">
                     Pregunta {current + 1} de {questions.length} - {Math.round(((current + 1) / questions.length) * 100)}%
                 </p>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-400 mb-2">
                     Tema: {selectedMainTag} - Subtema: {selectedSubTags.join(", ")}
                 </p>
-                <Progress value={((current + 1) / questions.length) * 100} className="mb-2" />
-                <div className="flex items-center justify-end mb-4">
+                <div className="mb-4">
+                    <Progress value={((current + 1) / questions.length) * 100} />
+                </div>
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-2">
                     <p className="text-sm text-gray-400 mr-2">Tiempo restante: {timeLeft}s</p>
                     <div className="w-full bg-gray-700 h-2 rounded-full">
                         <div
-                            className="h-full bg-blue-500 rounded-full"
-                            style={{ width: `${(timeLeft / 20) * 100}%` }}
+                            className="h-full rounded-full"
+                            style={{
+                                width: `${(timeLeft / timeLeftInitial) * 100}%`,
+                                backgroundColor: timeLeft <= 10 ? 'red' : '#3b82f6'
+                            }}
                         ></div>
                     </div>
                 </div>
                 <Card className="bg-gray-800">
                     <CardContent className="p-6">
-                        <h2 className="text-lg font-semibold mb-4">{questions[current].question}</h2>
+                        <h2 className="text-lg font-semibold mb-2 text-black">{questions[current].question}</h2>
                         {questions[current].code && (
-                            <SyntaxHighlighter language="java" style={materialLight} className="rounded-md border p-4 bg-gray-700 text-white">
+                        <SyntaxHighlighter language="java" style={materialDark} className="rounded-md border p-4 rounded-md">
                                 {questions[current].code}
                             </SyntaxHighlighter>
                         )}
