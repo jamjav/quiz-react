@@ -68,12 +68,13 @@ export default function QuizApp() {
 
         // Si hay menos de 4 opciones, no cambiamos nada
         if (availableOptions.length <= 4) {
-            setResults([...results, {
+            setResults(prevResults => [...prevResults, {
                 question: questions[current].question,
                 selectedAnswer: availableOptions[selected],
                 correctAnswer: availableOptions[correctOption],
                 explanation: questions[current].explanation,
-                isCorrect: selected === correctOption
+                isCorrect: selected === correctOption,
+                code: questions[current].code || '',
             }]);
             if (selected === correctOption) {
                 setScore(prevScore => prevScore + 1);
@@ -92,12 +93,13 @@ export default function QuizApp() {
             optionsWithCorrectAnswer = optionsWithCorrectAnswer.sort(() => 0.5 - Math.random());
             
             // Guardamos el resultado de la pregunta
-            setResults([...results, {
+            setResults(prevResults => [...prevResults, {
                 question: questions[current].question,
                 selectedAnswer: optionsWithCorrectAnswer[selected],
                 correctAnswer: optionsWithCorrectAnswer[correctOption],
                 explanation: questions[current].explanation,
-                isCorrect: selected === correctOption
+                isCorrect: selected === correctOption,
+                code: questions[current].code || '',
             }]);
             if (selected === correctOption) {
                 setScore(prevScore => prevScore + 1);
@@ -223,6 +225,11 @@ export default function QuizApp() {
                         <Card key={idx} className="mb-4 bg-gray-800">
                             <CardContent className="p-4">
                                 <p className="font-semibold text-white bg-gray-800 p-2 rounded">{res.question}</p>
+                                {res.code && (
+                                    <SyntaxHighlighter language="java" style={materialDark} className="rounded-md border p-4 my-2">
+                                        {res.code}
+                                    </SyntaxHighlighter>
+                                )}
                                 <p className={`text-sm mt-1 ${res.isCorrect ? 'text-green-600' : 'text-red-600'}`}>Tu respuesta: {res.selectedAnswer}</p>
                                 {!res.isCorrect && <p className="text-sm text-green-700">Respuesta correcta: {res.correctAnswer}</p>}
                                 <div className="text-lg mt-2 p-4 bg-gray-200 text-gray-900 rounded-md shadow-md flex items-center">
@@ -249,8 +256,11 @@ export default function QuizApp() {
                 <p className="text-xl font-bold mb-2 bg-gray-800 text-white p-2 rounded-md shadow-md">
                     Pregunta {current + 1} de {questions.length} - {Math.round(((current + 1) / questions.length) * 100)}%
                 </p>
-                <p className="text-sm text-gray-400 mb-2">
-                    Tema: {selectedMainTag} - Subtema: {selectedSubTags.join(", ")}
+                <p className="text-sm text-gray-300 mb-4">
+                    <span className="block text-md font-semibold text-blue-400">Tema: {selectedMainTag}</span>
+                    <span className="block text-md font-semibold text-green-400">
+                        Subtema: {questions[current]?.subtheme || "No definido"}
+                    </span>
                 </p>
                 <div className="mb-4">
                     <Progress value={((current + 1) / questions.length) * 100} />
@@ -281,7 +291,11 @@ export default function QuizApp() {
                                     key={i}
                                     variant={selected === i ? "default" : "outline"}
                                     onClick={() => setSelected(i)}
-                                    className={`w-full max-w-md mx-auto rounded-lg text-center bg-gray-700 text-white hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 ${selected === i ? 'bg-blue-600 text-white border-2 border-blue-700 shadow-lg' : ''}`}
+                                    className={`w-full max-w-md mx-auto rounded-lg text-center text-white transition-all duration-300 ease-in-out transform hover:scale-105 ${
+                                        selected === i
+                                            ? 'bg-green-600 border-2 border-green-300 shadow-lg'
+                                            : 'bg-gray-700 hover:bg-blue-500 hover:text-white'
+                                    }`}
                                 >
                                     {opt}
                                 </Button>
