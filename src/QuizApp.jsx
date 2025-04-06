@@ -153,8 +153,9 @@ export default function QuizApp() {
 
   if (!quizStarted) {
     return (
+        
       <div className="flex justify items-center min-h-screen bg-gray-900 text-white">
-        <div className="px-80">
+        <div className="px-4 sm:px-10 md:px-20 lg:px-40 xl:px-80">
           <h1 className="text-2xl font-bold mb-4 text-center">
             Selecciona el tema y los subtemas
           </h1>
@@ -264,7 +265,7 @@ export default function QuizApp() {
 
   if (current >= questions.length || timeLeft <= 0) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="w-full max-w-4xl mx-auto px-4 lg:px-8">
           <h1 className="text-center text-white text-2xl font-bold mb-6">
             Resultados del Quiz
