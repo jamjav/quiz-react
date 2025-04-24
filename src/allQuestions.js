@@ -11074,4 +11074,8613 @@ export const allQuestions = [
     group: "Java",
     level: "Experto",
   },
+
+  {
+    question:
+      "¿Cuál es la complejidad temporal del siguiente fragmento de código?",
+    code: 'for (int i = 0; i < n; i++) {\n  for (int j = 0; j < n; j++) {\n    System.out.println(i + "," + j);\n  }\n}',
+    options: ["O(n)", "O(n log n)", "O(n^2)", "O(1)"],
+    answer: 2,
+    explanation:
+      "Hay dos bucles anidados, cada uno recorriendo de 0 a n, lo que da una complejidad de O(n^2).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad temporal del acceso a un elemento en una lista enlazada simple (LinkedList)?",
+    code: "",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    answer: 2,
+    explanation:
+      "En una LinkedList, acceder a un elemento requiere recorrer desde el inicio hasta el nodo deseado: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene insertar un elemento al final de un ArrayList en Java, considerando que no hay redimensionamiento?",
+    code: "",
+    options: ["O(log n)", "O(1)", "O(n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "Insertar al final de un ArrayList es O(1) si hay espacio disponible. Solo redimensionar lo hace O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué representa la notación Big O?",
+    code: "",
+    options: [
+      "El tiempo real que tarda un algoritmo en ejecutarse.",
+      "El peor caso del rendimiento de un algoritmo.",
+      "El uso de memoria promedio de un algoritmo.",
+      "La cantidad de líneas de código.",
+    ],
+    answer: 1,
+    explanation:
+      "Big O describe el peor caso del crecimiento de tiempo o espacio con respecto al tamaño de la entrada.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad del algoritmo de búsqueda binaria?",
+    code: "",
+    options: ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "La búsqueda binaria divide el problema por la mitad en cada paso, lo que la hace O(log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene recorrer todos los elementos de una HashMap en Java usando entrySet()?",
+    code: "",
+    options: ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+    answer: 0,
+    explanation:
+      "Recorrer una HashMap con entrySet() requiere visitar cada entrada, lo cual es O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad en el peor caso de inserción en una tabla hash con colisiones?",
+    code: "",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    answer: 2,
+    explanation:
+      "En el peor caso, todas las claves colisionan y se insertan en la misma lista: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene el algoritmo de ordenación QuickSort en el peor caso?",
+    code: "",
+    options: ["O(n log n)", "O(n)", "O(n^2)", "O(log n)"],
+    answer: 2,
+    explanation:
+      "QuickSort tiene un peor caso de O(n^2) cuando los pivotes dividen desbalanceadamente.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad espacial de una llamada recursiva simple?",
+    code: "",
+    options: ["O(1)", "O(n)", "O(n log n)", "O(log n)"],
+    answer: 1,
+    explanation:
+      "Cada llamada recursiva agrega un frame a la pila, por lo que el espacio crece con O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad del siguiente código?",
+    code: "for (int i = 1; i < n; i *= 2) {\n  System.out.println(i);\n}",
+    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    answer: 1,
+    explanation:
+      "El bucle se ejecuta log n veces porque i se multiplica por 2 en cada iteración.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué significa una complejidad de O(1)?",
+    code: "",
+    options: [
+      "El tiempo de ejecución aumenta linealmente con la entrada.",
+      "El tiempo de ejecución es constante sin importar la entrada.",
+      "La función solo se ejecuta una vez.",
+      "El algoritmo solo usa una unidad de memoria.",
+    ],
+    answer: 1,
+    explanation:
+      "O(1) significa que el tiempo de ejecución no depende del tamaño de la entrada.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad de ordenar una lista usando MergeSort?",
+    code: "",
+    options: ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
+    answer: 2,
+    explanation: "MergeSort divide y conquista con un coste de O(n log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad temporal de eliminar el primer elemento de un ArrayList en Java?",
+    code: "",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "Eliminar el primer elemento implica mover todos los elementos hacia atrás: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad del siguiente código?",
+    code: "for (int i = 0; i < n; i++) {\n  for (int j = 0; j < Math.sqrt(n); j++) {\n    System.out.println(i + j);\n  }\n}",
+    options: ["O(n)", "O(n sqrt(n))", "O(n log n)", "O(n^2)"],
+    answer: 1,
+    explanation:
+      "El bucle externo es O(n) y el interno es O(sqrt(n)), por lo tanto O(n sqrt(n)).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene un algoritmo que duplica la entrada y luego la ordena con QuickSort?",
+    code: "",
+    options: ["O(n^2)", "O(n log n)", "O(n)", "O(n + n log n)"],
+    answer: 3,
+    explanation:
+      "Duplicar es O(n), QuickSort es O(n log n). En total: O(n + n log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad en tiempo del siguiente código?",
+    code: "for (int i = 0; i < n; i++) {\n  if (i % 2 == 0) {\n    System.out.println(i);\n  }\n}",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    answer: 2,
+    explanation: "El bucle recorre todos los elementos una sola vez: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál es la complejidad temporal del siguiente fragmento de código?",
+    code: "for (int i = 1; i < n; i *= 2) {\n  for (int j = 0; j < n; j++) {\n    System.out.println(i + j);\n  }\n}",
+    options: ["O(n log n)", "O(log n)", "O(n)", "O(n^2)"],
+    answer: 0,
+    explanation:
+      "El bucle externo corre log n veces (multiplicación por 2), y el interno n veces. Total: O(n log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad representa mejor la función: T(n) = 5n^2 + 3n + 8?",
+    code: "",
+    options: ["O(n)", "O(n^2)", "O(log n)", "O(n^3)"],
+    answer: 1,
+    explanation:
+      "Solo se considera el término dominante en notación Big O: O(n^2). Los coeficientes y términos menores se ignoran.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué complejidad tiene insertar un elemento en un heap binario?",
+    code: "",
+    options: ["O(log n)", "O(n)", "O(1)", "O(n log n)"],
+    answer: 0,
+    explanation:
+      "Insertar en un heap requiere 'flotar' el nodo hacia su posición correcta: O(log n) en el peor caso.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene recorrer un árbol binario de búsqueda (BST) completo en orden?",
+    code: "",
+    options: ["O(log n)", "O(n)", "O(n log n)", "O(n^2)"],
+    answer: 1,
+    explanation:
+      "En un recorrido in-order se visita cada nodo exactamente una vez: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene este código que usa una función recursiva?",
+    code: "void f(int n) {\n  if (n == 0) return;\n  f(n - 1);\n  f(n - 1);\n}",
+    options: ["O(log n)", "O(2^n)", "O(n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "Cada llamada hace 2 llamadas recursivas, creando un árbol binario de llamadas: O(2^n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad en el peor caso de búsqueda en un árbol binario de búsqueda no balanceado?",
+    code: "",
+    options: ["O(log n)", "O(1)", "O(n)", "O(n log n)"],
+    answer: 2,
+    explanation:
+      "En el peor caso, el árbol se degrada a una lista enlazada: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad temporal de la siguiente función?",
+    code: "void print(int n) {\n  for (int i = 0; i < n; i++) {\n    for (int j = i; j < n; j++) {\n      System.out.println(i + j);\n    }\n  }\n}",
+    options: ["O(n^2)", "O(log n)", "O(n)", "O(n^3)"],
+    answer: 0,
+    explanation:
+      "El número de iteraciones disminuye con cada i, pero el total sigue siendo del orden de O(n^2).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene acceder a un valor en una tabla hash bien implementada?",
+    code: "",
+    options: ["O(log n)", "O(1)", "O(n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "Con una buena función hash y sin muchas colisiones, el acceso es en tiempo constante: O(1).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad amortizada de agregar un elemento a un ArrayList que se redimensiona automáticamente?",
+    code: "",
+    options: ["O(n)", "O(n log n)", "O(1)", "O(log n)"],
+    answer: 2,
+    explanation:
+      "Aunque ocasionalmente se copia el arreglo, la mayoría de las inserciones son O(1). Promedio amortizado: O(1).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene la búsqueda lineal en una lista desordenada?",
+    code: "",
+    options: ["O(log n)", "O(1)", "O(n)", "O(n^2)"],
+    answer: 2,
+    explanation:
+      "Debe revisar cada elemento hasta encontrar el objetivo o llegar al final: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "Dado un algoritmo con complejidad O(n!), ¿cuál es el comportamiento esperado al aumentar n?",
+    code: "",
+    options: [
+      "Crecimiento muy rápido, factorial",
+      "Lineal",
+      "Crecimiento logarítmico",
+      "Constante",
+    ],
+    answer: 0,
+    explanation:
+      "O(n!) es una de las peores complejidades posibles. El número de operaciones crece factorialmente con n.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad del siguiente código?",
+    code: "for (int i = 0; i < n; i++) {\n  System.out.println(i);\n}\nfor (int j = 0; j < n; j++) {\n  System.out.println(j);\n}",
+    options: ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
+    answer: 0,
+    explanation: "Dos bucles separados de O(n) suman a O(n), no O(n^2).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad en el mejor caso de la búsqueda binaria?",
+    code: "",
+    options: ["O(log n)", "O(1)", "O(n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "Si el valor buscado está justo en el medio, se encuentra en la primera iteración: O(1).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene recorrer un grafo con BFS en su totalidad?",
+    code: "",
+    options: ["O(V + E)", "O(V log V)", "O(E^2)", "O(V^2)"],
+    answer: 0,
+    explanation: "BFS visita cada vértice y cada arista una vez: O(V + E).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué representa la notación Omega (Ω) en análisis algorítmico?",
+    code: "",
+    options: [
+      "El mejor caso de ejecución de un algoritmo.",
+      "El crecimiento promedio esperado.",
+      "El número total de operaciones.",
+      "El peor caso de ejecución.",
+    ],
+    answer: 0,
+    explanation:
+      "Omega (Ω) describe el caso más optimista o mejor escenario posible en el tiempo de ejecución.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál es la complejidad temporal del siguiente fragmento de código?",
+    code: 'for (int i = 0; i < n; i++) {\n  for (int j = 0; j < n; j++) {\n    System.out.println(i + "," + j);\n  }\n}',
+    options: ["O(n)", "O(n^2)", "O(log n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "Dos bucles anidados que recorren hasta n implican una complejidad cuadrática O(n^2).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad temporal del método Arrays.sort() en Java (para arrays primitivos)?",
+    code: "",
+    options: ["O(n^2)", "O(n)", "O(n log n)", "O(log n)"],
+    answer: 2,
+    explanation:
+      "Java usa Dual-Pivot QuickSort para arrays primitivos, que tiene una complejidad promedio de O(n log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad del acceso a un elemento en un ArrayList por índice?",
+    code: "",
+    options: ["O(n)", "O(1)", "O(log n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "El acceso por índice en un ArrayList es O(1) porque internamente usa un array.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad del método contains() en un HashSet?",
+    code: "",
+    options: ["O(n)", "O(1)", "O(log n)", "O(n log n)"],
+    answer: 1,
+    explanation:
+      "En promedio, las operaciones de búsqueda en un HashSet son O(1), gracias al uso de tablas hash.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la peor complejidad de búsqueda en un HashMap?",
+    code: "",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    answer: 2,
+    explanation:
+      "En el peor caso (colisiones extremas), un HashMap puede degradarse a una lista enlazada, dando O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad de insertar un nodo en una lista enlazada simple al inicio?",
+    code: "",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    answer: 0,
+    explanation:
+      "Insertar al inicio de una lista enlazada simple toma tiempo constante O(1).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué complejidad tiene recorrer un árbol binario completo?",
+    code: "",
+    options: ["O(log n)", "O(n log n)", "O(n)", "O(n^2)"],
+    answer: 2,
+    explanation:
+      "Un recorrido completo de un árbol binario visita todos los nodos, por lo tanto es O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene una búsqueda binaria en un array ordenado?",
+    code: "",
+    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    answer: 1,
+    explanation:
+      "La búsqueda binaria divide el espacio de búsqueda a la mitad en cada paso, lo que da O(log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué complejidad tiene el siguiente código?",
+    code: "for (int i = 1; i < n; i = i * 2) {\n  System.out.println(i);\n}",
+    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    answer: 1,
+    explanation:
+      "La variable 'i' se duplica cada vez, por lo que el bucle se ejecuta log₂(n) veces: O(log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad de insertar en una cola (Queue) implementada con una LinkedList?",
+    code: "",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    answer: 0,
+    explanation:
+      "Insertar en una cola con LinkedList es O(1) porque agrega al final mediante punteros.",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad de ordenar un array con MergeSort?",
+    code: "",
+    options: ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
+    answer: 2,
+    explanation:
+      "MergeSort divide el array en partes y las ordena, logrando una complejidad O(n log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene acceder al último elemento de un LinkedList?",
+    code: "",
+    options: ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    answer: 0,
+    explanation:
+      "LinkedList no tiene acceso directo, por lo que debe recorrer desde el inicio: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué complejidad tiene agregar un elemento al final de un ArrayList cuando no hay espacio disponible?",
+    code: "",
+    options: ["O(n)", "O(1) amortizado", "O(log n)", "O(n log n)"],
+    answer: 0,
+    explanation:
+      "Cuando el array interno se llena, debe copiar todos los elementos a uno nuevo: O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué complejidad tiene este código?",
+    code: 'for (int i = 0; i < n; i++) {\n  for (int j = 0; j < Math.log(i + 1); j++) {\n    System.out.println(i + "," + j);\n  }\n}',
+    options: ["O(n log n)", "O(log n)", "O(n)", "O(n^2)"],
+    answer: 0,
+    explanation:
+      "El bucle externo es O(n) y el interno es O(log n) en promedio: O(n log n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad espacial de un algoritmo que usa una pila de recursión con profundidad n?",
+    code: "",
+    options: ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+    answer: 2,
+    explanation:
+      "Cada llamada recursiva consume espacio en la pila, por lo tanto la complejidad espacial es O(n).",
+    subtheme: "Big O Notation",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál es el principal problema de una función recursiva que no tiene una condición base?",
+    code: "",
+    options: [
+      "Puede ejecutar más rápido que su equivalente iterativo",
+      "Provoca un StackOverflowError",
+      "Es más eficiente en tiempo",
+      "Consume menos memoria",
+    ],
+    answer: 1,
+    explanation:
+      "Sin una condición base, la función se llama a sí misma infinitamente, lo que eventualmente causa un desbordamiento de pila.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué imprime el siguiente código?",
+    code: 'void print(int n) {\n  if (n == 0) return;\n  print(n - 1);\n  System.out.print(n + " ");\n}\n\nprint(3);',
+    options: ["3 2 1", "1 2 3", "0 1 2 3", "3 3 3"],
+    answer: 1,
+    explanation:
+      "La función recursiva va al fondo primero (n=0), luego imprime al regresar: 1 2 3.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad temporal de la implementación recursiva clásica de Fibonacci?",
+    code: "int fib(int n) {\n  if (n <= 1) return n;\n  return fib(n - 1) + fib(n - 2);\n}",
+    options: ["O(n)", "O(log n)", "O(2^n)", "O(n^2)"],
+    answer: 2,
+    explanation:
+      "Cada llamada genera dos más, resultando en una complejidad exponencial: O(2^n).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es la recursión de cola (tail recursion)?",
+    code: "",
+    options: [
+      "Una recursión que se ejecuta al principio de la función",
+      "Una función recursiva que tiene múltiples condiciones base",
+      "Una función recursiva donde la llamada recursiva es la última instrucción",
+      "Una función recursiva que usa una cola (queue)",
+    ],
+    answer: 2,
+    explanation:
+      "En la recursión de cola, la llamada recursiva es la última acción realizada, permitiendo optimizaciones por el compilador.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué resultado produce la siguiente función?",
+    code: "int mystery(int n) {\n  if (n <= 1) return 1;\n  return n * mystery(n - 1);\n}\n\nmystery(4);",
+    options: ["24", "12", "4", "10"],
+    answer: 0,
+    explanation:
+      "La función calcula el factorial de un número. 4! = 4 * 3 * 2 * 1 = 24.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica se puede usar para mejorar el rendimiento de una función recursiva como Fibonacci?",
+    code: "",
+    options: [
+      "Recursión de cola",
+      "Recursión mutua",
+      "Memorización (Memoization)",
+      "Condiciones base múltiples",
+    ],
+    answer: 2,
+    explanation:
+      "La memorización guarda resultados previos para evitar recomputaciones costosas en funciones recursivas.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué se necesita para transformar una función recursiva en una versión iterativa?",
+    code: "",
+    options: [
+      "Utilizar menos variables",
+      "Usar una pila explícita (Stack)",
+      "Eliminar la condición base",
+      "Usar recursión mutua",
+    ],
+    answer: 1,
+    explanation:
+      "La mayoría de las funciones recursivas se pueden transformar en iterativas utilizando una pila explícita para simular el comportamiento.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué función representa una recursión mutua?",
+    code: "",
+    options: [
+      "Una función que llama a sí misma directamente",
+      "Dos funciones que se llaman entre sí",
+      "Una función que no tiene return",
+      "Una función con múltiples llamadas recursivas",
+    ],
+    answer: 1,
+    explanation:
+      "La recursión mutua ocurre cuando dos (o más) funciones se llaman entre sí recursivamente.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué problema puede tener una recursión muy profunda?",
+    code: "",
+    options: [
+      "Demasiadas llamadas IO",
+      "StackOverflowError",
+      "Overflow aritmético",
+      "Underflow de variables",
+    ],
+    answer: 1,
+    explanation:
+      "La pila de llamadas tiene un tamaño limitado. Una recursión profunda puede agotarla y causar StackOverflowError.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué imprime este código?",
+    code: 'void mystery(int n) {\n  if (n == 0) return;\n  System.out.print(n + " ");\n  mystery(n - 1);\n  System.out.print(n + " ");\n}\n\nmystery(2);',
+    options: ["2 1 0 0 1 2", "2 1 1 2", "2 1 1 2", "2 1 1 2"],
+    answer: 1,
+    explanation: "Imprime al entrar y al salir: 2 1 1 2.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué estructura de datos usa internamente el sistema para manejar llamadas recursivas?",
+    code: "",
+    options: ["Lista enlazada", "Cola (Queue)", "Pila (Stack)", "Heap"],
+    answer: 2,
+    explanation:
+      "La pila (stack) se usa para almacenar el contexto de cada llamada recursiva.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué tipo de problema es más adecuado para una solución recursiva?",
+    code: "",
+    options: [
+      "Problemas con muchas variables",
+      "Problemas con estructura repetitiva o dividida en subproblemas",
+      "Problemas donde se evita el uso de pila",
+      "Problemas de ordenamiento por burbuja",
+    ],
+    answer: 1,
+    explanation:
+      "La recursión es adecuada cuando el problema se puede dividir en subproblemas similares, como en divide y vencerás.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué sucede en la siguiente función cuando se llama con n=3?",
+    code: "void call(int n) {\n  if (n == 0) return;\n  call(n - 1);\n  call(n - 1);\n}",
+    options: [
+      "Se llama 3 veces",
+      "Se llama 6 veces",
+      "Se llama 7 veces",
+      "Se llama infinitamente",
+    ],
+    answer: 2,
+    explanation:
+      "La función se duplica en cada nivel: se llama 2^n - 1 veces = 7.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una ventaja de la recursión sobre la iteración?",
+    code: "",
+    options: [
+      "Menor uso de memoria",
+      "Mejor legibilidad para algunos problemas como árboles",
+      "Siempre es más rápida",
+      "Evita errores lógicos",
+    ],
+    answer: 1,
+    explanation:
+      "La recursión puede expresar ciertos algoritmos de forma más natural y legible, especialmente estructuras jerárquicas como árboles.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Cuál es el resultado de esta función recursiva?",
+    code: "int sum(int n) {\n  if (n == 0) return 0;\n  return n + sum(n - 1);\n}\nsum(4);",
+    options: ["4", "10", "6", "0"],
+    answer: 1,
+    explanation:
+      "La función suma los números de 4 a 0. Resultado: 4+3+2+1+0 = 10.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón de programación representa mejor una función recursiva que delega el problema a un subproblema más pequeño?",
+    code: "",
+    options: ["Divide y vencerás", "Backtracking", "Greedy", "MapReduce"],
+    answer: 0,
+    explanation:
+      "El patrón 'divide y vencerás' resuelve un problema dividiéndolo en subproblemas más pequeños recursivamente.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el número total de llamadas que hace esta función para n=2?",
+    code: "void f(int n) {\n  if (n == 0) return;\n  f(n - 1);\n  f(n - 1);\n}",
+    options: ["3", "4", "5", "7"],
+    answer: 1,
+    explanation:
+      "Para n=2, la función se llama 1 (n=2) + 2 (n=1) + 4 (n=0) = 4 llamadas (porque las de n=0 no hacen más llamadas).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué tipo de recursión ocurre cuando la función hace llamadas múltiples a sí misma por ejecución?",
+    code: "",
+    options: [
+      "Recursión lineal",
+      "Recursión de cola",
+      "Recursión binaria",
+      "Recursión mutua",
+    ],
+    answer: 2,
+    explanation:
+      "La recursión binaria ocurre cuando se hacen múltiples llamadas recursivas en cada paso, como en el árbol binario o Fibonacci.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes problemas es comúnmente resuelto usando recursión?",
+    code: "",
+    options: [
+      "Ordenamiento de burbuja",
+      "Traversal en árbol binario",
+      "Multiplicación básica",
+      "Buscar máximo en array",
+    ],
+    answer: 1,
+    explanation:
+      "Recorrer árboles es un caso clásico de aplicación recursiva, como inorden, preorden o postorden.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si una función recursiva llama a sí misma sin reducir el tamaño del problema?",
+    code: "",
+    options: [
+      "La ejecución se optimiza automáticamente",
+      "La función nunca termina",
+      "Se convierte en iterativa",
+      "Retorna null",
+    ],
+    answer: 1,
+    explanation:
+      "La función entrará en una recursión infinita, causando un StackOverflow.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué alternativa se recomienda cuando una función recursiva genera demasiadas llamadas innecesarias?",
+    code: "",
+    options: [
+      "Uso de heap",
+      "Uso de bucles for",
+      "Uso de memoization",
+      "Uso de hilos",
+    ],
+    answer: 2,
+    explanation:
+      "La memoización evita repetir el mismo cálculo guardando resultados previos, ideal para optimizar recursión.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el propósito de la condición base en una función recursiva?",
+    code: "",
+    options: [
+      "Reiniciar la recursión",
+      "Detener la recursión",
+      "Imprimir el resultado",
+      "Dividir el código en bloques",
+    ],
+    answer: 1,
+    explanation:
+      "La condición base es crucial para detener la recursión y evitar llamadas infinitas.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué valor retorna esta función con input n=3?",
+    code: "int g(int n) {\n  if (n <= 1) return 1;\n  return g(n - 1) + g(n - 2);\n}",
+    options: ["3", "4", "2", "1"],
+    answer: 0,
+    explanation:
+      "La función calcula Fibonacci: g(3) = g(2) + g(1) = 2 + 1 = 3.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué se recomienda hacer antes de implementar una función recursiva compleja?",
+    code: "",
+    options: [
+      "Buscar una solución greedy",
+      "Visualizar el árbol de recursión",
+      "Convertirlo a pseudocódigo iterativo",
+      "Evitar la condición base",
+    ],
+    answer: 1,
+    explanation:
+      "Visualizar el árbol ayuda a entender la cantidad de llamadas y subproblemas involucrados.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la salida de este código?",
+    code: 'void rec(int n) {\n  if (n == 0) return;\n  rec(n - 1);\n  System.out.print(n + " ");\n}\nrec(3);',
+    options: ["1 2 3", "3 2 1", "0 1 2", "0 1 2 3"],
+    answer: 0,
+    explanation:
+      "Las llamadas se hacen hasta n=0, luego imprimen al regresar: 1 2 3.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica permite usar recursión en problemas donde se requiere optimización?",
+    code: "",
+    options: [
+      "Branch and Bound",
+      "Memoization y programación dinámica",
+      "Multiprocesamiento",
+      "Ciclo for",
+    ],
+    answer: 1,
+    explanation:
+      "La memoización guarda subresultados, lo cual convierte una solución recursiva ineficiente en una eficiente.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace este código?",
+    code: "int f(int n) {\n  if (n == 0) return 1;\n  return 2 * f(n - 1);\n}\nf(3);",
+    options: ["6", "8", "3", "12"],
+    answer: 1,
+    explanation:
+      "Es una potencia de 2: f(3) = 2 * f(2) = 2 * 2 * f(1) = 2 * 2 * 2 * f(0) = 8.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica permite convertir recursión en iteración usando una pila explícita?",
+    code: "",
+    options: ["Memoization", "DFS", "Simulación de recursión", "Greedy"],
+    answer: 2,
+    explanation:
+      "La recursión puede simularse manualmente usando una pila explícita para guardar el estado de ejecución.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué significa que una función sea recursiva directa?",
+    code: "",
+    options: [
+      "Se llama desde otra función",
+      "Se llama a sí misma",
+      "Llama a dos funciones diferentes",
+      "Usa ciclo while dentro",
+    ],
+    answer: 1,
+    explanation:
+      "La recursión directa ocurre cuando una función se llama a sí misma explícitamente.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál es la complejidad temporal del algoritmo de Fibonacci recursivo sin memoización?",
+    code: "int fib(int n) {\n  if (n <= 1) return n;\n  return fib(n - 1) + fib(n - 2);\n}",
+    options: ["O(n)", "O(log n)", "O(n^2)", "O(2^n)"],
+    answer: 3,
+    explanation:
+      "Cada llamada genera dos nuevas llamadas, formando un árbol binario con complejidad exponencial O(2^n).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si no se define correctamente la condición base en una función recursiva?",
+    code: "",
+    options: [
+      "Se ejecuta una sola vez",
+      "Genera una excepción lógica",
+      "La función se convierte en iterativa",
+      "Produce un desbordamiento de pila (StackOverflow)",
+    ],
+    answer: 3,
+    explanation:
+      "Sin condición base, la recursión continúa indefinidamente, lo que termina en un StackOverflow.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica permite evitar la recursión infinita en algoritmos como DFS sobre grafos?",
+    code: "",
+    options: [
+      "Uso de listas de adyacencia",
+      "Contador global",
+      "Set de nodos visitados",
+      "Variables estáticas",
+    ],
+    answer: 2,
+    explanation:
+      "Se usa un conjunto de nodos visitados para evitar ciclos y llamadas infinitas en grafos con ciclos.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace este código recursivo?",
+    code: "void f(int n) {\n  if (n == 0) return;\n  f(n / 2);\n  System.out.print(n % 2);\n}",
+    options: [
+      "Convierte n a binario",
+      "Imprime la serie Fibonacci",
+      "Cuenta recursiones",
+      "Imprime números pares",
+    ],
+    answer: 0,
+    explanation:
+      "Divide n por 2 y imprime el residuo: es una conversión recursiva a binario.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón sigue esta recursión?",
+    code: "int fun(int n) {\n  if (n == 0) return 1;\n  return n * fun(n - 1);\n}",
+    options: [
+      "Tail recursion",
+      "Backtracking",
+      "Divide and conquer",
+      "Factorial",
+    ],
+    answer: 3,
+    explanation:
+      "La función calcula el factorial de n. Es un ejemplo clásico de recursión directa simple.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la ventaja principal de la tail recursion?",
+    code: "",
+    options: [
+      "Evita condiciones base",
+      "Es más legible",
+      "Permite optimización por el compilador",
+      "No necesita memoria adicional",
+    ],
+    answer: 2,
+    explanation:
+      "La tail recursion puede ser optimizada por el compilador para evitar uso excesivo de pila.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál sería la salida del siguiente código?",
+    code: "void f(int n) {\n  if (n == 0) return;\n  System.out.print(n);\n  f(n - 1);\n  System.out.print(n);\n}\nf(2);",
+    options: ["2121", "2112", "1221", "2211"],
+    answer: 0,
+    explanation:
+      "Primero imprime n (2), luego recursión (1), luego n de nuevo. Resultado: 2 1 1 2.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué tipo de problemas suelen beneficiarse más del enfoque recursivo?",
+    code: "",
+    options: [
+      "Problemas secuenciales",
+      "Problemas repetitivos simples",
+      "Problemas que se resuelven dividiendo en subproblemas",
+      "Problemas sin base inductiva",
+    ],
+    answer: 2,
+    explanation:
+      "La recursión es ideal cuando el problema puede dividirse en versiones más pequeñas de sí mismo.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué estructura de datos se utiliza implícitamente para manejar llamadas recursivas?",
+    code: "",
+    options: ["Pila (stack)", "Cola (queue)", "Lista enlazada", "Heap"],
+    answer: 0,
+    explanation:
+      "Cada llamada recursiva se guarda en la pila de llamadas del sistema hasta que se resuelva.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la principal desventaja de la recursión en términos de recursos?",
+    code: "",
+    options: [
+      "Es muy lenta",
+      "Consume más memoria por el stack",
+      "No es legible",
+      "No se puede depurar",
+    ],
+    answer: 1,
+    explanation:
+      "Cada llamada recursiva añade un nuevo frame a la pila, lo que puede causar desbordamientos si no se maneja bien.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad del recorrido inorden (in-order) en un árbol binario con n nodos?",
+    code: "",
+    options: ["O(n log n)", "O(log n)", "O(n)", "O(n^2)"],
+    answer: 2,
+    explanation:
+      "Cada nodo se visita una vez, por lo tanto la complejidad es O(n).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué salida produce este código?",
+    code: "void print(int n) {\n  if (n == 0) return;\n  print(n - 1);\n  System.out.print(n);\n}\nprint(3);",
+    options: ["321", "123", "1123", "3210"],
+    answer: 1,
+    explanation:
+      "Imprime después de la llamada recursiva, por lo tanto: 1 2 3.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué salida se imprime con este código?",
+    code: "void f(int n) {\n  if (n < 0) return;\n  System.out.print(n);\n  f(n - 2);\n}\nf(5);",
+    options: ["531", "54321", "5310", "520"],
+    answer: 2,
+    explanation: "Imprime n antes de cada llamada recursiva con n-2: 5 3 1 0.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué se puede afirmar de una función recursiva tail-call optimizable?",
+    code: "",
+    options: [
+      "Tiene múltiples llamadas recursivas",
+      "Retorna la llamada recursiva directamente",
+      "Requiere condiciones complejas",
+      "Usa estructuras auxiliares",
+    ],
+    answer: 1,
+    explanation:
+      "Una función tail-call optimizable retorna directamente el valor de la llamada recursiva, sin hacer trabajo extra después.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué característica debe tener una función para ser considerada tail-recursive?",
+    code: "",
+    options: [
+      "Llamarse a sí misma en medio del cuerpo",
+      "No tener condiciones base",
+      "Realizar su llamada recursiva como la última instrucción",
+      "Usar múltiples llamadas recursivas",
+    ],
+    answer: 2,
+    explanation:
+      "La tail recursion ocurre cuando la llamada recursiva es la última operación que se ejecuta, permitiendo optimización de la pila.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el principal problema al usar recursión en estructuras de datos muy profundas?",
+    code: "",
+    options: [
+      "Pérdida de precisión",
+      "Ciclo infinito",
+      "Stack overflow",
+      "División por cero",
+    ],
+    answer: 2,
+    explanation:
+      "En estructuras de datos profundas, como árboles desbalanceados, la recursión puede causar desbordamiento de pila (Stack Overflow).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la salida del siguiente código recursivo?",
+    code: "void f(int n) {\n  if (n <= 0) return;\n  f(n - 1);\n  System.out.print(n);\n  f(n - 1);\n}\nf(2);",
+    options: ["121", "1122", "1212", "2112"],
+    answer: 0,
+    explanation:
+      "f(2) → f(1) → f(0) → print(1) → f(0) → print(2) → f(1) → f(0) → print(1) → f(0): resultado 121.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué significa 'recursión indirecta'?",
+    code: "",
+    options: [
+      "Una función que se llama a sí misma directamente",
+      "Una función que no se llama a sí misma",
+      "Una función que llama a otra que a su vez la llama",
+      "Una función que se ejecuta en segundo plano",
+    ],
+    answer: 2,
+    explanation:
+      "La recursión indirecta ocurre cuando una función A llama a B, y B vuelve a llamar a A.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la salida del siguiente código?",
+    code: 'void mystery(int n) {\n  if (n == 0) return;\n  mystery(n - 1);\n  System.out.print(n + " ");\n  mystery(n - 1);\n}\nmystery(2);',
+    options: ["1 2 1", "1 1 2", "1 1 2 1 1", "1 2 2"],
+    answer: 2,
+    explanation:
+      "Este código genera un recorrido simétrico binario: 1 1 2 1 1.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el objetivo principal de la memoización en recursión?",
+    code: "",
+    options: [
+      "Reducir el tamaño de entrada",
+      "Guardar resultados ya calculados",
+      "Evitar llamadas recursivas",
+      "Eliminar la condición base",
+    ],
+    answer: 1,
+    explanation:
+      "La memoización almacena resultados intermedios para evitar repetir cálculos costosos en recursión.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué problema puede resolverse eficientemente con recursión y backtracking?",
+    code: "",
+    options: [
+      "Ordenamiento por selección",
+      "Multiplicación de matrices",
+      "Sudoku",
+      "Interpolación de polinomios",
+    ],
+    answer: 2,
+    explanation:
+      "Sudoku es un problema típico de búsqueda de solución con restricciones, ideal para recursión + backtracking.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la complejidad del algoritmo de Torre de Hanoi con n discos?",
+    code: "",
+    options: ["O(n)", "O(2^n)", "O(n log n)", "O(n^2)"],
+    answer: 1,
+    explanation:
+      "El número de movimientos requeridos para resolver Torre de Hanoi es 2^n - 1, es decir, O(2^n).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes afirmaciones sobre recursión mutua es correcta?",
+    code: "",
+    options: [
+      "Solo funciona en funciones estáticas",
+      "Solo se usa en programación funcional",
+      "Implica dos funciones que se llaman entre sí recursivamente",
+      "No tiene condición base",
+    ],
+    answer: 2,
+    explanation:
+      "La recursión mutua se da cuando dos o más funciones se llaman entre sí formando un ciclo recursivo.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito de la condición base en recursión?",
+    code: "",
+    options: [
+      "Evitar cálculos innecesarios",
+      "Evitar la ejecución del programa",
+      "Garantizar la terminación",
+      "Reducir la memoria",
+    ],
+    answer: 2,
+    explanation:
+      "La condición base asegura que la recursión se detenga en algún punto, evitando bucles infinitos.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de estos algoritmos divide el problema en subproblemas más pequeños recursivamente?",
+    code: "",
+    options: ["Dijkstra", "Floyd-Warshall", "Merge Sort", "Prim"],
+    answer: 2,
+    explanation:
+      "Merge Sort utiliza divide y vencerás con recursión: divide el array, lo ordena y luego fusiona.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "En programación funcional, ¿cómo se utiliza típicamente la recursión?",
+    code: "",
+    options: [
+      "Para acceder a bases de datos",
+      "Como sustituto de estructuras repetitivas como bucles",
+      "Para manejar errores",
+      "Para definir objetos",
+    ],
+    answer: 1,
+    explanation:
+      "En programación funcional no se usan bucles imperativos, por lo que la recursión se usa para repetición.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué representa el caso base en la recursión matemática de factorial(n)?",
+    code: "",
+    options: ["n = 2", "n = 1", "n = 0", "n = -1"],
+    answer: 2,
+    explanation:
+      "Por definición, factorial(0) = 1, ese es el caso base más común para la función factorial recursiva.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito de una función auxiliar en recursión?",
+    code: "",
+    options: [
+      "Reducir la complejidad del algoritmo",
+      "Evitar errores de compilación",
+      "Encapsular variables adicionales",
+      "Generar múltiples condiciones base",
+    ],
+    answer: 2,
+    explanation:
+      "Una función auxiliar permite usar variables adicionales sin modificar la firma de la función principal recursiva.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad temporal del siguiente algoritmo?",
+    code: "int f(int n) {\n  if (n <= 1) return 1;\n  return f(n - 1) + f(n - 1);\n}",
+    options: ["O(n)", "O(n log n)", "O(2^n)", "O(log n)"],
+    answer: 2,
+    explanation:
+      "La función realiza dos llamadas recursivas con n-1 en cada paso. Esto da lugar a una rama binaria completa, lo que lleva a una complejidad exponencial O(2^n).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica convierte un algoritmo recursivo en uno iterativo usando una estructura auxiliar?",
+    code: "",
+    options: [
+      "Backtracking",
+      "Memoization",
+      "Tabulation",
+      "Simulación con pila",
+    ],
+    answer: 3,
+    explanation:
+      "Simular la pila de llamadas con una estructura de datos tipo Stack permite convertir recursión en iteración.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el principal beneficio de la recursión sobre la iteración en árboles?",
+    code: "",
+    options: [
+      "Más rápida ejecución",
+      "Menor uso de memoria",
+      "Código más simple y natural",
+      "Mejor rendimiento para árboles binarios",
+    ],
+    answer: 2,
+    explanation:
+      "La recursión permite expresar recorridos de árboles (como DFS) de forma clara, elegante y concisa.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la complejidad del siguiente código recursivo?",
+    code: "void f(int n) {\n  if (n <= 1) return;\n  f(n/2);\n  f(n/2);\n}",
+    options: ["O(log n)", "O(n)", "O(n log n)", "O(n)"],
+    answer: 0,
+    explanation:
+      "Cada llamada divide n entre 2 y se llama dos veces. El árbol resultante tiene altura log n y 2^log n nodos = O(n). Pero cada rama es log n, y no hay operaciones costosas, por lo que la complejidad total es O(n).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el riesgo de usar recursión sin una condición base?",
+    code: "",
+    options: [
+      "Baja eficiencia",
+      "Stack Overflow",
+      "Pérdida de datos",
+      "Ciclo de vida corto de variables",
+    ],
+    answer: 1,
+    explanation:
+      "Sin condición base, la recursión continúa indefinidamente hasta desbordar la pila de llamadas (Stack Overflow).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes problemas es mejor resolver con recursión que con iteración?",
+    code: "",
+    options: [
+      "Buscar en una lista ordenada",
+      "Fibonacci",
+      "Permutaciones",
+      "Contar elementos en un array",
+    ],
+    answer: 2,
+    explanation:
+      "Generar permutaciones requiere un enfoque recursivo y de backtracking para explorar todas las combinaciones posibles.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si no se clona una lista mutable dentro de una función recursiva que modifica su contenido?",
+    code: "",
+    options: [
+      "Nada",
+      "Se optimiza la ejecución",
+      "El estado se comparte entre llamadas",
+      "Mejor rendimiento",
+    ],
+    answer: 2,
+    explanation:
+      "Al no clonar, las llamadas comparten el mismo estado, lo que puede producir resultados incorrectos debido a mutaciones compartidas.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica permite reducir una recursión top-down a una versión bottom-up?",
+    code: "",
+    options: ["Memoization", "Tail recursion", "Tabulation", "Inlining"],
+    answer: 2,
+    explanation:
+      "Tabulación es una forma iterativa (bottom-up) de resolver problemas que normalmente se abordan con recursión top-down.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "En la función recursiva clásica de Fibonacci, ¿cuántas veces se evalúa fib(1) para fib(5)?",
+    code: "",
+    options: ["3 veces", "5 veces", "8 veces", "13 veces"],
+    answer: 2,
+    explanation:
+      "En la recursión ingenua de Fibonacci, la función genera un árbol binario de llamadas. fib(1) se calcula 8 veces para fib(5).",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la desventaja de la recursión en lenguajes que no optimizan tail recursion?",
+    code: "",
+    options: [
+      "Mayor tiempo de compilación",
+      "Código ilegible",
+      "Mayor consumo de memoria por pila",
+      "Complejidad O(1)",
+    ],
+    answer: 2,
+    explanation:
+      "Si el compilador no optimiza tail recursion, cada llamada ocupa espacio en la pila, lo que puede llevar a stack overflow.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál de las siguientes afirmaciones es falsa sobre recursión?",
+    code: "",
+    options: [
+      "Puede ser usada para problemas divide y vencerás",
+      "Siempre es más rápida que iteración",
+      "Puede reemplazar a los bucles",
+      "Puede ser difícil de depurar",
+    ],
+    answer: 1,
+    explanation:
+      "La recursión no siempre es más rápida que la iteración; de hecho, puede ser menos eficiente si no se optimiza adecuadamente.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la salida del siguiente código?",
+    code: "int sum(int n) {\n  if (n == 0) return 0;\n  return n + sum(n - 1);\n}\nSystem.out.println(sum(3));",
+    options: ["3", "6", "0", "10"],
+    answer: 1,
+    explanation: "sum(3) = 3 + 2 + 1 + 0 = 6",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué es lo más importante para evitar un StackOverflow en recursión profunda?",
+    code: "",
+    options: [
+      "Evitar estructuras anidadas",
+      "Usar variables globales",
+      "Limitar profundidad o usar tail recursion",
+      "Declarar la función como static",
+    ],
+    answer: 2,
+    explanation:
+      "Usar tail recursion o limitar la profundidad garantiza que la pila no se desborde en llamadas recursivas profundas.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cómo puedes asegurar que una recursión múltiple no duplique trabajo innecesariamente?",
+    code: "",
+    options: [
+      "Usar estructuras inmutables",
+      "Evitar estructuras de control",
+      "Memoization",
+      "Dividir el problema en partes más grandes",
+    ],
+    answer: 2,
+    explanation:
+      "La memoización guarda los resultados de subproblemas ya resueltos, evitando recomputaciones costosas.",
+    subtheme: "Recursion",
+    group: "Estructura de Datos",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la diferencia principal entre @Component y @Service en Spring?",
+    code: "",
+    options: [
+      "@Service permite usar AOP directamente, mientras que @Component no.",
+      "@Component solo puede aplicarse a interfaces.",
+      "@Service no es detectado automáticamente por @ComponentScan.",
+      "@Service hereda directamente de @RestController.",
+    ],
+    answer: 0,
+    explanation:
+      "@Service es una especialización de @Component pensada para clases de lógica de negocio. A nivel funcional son iguales, pero @Service puede aprovechar aspectos de AOP y proporciona semántica más clara.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué hace la anotación @Repository adicionalmente a marcar un componente como bean?",
+    code: "",
+    options: [
+      "Activa la serialización automática de objetos.",
+      "Traduce excepciones específicas de la base de datos a excepciones Spring genéricas.",
+      "Habilita transacciones distribuidas.",
+      "Permite la creación de beans singleton por defecto.",
+    ],
+    answer: 1,
+    explanation:
+      "La anotación @Repository convierte automáticamente excepciones específicas de acceso a datos (como SQLException) en excepciones genéricas de Spring como DataAccessException.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la función de @Qualifier en Spring?",
+    code: "",
+    options: [
+      "Permitir usar beans estáticos.",
+      "Restringir el escaneo de componentes a un paquete específico.",
+      "Especificar qué bean debe inyectarse cuando hay múltiples candidatos.",
+      "Indicar que un bean debe inyectarse por nombre y no por tipo.",
+    ],
+    answer: 2,
+    explanation:
+      "@Qualifier se usa junto con @Autowired para seleccionar un bean específico cuando hay múltiples candidatos disponibles.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el comportamiento por defecto del scope de los beans en Spring?",
+    code: "",
+    options: ["request", "prototype", "singleton", "application"],
+    answer: 2,
+    explanation:
+      "Por defecto, todos los beans en Spring son singleton, lo que significa que solo se crea una instancia por contenedor de Spring.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué anotación reemplaza @RequestMapping para métodos HTTP GET?",
+    code: "",
+    options: ["@PostMapping", "@GetMapping", "@RequestBody", "@Controller"],
+    answer: 1,
+    explanation:
+      "@GetMapping es una forma especializada de @RequestMapping que simplifica la definición de métodos que manejan solicitudes HTTP GET.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la siguiente clase en una aplicación Spring Boot?",
+    code: '@RestController\npublic class ApiController {\n  @GetMapping("/status")\n  public String status() {\n    return "OK";\n  }\n}',
+    options: [
+      "Responde con HTML en formato plantilla.",
+      "Expone un endpoint REST que devuelve texto plano.",
+      "Solo funciona si se usa junto a @Service.",
+      "Devuelve una página JSP.",
+    ],
+    answer: 1,
+    explanation:
+      "La clase es un controlador REST y el método anotado con @GetMapping expone un endpoint que devuelve texto plano ('OK') en formato JSON o String.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el propósito de la anotación @Bean dentro de una clase @Configuration?",
+    code: "",
+    options: [
+      "Indica que la clase es un servicio REST.",
+      "Declara un componente escaneable.",
+      "Define manualmente un bean que será gestionado por el contenedor.",
+      "Expone una clase como Entity.",
+    ],
+    answer: 2,
+    explanation:
+      "El método anotado con @Bean define un bean de Spring manualmente dentro de una clase @Configuration, útil para beans de terceros o configuraciones personalizadas.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué resultado genera el siguiente código si hay dos implementaciones de ClienteService?",
+    code: "@Autowired\nprivate ClienteService clienteService;",
+    options: [
+      "Spring inyecta automáticamente la implementación más reciente.",
+      "Se lanza una excepción por ambigüedad.",
+      "Spring escoge aleatoriamente un bean.",
+      "El código compila pero no se inyecta ningún bean.",
+    ],
+    answer: 1,
+    explanation:
+      "Si existen múltiples beans del mismo tipo y no se especifica un @Qualifier, Spring lanza una excepción indicando ambigüedad al inyectar la dependencia.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué función cumple la anotación @SpringBootApplication?",
+    code: "",
+    options: [
+      "Define todos los controladores REST.",
+      "Activa la inyección de dependencias en Spring MVC.",
+      "Combina @Configuration, @EnableAutoConfiguration y @ComponentScan.",
+      "Solo aplica a clases que extienden ApplicationRunner.",
+    ],
+    answer: 2,
+    explanation:
+      "@SpringBootApplication es una anotación compuesta que agrupa @Configuration, @EnableAutoConfiguration y @ComponentScan, marcando el punto de entrada de una aplicación Spring Boot.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el resultado del siguiente código?",
+    code: '@Service\npublic class Notificador {\n    public void enviar() {\n        System.out.println("Notificación enviada");\n    }\n}',
+    options: [
+      "Spring ignora la clase porque le falta @ComponentScan.",
+      "Spring registra la clase como un bean si está en un paquete escaneado.",
+      "La clase no puede ser inyectada sin @Autowired.",
+      "Solo se registra si se añade @Bean explícitamente.",
+    ],
+    answer: 1,
+    explanation:
+      "Spring detectará automáticamente la clase anotada con @Service si está en un paquete incluido por @ComponentScan.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la ventaja de usar inyección por constructor en lugar de campos con @Autowired?",
+    code: "",
+    options: [
+      "Es más rápida en tiempo de ejecución.",
+      "Permite mejor inmutabilidad y facilita pruebas unitarias.",
+      "Requiere menos código.",
+      "Evita el uso de @Qualifier.",
+    ],
+    answer: 1,
+    explanation:
+      "La inyección por constructor permite declarar los campos como final, mejora la inmutabilidad, y facilita la escritura de pruebas al permitir el paso explícito de dependencias.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación es necesaria para habilitar el escaneo de componentes en Spring?",
+    code: "",
+    options: ["@ComponentScan", "@EnableComponents", "@ScanBeans", "@BeanScan"],
+    answer: 0,
+    explanation:
+      "@ComponentScan le indica a Spring que debe buscar y registrar automáticamente los beans anotados como @Component, @Service, @Repository y @Controller.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el resultado si una clase tiene múltiples métodos @Bean con el mismo nombre?",
+    code: "",
+    options: [
+      "El bean se sobrescribe sin advertencias.",
+      "Spring lanza una excepción indicando conflicto de nombres.",
+      "Spring escoge uno aleatoriamente.",
+      "Spring ignora todos menos el primero.",
+    ],
+    answer: 1,
+    explanation:
+      "Spring no permite beans duplicados con el mismo nombre, y lanza una excepción para evitar conflictos.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué tipo de anotación es @Controller en términos de jerarquía?",
+    code: "",
+    options: [
+      "Una anotación que implementa @Autowired.",
+      "Una anotación especializada de @Component.",
+      "Una subclase de @Bean.",
+      "Una anotación exclusiva de Spring Boot.",
+    ],
+    answer: 1,
+    explanation:
+      "@Controller es una especialización de @Component, lo que significa que también se registra como un bean en el contenedor de Spring.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si se define un bean manualmente con @Bean que tiene el mismo nombre que uno detectado por @Component?",
+    code: "",
+    options: [
+      "El bean manual sobrescribe el bean detectado automáticamente.",
+      "Spring lanza una excepción de conflicto.",
+      "Ambos beans coexisten en diferentes contextos.",
+      "Spring ignora el bean manual por defecto.",
+    ],
+    answer: 0,
+    explanation:
+      "Spring da prioridad a los beans definidos manualmente mediante @Bean sobre los descubiertos automáticamente por @ComponentScan si tienen el mismo nombre.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Qué hace la anotación @Primary en una configuración de Spring?",
+    code: "",
+    options: [
+      "Marca un bean para ser utilizado por defecto cuando hay múltiples candidatos.",
+      "Evita que el bean se registre en el contenedor.",
+      "Indica que el bean debe inicializarse manualmente.",
+      "Restringe el uso del bean a contextos de producción.",
+    ],
+    answer: 0,
+    explanation:
+      "@Primary se usa para indicar que un bean debe ser considerado como la opción por defecto cuando hay múltiples candidatos para una inyección.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito principal de @Configuration en Spring?",
+    code: "",
+    options: [
+      "Convertir la clase en un componente REST.",
+      "Permitir que una clase defina beans mediante métodos anotados con @Bean.",
+      "Registrar controladores web automáticamente.",
+      "Activar el uso de anotaciones JPA.",
+    ],
+    answer: 1,
+    explanation:
+      "@Configuration se usa para definir clases que contienen métodos @Bean. Spring interpreta estas clases como fuentes de definición de beans.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el efecto de esta clase en Spring?",
+    code: "@Configuration\npublic class AppConfig {\n  @Bean\n  public DateTimeFormatter formatter() {\n    return DateTimeFormatter.ISO_DATE;\n  }\n}",
+    options: [
+      "El método formatter() se ejecuta en cada request.",
+      "Se registra una instancia de DateTimeFormatter como bean.",
+      "Solo se usa en combinación con @ComponentScan.",
+      "El bean se crea cada vez que se llama formatter().",
+    ],
+    answer: 1,
+    explanation:
+      "El método @Bean dentro de @Configuration define un bean singleton por defecto en el contenedor de Spring, accesible desde cualquier parte del contexto.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación se utiliza para aplicar lógica después de la creación de un bean?",
+    code: "",
+    options: ["@PostConstruct", "@AfterBeanInit", "@BeanInit", "@InitMethod"],
+    answer: 0,
+    explanation:
+      "@PostConstruct marca un método que debe ejecutarse una vez que el bean ha sido creado e inyectado, pero antes de ser utilizado.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué efecto tiene esta anotación en un método de controlador?",
+    code: "@ResponseBody",
+    options: [
+      "Convierte el resultado del método en una vista JSP.",
+      "Ignora el retorno y ejecuta un redireccionamiento.",
+      "El resultado del método se convierte directamente en el cuerpo de la respuesta HTTP.",
+      "El método se convierte automáticamente en asíncrono.",
+    ],
+    answer: 2,
+    explanation:
+      "@ResponseBody indica que el valor devuelto por el método se debe escribir directamente en el cuerpo de la respuesta HTTP, usualmente como JSON.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ocurre si anotas una clase con @Component y @Lazy?",
+    code: "",
+    options: [
+      "El bean se crea al iniciar el contexto.",
+      "El bean se destruye después de cada request.",
+      "El bean solo se crea cuando se solicita por primera vez.",
+      "Spring ignora la anotación @Component.",
+    ],
+    answer: 2,
+    explanation:
+      "@Lazy en un bean indica que la instancia no se crea al inicio del contenedor, sino solo cuando se necesita por primera vez (lazy loading).",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito de la anotación @Scope?",
+    code: "",
+    options: [
+      "Define cuándo debe destruirse un bean.",
+      "Especifica el tipo de ciclo de vida del bean (singleton, prototype, etc).",
+      "Permite usar beans solo en perfiles específicos.",
+      "Permite heredar beans entre contextos hijos.",
+    ],
+    answer: 1,
+    explanation:
+      "@Scope define el ciclo de vida del bean: puede ser singleton, prototype, request, session, etc. Esto permite controlar cómo y cuándo se crean las instancias.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué hace el siguiente código si se utiliza en una clase anotada con @Component?",
+    code: '@Value("${server.port}")\nprivate int port;',
+    options: [
+      "Inyecta el valor por defecto de Spring Boot.",
+      "Inyecta el valor del puerto definido en application.properties.",
+      "Ignora el valor porque no es un bean.",
+      "Inyecta 8080 siempre.",
+    ],
+    answer: 1,
+    explanation:
+      "@Value permite inyectar valores desde propiedades externas (como application.properties o variables de entorno) directamente en campos.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace @ConditionalOnProperty?",
+    code: "",
+    options: [
+      "Activa un bean solo si existe un archivo de propiedades.",
+      "Activa un bean si una propiedad específica está definida en el entorno.",
+      "Permite ignorar excepciones en controladores.",
+      "Evita el uso de @Bean en clases de configuración.",
+    ],
+    answer: 1,
+    explanation:
+      "@ConditionalOnProperty se usa para condicionar la creación de un bean dependiendo del valor de una propiedad específica en el entorno.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación se usa para indicar que un controlador REST puede manejar múltiples métodos HTTP en una misma URL?",
+    code: "",
+    options: [
+      "@RequestMapping",
+      "@HttpMapping",
+      "@PathVariable",
+      "@MappingHandler",
+    ],
+    answer: 0,
+    explanation:
+      "@RequestMapping es una anotación versátil que permite mapear diferentes métodos HTTP a un mismo path, diferenciándolos por el atributo `method = ...`.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cómo se inyecta una dependencia opcional en Spring sin lanzar excepción si no existe?",
+    code: "",
+    options: [
+      "@Autowired(required = false)",
+      "@Optional",
+      "@InjectNullable",
+      "@Autowired(optional = true)",
+    ],
+    answer: 0,
+    explanation:
+      "Spring permite marcar una dependencia como no requerida con @Autowired(required = false), evitando que se lance una excepción si no hay bean disponible.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación permite aplicar comportamiento a través de aspectos (AOP)?",
+    code: "",
+    options: ["@Aspect", "@Proxy", "@Monitor", "@Intercept"],
+    answer: 0,
+    explanation:
+      "@Aspect se usa junto con Spring AOP para definir clases que contienen lógica transversal como logging, transacciones, etc.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la función de la anotación @Conditional?",
+    code: "",
+    options: [
+      "Ejecutar código si hay errores.",
+      "Definir condiciones programáticas para registrar beans.",
+      "Inyectar beans dependiendo del perfil.",
+      "Validar beans de forma automática.",
+    ],
+    answer: 1,
+    explanation:
+      "@Conditional permite registrar beans condicionalmente, basado en clases que implementan la interfaz Condition, útil para lógica compleja.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el efecto de usar @EnableScheduling en una aplicación Spring?",
+    code: "",
+    options: [
+      "Activa tareas programadas basadas en cron o fixedDelay.",
+      "Permite enviar tareas a través de colas JMS.",
+      "Activa servicios web SOAP.",
+      "Inicializa procesos batch automáticos.",
+    ],
+    answer: 0,
+    explanation:
+      "@EnableScheduling permite que Spring reconozca y ejecute métodos anotados con @Scheduled, lo que habilita programación de tareas.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué hace @RestControllerAdvice en comparación con @ControllerAdvice?",
+    code: "",
+    options: [
+      "Solo captura errores de controladores @Service.",
+      "Es equivalente, pero retorna respuestas en el cuerpo como @RestController.",
+      "No puede usarse junto con @ExceptionHandler.",
+      "Solo funciona en pruebas unitarias.",
+    ],
+    answer: 1,
+    explanation:
+      "@RestControllerAdvice combina @ControllerAdvice + @ResponseBody, permitiendo manejar excepciones globales devolviendo respuestas JSON.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      '¿Cuál es el objetivo de la anotación @Bean(initMethod = "iniciar")?',
+    code: "",
+    options: [
+      "Define el método que se ejecuta justo después de que el bean ha sido creado.",
+      "Evita que el bean sea inicializado hasta que se invoque explícitamente.",
+      "Permite registrar un bean que se borra al iniciar la aplicación.",
+      "Inyecta un bean dentro de otro de forma automática.",
+    ],
+    answer: 0,
+    explanation:
+      "@Bean(initMethod = ...) permite definir un método personalizado que será ejecutado justo después de que el bean ha sido inicializado e inyectado.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué diferencia principal hay entre @Component y @Repository?",
+    code: "",
+    options: [
+      "@Repository agrega manejo específico de excepciones de persistencia.",
+      "@Component solo se usa en controladores.",
+      "@Repository requiere anotaciones @Inject para funcionar.",
+      "Ambas son equivalentes y no hay diferencia en comportamiento.",
+    ],
+    answer: 0,
+    explanation:
+      "@Repository es una especialización de @Component que incluye funcionalidades específicas, como la conversión de excepciones en DataAccessException.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la anotación @Order(1) en Spring?",
+    code: "",
+    options: [
+      "Establece la prioridad de carga de beans o aspectos.",
+      "Define el orden de ejecución de métodos dentro de un bean.",
+      "Indica el orden de inicialización de la base de datos.",
+      "Ordena las anotaciones por nivel de acceso.",
+    ],
+    answer: 0,
+    explanation:
+      "@Order define la prioridad relativa de ejecución para componentes como filtros, aspectos o eventos. Un número menor indica mayor prioridad.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      '¿Qué efecto tiene usar @Scope("prototype") en una clase anotada con @Component?',
+    code: "",
+    options: [
+      "Se crea una nueva instancia cada vez que se solicita el bean.",
+      "El bean se comparte entre todos los hilos.",
+      "El bean se destruye al terminar la sesión del usuario.",
+      "El bean es inicializado perezosamente.",
+    ],
+    answer: 0,
+    explanation:
+      '@Scope("prototype") crea una nueva instancia del bean cada vez que se solicita, en lugar de usar una sola instancia (singleton).',
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación permite ejecutar lógica justo antes de que un bean sea destruido?",
+    code: "",
+    options: ["@PreDestroy", "@BeforeDestroy", "@DestroyBean", "@Cleanup"],
+    answer: 0,
+    explanation:
+      "@PreDestroy indica que el método debe ejecutarse antes de que el contenedor destruya el bean, útil para liberar recursos.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace el siguiente código?",
+    code: '@Component\n@Profile("dev")\npublic class DevDataLoader implements ApplicationRunner { ... }',
+    options: [
+      "El bean solo se activa si el perfil 'dev' está activo.",
+      "El bean se activa en cualquier entorno.",
+      "El perfil 'dev' se inyecta automáticamente.",
+      "Este código lanza una excepción si 'dev' no está activo.",
+    ],
+    answer: 0,
+    explanation:
+      "@Profile limita la activación de un bean a un perfil específico. En este caso, el bean solo se activa si el perfil activo es 'dev'.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué tipo de anotación es @RestController?",
+    code: "",
+    options: [
+      "Una combinación de @Controller y @ResponseBody.",
+      "Una combinación de @Service y @GetMapping.",
+      "Un marcador para beans con scope request.",
+      "Una subanotación de @Configuration.",
+    ],
+    answer: 0,
+    explanation:
+      "@RestController es una anotación compuesta que une @Controller y @ResponseBody, ideal para APIs REST donde se retorna directamente JSON o XML.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué hace Spring cuando encuentra un método anotado con @EventListener?",
+    code: "",
+    options: [
+      "Ejecuta el método cuando se publique un evento compatible.",
+      "Convierte el método en una tarea programada.",
+      "Es equivalente a usar @Async.",
+      "Expone el método como endpoint HTTP automáticamente.",
+    ],
+    answer: 0,
+    explanation:
+      "@EventListener permite que un método escuche eventos del contexto. Se ejecuta automáticamente cuando se publica un ApplicationEvent compatible.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace @Transactional en un método de servicio?",
+    code: "",
+    options: [
+      "Inicia una transacción que puede ser confirmada o revertida.",
+      "Marca el método como asíncrono.",
+      "Permite ejecutar SQL nativo directamente.",
+      "Indica que el método es seguro frente a múltiples hilos.",
+    ],
+    answer: 0,
+    explanation:
+      "@Transactional inicia una transacción al entrar en el método. Si ocurre una excepción, se hace rollback automáticamente.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ocurre si se usa @ComponentScan sin parámetros?",
+    code: "",
+    options: [
+      "Spring escanea el paquete actual y subpaquetes.",
+      "No escanea ningún paquete.",
+      "Escanea todos los paquetes del proyecto.",
+      "Lanza excepción al iniciar el contexto.",
+    ],
+    answer: 0,
+    explanation:
+      "Cuando no se especifica un paquete, @ComponentScan escanea desde el paquete de la clase que lo contiene hacia abajo.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la finalidad de @CrossOrigin?",
+    code: "",
+    options: [
+      "Permitir peticiones desde dominios externos (CORS).",
+      "Deshabilitar validaciones de seguridad.",
+      "Habilitar JWT en REST APIs.",
+      "Ignorar sesiones HTTP en endpoints públicos.",
+    ],
+    answer: 0,
+    explanation:
+      "@CrossOrigin permite controlar el acceso de recursos desde dominios distintos al del servidor, activando CORS en Spring MVC.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué función tiene la anotación @Import?",
+    code: "",
+    options: [
+      "Importar otras clases de configuración en una clase @Configuration.",
+      "Permitir inyecciones cruzadas entre beans.",
+      "Importar librerías externas como beans.",
+      "Inyectar valores desde archivos YAML.",
+    ],
+    answer: 0,
+    explanation:
+      "@Import permite importar otras clases de configuración en un contexto, útil para modularizar beans en diferentes archivos.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la función de @ConditionalOnMissingBean?",
+    code: "",
+    options: [
+      "Registrar un bean solo si no existe otro con el mismo tipo.",
+      "Evitar que un bean sea registrado en producción.",
+      "Anular la inyección de dependencias.",
+      "Convertir un bean en singleton forzado.",
+    ],
+    answer: 0,
+    explanation:
+      "@ConditionalOnMissingBean permite registrar un bean solo si no existe ya otro de su mismo tipo, útil para personalización en starters.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la ventaja principal de @EnableAsync?",
+    code: "",
+    options: [
+      "Permite ejecutar métodos anotados con @Async en hilos separados.",
+      "Activa tareas automáticas sincronizadas.",
+      "Hace que todos los métodos sean no bloqueantes.",
+      "Convierte los controladores en endpoints reactivos.",
+    ],
+    answer: 0,
+    explanation:
+      "@EnableAsync permite usar la anotación @Async en métodos, lo que hace que se ejecuten en un hilo separado, ideal para operaciones no bloqueantes.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el efecto de usar @Primary en una clase anotada con @Component?",
+    code: "",
+    options: [
+      "Se prioriza su inyección cuando hay múltiples beans del mismo tipo.",
+      "El bean se convierte en singleton automáticamente.",
+      "Evita que el bean se cargue si hay otro igual.",
+      "Obliga a que el bean se inyecte con @Autowired(required = true).",
+    ],
+    answer: 0,
+    explanation:
+      "@Primary indica que ese bean debe ser el preferido al inyectar dependencias cuando hay más de una implementación del mismo tipo.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Para qué se utiliza @Qualifier en Spring?",
+    code: "",
+    options: [
+      "Para indicar qué bean específico inyectar cuando hay varios del mismo tipo.",
+      "Para declarar que un bean es calificado como seguro.",
+      "Para definir la visibilidad de un bean en diferentes contextos.",
+      "Para evitar el uso de beans externos al paquete actual.",
+    ],
+    answer: 0,
+    explanation:
+      "@Qualifier se usa junto con @Autowired para especificar exactamente qué bean se debe inyectar cuando hay ambigüedad.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la anotación @Value en Spring?",
+    code: "",
+    options: [
+      "Inyecta un valor desde propiedades o expresiones.",
+      "Declara una variable como constante dentro de un bean.",
+      "Asigna un bean a un campo estático.",
+      "Determina el valor máximo aceptado por una propiedad.",
+    ],
+    answer: 0,
+    explanation:
+      "@Value permite inyectar valores desde el archivo de propiedades, entorno, o expresiones SpEL directamente en campos, métodos o constructores.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si se omite @Autowired en un constructor de un bean con un solo constructor?",
+    code: "",
+    options: [
+      "Spring inyecta automáticamente las dependencias en el constructor.",
+      "Se lanza una excepción al crear el contexto.",
+      "El bean se convierte en perezoso automáticamente.",
+      "El constructor se ignora y se usa el predeterminado.",
+    ],
+    answer: 0,
+    explanation:
+      "Desde Spring 4.3, si un bean tiene un único constructor, no es necesario usar @Autowired; Spring lo detecta e inyecta automáticamente.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué función tiene la anotación @ComponentScan(basePackages = {...})?",
+    code: "",
+    options: [
+      "Especifica los paquetes que Spring debe escanear para registrar beans.",
+      "Restringe el acceso a beans de otros paquetes.",
+      "Escanea solo archivos .xml de configuración.",
+      "Define rutas para controllers REST.",
+    ],
+    answer: 0,
+    explanation:
+      "@ComponentScan permite definir qué paquetes deben ser escaneados por el contenedor de Spring para registrar clases anotadas como beans.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito de @EnableConfigurationProperties?",
+    code: "",
+    options: [
+      "Permitir que una clase reciba valores mapeados desde archivos de configuración.",
+      "Inyectar valores de YAML como beans automáticos.",
+      "Registrar todos los @Component manualmente.",
+      "Habilitar perfiles de configuración avanzados.",
+    ],
+    answer: 0,
+    explanation:
+      "@EnableConfigurationProperties permite que Spring cree y configure una clase con propiedades externas, como las definidas en application.yml o application.properties.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace @EnableScheduling en una aplicación Spring?",
+    code: "",
+    options: [
+      "Activa el soporte para tareas programadas usando @Scheduled.",
+      "Activa el modo de ejecución secuencial en el Scheduler.",
+      "Permite la ejecución paralela de tareas @Async.",
+      "Asocia el bean a un cron externo del sistema operativo.",
+    ],
+    answer: 0,
+    explanation:
+      "@EnableScheduling habilita el procesamiento de tareas programadas mediante la anotación @Scheduled.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué diferencia hay entre @Autowired y @Inject?",
+    code: "",
+    options: [
+      "@Autowired es de Spring, @Inject es de Java EE (JSR-330).",
+      "@Inject requiere configuración XML.",
+      "@Autowired solo funciona con constructores.",
+      "Ambas no permiten la inyección de listas de beans.",
+    ],
+    answer: 0,
+    explanation:
+      "@Autowired pertenece al ecosistema de Spring, mientras que @Inject proviene de JSR-330 (Java EE estándar). Ambas funcionan igual, pero Spring recomienda usar @Autowired por flexibilidad.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué permite la anotación @RequestMapping(method = RequestMethod.GET)?",
+    code: "",
+    options: [
+      "Asociar una URL a un método específico con método HTTP GET.",
+      "Declarar que el método solo devuelve JSON.",
+      "Limitar el acceso a usuarios autenticados.",
+      "Ejecutar el método al inicio de la aplicación.",
+    ],
+    answer: 0,
+    explanation:
+      "@RequestMapping permite mapear peticiones HTTP a métodos de controladores. Con el atributo 'method', se especifica el tipo HTTP (GET, POST, etc.).",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la anotación @ModelAttribute?",
+    code: "",
+    options: [
+      "Vincula un objeto del modelo a un parámetro del método o a la vista.",
+      "Define un bean con valores predeterminados.",
+      "Convierte un DTO en entidad automáticamente.",
+      "Expone un bean como JSON.",
+    ],
+    answer: 0,
+    explanation:
+      "@ModelAttribute se usa para acceder a datos del modelo y vincularlos con objetos de forma automática, ideal para formularios web.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      '¿Cuál es la función de la anotación @Bean(destroyMethod = "cerrar")?',
+    code: "",
+    options: [
+      "Define un método a ejecutar antes de destruir el bean.",
+      "Evita que el bean sea finalizable.",
+      "Convierte el método 'cerrar' en una tarea programada.",
+      "Cancela la inyección si el método falla.",
+    ],
+    answer: 0,
+    explanation:
+      '@Bean(destroyMethod = "cerrar") permite ejecutar lógica de limpieza cuando el contenedor cierra el contexto. Es útil para cerrar conexiones o liberar recursos.',
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito principal de @SessionAttributes?",
+    code: "",
+    options: [
+      "Mantener atributos de modelo en la sesión entre peticiones.",
+      "Definir los atributos disponibles en el modelo.",
+      "Limitar los atributos que pueden ser serializados.",
+      "Evitar la creación de sesiones duplicadas.",
+    ],
+    answer: 0,
+    explanation:
+      "@SessionAttributes permite mantener ciertos atributos del modelo en la sesión, útil para formularios de múltiples pasos.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación usarías para inyectar un bean solo si existe una propiedad en el archivo de configuración?",
+    code: "",
+    options: [
+      "@ConditionalOnProperty",
+      "@ValueIfPresent",
+      "@InjectIf",
+      "@BeanIfPresent",
+    ],
+    answer: 0,
+    explanation:
+      "@ConditionalOnProperty permite registrar un bean si y solo si existe cierta propiedad en application.properties o application.yml.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la anotación @Scheduled(fixedRate = 5000)?",
+    code: "",
+    options: [
+      "Ejecuta el método cada 5 segundos, desde el inicio de la tarea anterior.",
+      "Espera 5 segundos después de completar la tarea para volver a ejecutar.",
+      "Ejecuta el método 5 veces por minuto exacto.",
+      "Ejecuta el método solo 5 veces como máximo.",
+    ],
+    answer: 0,
+    explanation:
+      "@Scheduled(fixedRate = 5000) ejecuta el método cada 5 segundos desde que se inicia, sin esperar a que termine la ejecución previa.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      '¿Qué hace la anotación @ConfigurationProperties(prefix = "app")?',
+    code: "",
+    options: [
+      "Asocia propiedades del archivo de configuración con campos de una clase.",
+      "Define un nuevo bean con propiedades inmutables.",
+      "Indica que el bean se debe registrar al iniciar la aplicación.",
+      "Carga archivos externos como configuración YAML.",
+    ],
+    answer: 0,
+    explanation:
+      "@ConfigurationProperties permite mapear propiedades desde application.properties o application.yml a una clase Java, usando un prefijo.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la diferencia entre @Controller y @RestController?",
+    code: "",
+    options: [
+      "@RestController incluye @ResponseBody por defecto.",
+      "@Controller no puede manejar peticiones POST.",
+      "@RestController desactiva el uso de plantillas Thymeleaf.",
+      "@Controller es exclusivo para APIs REST.",
+    ],
+    answer: 0,
+    explanation:
+      "@RestController combina @Controller y @ResponseBody, permitiendo devolver directamente objetos serializados a JSON/XML.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué efecto tiene la anotación @Lazy sobre un bean?",
+    code: "",
+    options: [
+      "El bean se crea solo cuando se necesita por primera vez.",
+      "El bean se ignora si otro igual ya existe.",
+      "Evita la inyección automática con @Autowired.",
+      "Hace que el bean se cree al iniciar el contexto.",
+    ],
+    answer: 0,
+    explanation:
+      "@Lazy retrasa la creación de un bean hasta que sea requerido, lo que mejora el tiempo de arranque si el bean es costoso de construir.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación permite interceptar métodos de beans y aplicar lógica transversal como logs o seguridad?",
+    code: "",
+    options: ["@Aspect", "@AroundMethod", "@Intercept", "@PointcutHandler"],
+    answer: 0,
+    explanation:
+      "@Aspect se usa en combinación con Spring AOP para aplicar lógica antes, después o alrededor de métodos mediante advice y pointcuts.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ocurre si se anota un método con @PostConstruct?",
+    code: "",
+    options: [
+      "Se ejecuta automáticamente tras la creación del bean.",
+      "El método se vuelve accesible por reflexión.",
+      "El método se convierte en tarea programada.",
+      "El método se expone como endpoint REST temporal.",
+    ],
+    answer: 0,
+    explanation:
+      "@PostConstruct indica que el método debe ejecutarse justo después de que el bean ha sido creado e inyectado completamente.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes anotaciones define una clase de configuración equivalente a un archivo XML?",
+    code: "",
+    options: [
+      "@Configuration",
+      "@ComponentScan",
+      "@SpringBootApplication",
+      "@EnableAutoConfiguration",
+    ],
+    answer: 0,
+    explanation:
+      "@Configuration marca una clase como fuente de definiciones de beans. Es una alternativa moderna a los archivos de configuración XML.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué hace la anotación @RequestBody en un método de controlador?",
+    code: "",
+    options: [
+      "Indica que el cuerpo de la petición HTTP debe mapearse al parámetro.",
+      "Extrae parámetros de la URL.",
+      "Inyecta un bean en el request actual.",
+      "Marca la respuesta como binaria.",
+    ],
+    answer: 0,
+    explanation:
+      "@RequestBody convierte automáticamente el cuerpo de una solicitud HTTP en un objeto Java utilizando un MessageConverter.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación usarías para cargar diferentes implementaciones de beans según el sistema operativo?",
+    code: "",
+    options: ["@Conditional", "@Profile", "@EnvironmentBased", "@SystemCheck"],
+    answer: 0,
+    explanation:
+      "@Conditional permite cargar beans condicionalmente según lógica programática, como el sistema operativo, mediante clases Condition personalizadas.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué sucede si se anota un bean con @DependsOn?",
+    code: "",
+    options: [
+      "Forza que otro bean se inicialice primero.",
+      "Inyecta múltiples beans de forma simultánea.",
+      "Ignora otros beans del mismo tipo.",
+      "Evita la destrucción del bean al cerrar el contexto.",
+    ],
+    answer: 0,
+    explanation:
+      "@DependsOn especifica que un bean depende de otros, y esos otros deben ser inicializados primero.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué función cumple @PathVariable?",
+    code: "",
+    options: [
+      "Extrae valores de la URL como parámetros de método.",
+      "Define variables de entorno de Spring Boot.",
+      "Permite modificar el path base de los controllers.",
+      "Permite inyectar el contexto de seguridad.",
+    ],
+    answer: 0,
+    explanation:
+      "@PathVariable vincula segmentos de la URL con parámetros de método, por ejemplo, `/users/{id}` mapea `id`.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación es necesaria para que un bean escuche eventos del ApplicationContext?",
+    code: "",
+    options: [
+      "@EventListener",
+      "@ContextAware",
+      "@EnableEventScan",
+      "@Triggerable",
+    ],
+    answer: 0,
+    explanation:
+      "@EventListener permite que un método se ejecute automáticamente cuando se publica un evento en el ApplicationContext.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación usarías para evitar que un bean se registre si otro específico ya existe?",
+    code: "",
+    options: [
+      "@ConditionalOnMissingBean",
+      "@BeanOverride",
+      "@OptionalBean",
+      "@LazyUnlessPresent",
+    ],
+    answer: 0,
+    explanation:
+      "@ConditionalOnMissingBean se usa en configuraciones para evitar registrar un bean si ya existe uno del mismo tipo o nombre.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito de @PropertySource?",
+    code: "",
+    options: [
+      "Cargar archivos .properties adicionales al contexto de Spring.",
+      "Definir rutas REST adicionales.",
+      "Asignar propiedades a través de constructor.",
+      "Exponer valores como headers HTTP.",
+    ],
+    answer: 0,
+    explanation:
+      "@PropertySource permite registrar archivos de propiedades adicionales para ser utilizados mediante @Value o @ConfigurationProperties.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la anotación @ResponseStatus(HttpStatus.CREATED)?",
+    code: "",
+    options: [
+      "Indica que el método debe devolver el código 201 Created.",
+      "Transforma la respuesta a formato XML.",
+      "Restringe el acceso al método para usuarios logueados.",
+      "Aplica validaciones antes de ejecutar el método.",
+    ],
+    answer: 0,
+    explanation:
+      "@ResponseStatus se usa para especificar el código HTTP que se devuelve como resultado de ejecutar el método, sin necesidad de devolver explícitamente ResponseEntity.",
+    subtheme: "Anotaciones Clave en Spring",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué anotación se utiliza para ejecutar un método justo después de que el bean haya sido inicializado?",
+    code: "",
+    options: ["@Init", "@Start", "@PostConstruct", "@AfterBeanInit"],
+    answer: 2,
+    explanation:
+      "@PostConstruct se utiliza para ejecutar un método inmediatamente después de la inyección de dependencias y antes de que el bean esté completamente inicializado.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué método de la interfaz InitializingBean debe implementarse?",
+    code: "",
+    options: ["init()", "initialize()", "afterPropertiesSet()", "setUp()"],
+    answer: 2,
+    explanation:
+      "La interfaz InitializingBean define el método afterPropertiesSet(), el cual Spring invoca una vez que ha inyectado las propiedades.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes métodos se ejecuta justo antes de destruir un bean?",
+    code: "",
+    options: ["@PreDestroy", "@Shutdown", "destroy()", "afterDestroy()"],
+    answer: 0,
+    explanation:
+      "@PreDestroy se usa para marcar un método que debe ejecutarse antes de destruir el bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el orden correcto del ciclo de vida de un bean en Spring?",
+    code: "",
+    options: [
+      "Inicialización → Creación → Uso → Destrucción",
+      "Creación → Inyección de dependencias → Inicialización → Uso → Destrucción",
+      "Creación → Inicialización → Inyección → Uso → Destrucción",
+      "Inyección de dependencias → Creación → Inicialización → Uso → Destrucción",
+    ],
+    answer: 1,
+    explanation:
+      "El orden correcto es: creación, inyección de dependencias, inicialización, uso y destrucción.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué interfaz permite ejecutar lógica personalizada justo antes de la destrucción del bean?",
+    code: "",
+    options: [
+      "DestroyableBean",
+      "BeanDestruction",
+      "DisposableBean",
+      "TerminatingBean",
+    ],
+    answer: 2,
+    explanation:
+      "La interfaz DisposableBean proporciona el método destroy(), que se ejecuta antes de que el bean sea destruido.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes afirmaciones sobre los beans con scope 'prototype' es correcta?",
+    code: "",
+    options: [
+      "Spring destruye automáticamente los beans prototype.",
+      "El ciclo de vida completo del bean prototype es gestionado por Spring.",
+      "El desarrollador debe gestionar la destrucción de beans prototype.",
+      "Los beans prototype no admiten anotaciones como @PostConstruct.",
+    ],
+    answer: 2,
+    explanation:
+      "Spring solo gestiona la creación e inyección de dependencias de beans prototype. La destrucción es responsabilidad del desarrollador.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si se usan tanto @PostConstruct como InitializingBean en un mismo bean?",
+    code: "",
+    options: [
+      "Se lanza una excepción por conflicto.",
+      "Solo se ejecuta uno, el primero en orden alfabético.",
+      "Ambos se ejecutan, y @PostConstruct ocurre antes.",
+      "Spring ignora el método anotado con @PostConstruct.",
+    ],
+    answer: 2,
+    explanation:
+      "Ambos se ejecutan, y Spring invoca primero el método anotado con @PostConstruct, luego el método afterPropertiesSet().",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué componente permite interceptar los beans antes y después de la inicialización?",
+    code: "",
+    options: [
+      "BeanFactory",
+      "BeanPostProcessor",
+      "BeanInitializer",
+      "ApplicationContext",
+    ],
+    answer: 1,
+    explanation:
+      "BeanPostProcessor permite ejecutar lógica personalizada antes y después de la inicialización de cualquier bean del contexto.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué método de BeanPostProcessor se ejecuta primero?",
+    code: "",
+    options: [
+      "postProcessAfterInitialization",
+      "afterPropertiesSet",
+      "postProcessBeforeInitialization",
+      "init()",
+    ],
+    answer: 2,
+    explanation:
+      "El método postProcessBeforeInitialization() se ejecuta antes de la inicialización del bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el resultado del siguiente fragmento?",
+    code: 'public class MyBean implements InitializingBean {\n  public void afterPropertiesSet() {\n    System.out.println("Init");\n  }\n}',
+    options: [
+      "Compila pero no se ejecuta automáticamente.",
+      "Spring ejecutará 'Init' tras inyectar propiedades.",
+      "El método nunca se invoca por Spring.",
+      "El método necesita estar anotado con @PostConstruct.",
+    ],
+    answer: 1,
+    explanation:
+      "Spring detecta que el bean implementa InitializingBean y ejecuta automáticamente el método afterPropertiesSet() después de la inyección.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la mejor forma de definir un método de destrucción sin acoplar el bean a Spring?",
+    code: "",
+    options: [
+      "@PreDestroy",
+      "DisposableBean",
+      "@Destroy",
+      "ApplicationContextAware",
+    ],
+    answer: 0,
+    explanation:
+      "@PreDestroy permite definir lógica de limpieza sin acoplar el bean a interfaces específicas de Spring.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si definimos un bean en una clase de configuración con un initMethod?",
+    code: '@Bean(initMethod = "startUp")\npublic MyService myService() { return new MyService(); }',
+    options: [
+      "Spring ignora el método startUp.",
+      "Se ejecutará automáticamente tras la inyección de dependencias.",
+      "Debe implementarse InitializingBean para que funcione.",
+      "startUp solo se invoca si está anotado con @PostConstruct.",
+    ],
+    answer: 1,
+    explanation:
+      "Spring ejecutará el método 'startUp' especificado en la configuración después de construir el bean y completar la inyección.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes métodos se ejecuta al cerrar el ApplicationContext?",
+    code: "",
+    options: ["@Destroy", "@OnClose", "@PreDestroy", "@CloseContext"],
+    answer: 2,
+    explanation:
+      "Cuando el contexto de Spring se cierra, ejecuta los métodos anotados con @PreDestroy de los beans singleton.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del método destroy() de DisposableBean?",
+    code: "",
+    options: [
+      "Ejecutar lógica al crear el bean.",
+      "Ejecutar lógica de limpieza antes de destruir el bean.",
+      "Eliminar dependencias inyectadas por Spring.",
+      "Registrar el bean como destruido en el contexto.",
+    ],
+    answer: 1,
+    explanation:
+      "destroy() se usa para implementar lógica de limpieza justo antes de que el bean sea destruido por Spring.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si el método anotado con @PostConstruct lanza una excepción?",
+    code: "",
+    options: [
+      "Spring ignora la excepción y continúa.",
+      "Spring cancela la creación del bean y lanza una excepción.",
+      "El bean entra en modo de solo lectura.",
+      "La excepción es ignorada y se ejecuta afterPropertiesSet().",
+    ],
+    answer: 1,
+    explanation:
+      "Si el método anotado con @PostConstruct lanza una excepción, Spring aborta el proceso de creación del bean y lanza una excepción.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué efecto tiene el uso de @PostConstruct en un método privado?",
+    code: '@PostConstruct\nprivate void init() {\n  System.out.println("Inicializando...");\n}',
+    options: [
+      "El método no será invocado por Spring",
+      "Spring lanza una excepción",
+      "Spring invoca el método sin problemas",
+      "Solo funciona si el método es público",
+    ],
+    answer: 2,
+    explanation:
+      "Spring puede invocar métodos @PostConstruct aunque sean privados, mediante reflexión.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué es correcto respecto a múltiples métodos con @PostConstruct?",
+    code: "",
+    options: [
+      "Spring lanza excepción si hay más de uno",
+      "Solo el primero se ejecuta",
+      "Todos los métodos anotados se ejecutan en orden de declaración",
+      "No es válido tener múltiples métodos @PostConstruct",
+    ],
+    answer: 0,
+    explanation:
+      "Solo se permite un único método @PostConstruct por clase. Tener más de uno lanza una excepción.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de estas afirmaciones sobre BeanPostProcessor es verdadera?",
+    code: "",
+    options: [
+      "Se ejecuta antes de la creación del bean",
+      "Opera sobre beans después de la destrucción",
+      "Permite modificar instancias de bean antes/después de la inicialización",
+      "Solo funciona para beans singleton",
+    ],
+    answer: 2,
+    explanation:
+      "BeanPostProcessor intercepta beans antes y después de la inicialización, permitiendo personalización.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué interfaz permite intervenir en el ciclo de vida para manejar inyección de ApplicationContext?",
+    code: "",
+    options: [
+      "ApplicationAware",
+      "ContextAware",
+      "ApplicationContextAware",
+      "BeanFactoryPostProcessor",
+    ],
+    answer: 2,
+    explanation:
+      "ApplicationContextAware permite acceder al contexto de Spring dentro de un bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el uso principal de SmartLifecycle?",
+    code: "",
+    options: [
+      "Iniciar beans en orden personalizado al arrancar Spring",
+      "Reemplazar métodos de ciclo de vida",
+      "Evitar el uso de @PostConstruct",
+      "Ejecutar pruebas al destruir el contexto",
+    ],
+    answer: 0,
+    explanation:
+      "SmartLifecycle permite definir fases de arranque y parada para controlar el orden de ejecución de beans.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el propósito del método postProcessBeforeInitialization()?",
+    code: "",
+    options: [
+      "Modificar bean antes de su construcción",
+      "Interceptar y modificar bean tras la inicialización",
+      "Interceptar y modificar bean antes de la inicialización",
+      "Evitar la ejecución de @PostConstruct",
+    ],
+    answer: 2,
+    explanation:
+      "Este método permite alterar el bean antes de que se llame a @PostConstruct o afterPropertiesSet().",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál de los siguientes eventos se lanza al cerrar el contexto?",
+    code: "",
+    options: [
+      "ContextClosedEvent",
+      "BeanDestroyedEvent",
+      "ApplicationShutdownEvent",
+      "LifecycleTerminatedEvent",
+    ],
+    answer: 0,
+    explanation:
+      "Spring lanza ContextClosedEvent al cerrar el ApplicationContext.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la consecuencia de usar un método anotado con @PreDestroy en un bean de scope 'prototype'?",
+    code: "",
+    options: [
+      "Spring invoca el método automáticamente",
+      "El método no se ejecuta automáticamente",
+      "El método se ignora silenciosamente",
+      "El contexto lanza excepción",
+    ],
+    answer: 1,
+    explanation:
+      "Spring no maneja la destrucción de beans prototype, por lo tanto, @PreDestroy no se ejecuta automáticamente.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación evita acoplar un bean a la interfaz DisposableBean?",
+    code: "",
+    options: ["@Destroy", "@CleanUp", "@PreDestroy", "@Release"],
+    answer: 2,
+    explanation:
+      "@PreDestroy permite definir lógica de destrucción sin necesidad de acoplar el bean a una interfaz específica.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes métodos es parte de la interfaz SmartLifecycle?",
+    code: "",
+    options: ["start()", "initialize()", "onStart()", "setup()"],
+    answer: 0,
+    explanation:
+      "SmartLifecycle extiende Lifecycle e incluye el método start() para definir lógica de arranque personalizada.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si un método @PostConstruct depende de un bean aún no inicializado?",
+    code: "",
+    options: [
+      "Spring reintenta más tarde la ejecución",
+      "Se lanza excepción de NullPointerException",
+      "Spring ignora la dependencia",
+      "La aplicación se cierra inmediatamente",
+    ],
+    answer: 1,
+    explanation:
+      "Si el bean aún no ha sido inyectado, el método puede lanzar NullPointerException si no hay control de errores.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Dónde se debe registrar un BeanPostProcessor personalizado?",
+    code: "",
+    options: [
+      "Como componente con @Service",
+      "Dentro del ApplicationContext",
+      "Como bean dentro de una clase @Configuration",
+      "No es posible personalizarlo",
+    ],
+    answer: 2,
+    explanation:
+      "Un BeanPostProcessor personalizado se registra como bean en una clase @Configuration para que Spring lo detecte.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del método stop() en SmartLifecycle?",
+    code: "",
+    options: [
+      "Detener ejecución de la aplicación",
+      "Ejecutar lógica de limpieza cuando se cierra el contexto",
+      "Destruir dependencias inyectadas",
+      "Reiniciar automáticamente los beans",
+    ],
+    answer: 1,
+    explanation:
+      "stop() se invoca cuando el contexto se cierra, permitiendo ejecutar tareas antes de apagar el bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué método de BeanPostProcessor se llama después de la inicialización del bean?",
+    code: "",
+    options: [
+      "postProcessBeforeInitialization",
+      "postProcessAfterInitialization",
+      "afterPropertiesSet",
+      "afterBeanCreated",
+    ],
+    answer: 1,
+    explanation:
+      "postProcessAfterInitialization se ejecuta después de que Spring haya terminado la inicialización del bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si el método destroy() de DisposableBean lanza una excepción?",
+    code: "",
+    options: [
+      "Spring la ignora y continúa",
+      "Spring aborta el cierre del contexto",
+      "Spring cancela la destrucción de otros beans",
+      "La excepción se propaga y detiene la JVM",
+    ],
+    answer: 0,
+    explanation:
+      "Spring ignora silenciosamente las excepciones lanzadas en métodos de destrucción como destroy() o @PreDestroy.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué método es invocado por el contenedor justo después de que el bean ha sido completamente construido y sus dependencias inyectadas?",
+    code: "",
+    options: ["destroy()", "@PostConstruct", "afterPropertiesSet()", "init()"],
+    answer: 1,
+    explanation:
+      "@PostConstruct es invocado después de que las dependencias han sido inyectadas y antes de que el bean esté disponible para su uso.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes interfaces se puede implementar para recibir una notificación de destrucción del bean?",
+    code: "",
+    options: [
+      "DisposableBean",
+      "InitializingBean",
+      "BeanFactoryAware",
+      "ApplicationContextAware",
+    ],
+    answer: 0,
+    explanation:
+      "DisposableBean permite definir el método destroy(), que será llamado cuando el contenedor destruya el bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué mecanismo de configuración permite especificar métodos de inicialización y destrucción sin implementar interfaces específicas?",
+    code: "",
+    options: [
+      "XML con init-method y destroy-method",
+      "Anotación @Bean",
+      "Uso de ApplicationContext",
+      "Implementación de BeanPostProcessor",
+    ],
+    answer: 0,
+    explanation:
+      "En XML, se pueden especificar métodos de ciclo de vida mediante los atributos init-method y destroy-method.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el orden correcto de los eventos del ciclo de vida de un bean?",
+    code: "",
+    options: [
+      "Constructor → Dependency Injection → @PostConstruct → afterPropertiesSet → Ready",
+      "@PostConstruct → Constructor → Dependency Injection → afterPropertiesSet",
+      "Dependency Injection → Constructor → afterPropertiesSet → @PostConstruct",
+      "Constructor → @PostConstruct → Dependency Injection → Ready",
+    ],
+    answer: 0,
+    explanation:
+      "El orden correcto es: Constructor → Dependency Injection → @PostConstruct → afterPropertiesSet → Ready.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué interfaz permite realizar acciones justo después de que todas las propiedades han sido configuradas en un bean?",
+    code: "",
+    options: [
+      "InitializingBean",
+      "DisposableBean",
+      "ApplicationEventPublisher",
+      "BeanFactoryPostProcessor",
+    ],
+    answer: 0,
+    explanation:
+      "InitializingBean define el método afterPropertiesSet() que se invoca tras la configuración de propiedades.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué método se usa para destruir un bean definido como @Bean en una clase de configuración?",
+    code: `
+  @Bean(destroyMethod = "shutdown")
+  public MyService myService() {
+      return new MyService();
+  }
+      `,
+    options: ["shutdown()", "@PreDestroy", "destroy()", "close()"],
+    answer: 0,
+    explanation:
+      "Spring llama al método especificado en destroyMethod, que en este caso es shutdown().",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes anotaciones es parte de JSR-250 y se usa para la destrucción de beans?",
+    code: "",
+    options: ["@PreDestroy", "@Destroy", "@BeanDestroy", "@BeforeDestroy"],
+    answer: 0,
+    explanation:
+      "@PreDestroy es parte del estándar JSR-250 y se usa para definir lógica de destrucción.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del BeanPostProcessor?",
+    code: "",
+    options: [
+      "Interceptar el ciclo de vida de los beans antes y después de su inicialización",
+      "Registrar eventos de aplicación",
+      "Inyectar propiedades manualmente",
+      "Modificar el contexto de aplicación",
+    ],
+    answer: 0,
+    explanation:
+      "BeanPostProcessor permite realizar tareas antes y después de la inicialización de un bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿En qué momento se llama a @PreDestroy en el ciclo de vida de un bean?",
+    code: "",
+    options: [
+      "Justo antes de que el contenedor destruya el bean",
+      "Después de @PostConstruct",
+      "Antes de la inyección de dependencias",
+      "Después de afterPropertiesSet()",
+    ],
+    answer: 0,
+    explanation:
+      "@PreDestroy se ejecuta justo antes de que el bean sea destruido por el contenedor.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación debe utilizarse para asegurar que un método se invoque justo después de la creación del bean y la inyección de dependencias?",
+    code: "",
+    options: ["@PostConstruct", "@Bean", "@Autowired", "@Init"],
+    answer: 0,
+    explanation:
+      "@PostConstruct indica que un método debe ejecutarse justo después de la construcción del bean y la inyección de dependencias.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si se define un método con @PostConstruct pero el bean es prototype?",
+    code: "",
+    options: [
+      "El método @PostConstruct se ejecuta al momento de cada solicitud de bean",
+      "El método nunca se ejecuta",
+      "Se lanza una excepción",
+      "El método se ejecuta solo una vez en toda la aplicación",
+    ],
+    answer: 0,
+    explanation:
+      "En beans prototype, @PostConstruct se ejecuta cada vez que se solicita una nueva instancia.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si se define initMethod y también se implementa InitializingBean?",
+    code: "",
+    options: [
+      "Ambos métodos se ejecutan",
+      "Solo se ejecuta el initMethod",
+      "Se lanza una excepción de conflicto",
+      "Solo se ejecuta afterPropertiesSet()",
+    ],
+    answer: 0,
+    explanation:
+      "Spring ejecuta ambos métodos si están definidos: primero afterPropertiesSet() y luego initMethod.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué método permite a un bean acceder al ApplicationContext?",
+    code: "",
+    options: [
+      "setApplicationContext()",
+      "getApplicationContext()",
+      "onApplicationStart()",
+      "contextAware()",
+    ],
+    answer: 0,
+    explanation:
+      "La interfaz ApplicationContextAware define el método setApplicationContext() que se llama con el contexto.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la forma preferida en Spring moderno de definir lógica de inicialización y destrucción?",
+    code: "",
+    options: [
+      "@PostConstruct / @PreDestroy",
+      "initMethod / destroyMethod",
+      "Interfaces InitializingBean / DisposableBean",
+      "BeanFactoryPostProcessor",
+    ],
+    answer: 0,
+    explanation:
+      "Spring moderno recomienda el uso de @PostConstruct y @PreDestroy como solución desacoplada y clara.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes opciones NO forma parte directa del ciclo de vida de un bean en Spring?",
+    code: "",
+    options: [
+      "ApplicationListener",
+      "BeanPostProcessor",
+      "InitializingBean",
+      "@PreDestroy",
+    ],
+    answer: 0,
+    explanation:
+      "ApplicationListener está relacionado con eventos del contexto, no con el ciclo de vida directo del bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el resultado si un bean define tanto @PreDestroy como implementa DisposableBean?",
+    code: "",
+    options: [
+      "Se ejecutan ambos métodos de destrucción",
+      "Solo se ejecuta el método destroy()",
+      "Solo se ejecuta el método anotado con @PreDestroy",
+      "Spring lanza una excepción por conflicto",
+    ],
+    answer: 0,
+    explanation:
+      "Spring ejecuta ambos: primero el método anotado con @PreDestroy y luego destroy() de DisposableBean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ocurre si se lanza una excepción dentro de un método anotado con @PostConstruct?",
+    code: "",
+    options: [
+      "El contenedor no inicializa el bean",
+      "Spring ignora la excepción y continúa",
+      "Se ejecuta el método destroy() de inmediato",
+      "El método se vuelve a intentar automáticamente",
+    ],
+    answer: 0,
+    explanation:
+      "Si @PostConstruct lanza una excepción, el bean no se considera completamente inicializado y el contenedor no lo registra.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el propósito principal de BeanFactoryPostProcessor en el contexto del ciclo de vida?",
+    code: "",
+    options: [
+      "Modificar definiciones de bean antes de que se instancien",
+      "Crear beans personalizados",
+      "Inyectar dependencias manualmente",
+      "Interceptar peticiones HTTP",
+    ],
+    answer: 0,
+    explanation:
+      "BeanFactoryPostProcessor permite modificar los metadatos de bean antes de que se creen instancias.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué método se invoca automáticamente en beans que implementan ApplicationContextAware?",
+    code: "",
+    options: [
+      "setApplicationContext()",
+      "afterPropertiesSet()",
+      "onContextLoad()",
+      "initializeContext()",
+    ],
+    answer: 0,
+    explanation:
+      "Spring llama automáticamente a setApplicationContext(ApplicationContext ctx) si el bean implementa ApplicationContextAware.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite el uso de SmartLifecycle sobre Lifecycle?",
+    code: "",
+    options: [
+      "Controlar el orden de inicio y parada con prioridad",
+      "Evitar la destrucción del bean",
+      "Deshabilitar la creación automática de beans",
+      "Hacer el bean singleton automáticamente",
+    ],
+    answer: 0,
+    explanation:
+      "SmartLifecycle extiende Lifecycle y permite definir prioridad en el arranque/parada y ejecución automática del ciclo.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué interface se utiliza para ejecutar lógica justo antes de que el contenedor cierre?",
+    code: "",
+    options: [
+      "DisposableBean",
+      "BeanFactoryPostProcessor",
+      "BeanPostProcessor",
+      "InitializingBean",
+    ],
+    answer: 0,
+    explanation:
+      "DisposableBean se utiliza para ejecutar lógica de limpieza justo antes de que el bean sea destruido por el contenedor.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes afirmaciones sobre @Bean(initMethod=..., destroyMethod=...) es correcta?",
+    code: "",
+    options: [
+      "Permite definir métodos sin anotar directamente el código fuente del bean",
+      "Requiere que el bean implemente interfaces específicas",
+      "No puede coexistir con @PostConstruct y @PreDestroy",
+      "Solo funciona con beans singleton",
+    ],
+    answer: 0,
+    explanation:
+      "Esta es una alternativa para definir métodos de ciclo de vida sin modificar el código fuente de la clase bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué clase de beans es ignorada por completo en la fase de destrucción del contexto?",
+    code: "",
+    options: ["Prototype", "Singleton", "Request-scoped", "Session-scoped"],
+    answer: 0,
+    explanation:
+      "Beans con scope prototype no son gestionados por Spring tras su creación, por lo tanto no se destruyen automáticamente.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué sucede si un método anotado con @PreDestroy lanza una excepción?",
+    code: "",
+    options: [
+      "La excepción es ignorada y el proceso de cierre continúa",
+      "El contenedor aborta el cierre de contexto",
+      "El bean se reinicializa automáticamente",
+      "Se desactiva la anotación para ese bean",
+    ],
+    answer: 0,
+    explanation:
+      "Spring ignora excepciones lanzadas durante @PreDestroy y continúa cerrando el contexto.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué método se ejecuta antes de que un bean se devuelva al cliente, si se implementa BeanPostProcessor?",
+    code: "",
+    options: [
+      "postProcessBeforeInitialization()",
+      "postConstruct()",
+      "initialize()",
+      "configure()",
+    ],
+    answer: 0,
+    explanation:
+      "BeanPostProcessor permite interceptar el bean antes de la inicialización a través de postProcessBeforeInitialization().",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes interfaces permite ejecutar código tras inyección de propiedades y antes de que el bean esté listo?",
+    code: "",
+    options: [
+      "InitializingBean",
+      "ApplicationContextAware",
+      "BeanNameAware",
+      "DisposableBean",
+    ],
+    answer: 0,
+    explanation:
+      "afterPropertiesSet() de InitializingBean se ejecuta después de la inyección de dependencias y antes de exponer el bean.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cómo asegura Spring que se ejecute el método destroy en un bean cuando la aplicación finaliza?",
+    code: "",
+    options: [
+      "Registrando un hook de shutdown en el contexto",
+      "Forzando la finalización con System.exit()",
+      "Destruyendo todos los threads activos",
+      "Ejecutando el método run() del bean",
+    ],
+    answer: 0,
+    explanation:
+      "Spring registra un hook de shutdown para ejecutar los métodos de destrucción definidos en los beans al cerrar el contexto.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué anotación se utiliza para indicar que un método debe ejecutarse justo después de la inyección de dependencias?",
+    code: "",
+    options: ["@PostConstruct", "@Inject", "@Startup", "@Init"],
+    answer: 0,
+    explanation:
+      "@PostConstruct marca un método para ser ejecutado inmediatamente después de la inyección de dependencias.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué fase sigue inmediatamente después de que el contenedor llama a afterPropertiesSet()?",
+    code: "",
+    options: [
+      "El bean está listo para ser usado",
+      "Se destruye el bean",
+      "Se ejecuta el método @PreDestroy",
+      "Se realiza la inyección de dependencias",
+    ],
+    answer: 0,
+    explanation:
+      "Después de afterPropertiesSet(), el bean está completamente inicializado y listo para ser usado por el contenedor.",
+    subtheme: "Ciclo de vida de un bean",
+    group: "Java Enterprise",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes afirmaciones representa mejor el principio KISS?",
+    code: "",
+    options: [
+      "Evita duplicar código en varios lugares del sistema.",
+      "Divide el sistema en módulos claramente definidos.",
+      "No agregues complejidad innecesaria a tu solución.",
+      "Cada clase debe tener una única razón para cambiar.",
+    ],
+    answer: 2,
+    explanation:
+      "El principio KISS (Keep It Simple, Stupid) enfatiza la simplicidad y desaconseja la sobreingeniería. Mantener las soluciones simples evita errores y facilita el mantenimiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué problema puede surgir si se ignora el principio DRY en un sistema grande?",
+    code: "",
+    options: [
+      "Alta cohesión de módulos.",
+      "Mayor dificultad en el mantenimiento del sistema.",
+      "Mayor legibilidad del código.",
+      "Bajo acoplamiento entre componentes.",
+    ],
+    answer: 1,
+    explanation:
+      "Ignorar el principio DRY (Don't Repeat Yourself) puede llevar a duplicación de lógica. Si un cambio es necesario, hay que modificar múltiples lugares, aumentando la posibilidad de errores.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el objetivo principal del principio YAGNI?",
+    code: "",
+    options: [
+      "Optimizar el rendimiento de la aplicación.",
+      "Evitar escribir código innecesario para funcionalidades no requeridas.",
+      "Reducir el acoplamiento entre módulos.",
+      "Mejorar la abstracción en las interfaces.",
+    ],
+    answer: 1,
+    explanation:
+      "YAGNI (You Aren't Gonna Need It) recomienda no implementar funcionalidades hasta que sean realmente necesarias, evitando complejidad innecesaria.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "Según el principio de 'Tell, Don’t Ask', ¿qué enfoque es más adecuado?",
+    code: `// ❌ Mal enfoque
+  if (user.getBalance() > 0) {
+      user.debit(amount);
+  }
+  
+  // ✅ Buen enfoque
+  user.processPayment(amount);`,
+    options: [
+      "El enfoque correcto es el segundo, porque delega la lógica a la clase.",
+      "El primer enfoque es mejor porque proporciona más control externo.",
+      "Ambos enfoques son equivalentes si funcionan.",
+      "Depende del lenguaje de programación.",
+    ],
+    answer: 0,
+    explanation:
+      "El principio 'Tell, Don’t Ask' promueve delegar comportamientos al objeto en lugar de exponer su estado interno. Así se mantiene la encapsulación y se mejora la cohesión.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué principio estás violando si haces lo siguiente?",
+    code: `cliente.getDireccion().getCiudad().getNombre();`,
+    options: [
+      "Tell, Don’t Ask",
+      "Law of Demeter (Principio del Conocimiento Mínimo)",
+      "Open/Closed Principle",
+      "Separation of Concerns",
+    ],
+    answer: 1,
+    explanation:
+      "Este tipo de 'encadenamiento profundo' viola la Ley de Deméter, ya que accede a objetos internos de objetos internos, aumentando el acoplamiento y la fragilidad.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la ventaja principal de preferir composición sobre herencia?",
+    code: "",
+    options: [
+      "Reduce la complejidad de los métodos.",
+      "Permite cambiar comportamientos dinámicamente sin romper jerarquías.",
+      "Evita el uso de interfaces.",
+      "Hace que el código sea más funcional.",
+    ],
+    answer: 1,
+    explanation:
+      "La composición permite flexibilidad y desacoplamiento al incluir instancias de otras clases como miembros, en lugar de depender de jerarquías de herencia rígidas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de estas acciones representa una violación del principio DRY?",
+    code: `public double calcularImpuesto(double total) {
+      return total * 0.18;
+  }
+  
+  public double aplicarIGV(double total) {
+      return total * 0.18;
+  }`,
+    options: [
+      "Usar nombres distintos para métodos similares.",
+      "Aplicar un mismo cálculo en dos métodos sin reutilización.",
+      "Multiplicar el total por una constante.",
+      "Tener dos métodos públicos en una clase.",
+    ],
+    answer: 1,
+    explanation:
+      "Repetir la lógica de cálculo del impuesto en múltiples métodos rompe el principio DRY. Lo ideal sería extraer esta lógica en un solo método reutilizable.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el riesgo de aplicar funcionalidades anticipadas según el principio YAGNI?",
+    code: "",
+    options: [
+      "Mayor desacoplamiento del sistema.",
+      "Falta de cobertura de pruebas.",
+      "Complejidad innecesaria y mantenimiento difícil.",
+      "Baja cohesión en las clases.",
+    ],
+    answer: 2,
+    explanation:
+      "Agregar funcionalidades que aún no se necesitan incrementa la complejidad del sistema sin beneficio inmediato, lo que puede dificultar el mantenimiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "En el contexto de SoC (Separation of Concerns), ¿cuál sería una mala práctica?",
+    code: "",
+    options: [
+      "Separar la lógica de presentación de la lógica de negocio.",
+      "Tener métodos de base de datos dentro del controlador de la vista.",
+      "Tener una clase `UsuarioService` que se encarga de validar usuarios.",
+      "Usar un patrón MVC para dividir responsabilidades.",
+    ],
+    answer: 1,
+    explanation:
+      "Incluir operaciones de base de datos directamente en controladores de vista rompe la separación de preocupaciones y mezcla responsabilidades.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es un beneficio claro del principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: [
+      "Permite mayor reutilización de atributos privados.",
+      "Fomenta el uso de estructuras de datos planas.",
+      "Reduce el acoplamiento y mejora la cohesión.",
+      "Hace que las clases hereden menos código.",
+    ],
+    answer: 2,
+    explanation:
+      "Al delegar acciones a los objetos directamente, se refuerza el encapsulamiento, reduciendo el acoplamiento y fomentando un diseño más cohesivo.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué problema presenta el siguiente código respecto al principio de separación de responsabilidades?",
+    code: `class Reporte {
+      void generarPDF() { /* lógica de PDF */ }
+      void guardarEnDisco() { /* lógica de persistencia */ }
+      void enviarPorCorreo() { /* lógica de envío */ }
+  }`,
+    options: [
+      "La clase tiene múltiples razones para cambiar.",
+      "No utiliza herencia correctamente.",
+      "Rompe el principio DRY.",
+      "Aplica mal la composición sobre herencia.",
+    ],
+    answer: 0,
+    explanation:
+      "El principio de Separación de Responsabilidades sugiere que una clase debe tener una única razón para cambiar. Aquí se mezclan responsabilidades de generación, almacenamiento y envío.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una consecuencia de violar la Ley de Deméter?",
+    code: "",
+    options: [
+      "Mayor cohesión entre clases.",
+      "Código más mantenible.",
+      "Aumento del acoplamiento entre objetos.",
+      "Mejores tiempos de ejecución.",
+    ],
+    answer: 2,
+    explanation:
+      "La Ley de Deméter busca limitar el conocimiento de un objeto sobre la estructura interna de otros, reduciendo el acoplamiento. Violaciones a esta ley lo incrementan.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes es un ejemplo de violación al principio YAGNI?",
+    code: `class Usuario {
+      void autenticar() { /* lógica */ }
+      void enviarNotificaciones() { /* aún no requerido */ }
+  }`,
+    options: [
+      "No reutilizar código.",
+      "Implementar funcionalidades que aún no son necesarias.",
+      "Incluir lógica en el constructor.",
+      "Tener métodos privados sin uso.",
+    ],
+    answer: 1,
+    explanation:
+      "El principio YAGNI (You Aren’t Gonna Need It) aconseja no desarrollar funcionalidades hasta que se requieran. El método `enviarNotificaciones` no tiene utilidad actual.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio se relaciona directamente con evitar código repetido?",
+    code: "",
+    options: ["YAGNI", "SoC", "DRY", "Tell, Don’t Ask"],
+    answer: 2,
+    explanation:
+      "DRY (Don’t Repeat Yourself) previene la duplicación de lógica para facilitar el mantenimiento y mejorar la coherencia del sistema.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Por qué preferir composición sobre herencia ayuda a respetar el principio de bajo acoplamiento?",
+    code: "",
+    options: [
+      "Porque heredar siempre es malo.",
+      "Porque permite heredar métodos finales.",
+      "Porque desacopla el comportamiento en tiempo de ejecución.",
+      "Porque permite que las subclases sean más específicas.",
+    ],
+    answer: 2,
+    explanation:
+      "La composición permite modificar comportamientos sin alterar jerarquías de clases, favoreciendo el desacoplamiento y la reutilización flexible.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué beneficio ofrece la separación de preocupaciones (SoC)?",
+    code: "",
+    options: [
+      "Facilita pruebas, mantenimiento y reutilización del código.",
+      "Reduce el número de clases en el sistema.",
+      "Mejora el rendimiento de la aplicación.",
+      "Aumenta la profundidad de herencia.",
+    ],
+    answer: 0,
+    explanation:
+      "Separar responsabilidades permite mantener, probar y extender el software más fácilmente, sin impactar otras áreas del sistema.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "En el principio 'Tell, Don’t Ask', ¿qué implica 'Ask'?",
+    code: "",
+    options: [
+      "Ejecutar una acción directamente.",
+      "Exponer detalles internos de un objeto para decidir por él.",
+      "Delegar la responsabilidad a otra clase.",
+      "Emitir una excepción en lugar de retornar null.",
+    ],
+    answer: 1,
+    explanation:
+      "'Ask' se refiere a consultar datos internos para luego tomar decisiones externas, lo que rompe el encapsulamiento. En lugar de eso, debemos 'decirle' al objeto qué hacer.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué indica una violación al principio DRY en un código base?",
+    code: "",
+    options: [
+      "Uso excesivo de clases abstractas.",
+      "Múltiples fragmentos de lógica duplicada.",
+      "Tener muchos comentarios en el código.",
+      "Uso intensivo de interfaces funcionales.",
+    ],
+    answer: 1,
+    explanation:
+      "La duplicación de lógica en varias partes del código indica una violación al principio DRY, lo que puede dificultar el mantenimiento y provocar errores.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón de diseño promueve explícitamente el principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: ["Factory Method", "Command", "Observer", "Strategy"],
+    answer: 1,
+    explanation:
+      "El patrón Command encapsula una solicitud como un objeto, lo que permite enviar comandos a los objetos, promoviendo el principio 'Tell, Don’t Ask'.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué problema se presenta en este código respecto al principio KISS?",
+    code: `if (estado.equals("activo") || estado.equals("pendiente") || estado.equals("nuevo")) {
+      if (!usuario.isBloqueado() && usuario.getIntentos() < 3) {
+          if (usuario.getRol().equals("admin") || usuario.getRol().equals("supervisor")) {
+              // lógica
+          }
+      }
+  }`,
+    options: [
+      "No se usa herencia correctamente.",
+      "La lógica es innecesariamente compleja.",
+      "Faltan comentarios.",
+      "El método es demasiado corto.",
+    ],
+    answer: 1,
+    explanation:
+      "El principio KISS busca mantener el código simple. Este fragmento puede refactorizarse con métodos auxiliares y expresiones booleanas más limpias.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué estrategia ayuda a evitar violaciones del principio DRY?",
+    code: "",
+    options: [
+      "Implementar múltiples constructores.",
+      "Extraer lógica común a métodos o clases reutilizables.",
+      "Duplicar código para claridad.",
+      "Utilizar herencia siempre que sea posible.",
+    ],
+    answer: 1,
+    explanation:
+      "Extraer lógica repetida en métodos reutilizables evita la duplicación y permite aplicar DRY efectivamente.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Por qué es importante la separación de capas en una arquitectura?",
+    code: "",
+    options: [
+      "Permite más clases en el proyecto.",
+      "Mejora la cobertura de pruebas unitarias.",
+      "Facilita la escalabilidad, el mantenimiento y el desacoplamiento.",
+      "Reduce la complejidad algorítmica.",
+    ],
+    answer: 2,
+    explanation:
+      "Separar responsabilidades en capas (controlador, servicio, repositorio) permite escalar, mantener y testear de forma más eficaz.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué indica si varios módulos dependen directamente de una implementación concreta?",
+    code: "",
+    options: [
+      "Alta cohesión.",
+      "Buena práctica de diseño.",
+      "Violación del principio de inversión de dependencias.",
+      "Uso adecuado de interfaces.",
+    ],
+    answer: 2,
+    explanation:
+      "Si varios módulos dependen de una implementación concreta, no hay inversión de dependencias, lo que puede dificultar el cambio y las pruebas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio complementario sugiere no escribir código para una necesidad futura incierta?",
+    code: "",
+    options: ["SoC", "YAGNI", "DRY", "KISS"],
+    answer: 1,
+    explanation:
+      "YAGNI promueve implementar sólo lo que realmente se necesita, evitando añadir código anticipado innecesario.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el objetivo principal del principio KISS en el diseño de software?",
+    code: "",
+    options: [
+      "Evitar tener demasiadas capas en la arquitectura.",
+      "Mantener el código simple y fácil de entender.",
+      "Utilizar herencia en lugar de composición.",
+      "Aumentar el uso de patrones de diseño complejos.",
+    ],
+    answer: 1,
+    explanation:
+      "KISS (Keep It Simple, Stupid) busca que el diseño sea lo más simple posible, reduciendo la complejidad innecesaria.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes acciones rompe el principio de separación de responsabilidades?",
+    code: `class ClienteService {
+      void registrarCliente() { /* lógica de registro */ }
+      void enviarEmailBienvenida() { /* lógica de envío de correo */ }
+  }`,
+    options: [
+      "Usar interfaces para la clase.",
+      "Agrupar múltiples funcionalidades sin cohesión en una sola clase.",
+      "Tener un solo método en la clase.",
+      "Utilizar clases anónimas para tareas simples.",
+    ],
+    answer: 1,
+    explanation:
+      "El método `enviarEmailBienvenida` debería estar en un componente de notificación, no en el servicio de cliente. Se mezclan responsabilidades.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué sugiere la Ley de Deméter sobre el acceso a los objetos?",
+    code: "",
+    options: [
+      "Puedes acceder a cualquier método público.",
+      "Evita acceder a métodos de objetos devueltos por otros objetos.",
+      "Debes preguntar a todos los objetos sus datos antes de actuar.",
+      "Utiliza más herencia para simplificar acceso.",
+    ],
+    answer: 1,
+    explanation:
+      "La Ley de Deméter sugiere que los objetos sólo deben hablar con sus amigos cercanos, no con 'amigos de amigos'.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una forma común de violar el principio DRY?",
+    code: `double calcularIVA(double precio) {
+      return precio * 0.21;
+  }
+  
+  double calcularTotal(double precio) {
+      double iva = precio * 0.21;
+      return precio + iva;
+  }`,
+    options: [
+      "Utilizar tipos primitivos en vez de objetos.",
+      "No usar herencia en los métodos.",
+      "Repetir la misma lógica en varios métodos.",
+      "Usar múltiples parámetros en los métodos.",
+    ],
+    answer: 2,
+    explanation:
+      "La lógica de cálculo del IVA se repite. Debería extraerse a un solo método reutilizable.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: [
+      "Evitar usar polimorfismo.",
+      "Diseñar objetos más pasivos.",
+      "Permitir que el objeto tome sus propias decisiones.",
+      "Exponer todos los datos internos del objeto.",
+    ],
+    answer: 2,
+    explanation:
+      "'Tell, Don’t Ask' promueve delegar acciones a los objetos directamente, en lugar de consultar sus datos para actuar externamente.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué enfoque viola el principio YAGNI?",
+    code: "",
+    options: [
+      "Escribir pruebas para el código existente.",
+      "Agregar funcionalidades que el cliente aún no ha solicitado.",
+      "Eliminar código duplicado.",
+      "Reducir dependencias en módulos externos.",
+    ],
+    answer: 1,
+    explanation:
+      "YAGNI indica que no se debe programar nada que no se necesite de inmediato. Agregar funcionalidades por si acaso rompe este principio.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué beneficio directo ofrece aplicar el principio DRY?",
+    code: "",
+    options: [
+      "Reducción del número de clases.",
+      "Mayor velocidad de ejecución.",
+      "Facilidad de mantenimiento y menor posibilidad de errores.",
+      "Mayor uso de herencia.",
+    ],
+    answer: 2,
+    explanation:
+      "Al eliminar la duplicación, DRY facilita la modificación de comportamientos comunes y reduce el riesgo de inconsistencias.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué tipo de acoplamiento se intenta minimizar con el uso del principio de inversión de dependencias?",
+    code: "",
+    options: [
+      "Acoplamiento entre módulos de negocio.",
+      "Acoplamiento entre la lógica y la base de datos.",
+      "Acoplamiento a implementaciones concretas.",
+      "Acoplamiento entre pruebas unitarias.",
+    ],
+    answer: 2,
+    explanation:
+      "El principio de inversión de dependencias busca que los módulos de alto nivel no dependan de implementaciones concretas, sino de abstracciones.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el riesgo de aplicar 'Tell, Don’t Ask' de forma incorrecta?",
+    code: "",
+    options: [
+      "Generar objetos demasiado activos que violen SRP.",
+      "Crear métodos setters innecesarios.",
+      "Disminuir la cohesión interna del objeto.",
+      "Reducir la legibilidad del código.",
+    ],
+    answer: 0,
+    explanation:
+      "Si se lleva al extremo, un objeto podría tener demasiadas responsabilidades, violando la Separación de Responsabilidades.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué tipo de test se ve más beneficiado cuando se aplica el principio de bajo acoplamiento?",
+    code: "",
+    options: [
+      "Test manuales.",
+      "Pruebas de rendimiento.",
+      "Pruebas unitarias.",
+      "Pruebas de carga.",
+    ],
+    answer: 2,
+    explanation:
+      "Las pruebas unitarias son más efectivas cuando los módulos están desacoplados, ya que se pueden probar de forma aislada.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué enfoque sigue el principio SoC (Separation of Concerns)?",
+    code: "",
+    options: [
+      "Separar interfaces públicas y privadas.",
+      "Separar datos persistentes de datos temporales.",
+      "Separar diferentes responsabilidades en componentes distintos.",
+      "Separar lógica de negocio del framework.",
+    ],
+    answer: 2,
+    explanation:
+      "El principio SoC sugiere que cada módulo o clase tenga una única preocupación claramente definida.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es una consecuencia de tener clases con múltiples responsabilidades?",
+    code: "",
+    options: [
+      "Mayor cohesión interna.",
+      "Mayor facilidad de pruebas.",
+      "Dificultad para reutilizar o extender el código.",
+      "Mayor rendimiento en ejecución.",
+    ],
+    answer: 2,
+    explanation:
+      "Las clases con múltiples responsabilidades son difíciles de probar, extender y mantener.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué es una señal de que podrías aplicar 'Tell, Don’t Ask' a una función existente?",
+    code: "",
+    options: [
+      "La función no tiene condicionales.",
+      "Hay múltiples llamadas a getters seguidas de una decisión.",
+      "Se está usando herencia.",
+      "La función no retorna ningún valor.",
+    ],
+    answer: 1,
+    explanation:
+      "Una cadena de llamadas a `get` y condicionales puede indicar que el objeto está siendo interrogado en lugar de ser instruido.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón de diseño puede usarse para reforzar el principio de separación de responsabilidades?",
+    code: "",
+    options: [
+      "Singleton",
+      "MVC (Model-View-Controller)",
+      "Factory Method",
+      "Builder",
+    ],
+    answer: 1,
+    explanation:
+      "El patrón MVC separa responsabilidades en componentes de modelo, vista y controlador, lo que facilita el mantenimiento y escalabilidad.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué ventaja directa ofrece aplicar el principio 'You Aren’t Gonna Need It' (YAGNI)?",
+    code: "",
+    options: [
+      "Mejora la velocidad de ejecución del programa.",
+      "Reduce la deuda técnica y evita sobreingeniería.",
+      "Permite escribir más pruebas automatizadas.",
+      "Facilita el uso de patrones complejos desde el inicio.",
+    ],
+    answer: 1,
+    explanation:
+      "YAGNI fomenta escribir solo lo necesario en el momento, lo que reduce la complejidad y previene la sobreingeniería.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál de las siguientes prácticas contradice el principio DRY?",
+    code: `public double calcularDescuento(double precio) {
+      return precio * 0.10;
+  }
+  
+  public double calcularPrecioFinal(double precio) {
+      return precio - (precio * 0.10);
+  }`,
+    options: [
+      "Reutilización de constantes.",
+      "Extracción de lógica a funciones.",
+      "Duplicación de lógica en múltiples métodos.",
+      "Uso de clases utilitarias.",
+    ],
+    answer: 2,
+    explanation:
+      "La lógica del descuento está duplicada. El principio DRY sugiere extraer esa lógica a un único método reutilizable.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cómo ayuda el principio de Cohesión Alta en el diseño de clases?",
+    code: "",
+    options: [
+      "Mejora la herencia entre clases.",
+      "Agrupa funcionalidades relacionadas, haciendo las clases más comprensibles y mantenibles.",
+      "Permite mezclar múltiples responsabilidades en una clase.",
+      "Facilita el uso de variables globales.",
+    ],
+    answer: 1,
+    explanation:
+      "Una clase cohesiva tiene métodos y propiedades que trabajan juntas en una misma responsabilidad, lo que mejora su claridad y mantenibilidad.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué refleja una violación del principio SoC (Separación de responsabilidades)?",
+    code: `class ReporteService {
+      void generarPDF() { /* ... */ }
+      void enviarPorEmail() { /* ... */ }
+  }`,
+    options: [
+      "Usar interfaces para separar funcionalidades.",
+      "Agrupar funcionalidades relacionadas en una sola clase.",
+      "Incluir funcionalidades de generación y envío en la misma clase.",
+      "Separar la lógica de presentación en otra clase.",
+    ],
+    answer: 2,
+    explanation:
+      "Cada responsabilidad (generar y enviar) debería estar en clases separadas para cumplir con el principio SoC.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es un ejemplo de alta cohesión en una clase?",
+    code: "",
+    options: [
+      "Una clase que maneja usuarios, correos y facturación.",
+      "Una clase que contiene 50 métodos con funcionalidades diversas.",
+      "Una clase que agrupa operaciones CRUD de clientes.",
+      "Una clase que depende de múltiples paquetes externos.",
+    ],
+    answer: 2,
+    explanation:
+      "Una clase que gestiona operaciones relacionadas (como CRUD para clientes) está enfocada y cohesionada.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón de diseño respeta el principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: ["Visitor", "Strategy", "Builder", "Observer"],
+    answer: 1,
+    explanation:
+      "El patrón Strategy encapsula el comportamiento y permite que el objeto delegue la lógica sin preguntar cómo debe actuar.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué problema surge al no aplicar el principio KISS?",
+    code: "",
+    options: [
+      "El código es más fácil de extender.",
+      "Se reduce la necesidad de documentar.",
+      "Se incrementa la complejidad innecesaria.",
+      "Se mejora el rendimiento por tener más lógica.",
+    ],
+    answer: 2,
+    explanation:
+      "KISS propone mantener el diseño simple. No seguirlo puede llevar a soluciones más complejas de lo necesario.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes casos respeta el principio de menor conocimiento (Ley de Deméter)?",
+    code: `pedido.getCliente().getNombre();`,
+    options: [
+      "Acceder directamente al atributo del cliente.",
+      "Usar getters anidados como en el ejemplo.",
+      "Exponer solo métodos que encapsulen la lógica interna.",
+      "Acceder a objetos dentro de objetos sin restricción.",
+    ],
+    answer: 2,
+    explanation:
+      "Encapsular el acceso evita la exposición de detalles internos, lo cual es el corazón de la Ley de Deméter.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes prácticas está alineada con el principio YAGNI?",
+    code: "",
+    options: [
+      "Diseñar todos los casos posibles por adelantado.",
+      "Agregar lógica anticipada a las clases base.",
+      "Implementar solo lo que es necesario ahora.",
+      "Desarrollar extensiones futuras junto al core.",
+    ],
+    answer: 2,
+    explanation:
+      "YAGNI aboga por construir solo lo que se necesita actualmente, evitando código que no aporta valor inmediato.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio enfatiza evitar la exposición de estructuras internas de objetos?",
+    code: "",
+    options: ["KISS", "YAGNI", "Law of Demeter", "DRY"],
+    answer: 2,
+    explanation:
+      "La Ley de Deméter sugiere que un objeto debe conocer sólo lo necesario, sin acceder profundamente a otras estructuras.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué enfoque ayuda a mejorar la cohesión?",
+    code: "",
+    options: [
+      "Dividir funcionalidades no relacionadas en distintas clases.",
+      "Agregar múltiples funcionalidades en una sola clase.",
+      "Unificar todos los servicios en una clase central.",
+      "Utilizar variables globales.",
+    ],
+    answer: 0,
+    explanation:
+      "Dividir responsabilidades mejora la cohesión, ya que cada clase se enfoca en un solo propósito.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cómo mejora el principio DRY la calidad del software?",
+    code: "",
+    options: [
+      "Evita errores al modificar lógica duplicada.",
+      "Hace que el código sea más lento pero más seguro.",
+      "Permite reutilizar código sin documentarlo.",
+      "Evita el uso de funciones auxiliares.",
+    ],
+    answer: 0,
+    explanation:
+      "Al eliminar la duplicación, DRY reduce el riesgo de inconsistencias y errores cuando se realizan cambios.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio se rompe si una clase depende de detalles de implementación?",
+    code: "",
+    options: ["YAGNI", "Tell, Don’t Ask", "Inversión de Dependencias", "KISS"],
+    answer: 2,
+    explanation:
+      "El principio de Inversión de Dependencias indica que las clases deben depender de abstracciones, no de implementaciones concretas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué técnica ayuda a implementar 'Tell, Don’t Ask'?",
+    code: "",
+    options: [
+      "Exponer todos los atributos como públicos.",
+      "Utilizar métodos con lógica interna encapsulada.",
+      "Escribir métodos estáticos con lógica compartida.",
+      "Evitar encapsular atributos para mejorar performance.",
+    ],
+    answer: 1,
+    explanation:
+      "Encapsular la lógica permite que los objetos sean instruidos ('tell') y tomen decisiones internas, evitando la interrogación.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué situación viola el principio 'Tell, Don’t Ask'?",
+    code: `if (usuario.getRol().equals("ADMIN")) {
+      usuario.darPermisosEspeciales();
+  }`,
+    options: [
+      "Utilizar `instanceof` para controlar flujos.",
+      "Solicitar información del objeto para tomar decisiones externas.",
+      "Delegar la lógica de permisos al objeto.",
+      "Usar polimorfismo para aplicar comportamientos.",
+    ],
+    answer: 1,
+    explanation:
+      "Al consultar el estado interno y tomar decisiones fuera del objeto, se viola el principio 'Tell, Don’t Ask'. Lo correcto sería que el objeto administre su propio comportamiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué implica aplicar correctamente la Ley de Deméter?",
+    code: "",
+    options: [
+      "Reducir el número total de clases.",
+      "Evitar la creación de objetos en constructores.",
+      "Limitar las dependencias y el acoplamiento.",
+      "Aumentar la reutilización de lógica duplicada.",
+    ],
+    answer: 2,
+    explanation:
+      "La Ley de Deméter sugiere que una clase debe interactuar solo con sus colaboradores directos, reduciendo el acoplamiento y manteniendo un diseño más limpio.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ventaja práctica ofrece el principio DRY?",
+    code: "",
+    options: [
+      "Permite código más largo pero más explícito.",
+      "Aumenta la cantidad de clases pero mejora el diseño.",
+      "Reduce errores al tener un solo punto de mantenimiento.",
+      "Evita usar interfaces para separar responsabilidades.",
+    ],
+    answer: 2,
+    explanation:
+      "Cuando la lógica se centraliza, cualquier cambio o corrección se aplica en un solo lugar, reduciendo errores.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué práctica representa una violación al principio KISS?",
+    code: `public void procesar() {
+      if (condicion1 && (!condicion2 || (condicion3 && condicion4))) {
+          // lógica compleja anidada
+      }
+  }`,
+    options: [
+      "Separar la lógica en métodos privados.",
+      "Agregar comentarios para cada condición.",
+      "Incluir múltiples condiciones anidadas en un solo bloque.",
+      "Utilizar un `switch` para evaluar múltiples casos.",
+    ],
+    answer: 2,
+    explanation:
+      "El uso excesivo de lógica compleja en un solo bloque de código va en contra del principio KISS, que aboga por mantener las cosas simples y claras.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón ayuda a mantener una alta cohesión?",
+    code: "",
+    options: ["Singleton", "Factory Method", "Repository", "Facade"],
+    answer: 2,
+    explanation:
+      "El patrón Repository aísla la lógica de acceso a datos, manteniendo alta cohesión al centralizar operaciones relacionadas en una sola clase.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es un efecto colateral negativo de no aplicar YAGNI?",
+    code: "",
+    options: [
+      "Tiempos de desarrollo más cortos.",
+      "Mejor planificación anticipada.",
+      "Incremento de complejidad innecesaria.",
+      "Código más eficiente desde el principio.",
+    ],
+    answer: 2,
+    explanation:
+      "Agregar funcionalidades antes de necesitarlas conlleva sobreingeniería, lo que complica el mantenimiento y evolución del sistema.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué enfoque es coherente con el principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: [
+      "Evaluar el estado de un objeto antes de actuar.",
+      "Instruir al objeto sobre lo que debe hacer.",
+      "Permitir que otro objeto revise y decida.",
+      "Exponer atributos internos públicamente.",
+    ],
+    answer: 1,
+    explanation:
+      "El enfoque correcto es decirle al objeto lo que debe hacer, delegando internamente el comportamiento y ocultando los detalles de implementación.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "En el contexto de DRY, ¿qué solución es más adecuada para evitar lógica duplicada?",
+    code: "",
+    options: [
+      "Copiar código entre métodos que hacen cosas similares.",
+      "Crear un método común reutilizable.",
+      "Duplicar código para mejorar rendimiento.",
+      "Dividir la lógica duplicada en clases distintas sin relación.",
+    ],
+    answer: 1,
+    explanation:
+      "DRY promueve la creación de métodos reutilizables que encapsulen lógica común, reduciendo duplicación y errores.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es un beneficio directo de aplicar la Ley de Deméter?",
+    code: "",
+    options: [
+      "Mejor rendimiento.",
+      "Mayor acoplamiento entre objetos.",
+      "Menor dependencia de la estructura interna de otros objetos.",
+      "Acceso más rápido a atributos anidados.",
+    ],
+    answer: 2,
+    explanation:
+      "La Ley de Deméter ayuda a reducir el acoplamiento, haciendo que los objetos dependan menos de la estructura interna de otros.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "El siguiente código infringe la Ley de Deméter. ¿Cómo se puede corregir?",
+    code: `cliente.getDireccion().getCalle().getNombre();`,
+    options: [
+      "Eliminar el atributo `cliente`.",
+      "Acceder directamente al nombre de la calle desde `cliente` mediante un método.",
+      "Usar herencia para unir las clases.",
+      "Hacer todos los atributos públicos.",
+    ],
+    answer: 1,
+    explanation:
+      "La corrección consiste en encapsular el acceso a través de un método como `cliente.getNombreDeCalle()`, evitando la navegación por múltiples niveles.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué problema puede generar una clase con demasiadas responsabilidades?",
+    code: "",
+    options: [
+      "Fácil testeo unitario.",
+      "Menor reutilización.",
+      "Alta cohesión.",
+      "Menor acoplamiento.",
+    ],
+    answer: 1,
+    explanation:
+      "Tener muchas responsabilidades en una clase limita su reutilización y complica su mantenimiento y pruebas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué representa un diseño KISS?",
+    code: "",
+    options: [
+      "Utilizar múltiples capas de abstracción innecesarias.",
+      "Diseñar para todas las posibles funcionalidades futuras.",
+      "Mantener el código directo, claro y sin complejidad innecesaria.",
+      "Usar programación metaprogramática avanzada por defecto.",
+    ],
+    answer: 2,
+    explanation:
+      "KISS significa evitar complejidad innecesaria, promoviendo soluciones simples, claras y efectivas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la principal motivación del principio DRY?",
+    code: "",
+    options: [
+      "Evitar errores al modificar lógica duplicada.",
+      "Aumentar la modularidad.",
+      "Permitir escribir más líneas de código.",
+      "Reutilizar únicamente librerías externas.",
+    ],
+    answer: 0,
+    explanation:
+      "DRY busca evitar la duplicación para que cualquier cambio en la lógica solo se tenga que hacer en un lugar.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio complementario promueve escribir menos código, pero más relevante?",
+    code: "",
+    options: ["DRY", "KISS", "YAGNI", "Tell, Don’t Ask"],
+    answer: 2,
+    explanation:
+      "YAGNI nos recuerda que no debemos implementar funcionalidades hasta que realmente las necesitemos, evitando así código innecesario.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Qué alternativa aplica mejor el principio YAGNI?",
+    code: `// Antes
+  public class ReportService {
+      public void export(String format) {
+          if (format.equals("PDF")) {
+              // exportar PDF
+          } else if (format.equals("Excel")) {
+              // exportar Excel
+          } else if (format.equals("HTML")) {
+              // exportar HTML
+          }
+      }
+  }`,
+    options: [
+      "Implementar solo PDF y Excel, y dejar HTML para cuando se necesite.",
+      "Agregar todos los formatos por si acaso.",
+      "Eliminar el método export.",
+      "Crear una clase por cada tipo de exportación desde el inicio.",
+    ],
+    answer: 0,
+    explanation:
+      "El principio YAGNI sugiere no implementar funcionalidad hasta que realmente sea requerida. HTML puede añadirse más adelante si se necesita.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el efecto negativo de violar el principio DRY?",
+    code: "",
+    options: [
+      "Mejora del rendimiento general.",
+      "Aumento de duplicación y errores de mantenimiento.",
+      "Facilidad para escribir pruebas unitarias.",
+      "Reducción de dependencias externas.",
+    ],
+    answer: 1,
+    explanation:
+      "La duplicación de código puede llevar a errores al modificar una parte y olvidar actualizar las demás.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué solución respeta la Ley de Deméter?",
+    code: `cliente.getPedido().getProducto().getPrecio();`,
+    options: [
+      "Acceder directamente al producto.",
+      "Crear un método en cliente como getPrecioDelProducto().",
+      "Hacer públicos todos los atributos.",
+      "Usar reflexión para obtener el valor.",
+    ],
+    answer: 1,
+    explanation:
+      "Encapsular el acceso profundo en un método evita la navegación por objetos intermedios y respeta la Ley de Deméter.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio complementario está directamente asociado a la simplicidad del código?",
+    code: "",
+    options: ["DRY", "KISS", "YAGNI", "Tell, Don’t Ask"],
+    answer: 1,
+    explanation:
+      "KISS (Keep It Simple, Stupid) recomienda evitar complejidad innecesaria y mantener el código simple.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "En el siguiente código, ¿qué principio está en riesgo?",
+    code: `public class Usuario {
+      public boolean esAdmin;
+  }
+  
+  if (usuario.esAdmin) {
+      realizarAccionesAdmin();
+  }`,
+    options: ["DRY", "YAGNI", "Tell, Don’t Ask", "KISS"],
+    answer: 2,
+    explanation:
+      "Se consulta el estado del objeto desde fuera en vez de delegarle la acción, lo cual viola 'Tell, Don’t Ask'.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón fomenta la cohesión al manejar lógica relacionada en un solo lugar?",
+    code: "",
+    options: ["Repository", "Builder", "Proxy", "Adapter"],
+    answer: 0,
+    explanation:
+      "Repository centraliza el acceso a datos y mantiene juntas las operaciones relacionadas, fomentando la cohesión.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué situación va en contra del principio KISS?",
+    code: "",
+    options: [
+      "Usar métodos descriptivos y breves.",
+      "Dividir la lógica compleja en funciones más simples.",
+      "Usar herencia múltiple innecesaria.",
+      "Aplicar nombres significativos.",
+    ],
+    answer: 2,
+    explanation:
+      "La herencia múltiple innecesaria puede aumentar la complejidad y dificultar el mantenimiento del código.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una manifestación común de violar el principio DRY?",
+    code: "",
+    options: [
+      "Uso excesivo de herencia.",
+      "Tener múltiples métodos con lógica idéntica.",
+      "Uso de inyección de dependencias.",
+      "Utilización de interfaces funcionales.",
+    ],
+    answer: 1,
+    explanation:
+      "La repetición de lógica en distintos métodos es una clara violación del principio DRY.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la Ley de Deméter más fácil de seguir?",
+    code: "",
+    options: [
+      "Usar composición sobre herencia.",
+      "Evitar métodos públicos en general.",
+      "Tener getters para cada atributo.",
+      "Exponer referencias a objetos anidados.",
+    ],
+    answer: 0,
+    explanation:
+      "La composición permite controlar mejor el acceso y limitar la exposición de objetos internos, facilitando el cumplimiento de la Ley de Deméter.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál de los siguientes enfoques es inconsistente con YAGNI?",
+    code: "",
+    options: [
+      "Agregar un campo que aún no se utiliza.",
+      "Dejar una interfaz preparada para extensión.",
+      "Implementar funcionalidades a medida que se necesitan.",
+      "Evitar la anticipación innecesaria del diseño.",
+    ],
+    answer: 0,
+    explanation:
+      "Agregar elementos que aún no se usan va en contra del principio YAGNI (You Aren’t Gonna Need It).",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué característica refuerza el principio KISS?",
+    code: "",
+    options: [
+      "Complejidad controlada.",
+      "Sobrecarga de constructores.",
+      "Abstracción innecesaria.",
+      "Uso excesivo de patrones.",
+    ],
+    answer: 0,
+    explanation:
+      "El principio KISS promueve mantener el diseño simple y fácil de entender.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón puede ayudar a evitar la duplicación de lógica de construcción de objetos?",
+    code: "",
+    options: ["Builder", "Decorator", "Factory", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón Builder encapsula la lógica de creación, evitando duplicación en la construcción de objetos complejos.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué enfoque es más alineado con 'Tell, Don’t Ask'?",
+    code: "",
+    options: [
+      "Devolver el estado interno y decidir desde el exterior.",
+      "Instruir al objeto para que actúe por sí mismo.",
+      "Usar getters para obtener cada campo.",
+      "Validar condiciones externas antes de llamar métodos.",
+    ],
+    answer: 1,
+    explanation:
+      "El principio enfatiza que debemos delegar comportamientos al objeto y evitar lógica de decisión fuera de él.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué beneficio ofrece aplicar DRY en sistemas grandes?",
+    code: "",
+    options: [
+      "Mayor redundancia y seguridad.",
+      "Aislamiento de módulos funcionales.",
+      "Fácil modificación de lógica común en un solo lugar.",
+      "Mejor diseño anticipado del sistema.",
+    ],
+    answer: 2,
+    explanation:
+      "Cuando la lógica se centraliza, cualquier cambio se propaga de forma segura y controlada en todo el sistema.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón puede ayudar a cumplir con YAGNI?",
+    code: "",
+    options: ["Singleton", "Proxy", "Command", "Strategy"],
+    answer: 3,
+    explanation:
+      "Strategy permite diferir decisiones de comportamiento hasta que realmente se necesiten, lo que está en línea con YAGNI.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué principio complementario sugiere delegar comportamientos al objeto en lugar de interrogarlo?",
+    code: "",
+    options: ["Tell, Don’t Ask", "DRY", "KISS", "YAGNI"],
+    answer: 0,
+    explanation:
+      "'Tell, Don’t Ask' promueve que los objetos hagan el trabajo en lugar de que otros decidan por ellos después de obtener su estado.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué técnica puede ayudarte a aplicar correctamente el principio DRY?",
+    code: "",
+    options: [
+      "Duplicar validaciones por cada módulo.",
+      "Encapsular lógica repetida en utilidades reutilizables.",
+      "Copiar funciones entre servicios para ahorrar tiempo.",
+      "Incluir la misma validación en cada clase controladora.",
+    ],
+    answer: 1,
+    explanation:
+      "Encapsular lógica común previene duplicación y facilita el mantenimiento, aplicando DRY.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué práctica viola el principio YAGNI?",
+    code: "",
+    options: [
+      "Desarrollar funcionalidades cuando son requeridas.",
+      "Preparar un módulo para múltiples bases de datos aunque solo uses una.",
+      "Refactorizar cuando hay duplicación evidente.",
+      "Minimizar la anticipación de requisitos.",
+    ],
+    answer: 1,
+    explanation:
+      "Agregar soporte anticipado para múltiples bases de datos sin requerimiento es un claro caso de violar YAGNI.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es una consecuencia negativa de ignorar la Ley de Deméter?",
+    code: "",
+    options: [
+      "Alta cohesión de clases.",
+      "Bajo acoplamiento entre objetos.",
+      "Demasiada navegación por objetos intermedios.",
+      "Mayor encapsulamiento.",
+    ],
+    answer: 2,
+    explanation:
+      "Violar la Ley de Deméter suele implicar acceder a objetos anidados, lo que aumenta el acoplamiento y la fragilidad del código.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una señal de que estás violando el principio KISS?",
+    code: "",
+    options: [
+      "Funciones cortas y específicas.",
+      "Diseño con muchas clases genéricas innecesarias.",
+      "Nombres de variables significativos.",
+      "Uso de composición en lugar de herencia compleja.",
+    ],
+    answer: 1,
+    explanation:
+      "El principio KISS busca simplicidad. Tener clases genéricas innecesarias agrega complejidad sin aportar valor.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una forma correcta de aplicar 'Tell, Don’t Ask'?",
+    code: `// Incorrecto
+  if (pedido.getEstado().equals("PENDIENTE")) {
+      pedido.procesar();
+  }`,
+    options: [
+      "Extraer el estado y procesar según condiciones externas.",
+      "Encapsular la decisión en un método del objeto Pedido.",
+      "Acceder al campo estado directamente.",
+      "Usar una enum para comparar estados desde fuera.",
+    ],
+    answer: 1,
+    explanation:
+      "Al delegar la lógica de decisión al objeto, se respeta 'Tell, Don’t Ask' y se mejora el encapsulamiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio sugiere evitar complejidad innecesaria incluso si parece más 'sofisticado'?",
+    code: "",
+    options: ["KISS", "DRY", "YAGNI", "Open/Closed"],
+    answer: 0,
+    explanation:
+      "KISS promueve mantener el diseño simple y directo, evitando sofisticaciones innecesarias.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué indica una violación del principio DRY en una base de código grande?",
+    code: "",
+    options: [
+      "Un método que hace muchas cosas.",
+      "Clases con múltiples responsabilidades.",
+      "Validaciones repetidas en múltiples lugares.",
+      "Interfaces con muchos métodos.",
+    ],
+    answer: 2,
+    explanation:
+      "Repetir validaciones en varios puntos es síntoma de que la lógica no está centralizada, violando DRY.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón ayuda a evitar decisiones prematuras violando YAGNI?",
+    code: "",
+    options: ["Factory Method", "Template Method", "Strategy", "Bridge"],
+    answer: 2,
+    explanation:
+      "Strategy permite agregar comportamientos sin anticipar su necesidad inicial, cumpliendo YAGNI.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué estructura favorece la Ley de Deméter?",
+    code: "",
+    options: [
+      "Objetos con acceso directo a sus colaboradores.",
+      "Cadena de llamadas anidadas.",
+      "Uso de métodos intermedios para delegar llamadas.",
+      "Múltiples niveles de herencia en objetos relacionados.",
+    ],
+    answer: 2,
+    explanation:
+      "Delegar llamadas intermedias encapsula el acceso y previene el acoplamiento excesivo.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cómo se relacionan KISS y mantenimiento del software?",
+    code: "",
+    options: [
+      "KISS prioriza la optimización prematura.",
+      "KISS reduce la legibilidad para ganar rendimiento.",
+      "KISS facilita mantener el software a largo plazo.",
+      "KISS requiere escribir más código por simplicidad.",
+    ],
+    answer: 2,
+    explanation:
+      "Al mantener el diseño simple y claro, KISS facilita la comprensión y mantenimiento del software.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué problema puede surgir si se viola 'Tell, Don’t Ask' frecuentemente?",
+    code: "",
+    options: [
+      "Acoplamiento alto entre módulos.",
+      "Interfaces coherentes y delegadas.",
+      "Reducción del número de líneas de código.",
+      "Uso de métodos orientados a mensajes.",
+    ],
+    answer: 0,
+    explanation:
+      "Preguntar por estado para decidir fuera del objeto genera acoplamiento y lógica distribuida.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es mejor evitar si quieres aplicar DRY correctamente?",
+    code: "",
+    options: [
+      "Módulos reutilizables.",
+      "Lógica compartida en métodos comunes.",
+      "Copiar código similar entre diferentes clases.",
+      "Uso de patrones de diseño como Template Method.",
+    ],
+    answer: 2,
+    explanation:
+      "Copiar código similar viola DRY, pues cualquier cambio debe repetirse manualmente.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace que una solución se considere simple según KISS?",
+    code: "",
+    options: [
+      "Ocultar todos los detalles en una sola clase.",
+      "Evitar condiciones, loops y estructuras básicas.",
+      "Descomponer la lógica compleja en unidades entendibles.",
+      "Duplicar lógica para ahorrar tiempo.",
+    ],
+    answer: 2,
+    explanation:
+      "Descomponer en partes simples y comprensibles mejora la claridad, favoreciendo el principio KISS.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué principio ayuda a evitar 'feature creep' durante el desarrollo?",
+    code: "",
+    options: ["KISS", "Tell, Don’t Ask", "YAGNI", "DRY"],
+    answer: 2,
+    explanation:
+      "YAGNI (You Aren't Gonna Need It) ayuda a evitar la implementación de funcionalidades que no han sido solicitadas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón de diseño favorece el principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: ["Observer", "Command", "Singleton", "Iterator"],
+    answer: 1,
+    explanation:
+      "El patrón Command encapsula acciones, favoreciendo la delegación de comportamiento en vez de consulta de estado.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué fragmento de código VIOLA el principio DRY?",
+    code: `public class ValidadorUsuario {
+      public boolean esEmailValido(String email) {
+          return email != null && email.contains("@");
+      }
+  
+      public boolean esEmailDeAdmin(String email) {
+          return email != null && email.contains("@") && email.endsWith("@admin.com");
+      }
+  }`,
+    options: [
+      "Usar contains() en ambas funciones.",
+      "Duplicar la validación de email en ambos métodos.",
+      "Validar solo dominios en un método.",
+      "Aplicar lógica booleana directamente.",
+    ],
+    answer: 1,
+    explanation:
+      "La validación de formato de email se repite en ambos métodos, violando DRY.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "Selecciona el principio relacionado con 'menor conocimiento posible'.",
+    code: "",
+    options: ["DRY", "KISS", "Ley de Deméter", "YAGNI"],
+    answer: 2,
+    explanation:
+      "La Ley de Deméter recomienda que los objetos solo se comuniquen con sus amigos cercanos, promoviendo bajo acoplamiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué situación representa mejor el principio YAGNI?",
+    code: "",
+    options: [
+      "Diseñar una clase base que no se utiliza.",
+      "Evitar agregar filtros de búsqueda si no hay requerimiento aún.",
+      "Refactorizar para evitar duplicación.",
+      "Implementar una interfaz para cada entidad.",
+    ],
+    answer: 1,
+    explanation:
+      "YAGNI sugiere no implementar características hasta que realmente sean necesarias.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cómo se refactoriza aplicando 'Tell, Don’t Ask'?",
+    code: `if (vehiculo.getVelocidad() > 100) {
+      vehiculo.reducirVelocidad();
+  }`,
+    options: [
+      "Agregar un getter más específico.",
+      "Dejar la decisión en el consumidor.",
+      "Crear un método reducirSiExceso() dentro de Vehiculo.",
+      "Acceder al atributo velocidad directamente.",
+    ],
+    answer: 2,
+    explanation:
+      "La lógica de decisión debe vivir dentro del objeto, no fuera, cumpliendo 'Tell, Don’t Ask'.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué principio se rompe al tener métodos que usan excesivamente estructuras de datos públicas?",
+    code: "",
+    options: ["Ley de Deméter", "DRY", "KISS", "Open/Closed"],
+    answer: 0,
+    explanation:
+      "La Ley de Deméter recomienda no navegar estructuras internas o acceder a datos profundamente anidados.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de las siguientes es una ventaja directa del principio DRY?",
+    code: "",
+    options: [
+      "Mayor tiempo de desarrollo.",
+      "Mayor cohesión en los métodos.",
+      "Reducción del mantenimiento.",
+      "Más complejidad de abstracciones.",
+    ],
+    answer: 2,
+    explanation:
+      "Reducir duplicaciones simplifica el mantenimiento y mejora la consistencia del código.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es lo más importante al aplicar KISS?",
+    code: "",
+    options: [
+      "Optimizar para velocidad ante todo.",
+      "Reducir la cantidad de líneas de código.",
+      "Crear soluciones que otros desarrolladores entiendan fácilmente.",
+      "Evitar la programación orientada a objetos.",
+    ],
+    answer: 2,
+    explanation:
+      "KISS busca simplicidad comprensible, haciendo que el código sea fácil de mantener y entender.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué tipo de método favorece el principio 'Tell, Don’t Ask'?",
+    code: "",
+    options: [
+      "getSaldo()",
+      "setSaldo()",
+      "actualizarSaldoConIntereses()",
+      "isSaldoNegativo()",
+    ],
+    answer: 2,
+    explanation:
+      "Métodos que encapsulan lógica de negocio, como actualizarSaldoConIntereses(), siguen el principio de delegar comportamiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál sería una buena refactorización si estás violando DRY en múltiples clases?",
+    code: "",
+    options: [
+      "Extraer lógica duplicada en una clase utilitaria.",
+      "Eliminar clases duplicadas.",
+      "Convertir cada método en una clase independiente.",
+      "Copiar la lógica de una clase a otra.",
+    ],
+    answer: 0,
+    explanation:
+      "Extraer métodos comunes a utilidades compartidas permite centralizar lógica y aplicar DRY.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué fragmento representa mejor la aplicación de la Ley de Deméter?",
+    code: `usuario.getPerfil().getDireccion().getCiudad();`,
+    options: [
+      "Aplicación correcta del principio.",
+      "Acoplamiento bajo.",
+      "Violación clara del principio.",
+      "Encapsulamiento de información sensible.",
+    ],
+    answer: 2,
+    explanation:
+      "Este acceso encadenado viola la Ley de Deméter, al depender de estructuras internas de varios objetos.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es un riesgo de ignorar el principio KISS en diseño de clases?",
+    code: "",
+    options: [
+      "Bajo rendimiento.",
+      "Clases con múltiples responsabilidades y difícil mantenimiento.",
+      "Dificultades con herencia.",
+      "Dependencia de librerías externas.",
+    ],
+    answer: 1,
+    explanation:
+      "Diseños complejos tienden a tener más responsabilidades, dificultando su evolución y pruebas.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es una forma útil de aplicar el principio DRY en validaciones?",
+    code: "",
+    options: [
+      "Validar cada campo por separado en cada clase.",
+      "Delegar en un validador externo reutilizable.",
+      "Evitar validaciones para mantener el código corto.",
+      "Repetir lógica en todos los endpoints REST.",
+    ],
+    answer: 1,
+    explanation:
+      "Crear un validador reutilizable para múltiples contextos permite centralizar la lógica y cumplir DRY.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón es ideal para encapsular algoritmos y hacerlos intercambiables sin afectar al cliente?",
+    code: "",
+    options: ["Observer", "Strategy", "Builder", "Factory Method"],
+    answer: 1,
+    explanation:
+      "El patrón Strategy permite encapsular algoritmos y hacerlos intercambiables sin modificar el código del cliente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones es más adecuado para centralizar la comunicación entre múltiples objetos?",
+    code: "",
+    options: ["Mediator", "Observer", "Decorator", "Chain of Responsibility"],
+    answer: 0,
+    explanation:
+      "El patrón Mediator centraliza la comunicación entre objetos para reducir dependencias directas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "En el patrón Singleton, ¿cuál es la principal preocupación en aplicaciones multihilo?",
+    code: "",
+    options: [
+      "Carga lenta",
+      "Duplicación de objetos",
+      "Sincronización de acceso",
+      "Sobrecarga de memoria",
+    ],
+    answer: 2,
+    explanation:
+      "La sincronización es crucial para evitar que múltiples hilos creen instancias diferentes del Singleton.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se utiliza para construir un objeto complejo paso a paso?",
+    code: "",
+    options: ["Builder", "Prototype", "Factory Method", "Singleton"],
+    answer: 0,
+    explanation:
+      "El patrón Builder separa la construcción de un objeto complejo de su representación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite agregar responsabilidades a objetos de forma dinámica?",
+    code: "",
+    options: ["Adapter", "Composite", "Decorator", "Proxy"],
+    answer: 2,
+    explanation:
+      "El patrón Decorator permite agregar responsabilidades a objetos en tiempo de ejecución de forma flexible.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el objetivo principal del patrón Abstract Factory?",
+    code: "",
+    options: [
+      "Evitar la creación de múltiples objetos",
+      "Proveer una interfaz para crear familias de objetos relacionados",
+      "Construir objetos paso a paso",
+      "Permitir clonación de objetos existentes",
+    ],
+    answer: 1,
+    explanation:
+      "Abstract Factory proporciona una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "Analiza el siguiente código. ¿Qué patrón representa?",
+    code: "interface Command { void execute(); }",
+    options: ["Observer", "Template Method", "Command", "State"],
+    answer: 2,
+    explanation:
+      "El patrón Command encapsula una solicitud como un objeto, y se reconoce por una interfaz con un método 'execute'.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón permite guardar y restaurar el estado de un objeto?",
+    code: "",
+    options: ["Observer", "State", "Memento", "Flyweight"],
+    answer: 2,
+    explanation:
+      "El patrón Memento permite capturar y restaurar el estado interno de un objeto sin violar su encapsulamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones es útil para representar árboles jerárquicos de objetos?",
+    code: "",
+    options: ["Decorator", "Composite", "Proxy", "Bridge"],
+    answer: 1,
+    explanation:
+      "El patrón Composite permite tratar objetos individuales y composiciones de manera uniforme en estructuras jerárquicas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite modificar el comportamiento de un algoritmo sin cambiar su estructura general?",
+    code: "",
+    options: ["Strategy", "Template Method", "Command", "Visitor"],
+    answer: 1,
+    explanation:
+      "El patrón Template Method define el esqueleto de un algoritmo y permite que subclases redefinan pasos específicos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "Observa el siguiente fragmento de código. ¿Qué patrón representa?",
+    code: "public abstract class Juego { final void jugar() { iniciar(); jugarTurnos(); finalizar(); } abstract void iniciar(); abstract void jugarTurnos(); abstract void finalizar(); }",
+    options: ["Strategy", "Template Method", "Factory Method", "Bridge"],
+    answer: 1,
+    explanation:
+      "Este código implementa Template Method al definir un algoritmo con pasos abstractos que pueden ser personalizados por subclases.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones separa una abstracción de su implementación para que puedan variar independientemente?",
+    code: "",
+    options: ["Bridge", "Proxy", "Adapter", "Composite"],
+    answer: 0,
+    explanation:
+      "El patrón Bridge desacopla la abstracción de su implementación, permitiendo que ambas evolucionen por separado.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón define una interfaz común para objetos que deben ser clonados?",
+    code: "",
+    options: ["Builder", "Factory Method", "Prototype", "Memento"],
+    answer: 2,
+    explanation:
+      "Prototype define una interfaz para clonar objetos sin acoplar el código a sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se puede aplicar para evitar el costo de crear objetos costosos reutilizándolos?",
+    code: "",
+    options: ["Flyweight", "Memento", "Command", "Builder"],
+    answer: 0,
+    explanation:
+      "El patrón Flyweight reutiliza instancias para minimizar el uso de memoria cuando se crean muchos objetos similares.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula diferentes representaciones de una expresión y permite su interpretación?",
+    code: "",
+    options: ["Interpreter", "Visitor", "Chain of Responsibility", "Composite"],
+    answer: 0,
+    explanation:
+      "El patrón Interpreter define una gramática y proporciona un intérprete para interpretar frases en ese lenguaje.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué patrón se aplica cuando una clase actúa como un sustituto de otra para controlar el acceso?",
+    code: "",
+    options: ["Decorator", "Proxy", "Adapter", "Composite"],
+    answer: 1,
+    explanation:
+      "El patrón Proxy proporciona un sustituto o representante de otro objeto para controlar el acceso a él.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de estos patrones se utiliza para permitir que un objeto altere su comportamiento cuando cambia su estado interno?",
+    code: "",
+    options: ["State", "Strategy", "Template Method", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón State permite que un objeto cambie su comportamiento cuando cambia su estado interno.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón facilita el recorrido de una colección sin exponer su representación interna?",
+    code: "",
+    options: ["Composite", "Iterator", "Command", "Flyweight"],
+    answer: 1,
+    explanation:
+      "El patrón Iterator proporciona una forma de acceder secuencialmente a los elementos de una colección sin exponer su estructura interna.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite definir operaciones sobre una estructura de objetos sin cambiar las clases de los elementos?",
+    code: "",
+    options: ["Visitor", "Interpreter", "Builder", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón transforma la interfaz de una clase en otra que espera el cliente?",
+    code: "",
+    options: ["Decorator", "Adapter", "Facade", "Proxy"],
+    answer: 1,
+    explanation:
+      "El patrón Adapter permite que clases con interfaces incompatibles colaboren entre sí transformando su interfaz.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "En el siguiente código, ¿qué patrón se está aplicando?",
+    code: 'public class LoggingProxy implements Service { private Service realService; public void execute() { System.out.println("Antes"); realService.execute(); System.out.println("Después"); } }',
+    options: ["Adapter", "Proxy", "Strategy", "Builder"],
+    answer: 1,
+    explanation:
+      "El código muestra un patrón Proxy, ya que agrega lógica alrededor del acceso a un objeto real.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una interfaz unificada para un conjunto de interfaces en un subsistema?",
+    code: "",
+    options: ["Adapter", "Proxy", "Facade", "Bridge"],
+    answer: 2,
+    explanation:
+      "El patrón Facade proporciona una interfaz simple para acceder a funcionalidades complejas de un sistema.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la diferencia clave entre Factory Method y Abstract Factory?",
+    code: "",
+    options: [
+      "Factory Method usa herencia, Abstract Factory composición",
+      "Factory Method crea objetos, Abstract Factory no",
+      "Factory Method crea un solo objeto, Abstract Factory crea familias",
+      "Factory Method usa múltiples clases concretas",
+    ],
+    answer: 2,
+    explanation:
+      "Factory Method se enfoca en un solo producto, mientras que Abstract Factory maneja familias de productos relacionados.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón favorece la composición sobre la herencia para extender funcionalidades?",
+    code: "",
+    options: ["Decorator", "Template Method", "Strategy", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón Decorator permite extender funcionalidades mediante composición en lugar de herencia.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el objetivo del patrón Chain of Responsibility?",
+    code: "",
+    options: [
+      "Delegar tareas a objetos en una cadena hasta que alguno la maneje",
+      "Permitir múltiples métodos en una jerarquía",
+      "Coordinar el acceso entre clases",
+      "Definir una plantilla común de ejecución",
+    ],
+    answer: 0,
+    explanation:
+      "El patrón Chain of Responsibility pasa una solicitud a lo largo de una cadena de manejadores hasta que uno la procesa.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "Observa el siguiente fragmento. ¿Qué patrón representa?",
+    code: "public interface Expression { int interpret(); }",
+    options: ["Visitor", "Interpreter", "Strategy", "State"],
+    answer: 1,
+    explanation:
+      "El patrón Interpreter define una gramática para interpretar expresiones, y se representa con una interfaz interpret().",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón define una relación 1 a muchos entre objetos, de modo que cuando uno cambia, los otros se actualizan?",
+    code: "",
+    options: ["Mediator", "Observer", "Command", "Visitor"],
+    answer: 1,
+    explanation:
+      "El patrón Observer notifica automáticamente a los objetos dependientes cuando el sujeto cambia de estado.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se usa cuando quieres que la creación de objetos dependa del contexto sin cambiar su código cliente?",
+    code: "",
+    options: ["Factory Method", "Prototype", "Command", "Strategy"],
+    answer: 0,
+    explanation:
+      "El patrón Factory Method encapsula la creación de objetos, permitiendo variación sin modificar el cliente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del patrón Bridge?",
+    code: "",
+    options: [
+      "Crear árboles jerárquicos",
+      "Ocultar la complejidad detrás de una interfaz",
+      "Separar una abstracción de su implementación",
+      "Proveer múltiples métodos sobre una colección",
+    ],
+    answer: 2,
+    explanation:
+      "El patrón Bridge desacopla la abstracción de su implementación, permitiendo que ambas evolucionen por separado.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se usa para aplicar operaciones sobre los elementos de una estructura de objetos?",
+    code: "",
+    options: ["Visitor", "Composite", "Facade", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Visitor permite definir nuevas operaciones sin cambiar las clases de los objetos visitados.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Cuál es el objetivo del patrón Singleton?",
+    code: "",
+    options: [
+      "Permitir la creación de múltiples instancias de una clase",
+      "Asegurar que una clase tenga solo una instancia y proporcionar un punto global de acceso",
+      "Delegar la creación de objetos a subclases",
+      "Facilitar la comunicación entre objetos desacoplados",
+    ],
+    answer: 1,
+    explanation:
+      "El patrón Singleton garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se recomienda para construir objetos complejos paso a paso?",
+    code: "",
+    options: ["Factory Method", "Builder", "Prototype", "Abstract Factory"],
+    answer: 1,
+    explanation:
+      "El patrón Builder permite construir un objeto paso a paso y proporciona una representación final más flexible.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones ayuda a evitar una gran cantidad de subclases al cambiar el comportamiento?",
+    code: "",
+    options: ["Strategy", "Bridge", "Decorator", "Template Method"],
+    answer: 0,
+    explanation:
+      "El patrón Strategy encapsula algoritmos y permite seleccionarlos en tiempo de ejecución, evitando subclases innecesarias.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón usa una interfaz común para diferentes implementaciones de algoritmos?",
+    code: "",
+    options: ["Observer", "Strategy", "Mediator", "Prototype"],
+    answer: 1,
+    explanation:
+      "El patrón Strategy define una familia de algoritmos, encapsula cada uno, y los hace intercambiables usando una interfaz común.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "En el siguiente código, ¿qué patrón se usa?",
+    code: "public interface Command { void execute(); }",
+    options: ["Strategy", "Command", "Observer", "Visitor"],
+    answer: 1,
+    explanation:
+      "El uso de una interfaz con el método `execute()` es característico del patrón Command, que encapsula solicitudes como objetos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón facilita el intercambio de datos entre objetos sin que estén fuertemente acoplados?",
+    code: "",
+    options: ["Observer", "Command", "Mediator", "Proxy"],
+    answer: 2,
+    explanation:
+      "El patrón Mediator promueve el desacoplamiento al centralizar la comunicación entre objetos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la ventaja principal del patrón Prototype?",
+    code: "",
+    options: [
+      "Reduce la complejidad del cliente",
+      "Permite crear nuevos objetos clonando otros existentes",
+      "Permite definir una interfaz común",
+      "Facilita la creación de jerarquías",
+    ],
+    answer: 1,
+    explanation:
+      "El patrón Prototype permite crear nuevos objetos copiando una instancia existente, ideal para objetos costosos de crear.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones proporciona un punto de entrada simplificado a un conjunto complejo de clases?",
+    code: "",
+    options: ["Facade", "Adapter", "Decorator", "Bridge"],
+    answer: 0,
+    explanation:
+      "El patrón Facade proporciona una interfaz unificada que simplifica el uso de subsistemas complejos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del patrón Composite?",
+    code: "",
+    options: [
+      "Permitir construir objetos complejos",
+      "Componer objetos en estructuras de árbol y tratarlos uniformemente",
+      "Separar abstracción e implementación",
+      "Implementar múltiples interfaces",
+    ],
+    answer: 1,
+    explanation:
+      "Composite permite a los clientes tratar objetos individuales y composiciones de objetos de forma uniforme.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el beneficio clave del patrón Decorator?",
+    code: "",
+    options: [
+      "Permitir herencia múltiple",
+      "Añadir responsabilidades dinámicamente a los objetos",
+      "Reducir la dependencia entre clases",
+      "Forzar reglas de negocio",
+    ],
+    answer: 1,
+    explanation:
+      "El patrón Decorator añade responsabilidades adicionales a un objeto de forma dinámica sin modificar su estructura original.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula una petición como un objeto, permitiendo parametrizar métodos con diferentes solicitudes?",
+    code: "",
+    options: ["Visitor", "Command", "Mediator", "Strategy"],
+    answer: 1,
+    explanation:
+      "Command encapsula peticiones como objetos, lo cual permite parametrizar clientes con distintas solicitudes y registrar peticiones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón establece un esqueleto de algoritmo en una operación y delega algunos pasos a las subclases?",
+    code: "",
+    options: ["Template Method", "Strategy", "Command", "Observer"],
+    answer: 0,
+    explanation:
+      "Template Method define la estructura de un algoritmo dejando que las subclases redefinan ciertos pasos sin cambiar la estructura general.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite la suscripción de múltiples objetos a eventos de un sujeto central?",
+    code: "",
+    options: ["Observer", "Mediator", "Visitor", "Facade"],
+    answer: 0,
+    explanation:
+      "El patrón Observer permite que múltiples objetos (observadores) se registren a un sujeto y reciban notificaciones sobre cambios de estado.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se recomienda para que un objeto actúe sobre elementos de una estructura sin modificar sus clases?",
+    code: "",
+    options: ["Command", "Strategy", "Visitor", "Mediator"],
+    answer: 2,
+    explanation:
+      "El patrón Visitor permite definir nuevas operaciones sobre elementos de una estructura de objetos sin cambiar sus clases.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón permite ejecutar una acción diferida y revocable?",
+    code: "",
+    options: ["Command", "Observer", "Memento", "Prototype"],
+    answer: 0,
+    explanation:
+      "El patrón Command permite encapsular solicitudes para poder ejecutarlas, deshacerlas o almacenarlas para después.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite representar operaciones que pueden deshacerse (undo)?",
+    code: "",
+    options: ["Memento", "Command", "Strategy", "Observer"],
+    answer: 1,
+    explanation:
+      "El patrón Command encapsula una acción y permite almacenar el estado necesario para deshacer (undo) la operación si es necesario.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es la responsabilidad del patrón Abstract Factory?",
+    code: "",
+    options: [
+      "Crear una única instancia de una clase",
+      "Construir objetos complejos paso a paso",
+      "Proveer una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas",
+      "Permitir que una clase altere su comportamiento en tiempo de ejecución",
+    ],
+    answer: 2,
+    explanation:
+      "Abstract Factory define una interfaz para crear familias de objetos relacionados sin conocer las clases concretas que los implementan.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una ventaja del patrón Proxy?",
+    code: "",
+    options: [
+      "Permite herencia múltiple",
+      "Proporciona una forma de acceder a un objeto controlando su creación o acceso",
+      "Evita que un objeto tenga demasiadas responsabilidades",
+      "Permite cambiar el comportamiento del algoritmo dinámicamente",
+    ],
+    answer: 1,
+    explanation:
+      "Proxy actúa como sustituto de otro objeto, controlando el acceso a este y permitiendo funcionalidades como lazy-loading o control de acceso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón puede evitar que los objetos se acoplen fuertemente entre sí?",
+    code: "",
+    options: ["Observer", "Strategy", "Mediator", "Template Method"],
+    answer: 2,
+    explanation:
+      "Mediator centraliza la comunicación entre objetos, evitando referencias directas entre ellos y reduciendo el acoplamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite cambiar el algoritmo de ejecución de un objeto sin modificar su clase?",
+    code: "",
+    options: ["Strategy", "Command", "Observer", "Template Method"],
+    answer: 0,
+    explanation:
+      "Strategy permite definir una familia de algoritmos, encapsularlos y hacerlos intercambiables sin modificar el contexto que los usa.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito principal del patrón Adapter?",
+    code: "",
+    options: [
+      "Permitir la herencia múltiple",
+      "Adaptar una interfaz existente a otra esperada por el cliente",
+      "Mejorar el rendimiento del sistema",
+      "Reutilizar clases existentes sin cambiar su código",
+    ],
+    answer: 1,
+    explanation:
+      "Adapter convierte la interfaz de una clase en otra que el cliente espera, permitiendo que clases incompatibles colaboren.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "Dado el siguiente código, ¿qué patrón se aplica?",
+    code: "public interface ProductFactory {\n    Product createProduct();\n}",
+    options: ["Factory Method", "Prototype", "Builder", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "Factory Method define una interfaz para crear un objeto, pero permite a las subclases decidir qué clase instanciar.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula el estado interno de un objeto para restaurarlo después?",
+    code: "",
+    options: ["Command", "Memento", "Visitor", "Observer"],
+    answer: 1,
+    explanation:
+      "El patrón Memento permite capturar y restaurar el estado interno de un objeto sin violar la encapsulación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es una limitación común del patrón Singleton?",
+    code: "",
+    options: [
+      "Dificulta las pruebas unitarias debido al estado global",
+      "Permite múltiples instancias en entornos multihilo",
+      "Requiere muchas líneas de código",
+      "Rompe la encapsulación",
+    ],
+    answer: 0,
+    explanation:
+      "El uso de Singleton introduce estado global, lo cual dificulta la escritura de pruebas unitarias y reduce la flexibilidad del diseño.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite a los objetos notificar a múltiples observadores cuando cambia su estado?",
+    code: "",
+    options: ["Mediator", "Observer", "Chain of Responsibility", "Decorator"],
+    answer: 1,
+    explanation:
+      "Observer define una relación uno-a-muchos entre objetos para que, cuando uno cambie, los demás sean notificados automáticamente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones representa una jerarquía en forma de árbol?",
+    code: "",
+    options: ["Composite", "Decorator", "Adapter", "Builder"],
+    answer: 0,
+    explanation:
+      "Composite compone objetos en estructuras de árbol para representar jerarquías parte-todo, permitiendo tratarlos de manera uniforme.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite extender funcionalidades de forma dinámica sin alterar la clase original?",
+    code: "",
+    options: ["Adapter", "Facade", "Decorator", "Proxy"],
+    answer: 2,
+    explanation:
+      "Decorator permite añadir nuevas funcionalidades a un objeto de forma dinámica al envolverlo con otro objeto decorador.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite definir operaciones sobre una estructura de objetos sin cambiar las clases de los objetos?",
+    code: "",
+    options: ["Visitor", "Strategy", "Mediator", "Template Method"],
+    answer: 0,
+    explanation:
+      "Visitor permite agregar nuevas operaciones a una estructura de objetos sin modificar las clases de los objetos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el uso principal del patrón Chain of Responsibility?",
+    code: "",
+    options: [
+      "Delegar tareas a subclases",
+      "Encapsular solicitudes y permitir revertirlas",
+      "Pasar una solicitud a través de una cadena de manejadores hasta que uno la procese",
+      "Notificar a múltiples objetos sobre un cambio de estado",
+    ],
+    answer: 2,
+    explanation:
+      "Chain of Responsibility permite que múltiples objetos tengan la oportunidad de procesar una solicitud al pasarla por una cadena.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón desacopla una abstracción de su implementación?",
+    code: "",
+    options: ["Bridge", "Adapter", "Strategy", "Builder"],
+    answer: 0,
+    explanation:
+      "Bridge permite separar una abstracción de su implementación para que ambas puedan evolucionar independientemente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué patrón se recomienda usar para construir objetos complejos paso a paso?",
+    code: "",
+    options: ["Builder", "Factory Method", "Prototype", "Singleton"],
+    answer: 0,
+    explanation:
+      "Builder permite crear objetos complejos dividiendo el proceso en pasos, ideal cuando el proceso de construcción varía.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es la ventaja principal del patrón Decorator frente a la herencia?",
+    code: "",
+    options: [
+      "Permite la herencia múltiple",
+      "Permite añadir funcionalidades de forma dinámica",
+      "Evita el uso de interfaces",
+      "Requiere menos clases",
+    ],
+    answer: 1,
+    explanation:
+      "Decorator permite agregar funcionalidades a objetos de manera flexible y dinámica sin modificar su clase original ni usar herencia.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón encapsula una solicitud como un objeto?",
+    code: "",
+    options: ["Command", "Observer", "Mediator", "Visitor"],
+    answer: 0,
+    explanation:
+      "El patrón Command encapsula una petición en un objeto, lo cual permite parametrizar clientes, realizar colas, logs y deshacer operaciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se aplica si necesitas clonar objetos complejos que podrían tener referencias circulares?",
+    code: "",
+    options: ["Prototype", "Factory Method", "Builder", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Prototype permite clonar objetos existentes sin depender de sus clases concretas, útil para objetos complejos o costosos de crear.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "Dado este código, ¿qué patrón representa?",
+    code: "public class Logger {\n  private static Logger instance = new Logger();\n  private Logger() {}\n  public static Logger getInstance() { return instance; }\n}",
+    options: ["Singleton", "Factory", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Este es un ejemplo clásico del patrón Singleton, que garantiza que solo exista una instancia de Logger en la aplicación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se basa en una clase abstracta que define el esqueleto de un algoritmo?",
+    code: "",
+    options: ["Template Method", "Strategy", "Observer", "Factory Method"],
+    answer: 0,
+    explanation:
+      "Template Method define el esqueleto de un algoritmo en una clase base, permitiendo que las subclases definan ciertos pasos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una interfaz unificada a un conjunto de interfaces en un subsistema?",
+    code: "",
+    options: ["Facade", "Adapter", "Bridge", "Composite"],
+    answer: 0,
+    explanation:
+      "El patrón Facade proporciona una interfaz más sencilla a un conjunto de interfaces complejas, facilitando su uso por parte de los clientes.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite implementar árboles de objetos con comportamiento jerárquico?",
+    code: "",
+    options: ["Composite", "Decorator", "Proxy", "Command"],
+    answer: 0,
+    explanation:
+      "Composite compone objetos en estructuras de árbol, lo que permite tratarlos de forma uniforme (hojas y nodos).",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón es útil para desacoplar una abstracción de su implementación?",
+    code: "",
+    options: ["Bridge", "Adapter", "Builder", "Singleton"],
+    answer: 0,
+    explanation:
+      "Bridge desacopla una abstracción de su implementación para que ambas puedan variar de forma independiente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón define una cadena de objetos receptores para una solicitud?",
+    code: "",
+    options: ["Chain of Responsibility", "Command", "Observer", "Strategy"],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility permite que una solicitud pase por una cadena de objetos hasta que alguno de ellos la maneje.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones permite agrupar la creación de objetos relacionados?",
+    code: "",
+    options: ["Abstract Factory", "Factory Method", "Prototype", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Abstract Factory proporciona una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el patrón que permite agregar operaciones a estructuras sin cambiar las clases?",
+    code: "",
+    options: ["Visitor", "Decorator", "Strategy", "Command"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sobre elementos de una estructura sin cambiar las clases de los elementos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón puede ayudarte a reducir el costo de creación de objetos pesados?",
+    code: "",
+    options: ["Flyweight", "Prototype", "Builder", "Decorator"],
+    answer: 0,
+    explanation:
+      "Flyweight comparte instancias comunes entre objetos similares para reducir el uso de memoria y mejorar el rendimiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se basa en observar cambios en el estado de otro objeto?",
+    code: "",
+    options: ["Observer", "Visitor", "Template Method", "Facade"],
+    answer: 0,
+    explanation:
+      "Observer permite que múltiples objetos estén pendientes del estado de otro y se notifiquen automáticamente al cambiar.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se usa para encapsular diferentes algoritmos y hacerlos intercambiables?",
+    code: "",
+    options: ["Strategy", "Template Method", "Visitor", "Bridge"],
+    answer: 0,
+    explanation:
+      "Strategy define una familia de algoritmos, encapsula cada uno y los hace intercambiables según el contexto.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Qué patrón se está utilizando en este ejemplo?",
+    code: 'public interface Button { void render(); }\npublic class WindowsButton implements Button {\n  public void render() { System.out.println("Windows Button"); }\n}\npublic class LinuxButton implements Button {\n  public void render() { System.out.println("Linux Button"); }\n}',
+    options: ["Factory Method", "Strategy", "Prototype", "Command"],
+    answer: 0,
+    explanation:
+      "Este código muestra una interfaz común y dos implementaciones concretas, típico del patrón Factory Method para crear objetos sin especificar su clase exacta.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón aplica mejor este código?",
+    code: "public class ReportBuilder {\n  private String title;\n  private String content;\n\n  public ReportBuilder setTitle(String title) {\n    this.title = title; return this;\n  }\n  public ReportBuilder setContent(String content) {\n    this.content = content; return this;\n  }\n  public Report build() {\n    return new Report(title, content);\n  }\n}",
+    options: ["Builder", "Singleton", "Flyweight", "Bridge"],
+    answer: 0,
+    explanation:
+      "Este fragmento aplica el patrón Builder, que permite construir un objeto complejo paso a paso de manera fluida.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón de comportamiento está presente aquí?",
+    code: "public interface Command {\n  void execute();\n}\npublic class LightOnCommand implements Command {\n  private Light light;\n  public LightOnCommand(Light light) { this.light = light; }\n  public void execute() { light.turnOn(); }\n}",
+    options: [
+      "Command",
+      "Observer",
+      "Template Method",
+      "Chain of Responsibility",
+    ],
+    answer: 0,
+    explanation:
+      "El código implementa el patrón Command: encapsula una acción (encender la luz) en un objeto ejecutable.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón representa este código?",
+    code: "public abstract class Game {\n  final void play() {\n    initialize(); startPlay(); endPlay();\n  }\n  abstract void initialize();\n  abstract void startPlay();\n  abstract void endPlay();\n}",
+    options: ["Template Method", "Strategy", "State", "Visitor"],
+    answer: 0,
+    explanation:
+      "Template Method define una estructura base para un algoritmo (play) con pasos específicos que se implementan en subclases.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál patrón se refleja aquí?",
+    code: 'public interface MediaPlayer {\n  void play(String fileName);\n}\npublic class AudioPlayer implements MediaPlayer {\n  public void play(String fileName) { System.out.println("Playing " + fileName); }\n}',
+    options: ["Strategy", "Adapter", "Decorator", "Proxy"],
+    answer: 1,
+    explanation:
+      "Aunque básico, este ejemplo se puede extender para aplicar el patrón Adapter, adaptando interfaces incompatibles (por ejemplo, reproductores multimedia distintos).",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón usa este ejemplo para gestionar múltiples instancias compartidas?",
+    code: 'public class Circle {\n  private String color;\n  public Circle(String color) { this.color = color; }\n  public void draw(int x, int y) {\n    System.out.println("Draw " + color + " circle at (" + x + "," + y + ")");\n  }\n}',
+    options: ["Flyweight", "Builder", "Prototype", "Factory"],
+    answer: 0,
+    explanation:
+      "El patrón Flyweight permite reutilizar instancias como Circle con diferentes coordenadas pero el mismo color para ahorrar recursos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón representa mejor este diseño?",
+    code: 'public interface PaymentStrategy {\n  void pay(int amount);\n}\npublic class CreditCardPayment implements PaymentStrategy {\n  public void pay(int amount) {\n    System.out.println("Paid " + amount + " using Credit Card");\n  }\n}',
+    options: ["Strategy", "State", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "Strategy permite intercambiar comportamientos (formas de pago) sin modificar el código que los usa.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se aplica cuando encapsulas un conjunto de objetos con una interfaz común?",
+    code: "public class File implements FileSystemComponent {\n  private String name;\n  public File(String name) { this.name = name; }\n  public void display() { System.out.println(name); }\n}\n\npublic class Directory implements FileSystemComponent {\n  private List<FileSystemComponent> children = new ArrayList<>();\n  public void add(FileSystemComponent component) { children.add(component); }\n  public void display() {\n    for (FileSystemComponent component : children) component.display();\n  }\n}",
+    options: ["Composite", "Facade", "Decorator", "Bridge"],
+    answer: 0,
+    explanation:
+      "Composite permite tratar objetos individuales y compuestos de manera uniforme, como en este sistema de archivos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón crea una única instancia de clase accesible globalmente?",
+    code: "public class Config {\n  private static Config instance;\n  private Config() {}\n  public static Config getInstance() {\n    if (instance == null) instance = new Config();\n    return instance;\n  }\n}",
+    options: ["Singleton", "Factory", "Builder", "Facade"],
+    answer: 0,
+    explanation:
+      "Singleton asegura que solo exista una instancia de Config y provee un punto de acceso global.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se usa aquí para encapsular operaciones en elementos de una estructura?",
+    code: "interface Visitor {\n  void visit(Book book);\n  void visit(CD cd);\n}\nclass Book { void accept(Visitor v) { v.visit(this); } }\nclass CD { void accept(Visitor v) { v.visit(this); } }",
+    options: ["Visitor", "Command", "Observer", "Template Method"],
+    answer: 0,
+    explanation:
+      "Visitor permite agregar nuevas operaciones sin modificar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón representa la siguiente implementación?",
+    code: 'public interface Image {\n  void display();\n}\npublic class RealImage implements Image {\n  private String filename;\n  public RealImage(String filename) {\n    this.filename = filename;\n    loadFromDisk();\n  }\n  public void display() { System.out.println("Displaying " + filename); }\n  private void loadFromDisk() { System.out.println("Loading " + filename); }\n}',
+    options: ["Proxy", "Flyweight", "Decorator", "Adapter"],
+    answer: 0,
+    explanation:
+      "Este patrón Proxy puede usarse para controlar el acceso a objetos costosos como imágenes cargadas desde disco.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón se refleja en este contexto?",
+    code: 'interface State {\n  void handle();\n}\nclass ConcreteStateA implements State {\n  public void handle() { System.out.println("State A"); }\n}',
+    options: ["State", "Strategy", "Command", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón State permite cambiar el comportamiento de un objeto según su estado interno.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite desacoplar el envío de una solicitud de su receptor?",
+    code: "class Button {\n  private Command command;\n  public void setCommand(Command command) { this.command = command; }\n  public void click() { command.execute(); }\n}",
+    options: ["Command", "Mediator", "Strategy", "Adapter"],
+    answer: 0,
+    explanation:
+      "Command desacopla el botón del receptor de la acción, permitiendo asignar cualquier acción al botón.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se aplica para separar la lógica de negocio de la interfaz gráfica?",
+    code: "class View {\n  void display(String data) { System.out.println(data); }\n}\nclass Presenter {\n  private View view;\n  public Presenter(View view) { this.view = view; }\n  public void updateView(String data) { view.display(data); }\n}",
+    options: ["Model-View-Presenter (MVP)", "Observer", "Facade", "Bridge"],
+    answer: 0,
+    explanation:
+      "El patrón MVP separa claramente la lógica de presentación (Presenter) de la vista (View).",
+    subtheme: "Patrones de Diseño - Arquitectura UI",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál es el patrón que se aplica cuando múltiples clases desean ser notificadas de un evento?",
+    code: 'public interface Observer {\n  void update(String message);\n}\npublic class ConcreteObserver implements Observer {\n  public void update(String message) {\n    System.out.println("Received: " + message);\n  }\n}',
+    options: ["Observer", "Mediator", "State", "Chain of Responsibility"],
+    answer: 0,
+    explanation:
+      "El patrón Observer permite notificar a múltiples objetos cuando ocurre un cambio en otro objeto.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el patrón utilizado para encapsular algoritmos intercambiables?",
+    code: 'public interface SortStrategy {\n  void sort(List<Integer> data);\n}\npublic class BubbleSort implements SortStrategy {\n  public void sort(List<Integer> data) {\n    System.out.println("Bubble Sort");\n  }\n}',
+    options: ["Strategy", "State", "Command", "Visitor"],
+    answer: 0,
+    explanation:
+      "El patrón Strategy encapsula algoritmos que pueden intercambiarse dinámicamente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón se aplica en este ejemplo?",
+    code: 'public interface Notification {\n  void send(String message);\n}\npublic class EmailNotification implements Notification {\n  public void send(String message) {\n    System.out.println("Email: " + message);\n  }\n}',
+    options: ["Decorator", "Adapter", "Bridge", "Factory Method"],
+    answer: 2,
+    explanation:
+      "Bridge separa la abstracción (Notification) de su implementación concreta (EmailNotification), permitiendo su evolución independiente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite añadir responsabilidades dinámicamente a un objeto?",
+    code: 'public class TextView {\n  public void draw() {\n    System.out.println("Draw TextView");\n  }\n}\npublic class BorderDecorator extends TextView {\n  public void draw() {\n    super.draw();\n    System.out.println("Add Border");\n  }\n}',
+    options: ["Decorator", "Adapter", "Proxy", "Composite"],
+    answer: 0,
+    explanation:
+      "El patrón Decorator permite añadir funcionalidades adicionales a objetos de manera dinámica sin alterar su estructura original.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál es el patrón que proporciona una interfaz unificada para un conjunto de interfaces?",
+    code: 'public class AudioSystem {\n  public void on() { System.out.println("Audio ON"); }\n}\npublic class HomeTheaterFacade {\n  private AudioSystem audio = new AudioSystem();\n  public void watchMovie() {\n    audio.on();\n  }\n}',
+    options: ["Facade", "Bridge", "Adapter", "Composite"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz simple a un subsistema complejo, ocultando los detalles internos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite tratar objetos individuales y grupos de manera uniforme?",
+    code: 'public interface Component {\n  void render();\n}\npublic class Text implements Component {\n  public void render() {\n    System.out.println("Render Text");\n  }\n}',
+    options: ["Composite", "Decorator", "Proxy", "Bridge"],
+    answer: 0,
+    explanation:
+      "Composite permite que los clientes traten de forma uniforme objetos individuales y compuestos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón representa mejor este código donde una instancia se clona?",
+    code: "public class Shape implements Cloneable {\n  public Shape clone() throws CloneNotSupportedException {\n    return (Shape) super.clone();\n  }\n}",
+    options: ["Prototype", "Factory Method", "Builder", "Singleton"],
+    answer: 0,
+    explanation:
+      "Prototype permite crear nuevos objetos copiando una instancia prototipo existente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón permite centralizar la comunicación entre objetos?",
+    code: 'public class Mediator {\n  public void send(String message, Colleague colleague) {\n    System.out.println("Mediator forwards: " + message);\n  }\n}',
+    options: ["Mediator", "Observer", "Chain of Responsibility", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Mediator reduce el acoplamiento entre objetos al centralizar la comunicación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón delega solicitudes a una cadena de manejadores?",
+    code: "abstract class Handler {\n  protected Handler next;\n  public void setNext(Handler next) { this.next = next; }\n  public abstract void handle(String request);\n}",
+    options: ["Chain of Responsibility", "Command", "Observer", "Strategy"],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility permite pasar solicitudes a lo largo de una cadena de manejadores hasta que alguien la procese.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón es útil para construir objetos complejos paso a paso?",
+    code: 'builder.setWheels(4).setColor("Red").build();',
+    options: ["Builder", "Factory", "Prototype", "Decorator"],
+    answer: 0,
+    explanation:
+      "Builder se utiliza para construir objetos complejos de forma controlada y paso a paso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del patrón Adapter?",
+    code: "class LegacyPrinter {\n  void printOld(String text) {\n    System.out.println(text);\n  }\n}\nclass PrinterAdapter {\n  private LegacyPrinter legacy;\n  void print(String msg) { legacy.printOld(msg); }\n}",
+    options: [
+      "Adaptar interfaces incompatibles",
+      "Agregar funcionalidad",
+      "Reducir dependencias",
+      "Centralizar acceso",
+    ],
+    answer: 0,
+    explanation:
+      "El patrón Adapter permite adaptar una interfaz existente a otra esperada por el cliente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón representa este diseño orientado a comandos ejecutables?",
+    code: 'public interface Command {\n  void execute();\n}\npublic class PrintCommand implements Command {\n  public void execute() {\n    System.out.println("Print action");\n  }\n}',
+    options: ["Command", "Strategy", "Observer", "Visitor"],
+    answer: 0,
+    explanation:
+      "Command encapsula una solicitud como un objeto, permitiendo parametrizar objetos con operaciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite acceder a partes de un objeto compuesto sin exponer su representación?",
+    code: "class FileSystemIterator {\n  public void iterate(Directory dir) {\n    for (File f : dir.getFiles()) System.out.println(f.getName());\n  }\n}",
+    options: ["Iterator", "Composite", "Proxy", "Memento"],
+    answer: 0,
+    explanation:
+      "Iterator proporciona una forma de recorrer elementos de una colección sin exponer su estructura interna.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite capturar y restaurar el estado interno de un objeto?",
+    code: "class Memento {\n  private String state;\n  public Memento(String state) { this.state = state; }\n  public String getState() { return state; }\n}",
+    options: ["Memento", "State", "Command", "Visitor"],
+    answer: 0,
+    explanation:
+      "Memento guarda el estado de un objeto para restaurarlo posteriormente sin violar el encapsulamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué patrón se aplica al siguiente código donde se restringe la creación de múltiples instancias?",
+    code: "public class Logger {\n  private static Logger instance;\n  private Logger() {}\n  public static Logger getInstance() {\n    if (instance == null) instance = new Logger();\n    return instance;\n  }\n}",
+    options: ["Singleton", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "El patrón Singleton asegura que una clase tenga solo una instancia y proporciona un punto de acceso global.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se está aplicando cuando se encapsula el comportamiento según el estado de un objeto?",
+    code: 'interface State {\n  void handle();\n}\nclass PlayingState implements State {\n  public void handle() {\n    System.out.println("Playing...");\n  }\n}',
+    options: ["State", "Strategy", "Command", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón State permite cambiar el comportamiento de un objeto cuando cambia su estado interno.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito principal del patrón Template Method?",
+    code: "abstract class Game {\n  final void play() {\n    initialize(); start(); end();\n  }\n  abstract void initialize(); abstract void start(); abstract void end();\n}",
+    options: [
+      "Definir el esqueleto de un algoritmo",
+      "Inyectar dependencias",
+      "Sustituir objetos en tiempo de ejecución",
+      "Separar lógica de presentación",
+    ],
+    answer: 0,
+    explanation:
+      "El patrón Template Method define el esqueleto de un algoritmo en una operación, dejando algunos pasos a las subclases.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se observa cuando un objeto actúa como intermediario para controlar el acceso a otro objeto?",
+    code: 'class RealImage {\n  void display() { System.out.println("Real image displayed"); }\n}\nclass ProxyImage {\n  private RealImage realImage;\n  void display() {\n    if (realImage == null) realImage = new RealImage();\n    realImage.display();\n  }\n}',
+    options: ["Proxy", "Adapter", "Decorator", "Facade"],
+    answer: 0,
+    explanation:
+      "El patrón Proxy actúa como un sustituto o placeholder de otro objeto para controlar el acceso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón se basa en encapsular llamadas como objetos para soportar operaciones como deshacer?",
+    code: 'class Light {\n  void on() { System.out.println("Light on"); }\n}\nclass LightOnCommand implements Command {\n  private Light light;\n  public LightOnCommand(Light light) { this.light = light; }\n  public void execute() { light.on(); }\n}',
+    options: ["Command", "Strategy", "State", "Visitor"],
+    answer: 0,
+    explanation:
+      "El patrón Command encapsula una petición como un objeto, permitiendo parametrizar clientes con diferentes solicitudes.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite definir una familia de objetos relacionados sin especificar sus clases concretas?",
+    code: "interface GUIFactory {\n  Button createButton();\n}\nclass MacFactory implements GUIFactory {\n  public Button createButton() { return new MacButton(); }\n}",
+    options: ["Abstract Factory", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Abstract Factory proporciona una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite a un objeto pasar solicitudes a lo largo de una cadena hasta que alguna la maneje?",
+    code: "abstract class Handler {\n  protected Handler next;\n  public void setNext(Handler next) { this.next = next; }\n  public abstract void handle(String request);\n}",
+    options: ["Chain of Responsibility", "Mediator", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Chain of Responsibility pasa solicitudes a lo largo de una cadena de manejadores hasta que uno la maneja.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite operar sobre una estructura sin cambiar sus clases?",
+    code: 'interface Visitor {\n  void visit(Book book);\n}\nclass TaxVisitor implements Visitor {\n  public void visit(Book book) {\n    System.out.println("Tax applied");\n  }\n}',
+    options: ["Visitor", "Decorator", "Adapter", "Template Method"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se basa en separar la abstracción de su implementación?",
+    code: "abstract class RemoteControl {\n  protected Device device;\n  RemoteControl(Device device) { this.device = device; }\n}",
+    options: ["Bridge", "Adapter", "Proxy", "Facade"],
+    answer: 0,
+    explanation:
+      "El patrón Bridge separa una abstracción de su implementación para que ambas puedan evolucionar independientemente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se aplica para proporcionar una interfaz simplificada a un subsistema complejo?",
+    code: 'class ComputerFacade {\n  void start() {\n    System.out.println("Booting... Checking memory... Running OS...");\n  }\n}',
+    options: ["Facade", "Builder", "Proxy", "Composite"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz unificada a un conjunto de interfaces en un subsistema.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se utiliza para acceder secuencialmente a los elementos de una colección sin exponer su estructura interna?",
+    code: "interface Iterator {\n  boolean hasNext();\n  Object next();\n}",
+    options: ["Iterator", "Composite", "Observer", "Visitor"],
+    answer: 0,
+    explanation:
+      "Iterator proporciona una forma de acceder secuencialmente a los elementos de una colección sin exponer su representación subyacente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se adapta cuando se necesita cambiar el algoritmo de un objeto en tiempo de ejecución?",
+    code: "class Context {\n  private Strategy strategy;\n  void setStrategy(Strategy s) { this.strategy = s; }\n  void executeStrategy() { strategy.execute(); }\n}",
+    options: ["Strategy", "State", "Command", "Visitor"],
+    answer: 0,
+    explanation:
+      "El patrón Strategy permite definir una familia de algoritmos y hacerlos intercambiables en tiempo de ejecución.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite representar jerarquías de objetos parte-todo?",
+    code: "interface Graphic {\n  void draw();\n}\nclass CompositeGraphic implements Graphic {\n  List<Graphic> children = new ArrayList<>();\n  void draw() { for (Graphic g : children) g.draw(); }\n}",
+    options: ["Composite", "Decorator", "Adapter", "Prototype"],
+    answer: 0,
+    explanation:
+      "Composite permite tratar objetos individuales y compuestos de manera uniforme en jerarquías parte-todo.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite que objetos externos puedan restaurar el estado de un objeto?",
+    code: "class Memento {\n  private final String state;\n  Memento(String state) { this.state = state; }\n  String getState() { return state; }\n}",
+    options: ["Memento", "Prototype", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Memento permite capturar y restaurar el estado interno de un objeto sin violar su encapsulamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón está siendo implementado en este ejemplo que construye un objeto paso a paso?",
+    code: 'class PizzaBuilder {\n  private String dough = "";\n  public PizzaBuilder setDough(String dough) {\n    this.dough = dough;\n    return this;\n  }\n  public Pizza build() {\n    return new Pizza(dough);\n  }\n}',
+    options: ["Builder", "Factory Method", "Prototype", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "Builder separa la construcción de un objeto complejo de su representación, permitiendo construir el objeto paso a paso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se utiliza cuando se quiere notificar a varios objetos sobre el cambio de estado de otro objeto?",
+    code: "class Subject {\n  private List<Observer> observers = new ArrayList<>();\n  void notifyAllObservers() {\n    for (Observer o : observers) o.update();\n  }\n}",
+    options: ["Observer", "Mediator", "Command", "Strategy"],
+    answer: 0,
+    explanation:
+      "El patrón Observer define una dependencia uno-a-muchos para que varios objetos sean notificados automáticamente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula una operación como un objeto para permitir su ejecución en otro momento?",
+    code: 'interface Command {\n  void execute();\n}\nclass PrintCommand implements Command {\n  public void execute() {\n    System.out.println("Printed!");\n  }\n}',
+    options: ["Command", "Template Method", "State", "Strategy"],
+    answer: 0,
+    explanation:
+      "El patrón Command encapsula una petición como un objeto, permitiendo parametrizar objetos con operaciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón aplica cuando se desea crear objetos duplicados a partir de un prototipo existente?",
+    code: "class Prototype implements Cloneable {\n  public Prototype clone() throws CloneNotSupportedException {\n    return (Prototype) super.clone();\n  }\n}",
+    options: ["Prototype", "Singleton", "Builder", "Factory Method"],
+    answer: 0,
+    explanation:
+      "Prototype permite copiar objetos existentes sin depender de sus clases concretas, utilizando `clone()`.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón define una interfaz pero delega la creación a sus subclases?",
+    code: "abstract class Dialog {\n  abstract Button createButton();\n  public void render() {\n    Button ok = createButton();\n    ok.render();\n  }\n}",
+    options: [
+      "Factory Method",
+      "Abstract Factory",
+      "Builder",
+      "Template Method",
+    ],
+    answer: 0,
+    explanation:
+      "Factory Method permite a las subclases alterar el tipo de objetos que se crean.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite añadir funcionalidad a objetos dinámicamente sin cambiar su clase?",
+    code: "class Coffee {\n  public int cost() { return 5; }\n}\nclass MilkDecorator extends Coffee {\n  public int cost() { return super.cost() + 2; }\n}",
+    options: ["Decorator", "Proxy", "Composite", "Adapter"],
+    answer: 0,
+    explanation:
+      "Decorator permite añadir funcionalidad adicional a objetos de forma flexible y sin modificar su estructura original.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se utiliza para convertir la interfaz de una clase en otra que espera el cliente?",
+    code: "class LegacyPrinter {\n  void printLegacy(String s) { System.out.println(s); }\n}\nclass PrinterAdapter implements Printer {\n  private LegacyPrinter legacy;\n  public void print(String s) {\n    legacy.printLegacy(s);\n  }\n}",
+    options: ["Adapter", "Bridge", "Facade", "Proxy"],
+    answer: 0,
+    explanation:
+      "El patrón Adapter convierte la interfaz de una clase en otra que los clientes esperan.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se aplica para coordinar las interacciones entre múltiples objetos sin que se conozcan entre sí directamente?",
+    code: 'class ChatRoom {\n  void showMessage(User user, String message) {\n    System.out.println(user.getName() + ": " + message);\n  }\n}',
+    options: ["Mediator", "Observer", "Chain of Responsibility", "Visitor"],
+    answer: 0,
+    explanation:
+      "Mediator centraliza la comunicación entre objetos para reducir las dependencias directas entre ellos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón separa un algoritmo del objeto que lo utiliza, permitiendo su reutilización?",
+    code: "interface SortingStrategy {\n  void sort(List<Integer> list);\n}\nclass QuickSort implements SortingStrategy {\n  public void sort(List<Integer> list) { /* ... */ }\n}",
+    options: ["Strategy", "Template Method", "Command", "Visitor"],
+    answer: 0,
+    explanation:
+      "El patrón Strategy define una familia de algoritmos encapsulados, haciéndolos intercambiables.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite guardar y restaurar el estado interno de un objeto sin violar el encapsulamiento?",
+    code: "class EditorMemento {\n  private final String state;\n  public EditorMemento(String state) {\n    this.state = state;\n  }\n  public String getState() { return state; }\n}",
+    options: ["Memento", "Prototype", "State", "Observer"],
+    answer: 0,
+    explanation:
+      "Memento permite guardar el estado interno de un objeto y restaurarlo más tarde sin exponer su implementación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite modificar el comportamiento de un objeto al cambiar su estado?",
+    code: "interface State {\n  void handle(Context ctx);\n}\nclass OnState implements State {\n  public void handle(Context ctx) {\n    ctx.setState(new OffState());\n  }\n}",
+    options: ["State", "Strategy", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón State permite a un objeto cambiar su comportamiento cuando su estado cambia.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula la lógica de navegación entre objetos complejos, permitiendo construirlos en diferentes pasos?",
+    code: "class CarBuilder {\n  private Engine engine;\n  private Wheels wheels;\n  CarBuilder setEngine(Engine e) { this.engine = e; return this; }\n  Car build() { return new Car(engine, wheels); }\n}",
+    options: ["Builder", "Prototype", "Factory Method", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "Builder separa la creación de un objeto complejo y permite configurarlo paso a paso de forma fluida.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se utiliza para representar una operación a ejecutar sobre elementos de una estructura de objetos?",
+    code: "interface Element {\n  void accept(Visitor v);\n}\nclass Book implements Element {\n  public void accept(Visitor v) { v.visit(this); }\n}",
+    options: ["Visitor", "Strategy", "Command", "Mediator"],
+    answer: 0,
+    explanation:
+      "El patrón Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón está presente si se desea componer objetos en estructuras de árbol y tratar a objetos individuales y compuestos de forma uniforme?",
+    code: "interface FileSystem {\n  void ls();\n}\nclass Folder implements FileSystem {\n  private List<FileSystem> children = new ArrayList<>();\n  public void ls() { for (FileSystem fs : children) fs.ls(); }\n}",
+    options: ["Composite", "Decorator", "Proxy", "Adapter"],
+    answer: 0,
+    explanation:
+      "Composite permite que los clientes traten objetos individuales y compuestos de manera uniforme.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué patrón de diseño se usa para permitir el acceso controlado a un objeto?",
+    code: 'class RealImage {\n  void display() { System.out.println("Mostrando imagen real"); }\n}\nclass ProxyImage {\n  private RealImage realImage;\n  void display() {\n    if (realImage == null) realImage = new RealImage();\n    realImage.display();\n  }\n}',
+    options: ["Proxy", "Decorator", "Adapter", "Composite"],
+    answer: 0,
+    explanation:
+      "Proxy proporciona un objeto que actúa como intermediario para acceder al objeto real, permitiendo control adicional como carga diferida o control de acceso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite definir el esqueleto de un algoritmo y dejar algunos pasos a las subclases?",
+    code: "abstract class DataProcessor {\n  void process() {\n    readData();\n    processData();\n    saveData();\n  }\n  abstract void readData();\n  abstract void processData();\n  abstract void saveData();\n}",
+    options: ["Template Method", "Strategy", "Command", "Observer"],
+    answer: 0,
+    explanation:
+      "Template Method define la estructura de un algoritmo en una clase base y permite que las subclases redefinan pasos específicos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón está más asociado con la creación de familias de objetos relacionados sin especificar sus clases concretas?",
+    code: "interface GUIFactory {\n  Button createButton();\n  Checkbox createCheckbox();\n}",
+    options: ["Abstract Factory", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Abstract Factory crea familias de objetos relacionados o dependientes sin especificar sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula un conjunto de comandos y los ejecuta en orden?",
+    code: "class MacroCommand implements Command {\n  private List<Command> commands;\n  public void execute() {\n    for (Command c : commands) c.execute();\n  }\n}",
+    options: ["Command", "Strategy", "Memento", "Chain of Responsibility"],
+    answer: 0,
+    explanation:
+      "El patrón Command encapsula una solicitud como un objeto, y permite componer múltiples comandos como uno solo.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite que múltiples objetos tengan la oportunidad de manejar una solicitud?",
+    code: "abstract class Handler {\n  protected Handler next;\n  public void setNext(Handler next) { this.next = next; }\n  abstract void handle(String request);\n}",
+    options: ["Chain of Responsibility", "Observer", "Command", "Strategy"],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility pasa una solicitud a lo largo de una cadena de manejadores hasta que uno la procesa.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál de los siguientes patrones se aplica mejor cuando necesitas cambiar el comportamiento de un objeto en tiempo de ejecución?",
+    code: "interface MoveBehavior {\n  void move();\n}\nclass Car {\n  private MoveBehavior behavior;\n  public void setMoveBehavior(MoveBehavior mb) { this.behavior = mb; }\n  public void move() { behavior.move(); }\n}",
+    options: ["Strategy", "State", "Decorator", "Visitor"],
+    answer: 0,
+    explanation:
+      "Strategy permite cambiar el comportamiento de un objeto en tiempo de ejecución, mediante composición de objetos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón representa una estructura compuesta en forma de árbol y permite tratar objetos individuales y compuestos de manera uniforme?",
+    code: 'interface Component {\n  void operation();\n}\nclass Leaf implements Component {\n  public void operation() { System.out.println("Leaf"); }\n}\nclass Composite implements Component {\n  private List<Component> children = new ArrayList<>();\n  public void operation() { children.forEach(Component::operation); }\n}',
+    options: ["Composite", "Adapter", "Bridge", "Facade"],
+    answer: 0,
+    explanation:
+      "Composite compone objetos en estructuras de árbol y permite tratarlos de forma uniforme, tanto a objetos individuales como compuestos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite desacoplar una abstracción de su implementación para que ambas puedan evolucionar independientemente?",
+    code: "interface Device {\n  void turnOn();\n}\nclass Remote {\n  protected Device device;\n  public Remote(Device device) { this.device = device; }\n  public void toggle() { device.turnOn(); }\n}",
+    options: ["Bridge", "Adapter", "Facade", "Strategy"],
+    answer: 0,
+    explanation:
+      "Bridge separa una abstracción de su implementación, permitiendo que ambas evolucionen de forma independiente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una interfaz unificada para un conjunto de interfaces en un subsistema?",
+    code: "class ComputerFacade {\n  private CPU cpu;\n  private Memory memory;\n  public void start() {\n    cpu.freeze();\n    memory.load();\n    cpu.execute();\n  }\n}",
+    options: ["Facade", "Adapter", "Proxy", "Composite"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz simplificada a un conjunto de clases complejas en un subsistema.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito principal del patrón Singleton?",
+    code: "class Singleton {\n  private static Singleton instance;\n  private Singleton() {}\n  public static Singleton getInstance() {\n    if (instance == null) instance = new Singleton();\n    return instance;\n  }\n}",
+    options: [
+      "Garantizar una única instancia de una clase",
+      "Proveer una interfaz común",
+      "Separar lógica de presentación",
+      "Construir objetos complejos",
+    ],
+    answer: 0,
+    explanation:
+      "Singleton asegura que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite agregar responsabilidades a un objeto en tiempo de ejecución?",
+    code: 'class Notifier {\n  public void send() { System.out.println("Notificación básica"); }\n}\nclass SMSDecorator extends Notifier {\n  private Notifier notifier;\n  public void send() {\n    notifier.send();\n    System.out.println("Enviando SMS");\n  }\n}',
+    options: ["Decorator", "Adapter", "Composite", "Proxy"],
+    answer: 0,
+    explanation:
+      "Decorator agrega funcionalidades adicionales a un objeto dinámicamente sin alterar su estructura original.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón define una interfaz común para operaciones que pueden aplicarse a una jerarquía de clases?",
+    code: "interface Visitor {\n  void visit(Book b);\n}\nclass Book {\n  void accept(Visitor v) { v.visit(this); }\n}",
+    options: ["Visitor", "Strategy", "Composite", "Command"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sobre objetos sin cambiar las clases sobre las que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué patrón permite reutilizar objetos compartidos para reducir el consumo de memoria?",
+    code: 'class TreeType {\n  String name, color, texture;\n  void draw(int x, int y) {\n    System.out.printf("Dibujando %s en (%d, %d)\\n", name, x, y);\n  }\n}',
+    options: ["Flyweight", "Prototype", "Singleton", "Builder"],
+    answer: 0,
+    explanation:
+      "Flyweight minimiza el uso de memoria compartiendo objetos comunes, en vez de crear uno por cada uso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón convierte una interfaz en otra que el cliente espera?",
+    code: 'class OldPrinter {\n  void printOld() { System.out.println("Impresión antigua"); }\n}\nclass NewPrinterAdapter implements NewPrinter {\n  OldPrinter op = new OldPrinter();\n  public void print() { op.printOld(); }\n}',
+    options: ["Adapter", "Decorator", "Proxy", "Bridge"],
+    answer: 0,
+    explanation:
+      "Adapter convierte la interfaz de una clase existente en otra que los clientes esperan.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón se enfoca en capturar y restaurar el estado interno de un objeto?",
+    code: "class Memento {\n  private final String state;\n  public Memento(String state) { this.state = state; }\n  public String getState() { return state; }\n}",
+    options: ["Memento", "State", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Memento permite capturar el estado de un objeto sin violar su encapsulamiento, para restaurarlo después.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón es útil para interpretar sentencias en lenguajes definidos por una gramática?",
+    code: "interface Expression {\n  boolean interpret(String context);\n}",
+    options: ["Interpreter", "Strategy", "Template Method", "Command"],
+    answer: 0,
+    explanation:
+      "Interpreter define una representación para una gramática y un intérprete para interpretar oraciones del lenguaje.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite que un objeto cambie su comportamiento cuando cambia su estado interno?",
+    code: "interface State {\n  void handle();\n}\nclass Context {\n  private State state;\n  public void setState(State state) { this.state = state; }\n  public void request() { state.handle(); }\n}",
+    options: ["State", "Strategy", "Command", "Template Method"],
+    answer: 0,
+    explanation:
+      "State permite a un objeto alterar su comportamiento cuando cambia su estado interno, pareciendo cambiar su clase.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula la construcción de objetos complejos paso a paso?",
+    code: "class CarBuilder {\n  Car car = new Car();\n  CarBuilder setWheels(int w) { car.wheels = w; return this; }\n  Car build() { return car; }\n}",
+    options: ["Builder", "Factory Method", "Prototype", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "Builder permite construir objetos complejos paso a paso, separando la construcción de su representación final.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite copiar objetos existentes sin hacer dependencias con sus clases concretas?",
+    code: "class Sheep implements Cloneable {\n  public Sheep clone() throws CloneNotSupportedException {\n    return (Sheep) super.clone();\n  }\n}",
+    options: ["Prototype", "Factory Method", "Builder", "Singleton"],
+    answer: 0,
+    explanation:
+      "Prototype permite copiar objetos existentes sin conocer sus clases exactas, utilizando clonación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se usa cuando una operación debe ser realizada por muchos objetos, sin conocer el receptor exacto?",
+    code: "interface EventListener {\n  void update(String event);\n}",
+    options: ["Observer", "Chain of Responsibility", "Mediator", "Command"],
+    answer: 0,
+    explanation:
+      "Observer define una relación de suscripción entre objetos, de forma que cuando uno cambia, sus dependientes son notificados automáticamente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón centraliza la comunicación entre objetos para evitar acoplamientos excesivos?",
+    code: "class ChatMediator {\n  void sendMessage(String msg, User user) { /* ... */ }\n}",
+    options: ["Mediator", "Observer", "Command", "Visitor"],
+    answer: 0,
+    explanation:
+      "Mediator define un objeto que encapsula cómo interactúan un conjunto de objetos, promoviendo el desacoplamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón representa una operación a ser realizada sobre los elementos de una estructura de objetos?",
+    code: "interface Visitor {\n  void visit(Book b);\n}\nclass Book {\n  void accept(Visitor v) { v.visit(this); }\n}",
+    options: ["Visitor", "Strategy", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "Visitor permite agregar operaciones a objetos sin modificar sus clases, recorriendo una estructura y aplicando una operación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula un algoritmo dentro de una clase y permite intercambiarlo en tiempo de ejecución?",
+    code: "interface SortingStrategy {\n  void sort(List<Integer> list);\n}",
+    options: ["Strategy", "Command", "State", "Template Method"],
+    answer: 0,
+    explanation:
+      "Strategy permite definir una familia de algoritmos y hacer que sean intercambiables en tiempo de ejecución.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite una interfaz común para una serie de clases que tienen implementaciones incompatibles?",
+    code: "class XmlToJsonAdapter implements JsonExporter {\n  XmlParser parser;\n  String export() {\n    return convertXmlToJson(parser.getXml());\n  }\n}",
+    options: ["Adapter", "Bridge", "Facade", "Decorator"],
+    answer: 0,
+    explanation:
+      "Adapter traduce la interfaz de una clase en otra que el cliente espera, permitiendo trabajar con clases incompatibles.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón agrupa múltiples subsistemas bajo una sola interfaz simplificada?",
+    code: "class HomeTheaterFacade {\n  void watchMovie() {\n    // enciende luces, tv, sistema de sonido\n  }\n}",
+    options: ["Facade", "Composite", "Bridge", "Adapter"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz de alto nivel que simplifica el uso de subsistemas complejos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se recomienda cuando se necesita ejecutar una acción más adelante o en otro contexto?",
+    code: "class LightOnCommand implements Command {\n  Light light;\n  public void execute() { light.turnOn(); }\n}",
+    options: ["Command", "Strategy", "Observer", "Template Method"],
+    answer: 0,
+    explanation:
+      "Command encapsula una solicitud como objeto, permitiendo parametrizar clientes con diferentes solicitudes o almacenarlas para ejecución posterior.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Cuál es el propósito principal del patrón Composite?",
+    code: 'interface Graphic { void draw(); }\nclass Circle implements Graphic { public void draw() { System.out.println("Dibuja círculo"); } }\nclass CompositeGraphic implements Graphic {\n  List<Graphic> children = new ArrayList<>();\n  public void draw() {\n    for (Graphic g : children) g.draw();\n  }\n}',
+    options: [
+      "Permitir tratar objetos individuales y compuestos de manera uniforme",
+      "Separar la creación del objeto de su representación",
+      "Proveer múltiples interfaces a objetos",
+      "Evitar dependencias cíclicas entre objetos",
+    ],
+    answer: 0,
+    explanation:
+      "Composite permite tratar objetos individuales y agrupaciones de objetos de forma uniforme mediante una estructura jerárquica.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una manera de acceder a los elementos de una colección secuencialmente sin exponer su estructura subyacente?",
+    code: "interface Iterator<T> { boolean hasNext(); T next(); }",
+    options: ["Iterator", "Composite", "Chain of Responsibility", "Visitor"],
+    answer: 0,
+    explanation:
+      "Iterator proporciona una interfaz estándar para recorrer colecciones sin exponer su implementación interna.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón estructura los objetos en una jerarquía para representar relaciones parte-todo?",
+    code: 'class File implements FileSystemItem { public void ls() { System.out.println("Archivo"); } }\nclass Directory implements FileSystemItem {\n  List<FileSystemItem> items = new ArrayList<>();\n  public void ls() {\n    for (FileSystemItem item : items) item.ls();\n  }\n}',
+    options: ["Composite", "Adapter", "Decorator", "Proxy"],
+    answer: 0,
+    explanation:
+      "Composite permite componer objetos en estructuras de árbol y trabajar con ellos como si fueran objetos individuales.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite que el comportamiento de un objeto varíe según su estado?",
+    code: "class Fan {\n  private State state;\n  public void turnOn() { state.turnOn(this); }\n}",
+    options: ["State", "Strategy", "Command", "Interpreter"],
+    answer: 0,
+    explanation:
+      "El patrón State permite que un objeto altere su comportamiento cuando cambia su estado interno, sin modificar su clase.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón evita el acoplamiento fuerte entre el emisor y el receptor de una solicitud al pasarla por una cadena de objetos?",
+    code: "abstract class Handler {\n  protected Handler next;\n  void setNext(Handler next) { this.next = next; }\n  abstract void handle(Request req);\n}",
+    options: ["Chain of Responsibility", "Mediator", "Observer", "Visitor"],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility permite pasar solicitudes a lo largo de una cadena de manejadores sin conocer el manejador final.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula las operaciones dentro de un objeto, permitiendo deshacer y rehacer acciones?",
+    code: "interface Command {\n  void execute(); void undo();\n}",
+    options: ["Command", "Strategy", "Memento", "Interpreter"],
+    answer: 0,
+    explanation:
+      "Command encapsula solicitudes como objetos, lo que permite parametrizar, registrar o deshacer acciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón proporciona una interfaz unificada para un conjunto de interfaces en un subsistema?",
+    code: "class CarFacade {\n  void startCar() {\n    engine.ignite();\n    dashboard.lightOn();\n  }\n}",
+    options: ["Facade", "Bridge", "Adapter", "Proxy"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz simplificada a un conjunto de clases complejas, ocultando su complejidad.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se enfoca en separar una abstracción de su implementación?",
+    code: "abstract class Shape {\n  protected Renderer renderer;\n  abstract void draw();\n}",
+    options: ["Bridge", "Adapter", "Facade", "Composite"],
+    answer: 0,
+    explanation:
+      "Bridge separa una abstracción de su implementación para que ambas puedan evolucionar independientemente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite añadir funcionalidades a un objeto dinámicamente?",
+    code: 'class CoffeeDecorator implements Coffee {\n  protected Coffee decoratedCoffee;\n  public String getDescription() {\n    return decoratedCoffee.getDescription() + ", leche";\n  }\n}',
+    options: ["Decorator", "Proxy", "Composite", "Adapter"],
+    answer: 0,
+    explanation:
+      "Decorator permite añadir funcionalidades a objetos individualmente, sin afectar a otros objetos de la misma clase.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite representar una operación sobre elementos de una estructura de objetos?",
+    code: 'class TaxVisitor implements Visitor {\n  public void visit(Product p) {\n    System.out.println("Aplicando impuesto al producto");\n  }\n}',
+    options: ["Visitor", "Command", "Observer", "Template Method"],
+    answer: 0,
+    explanation:
+      "Visitor permite aplicar una operación a una colección de objetos sin cambiar sus clases.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón proporciona una clase única que asegura que solo exista una instancia de sí misma?",
+    code: "class Singleton {\n  private static final Singleton instance = new Singleton();\n  private Singleton() {}\n  public static Singleton getInstance() { return instance; }\n}",
+    options: ["Singleton", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Singleton restringe la instanciación de una clase a un solo objeto, proporcionando un punto de acceso global.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón utiliza subclases para definir pasos de un algoritmo sin cambiar su estructura general?",
+    code: "abstract class Game {\n  final void play() {\n    initialize(); startPlay(); endPlay();\n  }\n  abstract void initialize(); abstract void startPlay(); abstract void endPlay();\n}",
+    options: ["Template Method", "Strategy", "Observer", "Command"],
+    answer: 0,
+    explanation:
+      "Template Method define el esqueleto de un algoritmo en una clase base, permitiendo a las subclases redefinir ciertos pasos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula un conjunto de algoritmos y permite intercambiarlos durante la ejecución?",
+    code: "class PaymentContext {\n  private PaymentStrategy strategy;\n  void pay(int amount) { strategy.pay(amount); }\n}",
+    options: ["Strategy", "State", "Command", "Template Method"],
+    answer: 0,
+    explanation:
+      "Strategy define una familia de algoritmos, encapsula cada uno y los hace intercambiables sin alterar el contexto.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón permite instanciar una de muchas clases relacionadas sin especificar su clase exacta?",
+    code: 'interface Animal { void speak(); }\nclass Dog implements Animal { public void speak() { System.out.println("Guau"); } }\nclass AnimalFactory {\n  static Animal getAnimal(String type) {\n    if (type.equals("dog")) return new Dog();\n    return null;\n  }\n}',
+    options: ["Factory Method", "Abstract Factory", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Factory Method define una interfaz para crear un objeto, dejando que las subclases decidan qué clase instanciar.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál es la principal ventaja del patrón Proxy en términos de acceso a objetos?",
+    code: "class ImageProxy implements Image {\n  private RealImage realImage;\n  public void display() {\n    if (realImage == null) realImage = new RealImage();\n    realImage.display();\n  }\n}",
+    options: [
+      "Controlar el acceso al objeto real",
+      "Convertir interfaces incompatibles",
+      "Mejorar la extensibilidad",
+      "Permitir múltiples instancias simultáneas",
+    ],
+    answer: 0,
+    explanation:
+      "El patrón Proxy permite controlar el acceso a un objeto, útil para carga diferida, seguridad o control de acceso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón facilita la reutilización de objetos mediante la clonación de instancias existentes?",
+    code: "class Document implements Cloneable {\n  public Document clone() throws CloneNotSupportedException {\n    return (Document) super.clone();\n  }\n}",
+    options: ["Prototype", "Builder", "Factory Method", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "El patrón Prototype permite crear nuevos objetos copiando una instancia prototipo ya existente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón se usa cuando se necesita construir objetos complejos paso a paso?",
+    code: 'class CarBuilder {\n  Car car = new Car();\n  CarBuilder addWheels() { car.add("wheels"); return this; }\n  Car build() { return car; }\n}',
+    options: ["Builder", "Factory Method", "Prototype", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "Builder separa la construcción de un objeto complejo de su representación, permitiendo su creación paso a paso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón define una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas?",
+    code: "interface GUIFactory {\n  Button createButton();\n  Checkbox createCheckbox();\n}",
+    options: ["Abstract Factory", "Factory Method", "Builder", "Singleton"],
+    answer: 0,
+    explanation:
+      "Abstract Factory permite la creación de familias de objetos relacionados sin especificar sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón define un sustituto para otro objeto para controlar su acceso?",
+    code: "class SecureProxy implements Service {\n  private RealService service;\n  public void request() {\n    if (userIsAuthorized()) service.request();\n  }\n}",
+    options: ["Proxy", "Adapter", "Facade", "Bridge"],
+    answer: 0,
+    explanation:
+      "Proxy actúa como un intermediario para controlar el acceso al objeto real, útil para seguridad o lazy loading.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite la comunicación entre objetos sin necesidad de que estén directamente acoplados?",
+    code: "class MediatorImpl implements Mediator {\n  public void send(String message, Colleague colleague) {\n    for (Colleague c : colleagues) if (c != colleague) c.receive(message);\n  }\n}",
+    options: ["Mediator", "Observer", "Chain of Responsibility", "Command"],
+    answer: 0,
+    explanation:
+      "Mediator reduce las dependencias entre objetos al centralizar la comunicación en un mediador.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón transforma una interfaz en otra que el cliente espera?",
+    code: "class MediaAdapter implements MediaPlayer {\n  AdvancedMediaPlayer advancedPlayer;\n  public void play(String type) { advancedPlayer.playVlc(); }\n}",
+    options: ["Adapter", "Bridge", "Decorator", "Facade"],
+    answer: 0,
+    explanation:
+      "Adapter convierte la interfaz de una clase en otra que los clientes esperan, facilitando la compatibilidad.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón define una forma estándar de ejecutar un conjunto de pasos?",
+    code: "abstract class Task {\n  final void execute() {\n    start(); process(); end();\n  }\n  abstract void process();\n}",
+    options: ["Template Method", "Strategy", "Command", "Observer"],
+    answer: 0,
+    explanation:
+      "Template Method define la estructura de un algoritmo, permitiendo que las subclases redefinan ciertos pasos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón representa una solicitud como un objeto y encapsula toda la información necesaria para ejecutarla?",
+    code: "class LightOnCommand implements Command {\n  Light light;\n  public void execute() { light.on(); }\n}",
+    options: ["Command", "Observer", "State", "Mediator"],
+    answer: 0,
+    explanation:
+      "Command encapsula solicitudes como objetos, lo que permite ejecutar, deshacer y almacenar operaciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite que múltiples objetos reciban una solicitud sin que el emisor conozca cuál la manejará?",
+    code: "abstract class Approver {\n  protected Approver next;\n  abstract void approve(Request req);\n}",
+    options: ["Chain of Responsibility", "Observer", "Command", "Visitor"],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility permite pasar la solicitud a lo largo de una cadena hasta que un objeto la maneje.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite notificar a varios objetos cuando cambia el estado de otro objeto?",
+    code: "class Subject {\n  List<Observer> observers;\n  void notifyAll() {\n    for (Observer o : observers) o.update();\n  }\n}",
+    options: ["Observer", "Mediator", "Visitor", "Command"],
+    answer: 0,
+    explanation:
+      "Observer define una relación de dependencia uno a muchos, notificando automáticamente a los observadores.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula el estado interno de un objeto y permite restaurarlo más adelante?",
+    code: "class Memento {\n  private String state;\n  public Memento(String state) { this.state = state; }\n}",
+    options: ["Memento", "Prototype", "Builder", "State"],
+    answer: 0,
+    explanation:
+      "Memento guarda el estado de un objeto para que pueda restaurarse más adelante sin violar el encapsulamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón es útil para realizar operaciones sobre una estructura de objetos sin modificar las clases?",
+    code: "interface Visitor { void visit(Book book); }\nclass Book { void accept(Visitor v) { v.visit(this); } }",
+    options: ["Visitor", "Interpreter", "Mediator", "Observer"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón evalúa un lenguaje o gramática de forma estructurada?",
+    code: "interface Expression { int interpret(); }\nclass Number implements Expression {\n  int value;\n  public int interpret() { return value; }\n}",
+    options: ["Interpreter", "Command", "Strategy", "Visitor"],
+    answer: 0,
+    explanation:
+      "Interpreter representa la gramática de un lenguaje y proporciona un método para interpretarla.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Cuál es el propósito principal del patrón Singleton?",
+    code: "public class Singleton {\n  private static final Singleton instance = new Singleton();\n  private Singleton() {}\n  public static Singleton getInstance() { return instance; }\n}",
+    options: [
+      "Asegurar una única instancia global",
+      "Delegar la creación de objetos",
+      "Ocultar la implementación",
+      "Controlar accesos concurrentes",
+    ],
+    answer: 0,
+    explanation:
+      "El patrón Singleton garantiza que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón encapsula algoritmos intercambiables?",
+    code: 'interface Strategy { void execute(); }\nclass ConcreteStrategyA implements Strategy { public void execute() { System.out.println("A"); } }',
+    options: ["Strategy", "State", "Template Method", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Strategy permite definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón separa una abstracción de su implementación para que puedan evolucionar independientemente?",
+    code: "interface Device { void enable(); }\nabstract class RemoteControl {\n  protected Device device;\n  RemoteControl(Device device) { this.device = device; }\n}",
+    options: ["Bridge", "Adapter", "Composite", "Facade"],
+    answer: 0,
+    explanation:
+      "Bridge permite desacoplar una abstracción de su implementación para que ambas puedan cambiar independientemente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón estructura objetos en forma de árbol para representar jerarquías parte-todo?",
+    code: "abstract class Component {\n  void add(Component c) {}\n  void remove(Component c) {}\n  abstract void display();\n}",
+    options: ["Composite", "Decorator", "Adapter", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Composite compone objetos en estructuras de árbol para representar jerarquías parte-todo.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el beneficio principal del patrón Decorator?",
+    code: "class Coffee { int cost() { return 5; } }\nclass MilkDecorator extends Coffee { int cost() { return super.cost() + 2; } }",
+    options: [
+      "Agregar responsabilidades dinámicamente",
+      "Simplificar interfaces",
+      "Controlar el acceso a objetos",
+      "Estandarizar procesos",
+    ],
+    answer: 0,
+    explanation:
+      "Decorator permite agregar funcionalidades adicionales a un objeto de manera dinámica sin alterar su estructura.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón proporciona una interfaz unificada a un conjunto de interfaces en un subsistema?",
+    code: "class ComputerFacade {\n  void startComputer() { cpu.start(); memory.load(); }\n}",
+    options: ["Facade", "Adapter", "Bridge", "Proxy"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz simplificada para interactuar con un conjunto de interfaces de un subsistema.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite cambiar el comportamiento de un objeto según su estado interno?",
+    code: "interface State { void handle(); }\nclass Context { private State state; void setState(State s) { this.state = s; } }",
+    options: ["State", "Strategy", "Command", "Template Method"],
+    answer: 0,
+    explanation:
+      "El patrón State permite que un objeto altere su comportamiento cuando su estado interno cambia.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del patrón Chain of Responsibility?",
+    code: "abstract class Handler {\n  protected Handler next;\n  public void setNext(Handler next) { this.next = next; }\n}",
+    options: [
+      "Evitar el acoplamiento entre el emisor y el receptor",
+      "Encapsular comandos",
+      "Simplificar el flujo de procesos",
+      "Transformar estructuras jerárquicas",
+    ],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility permite que varios objetos tengan la oportunidad de manejar una solicitud sin que el emisor conozca al receptor.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón encapsula una solicitud como un objeto?",
+    code: 'interface Command { void execute(); }\nclass LightOnCommand implements Command { public void execute() { System.out.println("Light On"); } }',
+    options: ["Command", "Observer", "Template Method", "Strategy"],
+    answer: 0,
+    explanation:
+      "Command encapsula una solicitud como un objeto, permitiendo parametrizar clientes con diferentes solicitudes.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón facilita agregar observadores que reaccionan a cambios de estado?",
+    code: "class Subject {\n  private List<Observer> observers;\n  void notifyAllObservers() { for (Observer o : observers) o.update(); }\n}",
+    options: ["Observer", "Mediator", "Strategy", "State"],
+    answer: 0,
+    explanation:
+      "Observer define una dependencia uno a muchos entre objetos, de modo que cuando uno cambia de estado, todos sus observadores son notificados.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón separa el algoritmo de los objetos sobre los que opera?",
+    code: "interface Visitor { void visit(Book b); }\nclass Book { void accept(Visitor v) { v.visit(this); } }",
+    options: ["Visitor", "Interpreter", "Command", "State"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una manera de acceder a los elementos de un objeto agregado secuencialmente?",
+    code: "interface Iterator<T> { boolean hasNext(); T next(); }",
+    options: ["Iterator", "Composite", "Builder", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón Iterator proporciona una forma de acceder secuencialmente a los elementos de una colección sin exponer su representación subyacente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón define la gramática de un lenguaje y un intérprete para el lenguaje?",
+    code: "interface Expression { int interpret(); }\nclass Number implements Expression { int value; public int interpret() { return value; } }",
+    options: ["Interpreter", "Visitor", "Template Method", "Factory Method"],
+    answer: 0,
+    explanation:
+      "Interpreter representa la gramática de un lenguaje y define un intérprete para analizar oraciones en dicho lenguaje.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón restringe la creación de múltiples instancias y asegura el acceso global?",
+    code: "class Logger {\n  private static Logger instance;\n  private Logger() {}\n  public static synchronized Logger getInstance() {\n    if (instance == null) instance = new Logger();\n    return instance;\n  }\n}",
+    options: ["Singleton", "Factory Method", "Prototype", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Singleton asegura que exista una única instancia de una clase y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Cuál es el propósito principal del patrón Singleton?",
+    code: "public class Singleton {\n  private static final Singleton instance = new Singleton();\n  private Singleton() {}\n  public static Singleton getInstance() { return instance; }\n}",
+    options: [
+      "Asegurar una única instancia global",
+      "Delegar la creación de objetos",
+      "Ocultar la implementación",
+      "Controlar accesos concurrentes",
+    ],
+    answer: 0,
+    explanation:
+      "El patrón Singleton garantiza que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón encapsula algoritmos intercambiables?",
+    code: 'interface Strategy { void execute(); }\nclass ConcreteStrategyA implements Strategy { public void execute() { System.out.println("A"); } }',
+    options: ["Strategy", "State", "Template Method", "Command"],
+    answer: 0,
+    explanation:
+      "El patrón Strategy permite definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón separa una abstracción de su implementación para que puedan evolucionar independientemente?",
+    code: "interface Device { void enable(); }\nabstract class RemoteControl {\n  protected Device device;\n  RemoteControl(Device device) { this.device = device; }\n}",
+    options: ["Bridge", "Adapter", "Composite", "Facade"],
+    answer: 0,
+    explanation:
+      "Bridge permite desacoplar una abstracción de su implementación para que ambas puedan cambiar independientemente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón estructura objetos en forma de árbol para representar jerarquías parte-todo?",
+    code: "abstract class Component {\n  void add(Component c) {}\n  void remove(Component c) {}\n  abstract void display();\n}",
+    options: ["Composite", "Decorator", "Adapter", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Composite compone objetos en estructuras de árbol para representar jerarquías parte-todo.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el beneficio principal del patrón Decorator?",
+    code: "class Coffee { int cost() { return 5; } }\nclass MilkDecorator extends Coffee { int cost() { return super.cost() + 2; } }",
+    options: [
+      "Agregar responsabilidades dinámicamente",
+      "Simplificar interfaces",
+      "Controlar el acceso a objetos",
+      "Estandarizar procesos",
+    ],
+    answer: 0,
+    explanation:
+      "Decorator permite agregar funcionalidades adicionales a un objeto de manera dinámica sin alterar su estructura.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón proporciona una interfaz unificada a un conjunto de interfaces en un subsistema?",
+    code: "class ComputerFacade {\n  void startComputer() { cpu.start(); memory.load(); }\n}",
+    options: ["Facade", "Adapter", "Bridge", "Proxy"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz simplificada para interactuar con un conjunto de interfaces de un subsistema.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite cambiar el comportamiento de un objeto según su estado interno?",
+    code: "interface State { void handle(); }\nclass Context { private State state; void setState(State s) { this.state = s; } }",
+    options: ["State", "Strategy", "Command", "Template Method"],
+    answer: 0,
+    explanation:
+      "El patrón State permite que un objeto altere su comportamiento cuando su estado interno cambia.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el propósito del patrón Chain of Responsibility?",
+    code: "abstract class Handler {\n  protected Handler next;\n  public void setNext(Handler next) { this.next = next; }\n}",
+    options: [
+      "Evitar el acoplamiento entre el emisor y el receptor",
+      "Encapsular comandos",
+      "Simplificar el flujo de procesos",
+      "Transformar estructuras jerárquicas",
+    ],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility permite que varios objetos tengan la oportunidad de manejar una solicitud sin que el emisor conozca al receptor.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón encapsula una solicitud como un objeto?",
+    code: 'interface Command { void execute(); }\nclass LightOnCommand implements Command { public void execute() { System.out.println("Light On"); } }',
+    options: ["Command", "Observer", "Template Method", "Strategy"],
+    answer: 0,
+    explanation:
+      "Command encapsula una solicitud como un objeto, permitiendo parametrizar clientes con diferentes solicitudes.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón facilita agregar observadores que reaccionan a cambios de estado?",
+    code: "class Subject {\n  private List<Observer> observers;\n  void notifyAllObservers() { for (Observer o : observers) o.update(); }\n}",
+    options: ["Observer", "Mediator", "Strategy", "State"],
+    answer: 0,
+    explanation:
+      "Observer define una dependencia uno a muchos entre objetos, de modo que cuando uno cambia de estado, todos sus observadores son notificados.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón separa el algoritmo de los objetos sobre los que opera?",
+    code: "interface Visitor { void visit(Book b); }\nclass Book { void accept(Visitor v) { v.visit(this); } }",
+    options: ["Visitor", "Interpreter", "Command", "State"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una manera de acceder a los elementos de un objeto agregado secuencialmente?",
+    code: "interface Iterator<T> { boolean hasNext(); T next(); }",
+    options: ["Iterator", "Composite", "Builder", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón Iterator proporciona una forma de acceder secuencialmente a los elementos de una colección sin exponer su representación subyacente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón define la gramática de un lenguaje y un intérprete para el lenguaje?",
+    code: "interface Expression { int interpret(); }\nclass Number implements Expression { int value; public int interpret() { return value; } }",
+    options: ["Interpreter", "Visitor", "Template Method", "Factory Method"],
+    answer: 0,
+    explanation:
+      "Interpreter representa la gramática de un lenguaje y define un intérprete para analizar oraciones en dicho lenguaje.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón restringe la creación de múltiples instancias y asegura el acceso global?",
+    code: "class Logger {\n  private static Logger instance;\n  private Logger() {}\n  public static synchronized Logger getInstance() {\n    if (instance == null) instance = new Logger();\n    return instance;\n  }\n}",
+    options: ["Singleton", "Factory Method", "Prototype", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Singleton asegura que exista una única instancia de una clase y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Cuál patrón es ideal para construir objetos complejos paso a paso?",
+    code: "class CarBuilder {\n  private Car car = new Car();\n  public CarBuilder setEngine(String engine) { car.engine = engine; return this; }\n  public Car build() { return car; }\n}",
+    options: ["Builder", "Factory Method", "Prototype", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "El patrón Builder permite construir un objeto complejo paso a paso, separando la construcción de su representación.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula la creación de objetos y permite subclases para decidir qué clase instanciar?",
+    code: "abstract class Dialog {\n  public void renderWindow() {\n    Button okButton = createButton();\n    okButton.render();\n  }\n  abstract Button createButton();\n}",
+    options: ["Factory Method", "Builder", "Abstract Factory", "Singleton"],
+    answer: 0,
+    explanation:
+      "Factory Method define una interfaz para crear un objeto, pero permite a las subclases decidir cuál clase instanciar.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite clonar objetos sin acoplarse a sus clases concretas?",
+    code: "class Sheep implements Cloneable {\n  public Sheep clone() throws CloneNotSupportedException {\n    return (Sheep) super.clone();\n  }\n}",
+    options: ["Prototype", "Builder", "Factory Method", "Adapter"],
+    answer: 0,
+    explanation:
+      "Prototype permite copiar objetos existentes sin depender de sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón convierte la interfaz de una clase en otra que el cliente espera?",
+    code: "class OldPrinter { void printOld(String text) { System.out.println(text); } }\nclass Adapter implements NewPrinter {\n  private OldPrinter oldPrinter = new OldPrinter();\n  public void print(String text) { oldPrinter.printOld(text); }\n}",
+    options: ["Adapter", "Bridge", "Proxy", "Facade"],
+    answer: 0,
+    explanation:
+      "Adapter permite que clases con interfaces incompatibles trabajen juntas convirtiendo la interfaz de una clase en otra esperada.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón protege el acceso a un objeto controlando su creación o acciones?",
+    code: 'class RealImage implements Image {\n  public void display() { System.out.println("Displaying image"); }\n}\nclass ProxyImage implements Image {\n  private RealImage realImage;\n  public void display() {\n    if (realImage == null) realImage = new RealImage();\n    realImage.display();\n  }\n}',
+    options: ["Proxy", "Adapter", "Decorator", "Bridge"],
+    answer: 0,
+    explanation:
+      "El patrón Proxy proporciona un sustituto o representante de otro objeto para controlar el acceso a él.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón organiza un grupo de objetos en una estructura de árbol?",
+    code: "interface Graphic { void draw(); }\nclass CompositeGraphic implements Graphic {\n  List<Graphic> children = new ArrayList<>();\n  public void draw() { children.forEach(Graphic::draw); }\n}",
+    options: ["Composite", "Decorator", "Facade", "Bridge"],
+    answer: 0,
+    explanation:
+      "Composite permite componer objetos en estructuras de árbol para representar jerarquías parte-todo.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón define un esqueleto de algoritmo y delega algunos pasos a subclases?",
+    code: "abstract class Game {\n  abstract void initialize();\n  abstract void start();\n  void play() {\n    initialize();\n    start();\n  }\n}",
+    options: ["Template Method", "Strategy", "State", "Observer"],
+    answer: 0,
+    explanation:
+      "Template Method define el esqueleto de un algoritmo en una operación, delegando algunos pasos a las subclases.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón centraliza la comunicación entre múltiples objetos?",
+    code: 'class ChatRoom {\n  public void showMessage(User user, String message) {\n    System.out.println(user.getName() + ": " + message);\n  }\n}',
+    options: ["Mediator", "Observer", "Command", "Strategy"],
+    answer: 0,
+    explanation:
+      "Mediator define un objeto que encapsula cómo interactúan un conjunto de objetos para reducir el acoplamiento entre ellos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón almacena y restaura el estado interno de un objeto sin violar encapsulamiento?",
+    code: "class Memento {\n  private String state;\n  public Memento(String state) { this.state = state; }\n  public String getState() { return state; }\n}",
+    options: ["Memento", "Command", "Prototype", "Flyweight"],
+    answer: 0,
+    explanation:
+      "Memento permite capturar y restaurar el estado interno de un objeto sin romper su encapsulamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón gestiona dependencias usando una familia de fábricas relacionadas?",
+    code: "interface GUIFactory { Button createButton(); Checkbox createCheckbox(); }",
+    options: ["Abstract Factory", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Abstract Factory proporciona una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón reduce el número de objetos creando instancias compartidas?",
+    code: "class TreeType {\n  private String name;\n  void draw(int x, int y) { /* reuse object */ }\n}",
+    options: ["Flyweight", "Prototype", "Builder", "Adapter"],
+    answer: 0,
+    explanation:
+      "Flyweight reduce el uso de memoria compartiendo tantos datos como sea posible con objetos similares.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite definir una operación sin cambiar las clases sobre las que opera?",
+    code: "interface Visitor { void visit(Fruit f); }\nclass Fruit { void accept(Visitor v) { v.visit(this); } }",
+    options: ["Visitor", "Strategy", "Template Method", "Command"],
+    answer: 0,
+    explanation:
+      "Visitor permite agregar operaciones a estructuras de objetos sin modificar las clases en sí.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón permite sustituir una llamada directa con un objeto que representa esa operación?",
+    code: "interface Command { void execute(); }\nclass SaveCommand implements Command { public void execute() { save(); } }",
+    options: ["Command", "Observer", "Mediator", "Visitor"],
+    answer: 0,
+    explanation:
+      "Command encapsula una solicitud como objeto, permitiendo parametrizar clientes con diferentes solicitudes y ejecutar comandos en momentos distintos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón ayuda a observar eventos sin acoplar el emisor con los receptores?",
+    code: "interface Observer { void update(String msg); }\nclass Subject {\n  List<Observer> observers;\n  void notifyObservers(String msg) { observers.forEach(o -> o.update(msg)); }\n}",
+    options: ["Observer", "Strategy", "State", "Mediator"],
+    answer: 0,
+    explanation:
+      "Observer define una relación uno-a-muchos donde múltiples objetos escuchan cambios en otro objeto sin acoplamiento fuerte.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question:
+      "¿Qué patrón permite agregar funcionalidades a objetos de manera dinámica sin alterar su estructura?",
+    code: "class Coffee {\n  public double cost() { return 5.0; }\n}\nclass MilkDecorator extends Coffee {\n  private Coffee coffee;\n  public MilkDecorator(Coffee c) { this.coffee = c; }\n  public double cost() { return coffee.cost() + 1.5; }\n}",
+    options: ["Decorator", "Adapter", "Composite", "Bridge"],
+    answer: 0,
+    explanation:
+      "Decorator permite añadir funcionalidades a un objeto de forma dinámica, manteniendo la misma interfaz.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón separa una abstracción de su implementación, permitiendo variarlas independientemente?",
+    code: "interface Device { void turnOn(); }\nabstract class RemoteControl {\n  protected Device device;\n  public RemoteControl(Device d) { this.device = d; }\n  public void turnOnDevice() { device.turnOn(); }\n}",
+    options: ["Bridge", "Adapter", "Strategy", "Facade"],
+    answer: 0,
+    explanation:
+      "Bridge separa la abstracción de su implementación para que ambas puedan modificarse independientemente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula algoritmos intercambiables y los hace independientes del cliente?",
+    code: "interface PaymentStrategy { void pay(int amount); }\nclass CreditCardPayment implements PaymentStrategy {\n  public void pay(int amount) { /* pago con tarjeta */ }\n}",
+    options: ["Strategy", "Command", "Template Method", "Visitor"],
+    answer: 0,
+    explanation:
+      "Strategy permite definir una familia de algoritmos, encapsularlos e intercambiarlos según necesidad.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón se basa en cambiar el comportamiento de un objeto dependiendo de su estado interno?",
+    code: "interface State { void handle(); }\nclass Context {\n  private State state;\n  public void setState(State s) { this.state = s; }\n  public void request() { state.handle(); }\n}",
+    options: ["State", "Strategy", "Mediator", "Observer"],
+    answer: 0,
+    explanation:
+      "El patrón State permite que un objeto altere su comportamiento cuando cambia su estado interno, pareciendo cambiar de clase.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una interfaz unificada para un conjunto de interfaces en un subsistema?",
+    code: "class ComputerFacade {\n  public void start() {\n    CPU.boot();\n    Memory.load();\n  }\n}",
+    options: ["Facade", "Adapter", "Proxy", "Bridge"],
+    answer: 0,
+    explanation:
+      "Facade proporciona una interfaz simplificada a un conjunto complejo de subsistemas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Qué patrón permite ejecutar comandos bajo demanda o en colas?",
+    code: 'interface Command { void execute(); }\nclass LightOnCommand implements Command {\n  public void execute() { System.out.println("Luz encendida"); }\n}',
+    options: ["Command", "Observer", "Chain of Responsibility", "Strategy"],
+    answer: 0,
+    explanation:
+      "Command encapsula una solicitud como un objeto, lo que permite parametrizar acciones, retrasar su ejecución o ponerlas en cola.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite recorrer elementos de una colección sin exponer su representación interna?",
+    code: 'interface Iterator<T> { boolean hasNext(); T next(); }\nclass NameRepository {\n  private String[] names = {"John", "Jane"};\n  public Iterator<String> getIterator() { return new NameIterator(); }\n}',
+    options: ["Iterator", "Visitor", "Composite", "Template Method"],
+    answer: 0,
+    explanation:
+      "Iterator proporciona una forma de acceder secuencialmente a los elementos de una colección sin exponer su estructura interna.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón permite responder a eventos de manera flexible mediante suscriptores?",
+    code: "interface Subscriber { void update(String message); }\nclass Publisher {\n  List<Subscriber> subs;\n  void notify(String msg) { subs.forEach(s -> s.update(msg)); }\n}",
+    options: ["Observer", "Mediator", "Command", "Strategy"],
+    answer: 0,
+    explanation:
+      "Observer permite que múltiples objetos respondan automáticamente cuando el estado de otro objeto cambia.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite manejar solicitudes a través de una cadena de objetos?",
+    code: "abstract class Handler {\n  protected Handler next;\n  public void setNext(Handler next) { this.next = next; }\n  abstract void handle(String request);\n}",
+    options: ["Chain of Responsibility", "Strategy", "Command", "Observer"],
+    answer: 0,
+    explanation:
+      "Chain of Responsibility pasa una solicitud a lo largo de una cadena de manejadores hasta que uno la procesa.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón representa una operación a realizar sobre elementos de una estructura?",
+    code: "interface Visitor { void visit(Book book); }\nclass Book { void accept(Visitor v) { v.visit(this); } }",
+    options: ["Visitor", "Command", "Strategy", "Template Method"],
+    answer: 0,
+    explanation:
+      "Visitor permite definir nuevas operaciones sin cambiar las clases de los elementos sobre los que opera.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál patrón limita la instancia de una clase a un solo objeto?",
+    code: "class Singleton {\n  private static Singleton instance;\n  private Singleton() {}\n  public static Singleton getInstance() {\n    if (instance == null) instance = new Singleton();\n    return instance;\n  }\n}",
+    options: ["Singleton", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Singleton asegura que una clase tenga solo una instancia y proporciona un punto de acceso global a ella.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula un grupo de comandos como una sola unidad de ejecución?",
+    code: "class MacroCommand implements Command {\n  List<Command> commands;\n  public void execute() { commands.forEach(Command::execute); }\n}",
+    options: ["Command", "Composite", "Strategy", "Template Method"],
+    answer: 0,
+    explanation:
+      "El patrón Command puede combinar múltiples comandos en un macrocomando que se ejecuta como una unidad.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón es útil para almacenar snapshots del estado de un objeto?",
+    code: "class Editor {\n  private String content;\n  public Memento save() { return new Memento(content); }\n}",
+    options: ["Memento", "State", "Prototype", "Observer"],
+    answer: 0,
+    explanation:
+      "Memento permite guardar y restaurar el estado de un objeto sin violar el encapsulamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula una interfaz simplificada para múltiples subsistemas?",
+    code: "class HomeTheaterFacade {\n  void watchMovie() {\n    projector.on();\n    screen.down();\n    dvd.play();\n  }\n}",
+    options: ["Facade", "Adapter", "Bridge", "Decorator"],
+    answer: 0,
+    explanation:
+      "Facade ofrece una interfaz de alto nivel que simplifica la interacción con varios subsistemas complejos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+
+  {
+    question: "¿Qué patrón permite crear objetos complejos paso a paso?",
+    code: 'class CarBuilder {\n  private Car car = new Car();\n  public CarBuilder addWheels() { car.parts.add("wheels"); return this; }\n  public CarBuilder addEngine() { car.parts.add("engine"); return this; }\n  public Car build() { return car; }\n}',
+    options: ["Builder", "Factory Method", "Prototype", "Abstract Factory"],
+    answer: 0,
+    explanation:
+      "El patrón Builder permite construir un objeto paso a paso, ideal para objetos complejos con múltiples configuraciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón facilita la creación de familias de objetos relacionados sin especificar sus clases concretas?",
+    code: "interface GUIFactory { Button createButton(); }\nclass WinFactory implements GUIFactory { public Button createButton() { return new WinButton(); } }",
+    options: ["Abstract Factory", "Factory Method", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Abstract Factory proporciona una interfaz para crear familias de objetos relacionados sin depender de sus clases concretas.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón estructura una jerarquía donde los objetos pueden contener otros objetos similares?",
+    code: "interface Graphic { void draw(); }\nclass CompositeGraphic implements Graphic {\n  List<Graphic> children;\n  public void draw() { children.forEach(Graphic::draw); }\n}",
+    options: ["Composite", "Decorator", "Adapter", "Bridge"],
+    answer: 0,
+    explanation:
+      "El patrón Composite permite componer objetos en estructuras de árbol y trabajar con ellos como si fueran individuales.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón permite que una clase delegue la creación de instancias a sus subclases?",
+    code: "abstract class Dialog {\n  public void renderWindow() { Button okButton = createButton(); okButton.render(); }\n  protected abstract Button createButton();\n}",
+    options: ["Factory Method", "Abstract Factory", "Builder", "Prototype"],
+    answer: 0,
+    explanation:
+      "Factory Method define una interfaz para crear objetos, pero deja que las subclases decidan qué clase instanciar.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón transforma la interfaz de una clase en otra que espera el cliente?",
+    code: "class OldPrinter { void printOld(String s) {} }\nclass NewPrinterAdapter implements Printer {\n  private OldPrinter op;\n  public void print(String s) { op.printOld(s); }\n}",
+    options: ["Adapter", "Bridge", "Decorator", "Proxy"],
+    answer: 0,
+    explanation:
+      "Adapter convierte la interfaz de una clase en otra que el cliente espera, permitiendo trabajar con clases incompatibles.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón usa una clase intermedia para manejar la comunicación entre múltiples objetos?",
+    code: "interface Mediator { void notify(Component sender, String event); }\nclass DialogMediator implements Mediator { public void notify(Component sender, String event) { /* manejar evento */ } }",
+    options: ["Mediator", "Observer", "Command", "Strategy"],
+    answer: 0,
+    explanation:
+      "El patrón Mediator centraliza la comunicación entre objetos, promoviendo un bajo acoplamiento.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón se basa en la creación de clones exactos de objetos ya existentes?",
+    code: "class Prototype implements Cloneable {\n  public Prototype clone() throws CloneNotSupportedException { return (Prototype) super.clone(); }\n}",
+    options: ["Prototype", "Builder", "Factory Method", "Singleton"],
+    answer: 0,
+    explanation:
+      "El patrón Prototype permite crear nuevos objetos copiando una instancia existente, útil para evitar la creación costosa.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón controla el acceso a un objeto mediante un intermediario?",
+    code: "class ProxyImage implements Image {\n  private RealImage realImage;\n  public void display() {\n    if (realImage == null) realImage = new RealImage();\n    realImage.display();\n  }\n}",
+    options: ["Proxy", "Decorator", "Adapter", "Facade"],
+    answer: 0,
+    explanation:
+      "Proxy actúa como intermediario entre el cliente y el objeto real, controlando su acceso.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón proporciona una estructura base y permite que las subclases redefinan ciertos pasos?",
+    code: "abstract class Game {\n  public final void play() {\n    initialize(); startPlay(); endPlay();\n  }\n  abstract void startPlay();\n}",
+    options: ["Template Method", "Strategy", "Factory Method", "State"],
+    answer: 0,
+    explanation:
+      "Template Method define el esqueleto de un algoritmo en una operación, dejando que las subclases redefinan algunos pasos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón convierte una operación en un objeto para parametrizar métodos?",
+    code: "class PrintCommand implements Command {\n  private String msg;\n  public void execute() { System.out.println(msg); }\n}",
+    options: ["Command", "Strategy", "Observer", "State"],
+    answer: 0,
+    explanation:
+      "Command convierte las solicitudes en objetos, permitiendo la parametrización y ejecución flexible de acciones.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón permite notificar múltiples objetos cuando ocurre un cambio?",
+    code: "interface Subject {\n  void attach(Observer o);\n  void notifyObservers();\n}",
+    options: ["Observer", "Mediator", "Visitor", "State"],
+    answer: 0,
+    explanation:
+      "Observer define una dependencia de uno a muchos, de modo que cuando uno cambia, se notifica a los demás automáticamente.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Qué patrón encapsula una solicitud como un objeto, permitiendo acciones como deshacer o rehacer?",
+    code: "class UndoCommand implements Command {\n  public void execute() { /* deshacer */ }\n}",
+    options: ["Command", "Memento", "Strategy", "Visitor"],
+    answer: 0,
+    explanation:
+      "Command encapsula acciones como objetos y permite funcionalidades como deshacer, rehacer o log de comandos.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
+  {
+    question:
+      "¿Cuál patrón representa una operación a realizar en cada elemento de una estructura de objetos?",
+    code: "class PrintVisitor implements Visitor {\n  public void visit(Book b) { System.out.println(b.getTitle()); }\n}",
+    options: ["Visitor", "Composite", "Template Method", "Decorator"],
+    answer: 0,
+    explanation:
+      "Visitor permite agregar nuevas operaciones a estructuras de objetos sin cambiar las clases de los objetos visitados.",
+    subtheme: "Patrones de Diseño",
+    group: "Java",
+    level: "Experto",
+  },
 ];
