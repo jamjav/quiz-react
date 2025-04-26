@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { allQuestions } from "./allQuestions";
-import { Card, CardContent } from "./components/ui/card";
-import { Button } from "./components/ui/button";
-import { Progress } from "./components/ui/progress";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Header from "./components/Header";
 import TagSelector from "./components/TagSelector";
 import QuizControls from "./components/QuizControls";
@@ -25,7 +20,9 @@ export default function QuizApp() {
   const [timeLeft, setTimeLeft] = useState(30);
   const [timeLeftInitial, setTimeLeftInitial] = useState(30);
 
+  // Updated to hide all divisions initially
   const mainTags = [...new Set(allQuestions.map((q) => q.group))];
+
   const levels = selectedMainTag
     ? [
         ...new Set(
@@ -193,6 +190,18 @@ export default function QuizApp() {
         score={score}
         timeLeft={timeLeft}
         onRestart={() => window.location.reload()}
+        allQuestions={allQuestions}
+        selectedMainTag={selectedMainTag}
+        selectedSubTags={selectedSubTags}
+        selectedLevel={selectedLevel}
+        numQuestions={numQuestions}
+        setQuestions={setQuestions}
+        setCurrent={setCurrent}
+        setScore={setScore}
+        setResults={setResults}
+        setQuizStarted={setQuizStarted}
+        timeLeftInitial={timeLeftInitial}
+        setTimeLeft={setTimeLeft}
       />
     );
   }
