@@ -18,54 +18,56 @@ export default function QuestionCard({
   const question = questions[current];
 
   return (
-    <div className="space-y-4">
-      <div className="text-lg font-bold text-center text-blue-700 bg-gray-100 py-2 rounded-md shadow-md mb-4">
-        Progreso: {current + 1} de {questions.length} preguntas (
-        {Math.round(((current + 1) / questions.length) * 100)}%)
+    <div className="card bg-gray-800 p-6 rounded-lg shadow-lg space-y-4 max-w-screen-md mx-auto">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-white mb-2">
+          <ReactMarkdown>{question.question}</ReactMarkdown>
+        </h1>
+        <h2 className="text-lg font-medium text-blue-400">
+          Progreso: {current + 1} de {questions.length} preguntas (
+          {Math.round(((current + 1) / questions.length) * 100)}%)
+        </h2>
+        <h3 className="text-md font-medium text-green-400">
+          Subtema: {question.subtheme || "Sin subtema"}
+        </h3>
       </div>
-      <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-4">
+      <div className="progress-bar w-full h-2 bg-gray-700 rounded-full overflow-hidden">
         <div
-          className="h-full bg-blue-600"
+          className="progress-bar-inner h-full bg-blue-500"
           style={{ width: `${((current + 1) / questions.length) * 100}%` }}
         ></div>
       </div>
-      <div className="text-sm font-medium text-center text-green-700 bg-gray-100 py-2 rounded-md shadow-md mb-4">
-        Subtema: {question.subtheme || "Sin subtema"}
-      </div>
-      <div className="text-2xl font-bold text-center text-white bg-blue-800 p-4 rounded-md shadow-md">
-        <ReactMarkdown>{question.question}</ReactMarkdown>
-      </div>
       {question.code && (
-        <div className="bg-gray-800 text-white p-4 rounded-md shadow-md mb-4">
+        <div className="bg-gray-800 text-white p-4 rounded-md shadow-md">
           <SyntaxHighlighter language="javascript" style={materialDark}>
             {question.code}
           </SyntaxHighlighter>
         </div>
       )}
-      <div className="space-y-2">
+      <div className="options grid grid-cols-1 gap-4">
         {question.options.map((option, index) => (
-          <Button
+          <button
             key={index}
-            onClick={() => setSelected(index)}
-            className={`w-full text-left px-4 py-2 border rounded-md ${
-              selected === index
-                ? "bg-blue-600 text-white"
-                : "bg-gray-700 text-white"
+            className={`option bg-gray-700 hover:bg-blue-500 text-white font-medium py-2 px-4 rounded-md shadow-sm ${
+              selected === index ? "selected bg-blue-600" : ""
             }`}
+            onClick={() => {
+              setSelected(index);
+            }}
           >
             <div className="answer text-center">
               <ReactMarkdown>{option}</ReactMarkdown>
             </div>
-          </Button>
+          </button>
         ))}
       </div>
       <div className="flex justify-between items-center mt-4">
-        <div className="w-full flex items-center space-x-2">
-          <span className="text-gray-400">Tiempo restante: {timeLeft}s</span>
-          <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden">
+        <div className="timer w-full flex items-center space-x-2 text-white">
+          <span>Tiempo restante: {timeLeft}s</span>
+          <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
             <div
               className={`h-full ${
-                timeLeft <= 15 ? "bg-red-600" : "bg-blue-600"
+                timeLeft <= 15 ? "bg-red-600" : "bg-blue-500"
               }`}
               style={{ width: `${(timeLeft / timeLeftInitial) * 100}%` }}
             ></div>
@@ -77,8 +79,8 @@ export default function QuestionCard({
               handleNext();
             }
           }}
-          disabled={isNextDisabled} // El botón estará deshabilitado si `isNextDisabled` es true
-          className={`bg-blue-600 hover:bg-blue-700 ${
+          disabled={isNextDisabled}
+          className={`next bg-blue-600 hover:bg-blue-700 ${
             isNextDisabled ? "opacity-50 cursor-not-allowed" : ""
           }`}
         >

@@ -1,0 +1,8 @@
+/* Estilos para resaltar la opción seleccionada */
+button.option.selected {
+  background-color: #2563eb; /* Azul intenso */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #1d4ed8; /* Borde azul más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+  transition: all 0.3s ease;
+}
