@@ -159,27 +159,45 @@ export default function QuizApp() {
       <div className="flex justify items-center min-h-screen bg-gray-900 text-white">
         <div className="px-4 sm:px-10 md:px-20 lg:px-40 xl:px-80">
           <Header />
-          <TagSelector
-            mainTags={mainTags}
-            levels={levels}
-            subTags={subTags}
-            selectedMainTag={selectedMainTag}
-            selectedLevel={selectedLevel}
-            selectedSubTags={selectedSubTags}
-            setSelectedMainTag={setSelectedMainTag}
-            setSelectedLevel={setSelectedLevel}
-            setSelectedSubTags={setSelectedSubTags}
-            handleSelectSubtopic={handleSelectSubtopic}
-          />
-          <QuizControls
-            timeLeft={timeLeft}
-            numQuestions={numQuestions}
-            setTimeLeft={setTimeLeft}
-            setNumQuestions={setNumQuestions}
-            startQuiz={startQuiz}
-            selectedMainTag={selectedMainTag}
-            selectedSubTags={selectedSubTags}
-          />
+          <div className="space-y-4">
+            <QuizControls
+              timeLeft={timeLeft}
+              numQuestions={numQuestions}
+              setTimeLeft={setTimeLeft}
+              setNumQuestions={setNumQuestions}
+              startQuiz={startQuiz}
+              selectedMainTag={selectedMainTag}
+              selectedSubTags={selectedSubTags}
+              showStartButton={false}
+            />
+            <TagSelector
+              mainTags={mainTags}
+              levels={levels}
+              subTags={subTags}
+              selectedMainTag={selectedMainTag}
+              selectedLevel={selectedLevel}
+              selectedSubTags={selectedSubTags}
+              setSelectedMainTag={setSelectedMainTag}
+              setSelectedLevel={setSelectedLevel}
+              setSelectedSubTags={setSelectedSubTags}
+              handleSelectSubtopic={handleSelectSubtopic}
+            />
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={startQuiz}
+                disabled={
+                  selectedMainTag === null || selectedSubTags.length === 0
+                }
+                className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-lg font-semibold ${
+                  selectedMainTag === null || selectedSubTags.length === 0
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
+              >
+                Comenzar Quiz
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -209,8 +227,8 @@ export default function QuizApp() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
-      <div className="w-full px-4 lg:px-8">
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto">
         <QuestionCard
           current={current}
           questions={questions}

@@ -23,32 +23,32 @@ export default function TagSelector({
 
   return (
     <div className="space-y-4 text-center">
-      <h2 className="text-xl font-bold mb-2">Selecciona un Tema Principal</h2>
-      <div className="flex flex-wrap gap-2 justify-center">
-        {mainTags.map((tag) => (
-          <button
-            key={tag}
-            onClick={() => {
-              setSelectedMainTag(tag);
-              setSelectedLevel(null);
-              setSelectedSubTags([]);
-            }}
-            className={`px-3 py-1 rounded-full border text-sm ${
-              selectedMainTag === tag
-                ? "bg-blue-600 text-white"
-                : "bg-white text-black"
-            }`}
-          >
-            {tag}
-          </button>
-        ))}
+      <div>
+        <h2 className="text-xl font-bold mb-2">Tema Principal</h2>
+        <div className="flex flex-wrap gap-2 justify-center">
+          {mainTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => {
+                setSelectedMainTag(tag);
+                setSelectedLevel(null);
+                setSelectedSubTags([]);
+              }}
+              className={`px-3 py-1 rounded-full border text-sm ${
+                selectedMainTag === tag
+                  ? "bg-blue-600 text-white"
+                  : "bg-white text-black"
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <hr className="my-4 border-t border-gray-500" />
-
       {selectedMainTag && (
-        <>
-          <h2 className="text-xl font-bold mb-2">Selecciona un Nivel</h2>
+        <div>
+          <h2 className="text-xl font-bold mb-2">Nivel</h2>
           <div className="flex flex-wrap gap-2 justify-center">
             {levels.map((level) => (
               <button
@@ -67,14 +67,12 @@ export default function TagSelector({
               </button>
             ))}
           </div>
-        </>
+        </div>
       )}
 
-      <hr className="my-4 border-t border-gray-500" />
-
       {selectedLevel && (
-        <>
-          <h2 className="text-xl font-bold mb-2">Selecciona un Subtema</h2>
+        <div>
+          <h2 className="text-xl font-bold mb-2">Subtema</h2>
           <div className="flex flex-wrap gap-2 justify-center">
             {subTags.map((subTag) => (
               <button
@@ -90,7 +88,7 @@ export default function TagSelector({
               </button>
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

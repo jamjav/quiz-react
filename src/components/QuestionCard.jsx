@@ -18,94 +18,130 @@ export default function QuestionCard({
   const question = questions[current];
 
   return (
-    <div className="card bg-gray-800 p-2 sm:p-6 rounded-lg shadow-lg space-y-3 sm:space-y-4 w-full max-w-[100vw] mx-auto px-2 sm:px-6">
-      <div className="text-center">
-        <h1 className="text-xl sm:text-2xl font-bold text-white mb-2 break-words">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {question.question}
-          </ReactMarkdown>
-        </h1>
-        <h2 className="text-base sm:text-lg font-medium text-blue-400">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{`**Progreso:** ${
-            current + 1
-          } de ${questions.length} preguntas (${Math.round(
-            ((current + 1) / questions.length) * 100
-          )}%)`}</ReactMarkdown>
-        </h2>
-        <h3 className="text-sm sm:text-md font-medium text-green-400 break-words">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{`**Subtema:** ${
-            question.subtheme || "Sin subtema"
-          }`}</ReactMarkdown>
-        </h3>
-      </div>
-      <div className="progress-bar w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-        <div
-          className="progress-bar-inner h-full bg-blue-500"
-          style={{ width: `${((current + 1) / questions.length) * 100}%` }}
-        ></div>
-      </div>
-      {question.code && (
-        <div className="bg-gray-800 text-white p-2 sm:p-4 rounded-md shadow-md mt-2 overflow-x-auto max-w-full">
-          <SyntaxHighlighter
-            language="java"
-            style={materialDark}
-            customStyle={{ fontSize: "0.875rem", maxWidth: "100%" }}
-            wrapLongLines={true}
-          >
-            {question.code}
-          </SyntaxHighlighter>
-        </div>
-      )}
-      <div className="options grid grid-cols-1 gap-2 sm:gap-4 w-full">
-        {question.options.map((option, index) => (
-          <button
-            key={index}
-            className={`option bg-gray-700 hover:bg-blue-500 text-white font-medium py-2 px-3 sm:px-4 rounded-md shadow-sm text-sm sm:text-base w-full break-words ${
-              selected === index ? "selected bg-blue-600" : ""
-            }`}
-            onClick={() => {
-              setSelected(index);
-            }}
-          >
-            <div className="answer text-center break-words">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {option}
-              </ReactMarkdown>
+    <div className="w-full min-h-screen flex items-start justify-center py-4">
+      <div className="w-full card bg-gray-800 rounded-lg shadow-lg">
+        <div className="min-h-[600px] md:h-[calc(100vh-2rem)] flex flex-col">
+          {/* Cabecera fija */}
+          <div className="flex-none bg-gray-800 border-b border-gray-700 p-4">
+            <div className="text-center space-y-2">
+              <div className="text-blue-400 text-lg md:text-xl">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{`**Progreso:** ${
+                  current + 1
+                } de ${questions.length} preguntas (${Math.round(
+                  ((current + 1) / questions.length) * 100
+                )}%)`}</ReactMarkdown>
+              </div>
+              <div className="text-green-400 text-md">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{`**Subtema:** ${
+                  question.subtheme || "Sin subtema"
+                }`}</ReactMarkdown>
+              </div>
+              <div className="h-2 bg-gray-700 rounded-full overflow-hidden mt-2">
+                <div
+                  className="h-full bg-blue-500 transition-all duration-300"
+                  style={{
+                    width: `${((current + 1) / questions.length) * 100}%`,
+                  }}
+                ></div>
+              </div>
             </div>
-          </button>
-        ))}
-      </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 mt-4 w-full">
-        <div className="timer w-full flex items-center space-x-2 text-white">
-          <span className="text-sm sm:text-base whitespace-nowrap">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {`⏱️ **Tiempo:** ${timeLeft}s`}
-            </ReactMarkdown>
-          </span>
-          <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-            <div
-              className={`h-full ${
-                timeLeft <= 15 ? "bg-red-600" : "bg-blue-500"
-              }`}
-              style={{ width: `${(timeLeft / timeLeftInitial) * 100}%` }}
-            ></div>
+          </div>
+
+          {/* Área de pregunta y respuestas con scroll */}
+          <div className="flex-1 overflow-y-auto bg-gray-800">
+            <div className="p-4">
+              <div className="w-full space-y-6 max-w-[100%]">
+                {/* Pregunta */}
+                <div className="text-white text-lg md:text-2xl font-semibold">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {question.question}
+                  </ReactMarkdown>
+                </div>
+
+                {/* Código si existe */}
+                {question.code && (
+                  <div className="bg-gray-900 rounded-md w-full overflow-x-auto">
+                    <div className="min-w-full">
+                      <SyntaxHighlighter
+                        language="java"
+                        style={materialDark}
+                        customStyle={{
+                          margin: 0,
+                          padding: "1rem",
+                          backgroundColor: "transparent",
+                          fontSize: "0.875rem",
+                          maxHeight: "400px",
+                          overflowY: "auto",
+                        }}
+                        wrapLongLines={true}
+                        showLineNumbers={true}
+                      >
+                        {question.code}
+                      </SyntaxHighlighter>
+                    </div>
+                  </div>
+                )}
+
+                {/* Opciones */}
+                <div className="grid gap-3 w-full">
+                  {question.options.map((option, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelected(index)}
+                      className={`p-4 w-full text-left rounded-lg transition-all duration-200 ${
+                        selected === index
+                          ? "bg-blue-600 text-white"
+                          : "bg-gray-700 text-white hover:bg-gray-600"
+                      }`}
+                    >
+                      <div className="break-words">
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {option}
+                        </ReactMarkdown>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Pie con timer y botón */}
+          <div className="flex-none bg-gray-800 border-t border-gray-700 p-4">
+            <div className="w-full">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="w-full">
+                  <div className="flex items-center gap-3 text-white mb-2 sm:mb-0">
+                    <span className="whitespace-nowrap">
+                      ⏱️ <span className="font-semibold">{timeLeft}s</span>
+                    </span>
+                    <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full transition-all duration-300 ${
+                          timeLeft <= 15 ? "bg-red-600" : "bg-blue-500"
+                        }`}
+                        style={{
+                          width: `${(timeLeft / timeLeftInitial) * 100}%`,
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  onClick={handleNext}
+                  disabled={isNextDisabled}
+                  className={`w-full sm:w-auto px-6 py-2 ${
+                    isNextDisabled
+                      ? "bg-gray-600 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700"
+                  }`}
+                >
+                  Siguiente
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
-        <Button
-          onClick={() => {
-            if (!isNextDisabled) {
-              handleNext();
-            }
-          }}
-          disabled={isNextDisabled}
-          className={`next bg-blue-600 hover:bg-blue-700 w-full sm:w-auto ${
-            isNextDisabled ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-        >
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            **Siguiente**
-          </ReactMarkdown>
-        </Button>
       </div>
     </div>
   );

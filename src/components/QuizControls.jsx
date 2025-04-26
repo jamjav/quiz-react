@@ -1,20 +1,13 @@
 import React from "react";
-import { Button } from "./ui/button";
 
 export default function QuizControls({
   timeLeft,
   numQuestions,
   setTimeLeft,
   setNumQuestions,
-  startQuiz,
-  selectedMainTag,
-  selectedSubTags,
 }) {
   return (
     <div className="flex flex-col items-center gap-4 mb-4">
-      <div className="w-full flex justify-center">
-        <hr className="w-full my-4 border-t-2 border-gray-500 mx-auto" />
-      </div>
       <div className="text-center w-full">
         <h3 className="text-lg font-bold mb-2">Tiempo por Pregunta</h3>
         <select
@@ -29,9 +22,7 @@ export default function QuizControls({
           ))}
         </select>
       </div>
-      <div className="w-full flex justify-center">
-        <hr className="w-full my-4 border-t-2 border-gray-500 mx-auto" />
-      </div>
+
       <div className="text-center w-full">
         <h3 className="text-lg font-bold mb-2">Número de Preguntas</h3>
         <select
@@ -46,20 +37,6 @@ export default function QuizControls({
           ))}
         </select>
       </div>
-      <div className="w-full flex justify-center">
-        <hr className="w-full my-4 border-t-2 border-gray-500 mx-auto" />
-      </div>
-      <Button
-        onClick={startQuiz}
-        disabled={selectedMainTag === null || selectedSubTags.length === 0}
-        className={`bg-blue-600 hover:bg-blue-700 ${
-          selectedMainTag === null || selectedSubTags.length === 0
-            ? "opacity-50 cursor-not-allowed"
-            : ""
-        }`}
-      >
-        Comenzar Quiz
-      </Button>
     </div>
   );
 }
