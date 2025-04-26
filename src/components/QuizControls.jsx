@@ -11,7 +11,10 @@ export default function QuizControls({
   selectedSubTags,
 }) {
   return (
-    <div className="flex flex-col items-center gap-6 mb-6">
+    <div className="flex flex-col items-center gap-4 mb-4">
+      <div className="w-full flex justify-center">
+        <hr className="w-full my-4 border-t-2 border-gray-500 mx-auto" />
+      </div>
       <div className="text-center w-full">
         <h3 className="text-lg font-bold mb-2">Tiempo por Pregunta</h3>
         <select
@@ -27,7 +30,7 @@ export default function QuizControls({
         </select>
       </div>
       <div className="w-full flex justify-center">
-        <hr className="w-3/4 my-4 border-t border-gray-500" />
+        <hr className="w-full my-4 border-t-2 border-gray-500 mx-auto" />
       </div>
       <div className="text-center w-full">
         <h3 className="text-lg font-bold mb-2">Número de Preguntas</h3>
@@ -44,7 +47,7 @@ export default function QuizControls({
         </select>
       </div>
       <div className="w-full flex justify-center">
-        <hr className="w-3/4 my-4 border-t border-gray-500" />
+        <hr className="w-full my-4 border-t-2 border-gray-500 mx-auto" />
       </div>
       <Button
         onClick={startQuiz}
