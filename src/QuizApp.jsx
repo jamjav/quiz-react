@@ -90,6 +90,7 @@ export default function QuizApp() {
           question: questions[current].question,
           selectedAnswer: availableOptions[selected],
           correctAnswer: availableOptions[correctOption],
+          answer: availableOptions[correctOption], // Explicitly include the answer field
           explanation: questions[current].explanation,
           isCorrect: selected === correctOption,
           code: questions[current].code || "",
@@ -120,6 +121,7 @@ export default function QuizApp() {
           question: questions[current].question,
           selectedAnswer: selectedOptions[selected],
           correctAnswer: correctAnswerText,
+          answer: correctAnswerText, // Explicitly include the answer field
           explanation: questions[current].explanation,
           isCorrect: selectedOptions[selected] === correctAnswerText,
           code: questions[current].code || "",
@@ -208,7 +210,7 @@ export default function QuizApp() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
-      <div className="w-full max-w-4xl mx-auto px-4 lg:px-8">
+      <div className="w-full px-4 lg:px-8">
         <QuestionCard
           current={current}
           questions={questions}
@@ -218,6 +220,7 @@ export default function QuizApp() {
           selected={selected}
           setSelected={setSelected}
           handleNext={handleNext}
+          isNextDisabled={selected === null} // El botón estará deshabilitado si no se ha seleccionado una respuesta
         />
       </div>
     </div>

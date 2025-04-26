@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+// Se agrega la propiedad `isNextDisabled` para controlar el estado del botón de avanzar.
 export default function QuestionCard({
   current,
   questions,
@@ -12,6 +13,7 @@ export default function QuestionCard({
   handleNext,
   timeLeft,
   timeLeftInitial,
+  isNextDisabled,
 }) {
   const question = questions[current];
 
@@ -70,10 +72,14 @@ export default function QuestionCard({
           </div>
         </div>
         <Button
-          onClick={handleNext}
-          disabled={selected === null}
+          onClick={() => {
+            if (!isNextDisabled) {
+              handleNext();
+            }
+          }}
+          disabled={isNextDisabled} // El botón estará deshabilitado si `isNextDisabled` es true
           className={`bg-blue-600 hover:bg-blue-700 ${
-            selected === null ? "opacity-50 cursor-not-allowed" : ""
+            isNextDisabled ? "opacity-50 cursor-not-allowed" : ""
           }`}
         >
           Siguiente
