@@ -11,7 +11,7 @@ export default function QuizApp() {
   const [selectedMainTag, setSelectedMainTag] = useState(null);
   const [selectedSubTags, setSelectedSubTags] = useState([]);
   const [selectedLevel, setSelectedLevel] = useState(null);
-  const [numQuestions, setNumQuestions] = useState(5);
+  const [numQuestions, setNumQuestions] = useState(10);
   const [quizStarted, setQuizStarted] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
@@ -153,7 +153,6 @@ export default function QuizApp() {
 
   if (!quizStarted) {
     return (
-        
       <div className="flex justify items-center min-h-screen bg-gray-900 text-white">
         <div className="px-4 sm:px-10 md:px-20 lg:px-40 xl:px-80">
           <h1 className="text-2xl font-bold mb-4 text-center">
@@ -170,7 +169,11 @@ export default function QuizApp() {
                     setSelectedLevel(null);
                     setSelectedSubTags([]);
                   }}
-                  className="px-4 py-2 text-sm font-medium rounded-md bg-blue-600 text-white"
+                  className={`px-4 py-2 text-sm font-medium rounded-md ${
+                    selectedMainTag === tag
+                      ? "bg-blue-600 text-white"
+                      : "bg-slate-700 text-white"
+                  }`}
                 >
                   {tag}
                 </Button>
@@ -223,9 +226,9 @@ export default function QuizApp() {
             </ErrorBoundary>
           )}
 
-          <div className="flex justify-center gap-4 mb-6 flex-wrap">
+          <div className="flex flex-col items-center gap-4 mb-6">
             <select
-              className="px-4 py-2 border rounded bg-gray-700 text-white"
+              className="px-4 py-2 border rounded bg-gray-700 text-white w-48"
               value={timeLeft}
               onChange={(e) => setTimeLeft(parseInt(e.target.value))}
             >
@@ -236,7 +239,7 @@ export default function QuizApp() {
               ))}
             </select>
             <select
-              className="px-4 py-2 border rounded bg-gray-700 text-white"
+              className="px-4 py-2 border rounded bg-gray-700 text-white w-48"
               value={numQuestions}
               onChange={(e) => setNumQuestions(parseInt(e.target.value))}
             >
@@ -249,12 +252,12 @@ export default function QuizApp() {
           </div>
           <Button
             onClick={startQuiz}
-            className="bg-blue-600 hover:bg-blue-700"
-            disabled={
-              selectedMainTag === null ||
-              selectedSubTags.length === 0 ||
-              selectedLevel === null
-            }
+            className={`bg-blue-600 hover:bg-blue-700 ${
+              selectedMainTag === null || selectedSubTags.length === 0
+                ? "opacity-50 cursor-not-allowed"
+                : ""
+            }`}
+            disabled={selectedMainTag === null || selectedSubTags.length === 0}
           >
             Comenzar Quiz
           </Button>
@@ -266,7 +269,7 @@ export default function QuizApp() {
   if (current >= questions.length || timeLeft <= 0) {
     return (
       <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
-        <div className="w-full max-w-4xl mx-auto px-4 lg:px-8">
+        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
           <h1 className="text-center text-white text-2xl font-bold mb-6">
             Resultados del Quiz
           </h1>
@@ -408,7 +411,7 @@ export default function QuizApp() {
                 {questions[current].code}
               </SyntaxHighlighter>
             )}
-            <div className="space-y-2 mb-4">
+            <div className="space-y-2 mb-4 w-full">
               {questions[current].options.map((opt, i) => (
                 <Button
                   key={i}
@@ -427,7 +430,9 @@ export default function QuizApp() {
             <Button
               onClick={handleNext}
               disabled={selected === null}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600"
+              className={`w-full bg-blue-600 hover:bg-blue-700 ${
+                selected === null ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
               Siguiente
             </Button>
