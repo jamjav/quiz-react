@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { allQuestions } from "./allQuestions";
 import Header from "./components/Header";
 import TagSelector from "./components/TagSelector";
 import QuizControls from "./components/QuizControls";
 import QuestionCard from "./components/QuestionCard";
 import Results from "./components/Results";
+import Loader from "./components/Loader";
 
 export default function QuizApp() {
   const [selectedMainTag, setSelectedMainTag] = useState(null);
@@ -20,223 +21,157 @@ export default function QuizApp() {
   const [timeLeft, setTimeLeft] = useState(30);
   const [timeLeftInitial, setTimeLeftInitial] = useState(30);
   const [shouldAutoStart, setShouldAutoStart] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isChangingQuestion, setIsChangingQuestion] = useState(false);
 
-  // Leer parámetros de la URL al cargar la aplicación
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Número de preguntas
-    const questionsParam = urlParams.get('questions');
-    if (questionsParam) {
-      const num = parseInt(questionsParam);
-      if (!isNaN(num) && num > 0) {
-        setNumQuestions(num);
-      }
-    }
-
-    // Tiempo por pregunta
-    const timeParam = urlParams.get('time');
-    if (timeParam) {
-      const time = parseInt(timeParam);
-      if (!isNaN(time) && time > 0) {
-        setTimeLeft(time);
-        setTimeLeftInitial(time);
-      }
-    }
-
-    // Tema principal
-    const mainTagParam = urlParams.get('mainTag');
-    if (mainTagParam) {
-      const mainTags = [...new Set(allQuestions.map((q) => q.group))];
-      if (mainTags.includes(mainTagParam)) {
-        setSelectedMainTag(mainTagParam);
-      }
-    }
-
-    // Nivel
-    const levelParam = urlParams.get('level');
-    if (levelParam && selectedMainTag) {
-      const levels = [...new Set(
-        allQuestions
-          .filter((q) => q.group === selectedMainTag)
-          .map((q) => q.level)
-      )].filter(Boolean);
-      if (levels.includes(levelParam)) {
-        setSelectedLevel(levelParam);
-      }
-    }
-
-    // Subtemas
-    const subTagsParam = urlParams.get('subTags');
-    if (subTagsParam && selectedMainTag && selectedLevel) {
-      const validSubTags = [...new Set(
-        allQuestions
-          .filter(
-            (q) => q.group === selectedMainTag && q.level === selectedLevel
-          )
-          .map((q) => q.subtheme)
-      )];
-      const subTags = subTagsParam.split(',').filter(tag => validSubTags.includes(tag));
-      if (subTags.length > 0) {
-        setSelectedSubTags(subTags);
-      }
-    }
-
-    // Marcar para inicio automático
-    const startParam = urlParams.get('start');
-    if (startParam === 'true') {
-      setShouldAutoStart(true);
-    }
-  }, [selectedMainTag, selectedLevel]);
-
-  // Efecto separado para manejar el inicio automático
-  useEffect(() => {
-    if (shouldAutoStart && selectedMainTag && selectedSubTags.length > 0 && !quizStarted) {
-      const filtered = allQuestions.filter(
-        (q) =>
-          (selectedMainTag === null || q.group === selectedMainTag) &&
-          (selectedSubTags.length === 0 ||
-            (q.subtheme && selectedSubTags.includes(q.subtheme))) &&
-          (selectedLevel === null || q.level === selectedLevel)
-      );
-
-      const shuffled = filtered
-        .sort(() => 0.5 - Math.random())
-        .slice(0, numQuestions);
-      
-      setQuestions(shuffled);
-      setTimeLeftInitial(timeLeft);
-      setQuizStarted(true);
-      setTimeLeft(timeLeft);
-    }
-  }, [shouldAutoStart, selectedMainTag, selectedSubTags, selectedLevel, numQuestions, timeLeft, quizStarted]);
-
-  // Updated to hide all divisions initially
-  const mainTags = [...new Set(allQuestions.map((q) => q.group))];
-
-  const levels = selectedMainTag
-    ? [
-        ...new Set(
-          allQuestions
-            .filter((q) => q.group === selectedMainTag)
-            .map((q) => q.level)
-        ),
-      ].filter(Boolean)
-    : [];
-
-  const subTags =
-    selectedMainTag && selectedLevel
-      ? [
-          ...new Set(
-            allQuestions
-              .filter(
-                (q) => q.group === selectedMainTag && q.level === selectedLevel
-              )
-              .map((q) => q.subtheme)
-          ),
-        ]
-      : [];
-
-  useEffect(() => {
-    console.log("Subtemas disponibles: ", subTags);
-  }, [subTags]);
-
-  useEffect(() => {
-    let timer;
-    if (quizStarted && timeLeft > 0 && current < questions.length) {
-      timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
-    } else if (current < questions.length && selected !== null) {
-      handleNext(); // Solo avanza si hay una respuesta seleccionada
-    }
-    return () => clearInterval(timer);
-  }, [quizStarted, timeLeft, current, selected]);
-
-  const startQuiz = () => {
-    const filtered = allQuestions.filter(
+  // Memoize filtered questions based on selections
+  const filteredQuestions = useMemo(() => {
+    return allQuestions.filter(
       (q) =>
         (selectedMainTag === null || q.group === selectedMainTag) &&
         (selectedSubTags.length === 0 ||
           (q.subtheme && selectedSubTags.includes(q.subtheme))) &&
         (selectedLevel === null || q.level === selectedLevel)
     );
+  }, [selectedMainTag, selectedSubTags, selectedLevel]);
 
-    const shuffled = filtered
-      .sort(() => 0.5 - Math.random())
-      .slice(0, numQuestions);
-    setQuestions(shuffled);
-    setTimeLeftInitial(timeLeft);
-    setQuizStarted(true);
-    setTimeLeft(timeLeft);
-  };
+  // Memoize available tags and levels
+  const mainTags = useMemo(() => [...new Set(allQuestions.map((q) => q.group))], []);
+  const levels = useMemo(() => {
+    if (!selectedMainTag) return [];
+    return [...new Set(
+      allQuestions
+        .filter((q) => q.group === selectedMainTag)
+        .map((q) => q.level)
+    )].filter(Boolean);
+  }, [selectedMainTag]);
 
-  const handleNext = () => {
-    const correctOption = questions[current].answer;
-    let availableOptions = [...questions[current].options];
+  const subTags = useMemo(() => {
+    if (!selectedMainTag || !selectedLevel) return [];
+    return [...new Set(
+      allQuestions
+        .filter((q) => q.group === selectedMainTag && q.level === selectedLevel)
+        .map((q) => q.subtheme)
+    )];
+  }, [selectedMainTag, selectedLevel]);
 
-    // Si hay menos de 4 opciones, no cambiamos nada
-    if (availableOptions.length <= 4) {
-      setResults((prevResults) => [
-        ...prevResults,
-        {
-          question: questions[current].question,
-          selectedAnswer: availableOptions[selected],
-          correctAnswer: availableOptions[correctOption],
-          answer: availableOptions[correctOption], // Explicitly include the answer field
-          explanation: questions[current].explanation,
-          isCorrect: selected === correctOption,
-          code: questions[current].code || "",
-          subtheme: questions[current].subtheme || "Sin subtema",
-        },
-      ]);
-      if (selected === correctOption) {
-        setScore((prevScore) => prevScore + 1);
-      }
-    } else {
-      const correctAnswerText = availableOptions[correctOption];
+  // URL parameter handling
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Helper function to safely parse integers
+    const safeParseInt = (value, defaultValue) => {
+      const num = parseInt(value);
+      return !isNaN(num) && num > 0 ? num : defaultValue;
+    };
 
-      let incorrectOptions = availableOptions.filter(
-        (_, index) => index !== correctOption
-      );
-      let selectedOptions = incorrectOptions
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 3);
+    // Set parameters with validation
+    setNumQuestions(safeParseInt(urlParams.get('questions'), 10));
+    const time = safeParseInt(urlParams.get('time'), 30);
+    setTimeLeft(time);
+    setTimeLeftInitial(time);
 
-      selectedOptions.push(correctAnswerText);
-      selectedOptions = selectedOptions.sort(() => 0.5 - Math.random());
+    // Set main tag if valid
+    const mainTagParam = urlParams.get('mainTag');
+    if (mainTagParam && mainTags.includes(mainTagParam)) {
+      setSelectedMainTag(mainTagParam);
+    }
 
-      const newCorrectIndex = selectedOptions.indexOf(correctAnswerText);
+    // Set level if valid
+    const levelParam = urlParams.get('level');
+    if (levelParam && levels.includes(levelParam)) {
+      setSelectedLevel(levelParam);
+    }
 
-      setResults((prevResults) => [
-        ...prevResults,
-        {
-          question: questions[current].question,
-          selectedAnswer: selectedOptions[selected],
-          correctAnswer: correctAnswerText,
-          answer: correctAnswerText, // Explicitly include the answer field
-          explanation: questions[current].explanation,
-          isCorrect: selectedOptions[selected] === correctAnswerText,
-          code: questions[current].code || "",
-          subtheme: questions[current].subtheme || "Sin subtema",
-        },
-      ]);
-      if (selectedOptions[selected] === correctAnswerText) {
-        setScore((prevScore) => prevScore + 1);
+    // Set sub tags if valid
+    const subTagsParam = urlParams.get('subTags');
+    if (subTagsParam) {
+      const validSubTags = subTagsParam.split(',').filter(tag => subTags.includes(tag));
+      if (validSubTags.length > 0) {
+        setSelectedSubTags(validSubTags);
       }
     }
 
-    // Avanzamos a la siguiente pregunta
-    setSelected(null);
-    setCurrent(current + 1);
-    setTimeLeft(timeLeftInitial);
+    // Set auto start
+    if (urlParams.get('start') === 'true') {
+      setShouldAutoStart(true);
+    }
+  }, [mainTags, levels, subTags]);
+
+  // Auto start handling
+  useEffect(() => {
+    if (shouldAutoStart && selectedMainTag && selectedSubTags.length > 0 && !quizStarted) {
+      const shuffled = filteredQuestions
+        .sort(() => 0.5 - Math.random())
+        .slice(0, numQuestions);
+      
+      setQuestions(shuffled);
+      setQuizStarted(true);
+      setTimeLeft(timeLeftInitial);
+    }
+  }, [shouldAutoStart, selectedMainTag, selectedSubTags, filteredQuestions, numQuestions, timeLeftInitial, quizStarted]);
+
+  // Timer effect
+  useEffect(() => {
+    let timer;
+    if (quizStarted && timeLeft > 0 && current < questions.length) {
+      timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
+    } else if (current < questions.length && selected !== null) {
+      handleNext();
+    }
+    return () => clearInterval(timer);
+  }, [quizStarted, timeLeft, current, selected]);
+
+  const startQuiz = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const shuffled = filteredQuestions
+        .sort(() => 0.5 - Math.random())
+        .slice(0, numQuestions);
+      setQuestions(shuffled);
+      setQuizStarted(true);
+      setTimeLeft(timeLeftInitial);
+      setIsLoading(false);
+    }, 1500);
+  };
+
+  const handleNext = () => {
+    setIsChangingQuestion(true);
+    const currentQuestion = questions[current];
+    const correctOption = currentQuestion.answer;
+    const availableOptions = [...currentQuestion.options];
+    const correctAnswerText = availableOptions[correctOption];
+
+    const result = {
+      question: currentQuestion.question,
+      selectedAnswer: availableOptions[selected],
+      correctAnswer: correctAnswerText,
+      answer: correctAnswerText,
+      explanation: currentQuestion.explanation,
+      isCorrect: selected === correctOption,
+      code: currentQuestion.code || "",
+      subtheme: currentQuestion.subtheme || "Sin subtema",
+    };
+
+    setResults((prevResults) => [...prevResults, result]);
+    if (selected === correctOption) {
+      setScore((prevScore) => prevScore + 1);
+    }
+
+    setTimeout(() => {
+      setSelected(null);
+      setCurrent(current + 1);
+      setTimeLeft(timeLeftInitial);
+      setIsChangingQuestion(false);
+    }, 500); // Reducido a 500ms
   };
 
   const toggleSubTag = (subTag) => {
     setSelectedSubTags((prevTags) => {
       if (prevTags.includes(subTag)) {
         return prevTags.filter((tag) => tag !== subTag);
-      } else {
-        return [...prevTags, subTag];
       }
+      return [...prevTags, subTag];
     });
   };
 
@@ -244,6 +179,14 @@ export default function QuizApp() {
     toggleSubTag(subtopic);
     console.log("Subtema seleccionado:", subtopic);
   };
+
+  if (isLoading) {
+    return <Loader message="Preparando el quiz..." />;
+  }
+
+  if (isChangingQuestion) {
+    return <Loader message="Siguiente pregunta..." />;
+  }
 
   if (!quizStarted) {
     return (
@@ -283,7 +226,7 @@ export default function QuizApp() {
                     disabled={
                       selectedMainTag === null || selectedSubTags.length === 0
                     }
-                    className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-lg font-semibold ${
+                    className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-lg font-semibold transition-all duration-300 ${
                       selectedMainTag === null || selectedSubTags.length === 0
                         ? "opacity-50 cursor-not-allowed"
                         : ""
@@ -321,7 +264,7 @@ export default function QuizApp() {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 py-8">
         <QuestionCard
           current={current}
           questions={questions}
@@ -331,7 +274,7 @@ export default function QuizApp() {
           selected={selected}
           setSelected={setSelected}
           handleNext={handleNext}
-          isNextDisabled={selected === null} // El botón estará deshabilitado si no se ha seleccionado una respuesta
+          isNextDisabled={selected === null}
         />
       </div>
     </div>

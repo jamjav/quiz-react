@@ -5,6 +5,8 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
 export default function QuestionCard({
   current,
   questions,
@@ -93,10 +95,17 @@ export default function QuestionCard({
                         : "bg-gray-700 text-white hover:bg-gray-600"
                     }`}
                   >
-                    <div className="break-words">
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {option}
-                      </ReactMarkdown>
+                    <div className="flex items-start gap-3">
+                      <div className={`flex-none w-8 h-8 flex items-center justify-center rounded-full ${
+                        selected === index ? 'bg-white text-blue-600' : 'bg-gray-600'
+                      } font-bold text-lg`}>
+                        {LETTERS[index]}
+                      </div>
+                      <div className="flex-1 break-words">
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          {option}
+                        </ReactMarkdown>
+                      </div>
                     </div>
                   </button>
                 ))}
