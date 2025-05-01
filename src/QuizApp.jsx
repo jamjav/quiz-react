@@ -19,6 +19,97 @@ export default function QuizApp() {
   const [results, setResults] = useState([]);
   const [timeLeft, setTimeLeft] = useState(30);
   const [timeLeftInitial, setTimeLeftInitial] = useState(30);
+  const [shouldAutoStart, setShouldAutoStart] = useState(false);
+
+  // Leer parámetros de la URL al cargar la aplicación
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Número de preguntas
+    const questionsParam = urlParams.get('questions');
+    if (questionsParam) {
+      const num = parseInt(questionsParam);
+      if (!isNaN(num) && num > 0) {
+        setNumQuestions(num);
+      }
+    }
+
+    // Tiempo por pregunta
+    const timeParam = urlParams.get('time');
+    if (timeParam) {
+      const time = parseInt(timeParam);
+      if (!isNaN(time) && time > 0) {
+        setTimeLeft(time);
+        setTimeLeftInitial(time);
+      }
+    }
+
+    // Tema principal
+    const mainTagParam = urlParams.get('mainTag');
+    if (mainTagParam) {
+      const mainTags = [...new Set(allQuestions.map((q) => q.group))];
+      if (mainTags.includes(mainTagParam)) {
+        setSelectedMainTag(mainTagParam);
+      }
+    }
+
+    // Nivel
+    const levelParam = urlParams.get('level');
+    if (levelParam && selectedMainTag) {
+      const levels = [...new Set(
+        allQuestions
+          .filter((q) => q.group === selectedMainTag)
+          .map((q) => q.level)
+      )].filter(Boolean);
+      if (levels.includes(levelParam)) {
+        setSelectedLevel(levelParam);
+      }
+    }
+
+    // Subtemas
+    const subTagsParam = urlParams.get('subTags');
+    if (subTagsParam && selectedMainTag && selectedLevel) {
+      const validSubTags = [...new Set(
+        allQuestions
+          .filter(
+            (q) => q.group === selectedMainTag && q.level === selectedLevel
+          )
+          .map((q) => q.subtheme)
+      )];
+      const subTags = subTagsParam.split(',').filter(tag => validSubTags.includes(tag));
+      if (subTags.length > 0) {
+        setSelectedSubTags(subTags);
+      }
+    }
+
+    // Marcar para inicio automático
+    const startParam = urlParams.get('start');
+    if (startParam === 'true') {
+      setShouldAutoStart(true);
+    }
+  }, [selectedMainTag, selectedLevel]);
+
+  // Efecto separado para manejar el inicio automático
+  useEffect(() => {
+    if (shouldAutoStart && selectedMainTag && selectedSubTags.length > 0 && !quizStarted) {
+      const filtered = allQuestions.filter(
+        (q) =>
+          (selectedMainTag === null || q.group === selectedMainTag) &&
+          (selectedSubTags.length === 0 ||
+            (q.subtheme && selectedSubTags.includes(q.subtheme))) &&
+          (selectedLevel === null || q.level === selectedLevel)
+      );
+
+      const shuffled = filtered
+        .sort(() => 0.5 - Math.random())
+        .slice(0, numQuestions);
+      
+      setQuestions(shuffled);
+      setTimeLeftInitial(timeLeft);
+      setQuizStarted(true);
+      setTimeLeft(timeLeft);
+    }
+  }, [shouldAutoStart, selectedMainTag, selectedSubTags, selectedLevel, numQuestions, timeLeft, quizStarted]);
 
   // Updated to hide all divisions initially
   const mainTags = [...new Set(allQuestions.map((q) => q.group))];
@@ -54,11 +145,11 @@ export default function QuizApp() {
     let timer;
     if (quizStarted && timeLeft > 0 && current < questions.length) {
       timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
-    } else if (current < questions.length) {
-      handleNext(); // Avanza automáticamente a la siguiente pregunta cuando el tiempo llega a 0
+    } else if (current < questions.length && selected !== null) {
+      handleNext(); // Solo avanza si hay una respuesta seleccionada
     }
     return () => clearInterval(timer);
-  }, [quizStarted, timeLeft, current]);
+  }, [quizStarted, timeLeft, current, selected]);
 
   const startQuiz = () => {
     const filtered = allQuestions.filter(
@@ -156,46 +247,52 @@ export default function QuizApp() {
 
   if (!quizStarted) {
     return (
-      <div className="flex justify items-center min-h-screen bg-gray-900 text-white">
-        <div className="px-4 sm:px-10 md:px-20 lg:px-40 xl:px-80">
-          <Header />
-          <div className="space-y-4">
-            <QuizControls
-              timeLeft={timeLeft}
-              numQuestions={numQuestions}
-              setTimeLeft={setTimeLeft}
-              setNumQuestions={setNumQuestions}
-              startQuiz={startQuiz}
-              selectedMainTag={selectedMainTag}
-              selectedSubTags={selectedSubTags}
-              showStartButton={false}
-            />
-            <TagSelector
-              mainTags={mainTags}
-              levels={levels}
-              subTags={subTags}
-              selectedMainTag={selectedMainTag}
-              selectedLevel={selectedLevel}
-              selectedSubTags={selectedSubTags}
-              setSelectedMainTag={setSelectedMainTag}
-              setSelectedLevel={setSelectedLevel}
-              setSelectedSubTags={setSelectedSubTags}
-              handleSelectSubtopic={handleSelectSubtopic}
-            />
-            <div className="flex justify-center mt-6">
-              <button
-                onClick={startQuiz}
-                disabled={
-                  selectedMainTag === null || selectedSubTags.length === 0
-                }
-                className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-lg font-semibold ${
-                  selectedMainTag === null || selectedSubTags.length === 0
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
-                }`}
-              >
-                Comenzar Quiz
-              </button>
+      <div className="fixed inset-0 bg-gray-900">
+        <div className="h-full w-full flex flex-col">
+          <div className="flex-none">
+            <Header />
+          </div>
+          <div className="flex-1 overflow-y-auto">
+            <div className="max-w-4xl mx-auto p-4">
+              <div className="space-y-4">
+                <QuizControls
+                  timeLeft={timeLeft}
+                  numQuestions={numQuestions}
+                  setTimeLeft={setTimeLeft}
+                  setNumQuestions={setNumQuestions}
+                  startQuiz={startQuiz}
+                  selectedMainTag={selectedMainTag}
+                  selectedSubTags={selectedSubTags}
+                  showStartButton={false}
+                />
+                <TagSelector
+                  mainTags={mainTags}
+                  levels={levels}
+                  subTags={subTags}
+                  selectedMainTag={selectedMainTag}
+                  selectedLevel={selectedLevel}
+                  selectedSubTags={selectedSubTags}
+                  setSelectedMainTag={setSelectedMainTag}
+                  setSelectedLevel={setSelectedLevel}
+                  setSelectedSubTags={setSelectedSubTags}
+                  handleSelectSubtopic={handleSelectSubtopic}
+                />
+                <div className="flex justify-center mt-6">
+                  <button
+                    onClick={startQuiz}
+                    disabled={
+                      selectedMainTag === null || selectedSubTags.length === 0
+                    }
+                    className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-lg font-semibold ${
+                      selectedMainTag === null || selectedSubTags.length === 0
+                        ? "opacity-50 cursor-not-allowed"
+                        : ""
+                    }`}
+                  >
+                    Comenzar Quiz
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -208,20 +305,16 @@ export default function QuizApp() {
       <Results
         results={results}
         score={score}
-        timeLeft={timeLeft}
-        onRestart={() => window.location.reload()}
-        allQuestions={allQuestions}
-        selectedMainTag={selectedMainTag}
-        selectedSubTags={selectedSubTags}
-        selectedLevel={selectedLevel}
-        numQuestions={numQuestions}
-        setQuestions={setQuestions}
-        setCurrent={setCurrent}
-        setScore={setScore}
-        setResults={setResults}
-        setQuizStarted={setQuizStarted}
-        timeLeftInitial={timeLeftInitial}
-        setTimeLeft={setTimeLeft}
+        totalQuestions={questions.length}
+        correctAnswers={score}
+        incorrectAnswers={questions.length - score}
+        quizParams={{
+          questions: numQuestions,
+          time: timeLeftInitial,
+          mainTag: selectedMainTag,
+          level: selectedLevel,
+          subTags: selectedSubTags.join(',')
+        }}
       />
     );
   }
