@@ -8456,4 +8456,1501 @@ export const softekQuestions = [
     group: GROUP,
     level: "Junior",
   },
+
+  // ========================================================================
+  // QUINTA TANDA — paquete de 100 preguntas (ángulos nuevos)
+  // ========================================================================
+
+  // ---- Duck Creek e Insurity (10) ----
+  {
+    question: "¿Qué es el 'periodo de gracia' (grace period) en una póliza?",
+    options: [
+      "El plazo tras el vencimiento en que aún se puede pagar la prima sin perder la cobertura",
+      "El tiempo de emisión de la póliza",
+      "El plazo para reportar un siniestro",
+      "La duración total de la póliza",
+    ],
+    answer: 0,
+    explanation:
+      "El grace period da un margen tras la fecha de pago para abonar la prima sin que la póliza caduque.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es la 'subrogación' (subrogation) en seguros?",
+    options: [
+      "El derecho de la aseguradora a recuperar lo pagado reclamando al tercero responsable",
+      "El pago de la prima",
+      "La cancelación de la póliza",
+      "El aumento de cobertura",
+    ],
+    answer: 0,
+    explanation:
+      "Tras indemnizar al asegurado, la aseguradora se subroga en sus derechos para reclamar al tercero causante del daño.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué significa que una póliza esté 'in-force' (vigente)?",
+    options: [
+      "Que está activa y brindando cobertura en el periodo actual",
+      "Que fue cancelada",
+      "Que está en cotización",
+      "Que venció sin renovar",
+    ],
+    answer: 0,
+    explanation:
+      "Una póliza in-force está vigente: la cobertura está activa y el asegurado protegido durante ese periodo.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es un 'binder' en seguros?",
+    options: [
+      "Una cobertura provisional temporal mientras se emite la póliza definitiva",
+      "El documento de cancelación",
+      "El recibo de pago final",
+      "El informe de siniestro",
+    ],
+    answer: 0,
+    explanation:
+      "El binder otorga cobertura temporal inmediata hasta que se formaliza y emite la póliza completa.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es el prorrateo (pro-rata) de la prima?",
+    options: [
+      "Calcular la prima proporcional al tiempo de cobertura efectivo (p. ej. tras un endoso o cancelación)",
+      "Duplicar la prima",
+      "Eliminar el deducible",
+      "El pago total por adelantado",
+    ],
+    answer: 0,
+    explanation:
+      "El prorrateo ajusta la prima al periodo realmente cubierto, común al cancelar o modificar una póliza a mitad de término.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "Al manejar datos personales (PII) de asegurados, ¿qué práctica es recomendable?",
+    options: [
+      "Enmascarar/cifrar PII y aplicar mínimo privilegio en el acceso",
+      "Exponerla en logs para depurar",
+      "Enviarla en parámetros de URL",
+      "Compartirla con todos los servicios",
+    ],
+    answer: 0,
+    explanation:
+      "Los datos sensibles deben cifrarse/enmascararse y limitarse por mínimo privilegio, nunca exponerse en logs ni en URLs.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es el 'salvamento' (salvage) en un siniestro?",
+    options: [
+      "El valor recuperable del bien dañado que la aseguradora puede vender tras indemnizar",
+      "El deducible del asegurado",
+      "La prima de renovación",
+      "El límite de la cobertura",
+    ],
+    answer: 0,
+    explanation:
+      "El salvage es lo recuperable del bien siniestrado; la aseguradora puede disponer de él para mitigar el costo del siniestro pagado.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué describe el 'lapse' (caducidad) de una póliza?",
+    options: [
+      "La terminación de la cobertura por falta de pago de la prima",
+      "La emisión de un endoso",
+      "El primer aviso de siniestro",
+      "El cálculo del rating",
+    ],
+    answer: 0,
+    explanation:
+      "El lapse ocurre cuando la póliza caduca por impago (tras el periodo de gracia), quedando sin cobertura.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question:
+      "Al integrar cotizadores de varios canales con el PAS, ¿qué desacopla mejor la carga?",
+    options: [
+      "Un servicio de rating/cotización con caché, consumido vía API por los canales",
+      "Acceso directo de cada canal a la base del PAS",
+      "Un único hilo compartido",
+      "Replicar el PAS por canal",
+    ],
+    answer: 0,
+    explanation:
+      "Centralizar el rating en un servicio con caché y exponerlo por API desacopla a los canales del PAS y absorbe la carga de cotización.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué rol cumple ACORD en la industria aseguradora?",
+    options: [
+      "Define estándares de datos y formularios para intercambiar información entre partes",
+      "Es un motor de reglas",
+      "Es un broker de mensajería",
+      "Es un lenguaje de programación",
+    ],
+    answer: 0,
+    explanation:
+      "ACORD estandariza formatos de datos y formularios del sector seguros, facilitando la interoperabilidad entre sistemas y compañías.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Java 17+, Spring Boot y Quarkus (9) ----
+  {
+    question: "¿Qué hace el Garbage Collector (GC) en la JVM?",
+    options: [
+      "Libera automáticamente la memoria de objetos que ya no son alcanzables",
+      "Compila el bytecode",
+      "Gestiona los hilos del SO",
+      "Cifra la memoria",
+    ],
+    answer: 0,
+    explanation:
+      "El GC recupera memoria del heap ocupada por objetos inalcanzables, evitando que el desarrollador la libere manualmente.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué diferencia hay entre el 'stack' y el 'heap' en la memoria de la JVM?",
+    options: [
+      "El stack guarda variables locales y marcos de método; el heap aloja los objetos",
+      "Son lo mismo",
+      "El heap guarda variables locales",
+      "El stack aloja los objetos",
+    ],
+    answer: 0,
+    explanation:
+      "El stack contiene marcos de ejecución y variables locales por hilo; el heap es la zona compartida donde viven los objetos.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Por qué si se sobreescribe equals() hay que sobreescribir hashCode()?",
+    options: [
+      "Porque objetos iguales deben tener el mismo hashCode para funcionar bien en HashMap/HashSet",
+      "Porque equals no compila sin hashCode",
+      "Porque son el mismo método",
+      "Porque lo exige la JVM al arrancar",
+    ],
+    answer: 0,
+    explanation:
+      "El contrato equals/hashCode exige que objetos iguales tengan igual hashCode; romperlo causa comportamientos erróneos en colecciones basadas en hash.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué garantiza el bloque try-with-resources en Java?",
+    options: [
+      "Cierra automáticamente los recursos AutoCloseable al terminar, incluso ante excepción",
+      "Reintenta el bloque ante error",
+      "Ejecuta en otro hilo",
+      "Cachea el resultado",
+    ],
+    answer: 0,
+    explanation:
+      "try-with-resources cierra los recursos declarados (que implementan AutoCloseable) de forma automática y segura al salir del bloque.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Para qué sirve ResponseEntity en Spring MVC?",
+    options: [
+      "Controlar explícitamente el cuerpo, el código de estado y las cabeceras de la respuesta HTTP",
+      "Abrir una transacción",
+      "Inyectar dependencias",
+      "Validar entradas",
+    ],
+    answer: 0,
+    explanation:
+      "ResponseEntity permite construir la respuesta con control total sobre status, headers y body, útil para APIs expresivas.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué diferencia hay entre @PathVariable y @RequestParam en Spring?",
+    options: [
+      "@PathVariable extrae valores de la ruta (/items/{id}); @RequestParam de la query string (?page=2)",
+      "Son idénticos",
+      "@RequestParam lee del path",
+      "@PathVariable lee del body",
+    ],
+    answer: 0,
+    explanation:
+      "@PathVariable toma segmentos de la URI; @RequestParam toma parámetros de la query string o del formulario.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué representa un CompletableFuture en Java?",
+    options: [
+      "Un resultado asíncrono componible al que se le encadenan callbacks (thenApply, thenCompose)",
+      "Un hilo del SO",
+      "Una anotación de Spring",
+      "Un tipo primitivo",
+    ],
+    answer: 0,
+    explanation:
+      "CompletableFuture modela un cómputo asíncrono que puede completarse a futuro y componerse con operaciones encadenadas sin bloquear.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la operación reduce() en un Stream?",
+    options: [
+      "Combina los elementos en un único resultado acumulado (p. ej. suma)",
+      "Filtra elementos",
+      "Transforma cada elemento",
+      "Ordena el stream",
+    ],
+    answer: 0,
+    explanation:
+      "reduce agrega los elementos aplicando una operación acumulativa, produciendo un único valor a partir del stream.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es el 'String pool' en Java?",
+    options: [
+      "Un área que reutiliza literales String idénticos para ahorrar memoria",
+      "Un pool de conexiones a base",
+      "Un hilo dedicado a strings",
+      "Un tipo de colección",
+    ],
+    answer: 0,
+    explanation:
+      "El String pool cachea literales String: dos literales iguales referencian el mismo objeto, optimizando memoria (por la inmutabilidad de String).",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Experto",
+  },
+
+  // ---- APIs REST, Microservicios y OpenAPI (9) ----
+  {
+    question: "¿Qué código HTTP conviene para una operación aceptada que se procesará de forma asíncrona?",
+    options: ["202 Accepted", "200 OK", "201 Created", "204 No Content"],
+    answer: 0,
+    explanation:
+      "202 Accepted indica que la petición fue aceptada para procesamiento posterior, sin haberse completado aún.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué código HTTP indica que el tipo de contenido enviado no es soportado?",
+    options: ["415 Unsupported Media Type", "400 Bad Request", "406 Not Acceptable", "409 Conflict"],
+    answer: 0,
+    explanation:
+      "415 señala que el Content-Type del cuerpo no es soportado por el endpoint (p. ej. enviar XML donde se espera JSON).",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es un 'service mesh' (p. ej. Istio) en microservicios?",
+    options: [
+      "Una capa de infraestructura que gestiona la comunicación entre servicios (ruteo, seguridad, observabilidad)",
+      "Una base de datos compartida",
+      "Un framework de frontend",
+      "Un compilador",
+    ],
+    answer: 0,
+    explanation:
+      "El service mesh añade, vía sidecars, capacidades transversales (mTLS, retries, tracing, balanceo) sin tocar el código del servicio.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es el patrón 'sidecar' en arquitecturas de contenedores?",
+    options: [
+      "Un contenedor auxiliar junto al principal que añade capacidades (proxy, logging) sin modificarlo",
+      "Un tipo de base de datos",
+      "Un balanceador físico",
+      "Un lenguaje de consulta",
+    ],
+    answer: 0,
+    explanation:
+      "El sidecar corre junto a la app en el mismo pod aportando funciones transversales (p. ej. el proxy de un service mesh).",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué sección de OpenAPI describe cómo se autentica la API (OAuth2, API key)?",
+    options: ["components/securitySchemes", "paths", "servers", "tags"],
+    answer: 0,
+    explanation:
+      "securitySchemes define los mecanismos de seguridad (apiKey, http, oauth2, openIdConnect) que luego se referencian en security.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué método HTTP permite al cliente descubrir los métodos soportados por un recurso?",
+    options: ["OPTIONS", "GET", "POST", "TRACE"],
+    answer: 0,
+    explanation:
+      "OPTIONS consulta las capacidades/métodos admitidos de un recurso; el navegador también lo usa en el preflight de CORS.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué ventaja da un token de corta vida con refresh token en seguridad de APIs?",
+    options: [
+      "Limita la ventana de riesgo si se filtra el access token, renovándolo con el refresh",
+      "Elimina la necesidad de TLS",
+      "Hace la API más rápida",
+      "Evita autenticar",
+    ],
+    answer: 0,
+    explanation:
+      "Access tokens de vida corta reducen el impacto de una fuga; el refresh token (más protegido) permite obtener nuevos sin re-login.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué código HTTP indica que el servidor no puede producir una respuesta en el formato pedido por Accept?",
+    options: ["406 Not Acceptable", "415 Unsupported Media Type", "404 Not Found", "400 Bad Request"],
+    answer: 0,
+    explanation:
+      "406 Not Acceptable ocurre cuando ningún formato disponible coincide con lo solicitado por la cabecera Accept del cliente.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ventaja ofrece la negociación de contenido (content negotiation)?",
+    options: [
+      "Servir el mismo recurso en distintos formatos según lo que el cliente acepte",
+      "Cifrar el tráfico",
+      "Reducir el número de endpoints a cero",
+      "Evitar la autenticación",
+    ],
+    answer: 0,
+    explanation:
+      "La content negotiation permite que un endpoint devuelva JSON, XML, etc., según la cabecera Accept, reutilizando el mismo recurso.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Apache Camel y Patrones de Integración (EIP) (9) ----
+  {
+    question: "¿Qué es el CamelContext?",
+    options: [
+      "El contenedor en runtime que gestiona rutas, componentes y el ciclo de vida de Camel",
+      "Un tipo de base de datos",
+      "Un endpoint REST",
+      "Un archivo de logs",
+    ],
+    answer: 0,
+    explanation:
+      "El CamelContext es el núcleo en ejecución: arranca/detiene rutas, administra componentes y el registro, y coordina el procesamiento.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "En Camel, ¿qué hacen marshal y unmarshal?",
+    options: [
+      "Convertir entre objetos y un formato de datos (JSON, XML, CSV) y viceversa",
+      "Enrutar por contenido",
+      "Dividir mensajes",
+      "Limitar la tasa",
+    ],
+    answer: 0,
+    explanation:
+      "marshal serializa un objeto a un formato (p. ej. JSON); unmarshal hace lo inverso, deserializando el payload a objetos.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite el método bean() dentro de una ruta Camel?",
+    options: [
+      "Invocar un método de un bean para procesar el mensaje",
+      "Crear una cola JMS",
+      "Abrir una transacción de base",
+      "Definir un endpoint HTTP",
+    ],
+    answer: 0,
+    explanation:
+      "bean() delega el procesamiento del Exchange a un método de un bean registrado, integrando lógica Java en la ruta.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es Camel K?",
+    options: [
+      "Una distribución de Camel para ejecutar integraciones nativas en Kubernetes",
+      "Un lenguaje de reglas",
+      "Un broker de mensajería",
+      "Un IDE",
+    ],
+    answer: 0,
+    explanation:
+      "Camel K lleva las integraciones Camel a Kubernetes como recursos nativos, simplificando el despliegue cloud-native de rutas.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "En el Aggregator de Camel, ¿qué define la 'completion condition'?",
+    options: [
+      "Cuándo se considera completa la agregación y se emite el mensaje combinado",
+      "El formato de salida",
+      "El número de particiones",
+      "La política de seguridad",
+    ],
+    answer: 0,
+    explanation:
+      "La completion condition (por tamaño, tiempo, predicado) determina el momento en que el Aggregator libera el resultado agregado.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué diferencia hay entre 'enrich' y 'pollEnrich' en Camel?",
+    options: [
+      "enrich obtiene datos de un recurso (productor); pollEnrich los consume de un recurso que se sondea (consumidor)",
+      "Son idénticos",
+      "pollEnrich divide el mensaje",
+      "enrich reordena mensajes",
+    ],
+    answer: 0,
+    explanation:
+      "enrich llama a un endpoint productor para enriquecer; pollEnrich hace polling de un endpoint consumidor (p. ej. leer un archivo) para combinar.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué formato de URI usa un endpoint de Camel?",
+    options: [
+      "esquema:contexto?opciones (p. ej. file:/in?delete=true)",
+      "Solo una ruta de archivo",
+      "Siempre una URL http",
+      "Un número de puerto",
+    ],
+    answer: 0,
+    explanation:
+      "Los endpoints se expresan como URIs: 'componente:detalles?param=valor', que Camel resuelve al componente correspondiente.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué ventaja da probar rutas con CamelTestSupport / @QuarkusTest?",
+    options: [
+      "Validar el comportamiento de las rutas (mock endpoints, aserciones) de forma automatizada",
+      "Generar carga de producción",
+      "Compilar a nativo",
+      "Desplegar a Kubernetes",
+    ],
+    answer: 0,
+    explanation:
+      "Los frameworks de test de Camel permiten simular endpoints (mock) y verificar que la ruta procesa y enruta como se espera.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué EIP corresponde a 'Pipes and Filters'?",
+    options: [
+      "Encadenar pasos de procesamiento independientes por los que fluye el mensaje",
+      "Descartar mensajes inválidos",
+      "Enviar a varios destinatarios",
+      "Reordenar por secuencia",
+    ],
+    answer: 0,
+    explanation:
+      "Pipes and Filters descompone el procesamiento en etapas (filtros) conectadas por canales (pipes), base del modelo de rutas de Camel.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Drools y Motores de Reglas (9) ----
+  {
+    question: "¿Qué hace la función 'accumulate' en una regla Drools?",
+    options: [
+      "Calcular agregados (suma, promedio, conteo) sobre un conjunto de facts que matchean",
+      "Eliminar facts",
+      "Crear una sesión",
+      "Compilar reglas",
+    ],
+    answer: 0,
+    explanation:
+      "accumulate agrega sobre los hechos coincidentes (sum, count, average, etc.), permitiendo condiciones basadas en el resultado acumulado.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es la 'inserción lógica' (insertLogical) y el truth maintenance en Drools?",
+    options: [
+      "Insertar facts que se retractan automáticamente cuando dejan de cumplirse sus condiciones de soporte",
+      "Insertar facts permanentes",
+      "Eliminar la sesión",
+      "Compilar a nativo",
+    ],
+    answer: 0,
+    explanation:
+      "insertLogical crea hechos justificados por una condición; el truth maintenance system los retira cuando esa justificación deja de ser válida.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite 'from' en el LHS de una regla Drools?",
+    options: [
+      "Razonar sobre datos de una fuente externa a la working memory (p. ej. una colección de un fact)",
+      "Eliminar un fact",
+      "Crear un global",
+      "Cerrar la sesión",
+    ],
+    answer: 0,
+    explanation:
+      "from permite hacer matching sobre datos obtenidos de una fuente (una colección, un servicio) sin tener que insertarlos como facts individuales.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace un 'activation-group' en Drools?",
+    options: [
+      "Agrupa reglas de modo que al dispararse una, las demás del grupo no se ejecutan",
+      "Agrupa facts",
+      "Define el nivel de log",
+      "Crea una KieBase",
+    ],
+    answer: 0,
+    explanation:
+      "En un activation-group solo una regla llega a dispararse (exclusión mutua): la primera que se activa cancela las otras del grupo.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué define el 'dialect' en un archivo DRL (java o mvel)?",
+    options: [
+      "El lenguaje usado para las expresiones y acciones de las reglas",
+      "El idioma de los comentarios",
+      "El formato de los facts",
+      "El nivel de salience",
+    ],
+    answer: 0,
+    explanation:
+      "El dialect indica si las expresiones/acciones usan Java o MVEL; MVEL es más dinámico y conciso, Java más explícito y rápido.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permiten los atributos 'date-effective' y 'date-expires' de una regla?",
+    options: [
+      "Acotar la ventana temporal en que la regla puede dispararse",
+      "Cifrar la regla",
+      "Cambiar el dialecto",
+      "Eliminar la agenda",
+    ],
+    answer: 0,
+    explanation:
+      "date-effective/date-expires habilitan la regla solo dentro de un rango de fechas, útil para reglas de negocio con vigencia temporal.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ventaja da usar una tabla de decisión frente a escribir muchas reglas DRL a mano?",
+    options: [
+      "Negocio puede mantener muchas combinaciones de condiciones en formato tabular, menos propenso a errores",
+      "Ejecuta más rápido el motor",
+      "Elimina la working memory",
+      "Evita compilar",
+    ],
+    answer: 0,
+    explanation:
+      "Las decision tables expresan en una grilla muchas reglas similares, legibles para negocio y menos propensas a errores que escribir DRL repetitivo.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite el procesamiento temporal (sliding window) en CEP con Drools?",
+    options: [
+      "Razonar sobre eventos ocurridos dentro de una ventana de tiempo deslizante",
+      "Ordenar facts alfabéticamente",
+      "Compilar a nativo",
+      "Eliminar la agenda",
+    ],
+    answer: 0,
+    explanation:
+      "Las ventanas deslizantes limitan el razonamiento a los eventos recientes (p. ej. últimos 5 minutos), clave en detección de patrones temporales.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Por qué conviene nombrar las reglas de forma descriptiva?",
+    options: [
+      "Facilita el mantenimiento, la trazabilidad en logs/agenda y la colaboración con negocio",
+      "Mejora el rendimiento del motor",
+      "Es obligatorio para compilar",
+      "Reduce el número de facts",
+    ],
+    answer: 0,
+    explanation:
+      "Nombres claros hacen el conjunto de reglas legible y trazable (aparecen en la agenda y en el debugging), facilitando su gobierno.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Kafka, MQ y Mensajería Empresarial (9) ----
+  {
+    question: "En un topic compactado de Kafka, ¿qué representa un 'tombstone'?",
+    options: [
+      "Un mensaje con clave y valor null que marca la eliminación de esa clave",
+      "Un mensaje duplicado",
+      "El primer mensaje del topic",
+      "Un mensaje cifrado",
+    ],
+    answer: 0,
+    explanation:
+      "Un tombstone (valor null para una clave) indica borrado en la compaction: tras retención, la clave se elimina del log compactado.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué riesgo implica habilitar 'unclean leader election' en Kafka?",
+    options: [
+      "Posible pérdida de datos al permitir que una réplica desincronizada se vuelva líder",
+      "Mayor durabilidad garantizada",
+      "Más particiones",
+      "Menor latencia sin costo",
+    ],
+    answer: 0,
+    explanation:
+      "La unclean leader election permite que una réplica no-ISR lidere ante fallos, priorizando disponibilidad a costa de posible pérdida de datos.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Para qué sirve MirrorMaker en Kafka?",
+    options: [
+      "Replicar datos entre clusters Kafka (p. ej. para DR o geo-distribución)",
+      "Comprimir mensajes",
+      "Crear particiones",
+      "Serializar con Avro",
+    ],
+    answer: 0,
+    explanation:
+      "MirrorMaker copia topics de un cluster a otro, útil para recuperación ante desastres, migraciones o agregación multi-región.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué controla 'max.poll.records' en un consumidor Kafka?",
+    options: [
+      "El número máximo de registros devueltos por cada llamada a poll()",
+      "El número de particiones",
+      "El factor de replicación",
+      "El tiempo de retención",
+    ],
+    answer: 0,
+    explanation:
+      "max.poll.records limita cuántos registros entrega cada poll, ayudando a controlar el tiempo de procesamiento por ciclo y evitar rebalances.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "En JMS, ¿qué controla el 'acknowledgement mode'?",
+    options: [
+      "Cómo y cuándo se confirma la recepción de un mensaje (AUTO, CLIENT, DUPS_OK)",
+      "El formato del mensaje",
+      "El número de consumidores",
+      "La prioridad del productor",
+    ],
+    answer: 0,
+    explanation:
+      "El ack mode define la confirmación: AUTO_ACKNOWLEDGE automática, CLIENT_ACKNOWLEDGE manual, DUPS_OK_ACKNOWLEDGE perezosa (puede duplicar).",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "En RabbitMQ (AMQP), ¿qué hace un 'exchange'?",
+    options: [
+      "Recibe mensajes del productor y los enruta a las colas según reglas de binding",
+      "Almacena los offsets",
+      "Replica particiones",
+      "Compila el mensaje",
+    ],
+    answer: 0,
+    explanation:
+      "En AMQP el productor publica a un exchange, que según su tipo (direct, topic, fanout) enruta a las colas vinculadas por bindings.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué estrategia de asignación reparte particiones minimizando reasignaciones entre rebalances?",
+    options: [
+      "Sticky assignor (cooperative sticky)",
+      "Round-robin puro sin estado",
+      "Asignar todo a un consumidor",
+      "No asignar",
+    ],
+    answer: 0,
+    explanation:
+      "El sticky/cooperative assignor intenta conservar las asignaciones previas, reduciendo el movimiento de particiones y el impacto del rebalance.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es un 'poison message' en mensajería?",
+    options: [
+      "Un mensaje que falla repetidamente al procesarse y puede bloquear o saturar el consumo",
+      "Un mensaje cifrado",
+      "El primer mensaje del topic",
+      "Un mensaje de prueba",
+    ],
+    answer: 0,
+    explanation:
+      "Un poison message no se puede procesar y reintenta sin fin; se maneja con límite de reintentos y derivación a una DLQ.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué ventaja da comprimir mensajes a nivel de topic/productor en Kafka?",
+    options: [
+      "Reduce el uso de red y disco, mejorando el throughput efectivo",
+      "Garantiza orden global",
+      "Elimina la necesidad de particiones",
+      "Aumenta la latencia a cero",
+    ],
+    answer: 0,
+    explanation:
+      "La compresión (gzip, snappy, lz4, zstd) reduce el tamaño transmitido y almacenado, elevando el throughput a cambio de algo de CPU.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Observabilidad (9) ----
+  {
+    question: "¿Qué mide el método USE para recursos del sistema?",
+    options: [
+      "Utilization, Saturation y Errors (utilización, saturación y errores)",
+      "Users, Sessions y Events",
+      "Uptime, Speed y Errors",
+      "Usage, Security y Encryption",
+    ],
+    answer: 0,
+    explanation:
+      "El método USE (Brendan Gregg) examina Utilización, Saturación y Errores de cada recurso (CPU, memoria, disco) para hallar cuellos de botella.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Por qué conviene usar niveles de log (DEBUG, INFO, WARN, ERROR) adecuadamente?",
+    options: [
+      "Para filtrar por severidad, reducir ruido y controlar el volumen/costo de logs",
+      "Para cifrar los logs",
+      "Para acelerar la app",
+      "Para evitar escribir logs",
+    ],
+    answer: 0,
+    explanation:
+      "Los niveles permiten ajustar qué se registra según el entorno (más detalle en dev, menos en prod), equilibrando diagnóstico y costo.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es el 'baggage' en OpenTelemetry?",
+    options: [
+      "Pares clave-valor que se propagan junto al contexto de traza a través de los servicios",
+      "Un tipo de métrica",
+      "Un exportador",
+      "Un dashboard",
+    ],
+    answer: 0,
+    explanation:
+      "El baggage transporta metadatos (p. ej. tenant id) junto al contexto de traza entre servicios, para enriquecer telemetría o decisiones.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué diferencia a RUM (Real User Monitoring) de APM?",
+    options: [
+      "RUM mide la experiencia real en el navegador/cliente; APM instrumenta el rendimiento del backend",
+      "Son lo mismo",
+      "APM mide el navegador",
+      "RUM compila el código",
+    ],
+    answer: 0,
+    explanation:
+      "RUM captura métricas desde el cliente real (carga, interacción); APM se centra en el rendimiento y las trazas del lado servidor.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué problema es la 'fatiga de alertas' (alert fatigue)?",
+    options: [
+      "Tantas alertas (muchas irrelevantes) que el equipo deja de prestarles atención",
+      "Un error de compilación",
+      "Falta de métricas",
+      "Un tipo de dashboard",
+    ],
+    answer: 0,
+    explanation:
+      "El exceso de alertas ruidosas insensibiliza al equipo y hace que se pierdan las importantes; se mitiga alertando por síntomas accionables.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué hace un filtro 'grok' en Logstash?",
+    options: [
+      "Parsear texto no estructurado a campos estructurados mediante patrones",
+      "Cifrar los logs",
+      "Balancear la carga",
+      "Crear dashboards",
+    ],
+    answer: 0,
+    explanation:
+      "Grok aplica patrones para extraer campos de líneas de log no estructuradas, convirtiéndolas en datos indexables y consultables.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite un 'correlation id' en logs de varios servicios?",
+    options: [
+      "Agrupar todos los logs de una misma petición/transacción a través de los servicios",
+      "Cifrar los logs",
+      "Reducir el almacenamiento a cero",
+      "Compilar el código",
+    ],
+    answer: 0,
+    explanation:
+      "Un correlation id propagado por la request permite reconstruir su recorrido uniendo los logs de todos los servicios implicados.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué ventaja da definir dashboards y alertas 'as code' (versionados)?",
+    options: [
+      "Reproducibilidad, revisión y despliegue controlado de la observabilidad",
+      "Mayor acoplamiento al host",
+      "Imposibilidad de versionar",
+      "Eliminar las métricas",
+    ],
+    answer: 0,
+    explanation:
+      "Gestionar dashboards/alertas como código versionado permite revisarlos, reproducirlos y desplegarlos junto con la aplicación.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es la telemetría en observabilidad?",
+    options: [
+      "Los datos que emite el sistema (logs, métricas, trazas) para entender su comportamiento",
+      "Un tipo de base de datos",
+      "Un protocolo de cifrado",
+      "Un lenguaje de programación",
+    ],
+    answer: 0,
+    explanation:
+      "La telemetría son las señales que el sistema produce sobre sí mismo (logs, métricas, trazas), base de la observabilidad.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- Arquitecturas Orientadas a Eventos (9) ----
+  {
+    question: "¿Qué es el problema del 'dual write' en sistemas de eventos?",
+    options: [
+      "Escribir a la base y publicar el evento en dos operaciones separadas que pueden desincronizarse ante un fallo",
+      "Escribir dos veces el mismo dato",
+      "Duplicar la base de datos",
+      "Un error de compilación",
+    ],
+    answer: 0,
+    explanation:
+      "El dual write (DB + broker en pasos separados) puede dejar inconsistencia si uno falla; se resuelve con el patrón Outbox o CDC.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es Change Data Capture (CDC) en el contexto de eventos?",
+    options: [
+      "Capturar los cambios de una base de datos y publicarlos como eventos",
+      "Cifrar la base de datos",
+      "Comprimir los eventos",
+      "Un tipo de índice",
+    ],
+    answer: 0,
+    explanation:
+      "CDC lee el log de cambios de la base (inserts/updates/deletes) y los emite como eventos, alimentando pipelines sin tocar la app.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué significa compatibilidad 'backward' en la evolución de esquemas de eventos?",
+    options: [
+      "Los consumidores con el esquema nuevo pueden leer datos producidos con el esquema viejo",
+      "Nada puede cambiar nunca",
+      "Los productores no pueden evolucionar",
+      "Se borran los eventos antiguos",
+    ],
+    answer: 0,
+    explanation:
+      "La compatibilidad backward permite que un consumidor actualizado lea eventos antiguos; forward es lo inverso. Se gestiona con un schema registry.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué técnica de descubrimiento de dominio ayuda a diseñar una EDA?",
+    options: [
+      "Event Storming (tormenta de eventos)",
+      "Pair programming",
+      "Code review",
+      "Load testing",
+    ],
+    answer: 0,
+    explanation:
+      "El Event Storming reúne a negocio y tecnología para mapear eventos de dominio, comandos y agregados, útil para modelar una EDA.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite que un consumidor procese eventos de forma ordenada por entidad?",
+    options: [
+      "Particionar por la clave de la entidad y procesar cada partición secuencialmente",
+      "Usar más consumer groups",
+      "Deshabilitar las particiones",
+      "Procesar en paralelo sin clave",
+    ],
+    answer: 0,
+    explanation:
+      "Particionar por la clave de entidad agrupa sus eventos en una partición, donde se consumen en orden de forma secuencial.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ventaja da emitir 'eventos de dominio' bien definidos en lugar de exponer la base de datos?",
+    options: [
+      "Desacopla a los consumidores de la estructura interna, publicando un contrato estable",
+      "Obliga a compartir la base",
+      "Elimina la necesidad de esquema",
+      "Aumenta el acoplamiento",
+    ],
+    answer: 0,
+    explanation:
+      "Publicar eventos de dominio (contrato estable) evita que otros dependan del esquema interno, reduciendo acoplamiento y facilitando evolución.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite el patrón 'event notification' minimalista?",
+    options: [
+      "Avisar que algo cambió con datos mínimos; el consumidor consulta más si lo necesita",
+      "Incluir todo el estado siempre",
+      "Eliminar el broker",
+      "Garantizar consistencia fuerte",
+    ],
+    answer: 0,
+    explanation:
+      "La event notification lleva poca información (p. ej. un id); el consumidor, si requiere detalles, los consulta, a costa de más acoplamiento temporal.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué diferencia a 'at-least-once' de 'exactly-once' en procesamiento de eventos?",
+    options: [
+      "at-least-once puede reentregar (requiere idempotencia); exactly-once procesa cada evento una sola vez con coordinación",
+      "Son idénticos",
+      "exactly-once puede perder eventos",
+      "at-least-once nunca duplica",
+    ],
+    answer: 0,
+    explanation:
+      "at-least-once es lo habitual y puede duplicar (se maneja con idempotencia); exactly-once exige transacciones/coordinación para no duplicar ni perder.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué beneficio aporta un 'event backbone' común a varios equipos?",
+    options: [
+      "Un medio compartido y gobernado para publicar/consumir eventos, fomentando integración desacoplada",
+      "Obliga a un único lenguaje",
+      "Elimina la necesidad de contratos",
+      "Centraliza toda la lógica de negocio",
+    ],
+    answer: 0,
+    explanation:
+      "Un event backbone (p. ej. Kafka gobernado) estandariza cómo los equipos intercambian eventos, habilitando integración desacoplada y reutilizable.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- JMeter y Playwright (9) ----
+  {
+    question: "¿Qué permite un elemento JSR223 Sampler/PostProcessor en JMeter?",
+    options: [
+      "Ejecutar scripts (p. ej. Groovy) para lógica personalizada de generación o procesamiento",
+      "Generar dashboards",
+      "Reducir los usuarios",
+      "Compilar el backend",
+    ],
+    answer: 0,
+    explanation:
+      "Los elementos JSR223 ejecutan scripts (Groovy recomendado) para lógica a medida: construir peticiones, procesar respuestas o correlacionar.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite el 'Constant Throughput Timer' en JMeter?",
+    options: [
+      "Mantener una tasa de peticiones objetivo (p. ej. N por minuto) durante la prueba",
+      "Validar respuestas",
+      "Generar el reporte HTML",
+      "Extraer datos de la respuesta",
+    ],
+    answer: 0,
+    explanation:
+      "El Constant Throughput Timer regula el ritmo para sostener una tasa objetivo de requests, útil para modelar carga constante.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué genera el 'HTML dashboard report' de JMeter?",
+    options: [
+      "Un reporte visual con métricas (percentiles, throughput, errores) tras una ejecución",
+      "La carga de usuarios",
+      "El código del test",
+      "Un contenedor Docker",
+    ],
+    answer: 0,
+    explanation:
+      "El dashboard HTML resume la ejecución con gráficos y tablas (latencias, throughput, errores), facilitando el análisis de resultados.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite la configuración de 'projects' en Playwright Test?",
+    options: [
+      "Definir múltiples configuraciones (navegadores, dispositivos, entornos) para correr la misma suite",
+      "Generar carga masiva",
+      "Compilar el backend",
+      "Medir el throughput",
+    ],
+    answer: 0,
+    explanation:
+      "Los projects permiten ejecutar los tests bajo distintas configuraciones (Chromium/Firefox/WebKit, mobile, baseURL) desde un solo archivo.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite el 'device emulation' en Playwright?",
+    options: [
+      "Simular dispositivos móviles (viewport, user agent, touch) para probar en distintos tamaños",
+      "Generar 10k usuarios",
+      "Medir CPU del servidor",
+      "Desplegar la app",
+    ],
+    answer: 0,
+    explanation:
+      "Playwright emula dispositivos (p. ej. iPhone) ajustando viewport, user agent y toque, para validar la experiencia responsive.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite el 'request' fixture de Playwright para pruebas de API?",
+    options: [
+      "Hacer llamadas HTTP directas (sin navegador) para probar endpoints o preparar estado",
+      "Generar carga de miles de usuarios",
+      "Compilar el proyecto",
+      "Medir percentiles de red",
+    ],
+    answer: 0,
+    explanation:
+      "El APIRequestContext (request) de Playwright permite testear APIs o montar datos de prueba vía HTTP sin abrir un navegador.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ventaja da capturar screenshot/video 'on failure' en Playwright?",
+    options: [
+      "Facilita diagnosticar por qué falló un test al conservar evidencia visual del momento del fallo",
+      "Acelera la ejecución",
+      "Mide el throughput",
+      "Genera usuarios virtuales",
+    ],
+    answer: 0,
+    explanation:
+      "Guardar screenshot/video solo en fallos aporta contexto visual para depurar sin inflar el almacenamiento con corridas exitosas.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué agrupa test.describe() en Playwright Test?",
+    options: [
+      "Un conjunto de tests relacionados, con hooks y configuración comunes",
+      "Usuarios virtuales",
+      "Particiones de Kafka",
+      "Reglas de Drools",
+    ],
+    answer: 0,
+    explanation:
+      "test.describe agrupa casos relacionados, permitiendo compartir beforeEach/afterEach y organizar la suite de forma legible.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Por qué conviene aislar el entorno/datos al correr pruebas de carga?",
+    options: [
+      "Para no afectar producción ni usuarios reales y obtener mediciones limpias",
+      "Para que el test tarde más",
+      "Para evitar usar timers",
+      "Para no generar reportes",
+    ],
+    answer: 0,
+    explanation:
+      "Las pruebas de carga deben correr en entornos aislados (datos y recursos propios) para no impactar producción y medir sin interferencias.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- SQL Server y Cosmos DB (9) ----
+  {
+    question: "¿Qué garantiza una restricción UNIQUE en una columna?",
+    options: [
+      "Que no se repitan valores (pero puede admitir un NULL según el motor)",
+      "Que los valores estén ordenados",
+      "Que la columna sea la clave primaria",
+      "Que se cifre la columna",
+    ],
+    answer: 0,
+    explanation:
+      "UNIQUE impide valores duplicados en la columna/combinación; a diferencia de PRIMARY KEY, suele permitir un valor NULL.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "En un índice compuesto, ¿por qué importa el orden de las columnas?",
+    options: [
+      "El índice sirve para filtros que usan las columnas de izquierda a derecha (prefijo más a la izquierda)",
+      "El orden no influye",
+      "Siempre conviene alfabético",
+      "Solo importa el tipo de dato",
+    ],
+    answer: 0,
+    explanation:
+      "Un índice compuesto se aprovecha según el prefijo izquierdo: filtrar por la primera columna (o primeras) usa el índice; empezar por la segunda no.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué hace la sentencia MERGE en T-SQL?",
+    options: [
+      "Insertar, actualizar o eliminar filas en una tabla destino según coincidan con una fuente (upsert)",
+      "Fusionar dos bases de datos",
+      "Crear un índice",
+      "Unir dos tablas en una vista",
+    ],
+    answer: 0,
+    explanation:
+      "MERGE aplica en una sola sentencia operaciones INSERT/UPDATE/DELETE según si las filas de la fuente coinciden con el destino (upsert).",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Para qué sirven las estadísticas (statistics) en SQL Server?",
+    options: [
+      "Ayudan al optimizador a estimar cardinalidades y elegir un buen plan de ejecución",
+      "Cifran las tablas",
+      "Crean índices automáticamente",
+      "Reemplazan a las claves foráneas",
+    ],
+    answer: 0,
+    explanation:
+      "Las estadísticas describen la distribución de datos; si están desactualizadas, el optimizador puede elegir planes subóptimos.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué permite la cláusula PARTITION BY en una función de ventana?",
+    options: [
+      "Reiniciar el cálculo de la función por cada grupo de filas definido",
+      "Particionar físicamente la tabla",
+      "Crear un índice",
+      "Eliminar duplicados",
+    ],
+    answer: 0,
+    explanation:
+      "PARTITION BY divide el conjunto en grupos; la función de ventana (ROW_NUMBER, SUM OVER...) se calcula independientemente dentro de cada uno.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "En Cosmos DB, ¿qué informa la cabecera 'x-ms-request-charge' de una operación?",
+    options: [
+      "Las RU consumidas por esa operación",
+      "El tiempo de respuesta",
+      "El número de documentos totales",
+      "La región de origen",
+    ],
+    answer: 0,
+    explanation:
+      "request-charge indica cuántas RU costó la operación, clave para dimensionar el throughput y optimizar consultas costosas.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "En Cosmos DB, ¿qué diferencia a un 'point read' de una 'query'?",
+    options: [
+      "El point read (por id + partition key) es el acceso más barato; una query evalúa y puede costar más RU",
+      "Son idénticos en costo",
+      "La query es siempre más barata",
+      "El point read recorre todas las particiones",
+    ],
+    answer: 0,
+    explanation:
+      "Leer por id y partition key (point read) es el acceso más eficiente en RU; una query implica evaluar documentos y suele costar más.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "En Cosmos DB, ¿qué relación hay entre particiones lógicas y físicas?",
+    options: [
+      "Muchas particiones lógicas (por partition key) se distribuyen entre las particiones físicas que gestiona el servicio",
+      "Son lo mismo",
+      "Cada partición lógica es una base distinta",
+      "Las físicas las define el usuario",
+    ],
+    answer: 0,
+    explanation:
+      "Cada valor de partition key forma una partición lógica; Cosmos las reparte automáticamente entre particiones físicas con capacidad propia de RU.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué es una clave primaria (PRIMARY KEY) en una tabla relacional?",
+    options: [
+      "Una columna o conjunto que identifica de forma única cada fila y no admite NULL",
+      "Un índice opcional sin unicidad",
+      "Una columna que puede repetirse",
+      "Una vista materializada",
+    ],
+    answer: 0,
+    explanation:
+      "La PRIMARY KEY identifica unívocamente cada fila (única y no nula); suele respaldarse con un índice clustered en SQL Server.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- Git, Jenkins, Maven y CI/CD (9) ----
+  {
+    question: "¿Para qué sirve el archivo .gitignore?",
+    options: [
+      "Indicar a Git qué archivos/carpetas no debe versionar",
+      "Listar los colaboradores",
+      "Definir el pipeline",
+      "Configurar el servidor remoto",
+    ],
+    answer: 0,
+    explanation:
+      ".gitignore excluye del control de versiones archivos generados o sensibles (build, node_modules, secretos) para no commitearlos.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué hace 'git bisect'?",
+    options: [
+      "Busca con búsqueda binaria el commit que introdujo un bug",
+      "Fusiona ramas",
+      "Borra el historial",
+      "Crea un tag",
+    ],
+    answer: 0,
+    explanation:
+      "git bisect hace una búsqueda binaria entre un commit bueno y uno malo para aislar eficientemente el commit que introdujo el fallo.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué representa HEAD en Git?",
+    options: [
+      "Un puntero a la referencia (rama/commit) en la que estás posicionado actualmente",
+      "El primer commit del repo",
+      "El servidor remoto",
+      "Un archivo de configuración",
+    ],
+    answer: 0,
+    explanation:
+      "HEAD apunta a tu posición actual, normalmente la punta de la rama activa; en 'detached HEAD' apunta directo a un commit.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué plugin de Maven ejecuta las pruebas unitarias durante el build?",
+    options: ["Surefire", "Shade", "Assembly", "Compiler"],
+    answer: 0,
+    explanation:
+      "El plugin Surefire corre los tests unitarios en la fase test; Failsafe se encarga de los de integración.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué diferencia a una versión SNAPSHOT de una release en Maven?",
+    options: [
+      "SNAPSHOT es una versión en desarrollo que puede cambiar; la release es fija e inmutable",
+      "Son idénticas",
+      "La release cambia constantemente",
+      "SNAPSHOT no se puede compilar",
+    ],
+    answer: 0,
+    explanation:
+      "Una -SNAPSHOT representa trabajo en curso y se re-resuelve; una versión release es definitiva e inmutable una vez publicada.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué dispara una build de Jenkins automáticamente al hacer push?",
+    options: [
+      "Un webhook del repositorio (o polling de SCM)",
+      "Un commit local sin push",
+      "Un cambio en el .gitignore",
+      "La apertura del IDE",
+    ],
+    answer: 0,
+    explanation:
+      "Un webhook notifica a Jenkins al recibir push y dispara el pipeline; alternativamente, Jenkins puede sondear el SCM periódicamente.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es una 'multibranch pipeline' en Jenkins?",
+    options: [
+      "Una pipeline que detecta ramas/PRs del repo y ejecuta su Jenkinsfile automáticamente en cada una",
+      "Una pipeline con una sola rama fija",
+      "Un script bash suelto",
+      "Un repositorio de artefactos",
+    ],
+    answer: 0,
+    explanation:
+      "La multibranch pipeline descubre ramas y pull requests con Jenkinsfile y crea jobs por cada una, ideal para validar features y PRs.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Cuál es el orden correcto (parcial) del ciclo de vida default de Maven?",
+    options: [
+      "validate → compile → test → package → verify → install → deploy",
+      "deploy → install → package → compile",
+      "test → compile → validate → package",
+      "package → compile → test → validate",
+    ],
+    answer: 0,
+    explanation:
+      "El lifecycle default avanza en orden: validate, compile, test, package, verify, install y deploy; ejecutar una fase corre también las previas.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Experto",
+  },
+  {
+    question: "¿Qué ventaja da una 'shared library' en Jenkins?",
+    options: [
+      "Reutilizar lógica de pipeline común entre proyectos, evitando duplicar código en cada Jenkinsfile",
+      "Reemplazar Git",
+      "Eliminar la necesidad de agentes",
+      "Compilar más rápido el código de la app",
+    ],
+    answer: 0,
+    explanation:
+      "Las shared libraries centralizan pasos y funciones reutilizables de pipeline, estandarizando y evitando duplicación entre Jenkinsfiles.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Experto",
+  },
 ];
