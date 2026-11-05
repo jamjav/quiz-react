@@ -7905,4 +7905,555 @@ export const softekQuestions = [
     group: GROUP,
     level: "Experto",
   },
+
+  // ========================================================================
+  // CUARTA TANDA — conceptos básicos: "¿Qué es?" y "¿Para qué se usa?"
+  // ========================================================================
+
+  // ---- Duck Creek e Insurity ----
+  {
+    question: "¿Qué es un PAS (Policy Administration System)?",
+    options: [
+      "El sistema central que administra el ciclo de vida de las pólizas (cotización, emisión, endosos, renovación)",
+      "Un servidor de correo",
+      "Un motor de búsqueda",
+      "Un protocolo de red",
+    ],
+    answer: 0,
+    explanation:
+      "El PAS es el núcleo que gestiona las pólizas de punta a punta; Duck Creek e Insurity ofrecen PAS para seguros P&C.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usan plataformas como Duck Creek e Insurity?",
+    options: [
+      "Para administrar pólizas, facturación y siniestros de aseguradoras de forma integrada",
+      "Para editar imágenes",
+      "Para compilar código C++",
+      "Para orquestar contenedores",
+    ],
+    answer: 0,
+    explanation:
+      "Son suites de core insurance: cubren policy, billing y claims, el corazón operativo de una aseguradora P&C.",
+    subtheme: "Duck Creek e Insurity",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- Java 17+, Spring Boot y Quarkus ----
+  {
+    question: "¿Qué es Java?",
+    options: [
+      "Un lenguaje de programación orientado a objetos que compila a bytecode y corre sobre la JVM",
+      "Un sistema operativo",
+      "Una base de datos",
+      "Un navegador web",
+    ],
+    answer: 0,
+    explanation:
+      "Java es un lenguaje OO, portable ('write once, run anywhere'): su código compila a bytecode que ejecuta la JVM en cualquier plataforma.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es la JVM (Java Virtual Machine)?",
+    options: [
+      "La máquina virtual que ejecuta el bytecode de Java, abstrayendo el sistema operativo",
+      "Un editor de código",
+      "Un gestor de dependencias",
+      "Un servidor web",
+    ],
+    answer: 0,
+    explanation:
+      "La JVM interpreta/compila (JIT) el bytecode y gestiona memoria (GC), permitiendo que el mismo programa corra en distintos SO.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es el bytecode de Java?",
+    options: [
+      "El código intermedio (.class) que produce el compilador y ejecuta la JVM",
+      "El código máquina específico del procesador",
+      "Un archivo de configuración",
+      "El código fuente .java",
+    ],
+    answer: 0,
+    explanation:
+      "El compilador javac traduce el .java a bytecode (.class), un formato intermedio portable que la JVM ejecuta en cualquier plataforma.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué diferencia hay entre el JDK y el JRE?",
+    options: [
+      "El JDK incluye herramientas de desarrollo (compilador) además del JRE; el JRE solo ejecuta aplicaciones",
+      "Son lo mismo",
+      "El JRE compila y el JDK solo ejecuta",
+      "El JDK es un navegador",
+    ],
+    answer: 0,
+    explanation:
+      "El JDK (Development Kit) trae compilador y herramientas para desarrollar; el JRE (Runtime Environment) solo contiene lo necesario para ejecutar.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es Spring Boot?",
+    options: [
+      "Un framework que simplifica crear aplicaciones Spring con autoconfiguración y servidor embebido",
+      "Un sistema operativo",
+      "Un motor de base de datos",
+      "Un lenguaje de programación",
+    ],
+    answer: 0,
+    explanation:
+      "Spring Boot agiliza el desarrollo con Spring: autoconfiguración, starters y servidor embebido, reduciendo configuración manual.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usa Spring Boot?",
+    options: [
+      "Para construir rápidamente aplicaciones y microservicios Java listos para producción",
+      "Para editar video",
+      "Para diseñar bases de datos únicamente",
+      "Para compilar C#",
+    ],
+    answer: 0,
+    explanation:
+      "Se usa para crear servicios/APIs y microservicios Java con mínima configuración y buenas prácticas de producción (Actuator, métricas, etc.).",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es Quarkus?",
+    options: [
+      "Un framework Java 'cloud-native' optimizado para arranque rápido y bajo consumo (ideal para contenedores)",
+      "Un IDE",
+      "Un broker de mensajería",
+      "Una base de datos NoSQL",
+    ],
+    answer: 0,
+    explanation:
+      "Quarkus es un framework Java pensado para la nube: build-time processing y compilación nativa (GraalVM) para startup en milisegundos y poca RAM.",
+    subtheme: "Java 17+, Spring Boot y Quarkus",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- APIs REST, Microservicios y OpenAPI ----
+  {
+    question: "¿Qué es una API?",
+    options: [
+      "Una interfaz que permite que dos sistemas se comuniquen mediante un contrato definido",
+      "Un tipo de base de datos",
+      "Un lenguaje de programación",
+      "Un servidor físico",
+    ],
+    answer: 0,
+    explanation:
+      "Una API (Application Programming Interface) expone operaciones con un contrato claro para que otros sistemas la consuman.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es REST?",
+    options: [
+      "Un estilo arquitectónico para APIs sobre HTTP, basado en recursos y verbos estándar",
+      "Un lenguaje de programación",
+      "Un protocolo de cifrado",
+      "Un motor de reglas",
+    ],
+    answer: 0,
+    explanation:
+      "REST (Representational State Transfer) modela recursos accesibles por URIs y manipulados con los métodos HTTP, de forma stateless.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es un microservicio?",
+    options: [
+      "Un servicio pequeño y autónomo, con su propia responsabilidad, desplegable de forma independiente",
+      "Una función de base de datos",
+      "Un tipo de servidor físico",
+      "Una librería de UI",
+    ],
+    answer: 0,
+    explanation:
+      "Un microservicio encapsula una capacidad de negocio acotada, se despliega y escala por separado y se comunica por APIs/eventos.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es Swagger UI?",
+    options: [
+      "Una interfaz web que renderiza un documento OpenAPI para explorar y probar la API",
+      "Un compilador de Java",
+      "Un broker de eventos",
+      "Un sistema operativo",
+    ],
+    answer: 0,
+    explanation:
+      "Swagger UI genera documentación interactiva a partir del contrato OpenAPI, permitiendo ver y ejecutar los endpoints desde el navegador.",
+    subtheme: "APIs REST, Microservicios y OpenAPI",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- Apache Camel y Patrones de Integración (EIP) ----
+  {
+    question: "¿Para qué se usa Apache Camel?",
+    options: [
+      "Para integrar sistemas enrutando y transformando mensajes entre protocolos/tecnologías",
+      "Para diseñar interfaces de usuario",
+      "Para entrenar modelos de ML",
+      "Para administrar bases de datos",
+    ],
+    answer: 0,
+    explanation:
+      "Camel se usa para construir integraciones: conecta sistemas heterogéneos aplicando patrones de ruteo, mediación y transformación (EIP).",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué son los Enterprise Integration Patterns (EIP)?",
+    options: [
+      "Un catálogo de patrones reutilizables para integrar aplicaciones mediante mensajería",
+      "Un lenguaje de programación",
+      "Un tipo de base de datos",
+      "Un protocolo de red propietario",
+    ],
+    answer: 0,
+    explanation:
+      "Los EIP (Hohpe & Woolf) son soluciones probadas y con vocabulario común para problemas de integración por mensajería; Camel los implementa.",
+    subtheme: "Apache Camel y Patrones de Integración (EIP)",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- Drools y Motores de Reglas ----
+  {
+    question: "¿Para qué se usa Drools?",
+    options: [
+      "Para externalizar y ejecutar reglas de negocio separadas del código de la aplicación",
+      "Para desplegar contenedores",
+      "Para medir rendimiento web",
+      "Para versionar código",
+    ],
+    answer: 0,
+    explanation:
+      "Drools permite definir y ejecutar reglas de negocio fuera del código, de modo que cambien sin redeploy y las toque también negocio.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es un BRMS (Business Rules Management System)?",
+    options: [
+      "Un sistema para definir, gestionar y ejecutar reglas de negocio de forma centralizada",
+      "Un sistema de archivos distribuido",
+      "Un orquestador de contenedores",
+      "Un navegador web",
+    ],
+    answer: 0,
+    explanation:
+      "Un BRMS (como Drools) centraliza la autoría, gobierno y ejecución de reglas de negocio, separándolas de la lógica de la aplicación.",
+    subtheme: "Drools y Motores de Reglas",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Kafka, MQ y Mensajería Empresarial ----
+  {
+    question: "¿Para qué se usa Apache Kafka?",
+    options: [
+      "Para transmitir y almacenar flujos de eventos de forma distribuida entre sistemas",
+      "Para renderizar páginas web",
+      "Para compilar Java",
+      "Para diseñar interfaces",
+    ],
+    answer: 0,
+    explanation:
+      "Kafka se usa como plataforma de streaming de eventos: desacopla productores y consumidores, con alta escala, persistencia y replay.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es un message broker (intermediario de mensajes)?",
+    options: [
+      "Un intermediario que recibe, almacena y entrega mensajes entre aplicaciones desacopladas",
+      "Una base de datos relacional",
+      "Un servidor de archivos",
+      "Un compilador",
+    ],
+    answer: 0,
+    explanation:
+      "Un message broker (Kafka, RabbitMQ, ActiveMQ) media la comunicación asíncrona, desacoplando a emisores y receptores.",
+    subtheme: "Kafka, MQ y Mensajería Empresarial",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK) ----
+  {
+    question: "¿Qué es ELK (Elastic Stack)?",
+    options: [
+      "El conjunto Elasticsearch + Logstash + Kibana para ingerir, indexar y visualizar logs/datos",
+      "Un lenguaje de programación",
+      "Un broker de mensajería",
+      "Un framework de frontend",
+    ],
+    answer: 0,
+    explanation:
+      "ELK agrupa Elasticsearch (indexación/búsqueda), Logstash (ingesta/transformación) y Kibana (visualización); con Beats se le llama Elastic Stack.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usa el stack ELK?",
+    options: [
+      "Para centralizar, buscar y analizar logs y datos operativos del sistema",
+      "Para compilar aplicaciones",
+      "Para orquestar contenedores",
+      "Para versionar código",
+    ],
+    answer: 0,
+    explanation:
+      "ELK se usa para gestión centralizada de logs y analítica: ingestar, indexar y explorar/visualizar grandes volúmenes de eventos.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es la observabilidad en un sistema de software?",
+    options: [
+      "La capacidad de entender el estado interno del sistema a partir de su telemetría (logs, métricas, trazas)",
+      "Un tipo de base de datos",
+      "Un lenguaje de consulta",
+      "Un protocolo de red",
+    ],
+    answer: 0,
+    explanation:
+      "La observabilidad permite diagnosticar y explorar el comportamiento del sistema (incluido lo imprevisto) a partir de logs, métricas y trazas.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es Dynatrace?",
+    options: [
+      "Una plataforma de monitoreo/APM que instrumenta aplicaciones y analiza su rendimiento con IA",
+      "Un gestor de dependencias",
+      "Un sistema de control de versiones",
+      "Una base de datos NoSQL",
+    ],
+    answer: 0,
+    explanation:
+      "Dynatrace es una plataforma APM full-stack: descubre la topología, instrumenta automáticamente y detecta causas raíz con IA (Davis).",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es Prometheus en el contexto de observabilidad?",
+    options: [
+      "Un sistema de monitoreo y base de datos de series temporales con el lenguaje PromQL",
+      "Un orquestador de contenedores",
+      "Un framework de pruebas",
+      "Un broker de mensajería",
+    ],
+    answer: 0,
+    explanation:
+      "Prometheus recolecta y almacena métricas como series temporales y permite consultarlas/alertar con PromQL, muy usado junto a Grafana.",
+    subtheme: "Observabilidad (Dynatrace, OpenTelemetry, Grafana, ELK)",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Arquitecturas Orientadas a Eventos ----
+  {
+    question: "¿Qué significa EDA (Event-Driven Architecture)?",
+    options: [
+      "Arquitectura orientada a eventos: los componentes producen y reaccionan a eventos de forma desacoplada",
+      "Un lenguaje de consulta",
+      "Un tipo de base de datos",
+      "Un protocolo de seguridad",
+    ],
+    answer: 0,
+    explanation:
+      "EDA (Event-Driven Architecture) es un estilo donde los servicios se comunican mediante eventos, logrando bajo acoplamiento y buena escalabilidad.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usa una arquitectura orientada a eventos (EDA)?",
+    options: [
+      "Para desacoplar servicios y reaccionar a cambios en tiempo real, escalando de forma independiente",
+      "Para compilar código nativo",
+      "Para diseñar interfaces gráficas",
+      "Para cifrar bases de datos",
+    ],
+    answer: 0,
+    explanation:
+      "Se usa cuando conviene desacoplar sistemas y reaccionar a eventos (integraciones, procesamiento en tiempo real), tolerando picos e indisponibilidad.",
+    subtheme: "Arquitecturas Orientadas a Eventos",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- JMeter y Playwright ----
+  {
+    question: "¿Qué es Apache JMeter?",
+    options: [
+      "Una herramienta open source para pruebas de carga y rendimiento",
+      "Un navegador web",
+      "Un motor de reglas",
+      "Un sistema de control de versiones",
+    ],
+    answer: 0,
+    explanation:
+      "JMeter es una herramienta de pruebas de carga/rendimiento que simula usuarios concurrentes contra APIs, webs, colas y bases de datos.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es Playwright?",
+    options: [
+      "Un framework de automatización de navegadores para pruebas end-to-end de aplicaciones web",
+      "Una herramienta de carga masiva",
+      "Un compilador",
+      "Una base de datos",
+    ],
+    answer: 0,
+    explanation:
+      "Playwright automatiza Chromium, Firefox y WebKit para pruebas E2E de UI (y API), con auto-waits y soporte multiplataforma/multilenguaje.",
+    subtheme: "JMeter y Playwright",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- SQL Server y Cosmos DB ----
+  {
+    question: "¿Qué es SQL Server?",
+    options: [
+      "Un sistema de gestión de bases de datos relacionales (RDBMS) de Microsoft",
+      "Un lenguaje de programación",
+      "Un orquestador de contenedores",
+      "Una base de datos de grafos",
+    ],
+    answer: 0,
+    explanation:
+      "SQL Server es el RDBMS de Microsoft: almacena datos relacionales y se consulta con T-SQL, con transacciones ACID e índices.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es Azure Cosmos DB?",
+    options: [
+      "Una base de datos NoSQL distribuida globalmente y multimodelo de Microsoft Azure",
+      "Un RDBMS on-premise",
+      "Un framework de frontend",
+      "Un servidor de correo",
+    ],
+    answer: 0,
+    explanation:
+      "Cosmos DB es una base NoSQL multimodelo con distribución global, escalado horizontal y niveles de consistencia configurables.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usa una base de datos NoSQL como Cosmos DB?",
+    options: [
+      "Para datos a gran escala, flexibles y distribuidos geográficamente con baja latencia",
+      "Para reemplazar siempre a cualquier RDBMS",
+      "Para compilar aplicaciones",
+      "Para versionar código",
+    ],
+    answer: 0,
+    explanation:
+      "Cosmos DB brilla con grandes volúmenes, esquemas flexibles y distribución global de baja latencia; no es un reemplazo universal del relacional.",
+    subtheme: "SQL Server y Cosmos DB",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Git, Jenkins, Maven y CI/CD ----
+  {
+    question: "¿Qué es Jenkins?",
+    options: [
+      "Un servidor de automatización open source para construir pipelines de CI/CD",
+      "Un sistema de control de versiones",
+      "Una base de datos",
+      "Un framework de frontend",
+    ],
+    answer: 0,
+    explanation:
+      "Jenkins automatiza build, test y despliegue mediante pipelines (pipeline-as-code con Jenkinsfile) y un amplio ecosistema de plugins.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usa Jenkins?",
+    options: [
+      "Para automatizar la construcción, pruebas y despliegue del software (CI/CD)",
+      "Para diseñar bases de datos",
+      "Para editar imágenes",
+      "Para escribir documentación",
+    ],
+    answer: 0,
+    explanation:
+      "Jenkins orquesta pipelines que compilan, prueban y despliegan automáticamente ante cada cambio, base de la integración/entrega continua.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Para qué se usa Maven?",
+    options: [
+      "Para gestionar dependencias y automatizar el ciclo de build de proyectos Java",
+      "Para monitorear producción",
+      "Para orquestar contenedores",
+      "Para diseñar UI",
+    ],
+    answer: 0,
+    explanation:
+      "Maven resuelve dependencias y estandariza el build (compile, test, package, install, deploy) a partir del pom.xml.",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué significa CI/CD?",
+    options: [
+      "Integración Continua y Entrega/Despliegue Continuo: automatizar integrar, validar y liberar cambios",
+      "Un lenguaje de programación",
+      "Un tipo de base de datos",
+      "Un protocolo de red",
+    ],
+    answer: 0,
+    explanation:
+      "CI/CD combina Integración Continua (build+tests frecuentes) con Entrega/Despliegue Continuo (liberar de forma automatizada y confiable).",
+    subtheme: "Git, Jenkins, Maven y CI/CD",
+    group: GROUP,
+    level: "Junior",
+  },
 ];
