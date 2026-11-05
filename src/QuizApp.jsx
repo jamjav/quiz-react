@@ -12,6 +12,23 @@ import Loader from "./components/Loader";
 const questionGroups = (q) => (Array.isArray(q.group) ? q.group : [q.group]);
 const inGroup = (q, tag) => questionGroups(q).includes(tag);
 
+// Baraja las opciones de una pregunta y remapea el índice de la respuesta
+// correcta (Fisher-Yates sobre índices, robusto ante textos repetidos).
+// Evita que la respuesta correcta quede siempre en la misma posición.
+const shuffleQuestionOptions = (q) => {
+  if (!Array.isArray(q.options) || q.options.length < 2) return q;
+  const idx = q.options.map((_, i) => i);
+  for (let i = idx.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [idx[i], idx[j]] = [idx[j], idx[i]];
+  }
+  return {
+    ...q,
+    options: idx.map((i) => q.options[i]),
+    answer: idx.indexOf(q.answer),
+  };
+};
+
 export default function QuizApp() {
   const [selectedMainTag, setSelectedMainTag] = useState(null);
   const [selectedSubTags, setSelectedSubTags] = useState([]);
@@ -116,8 +133,9 @@ export default function QuizApp() {
     if (shouldAutoStart && selectedMainTag && selectedSubTags.length > 0 && !quizStarted) {
       const shuffled = filteredQuestions
         .sort(() => 0.5 - Math.random())
-        .slice(0, numQuestions);
-      
+        .slice(0, numQuestions)
+        .map(shuffleQuestionOptions);
+
       setQuestions(shuffled);
       setQuizStarted(true);
       setTimeLeft(timeLeftInitial);
@@ -140,7 +158,8 @@ export default function QuizApp() {
     setTimeout(() => {
       const shuffled = filteredQuestions
         .sort(() => 0.5 - Math.random())
-        .slice(0, numQuestions);
+        .slice(0, numQuestions)
+        .map(shuffleQuestionOptions);
       setQuestions(shuffled);
       setQuizStarted(true);
       setTimeLeft(timeLeftInitial);
