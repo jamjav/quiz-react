@@ -20203,11 +20203,24 @@ const baseQuestions = [
 ];
 
 // --- Composición del banco (Opción B: group polimórfico) ---
-// Reutilización sin duplicar: toda pregunta de "Java Enterprise" también
-// pertenece al grupo "Entrevista Softek", conservando una única instancia.
+// Reutilización sin duplicar (una única instancia por pregunta): el grupo
+// "Entrevista Softek" incluye también:
+//   - todo "Java Enterprise" (Spring, IoC, beans, arquitectura por capas), y
+//   - los fundamentos de diseño del grupo "Java" (SOLID, patrones, GRASP,
+//     principios complementarios: KISS/DRY/YAGNI/antipatrones/buenas prácticas).
 const SOFTEK = "Entrevista Softek";
+const JAVA_FUNDAMENTOS = new Set([
+  "SOLID",
+  "Patrones de Diseño",
+  "Patrones de Diseño - Arquitectura UI",
+  "GRASP",
+  "Principios Complementarios de Diseño",
+]);
+const perteneceASoftek = (q) =>
+  q.group === "Java Enterprise" ||
+  (q.group === "Java" && JAVA_FUNDAMENTOS.has(q.subtheme));
 const withSoftek = baseQuestions.map((q) =>
-  q.group === "Java Enterprise" ? { ...q, group: [q.group, SOFTEK] } : q
+  perteneceASoftek(q) ? { ...q, group: [q.group, SOFTEK] } : q
 );
 
 export const allQuestions = [...withSoftek, ...softekQuestions];
