@@ -1,4 +1,6 @@
-export const allQuestions = [
+import { softekQuestions } from "./softekQuestions";
+
+const baseQuestions = [
   {
     "question": "¿Cuál de los siguientes es un tipo de dato primitivo en Java?",
     "options": [
@@ -20199,3 +20201,13 @@ export const allQuestions = [
     "level": "Experto"
   }
 ];
+
+// --- Composición del banco (Opción B: group polimórfico) ---
+// Reutilización sin duplicar: toda pregunta de "Java Enterprise" también
+// pertenece al grupo "Entrevista Softek", conservando una única instancia.
+const SOFTEK = "Entrevista Softek";
+const withSoftek = baseQuestions.map((q) =>
+  q.group === "Java Enterprise" ? { ...q, group: [q.group, SOFTEK] } : q
+);
+
+export const allQuestions = [...withSoftek, ...softekQuestions];

@@ -7,6 +7,11 @@ import QuestionCard from "./components/QuestionCard";
 import Results from "./components/Results";
 import Loader from "./components/Loader";
 
+// Soporte de grupo polimórfico: una pregunta puede pertenecer a uno
+// (string) o varios grupos (string[]). Retrocompatible con los datos previos.
+const questionGroups = (q) => (Array.isArray(q.group) ? q.group : [q.group]);
+const inGroup = (q, tag) => questionGroups(q).includes(tag);
+
 export default function QuizApp() {
   const [selectedMainTag, setSelectedMainTag] = useState(null);
   const [selectedSubTags, setSelectedSubTags] = useState([]);
@@ -28,7 +33,7 @@ export default function QuizApp() {
   const filteredQuestions = useMemo(() => {
     return allQuestions.filter(
       (q) =>
-        (selectedMainTag === null || q.group === selectedMainTag) &&
+        (selectedMainTag === null || inGroup(q, selectedMainTag)) &&
         (selectedSubTags.length === 0 ||
           (q.subtheme && selectedSubTags.includes(q.subtheme))) &&
         (selectedLevel === null || q.level === selectedLevel)
@@ -36,12 +41,15 @@ export default function QuizApp() {
   }, [selectedMainTag, selectedSubTags, selectedLevel]);
 
   // Memoize available tags and levels
-  const mainTags = useMemo(() => [...new Set(allQuestions.map((q) => q.group))], []);
+  const mainTags = useMemo(
+    () => [...new Set(allQuestions.flatMap((q) => questionGroups(q)))],
+    []
+  );
   const levels = useMemo(() => {
     if (!selectedMainTag) return [];
     return [...new Set(
       allQuestions
-        .filter((q) => q.group === selectedMainTag)
+        .filter((q) => inGroup(q, selectedMainTag))
         .map((q) => q.level)
     )].filter(Boolean);
   }, [selectedMainTag]);
@@ -50,7 +58,7 @@ export default function QuizApp() {
     if (!selectedMainTag || !selectedLevel) return [];
     return [...new Set(
       allQuestions
-        .filter((q) => q.group === selectedMainTag && q.level === selectedLevel)
+        .filter((q) => inGroup(q, selectedMainTag) && q.level === selectedLevel)
         .map((q) => q.subtheme)
     )];
   }, [selectedMainTag, selectedLevel]);
