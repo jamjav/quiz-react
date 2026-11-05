@@ -13,7 +13,6 @@ export default function Results({
   totalQuestions = 0,
   correctAnswers = 0,
   incorrectAnswers = 0,
-  onRestart,
   quizParams = {},
 }) {
   const [isRestarting, setIsRestarting] = useState(false);
@@ -290,16 +289,16 @@ export default function Results({
                     }`}
                   >
                     <div className="flex-1">
-                      <div className="prose prose-invert max-w-none mb-3">
-                        <ReactMarkdown 
+                      <div className="prose prose-invert max-w-none mb-3 text-gray-100 text-base font-medium">
+                        <ReactMarkdown
                           remarkPlugins={[remarkGfm]}
                           components={{
-                            code({node, inline, className, children, ...props}) {
+                            code({inline, className, children, ...props}) {
                               const match = /language-(\w+)/.exec(className || '');
                               const isInline = inline || !match;
                               if (isInline) {
                                 return (
-                                  <code className="bg-gray-800/50 px-1.5 py-0.5 rounded text-sm" {...props}>
+                                  <code className="bg-gray-800/70 px-1.5 py-0.5 rounded text-sm text-pink-300" {...props}>
                                     {children}
                                   </code>
                                 );
@@ -338,9 +337,9 @@ export default function Results({
                     </div>
                     <div className="mt-auto pt-3 border-t space-y-2">
                       {showCorrect ? (
-                        <div className="text-green-400 flex items-start gap-2">
+                        <div className="text-green-200 flex items-start gap-2">
                           <span className="text-lg mt-0.5">✅</span>
-                          <div className="prose prose-invert max-w-none">
+                          <div className="prose prose-invert max-w-none text-green-200">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                               {result.answer}
                             </ReactMarkdown>
@@ -348,25 +347,25 @@ export default function Results({
                         </div>
                       ) : (
                         <>
-                          <div className="text-red-400 flex items-start gap-2">
+                          <div className="text-red-200 flex items-start gap-2">
                             <span className="text-lg mt-0.5">❌</span>
-                            <div className="prose prose-invert max-w-none">
+                            <div className="prose prose-invert max-w-none text-red-200">
                               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                 {result.selectedAnswer}
                               </ReactMarkdown>
                             </div>
                           </div>
-                          <div className="text-green-400 flex items-start gap-2">
+                          <div className="text-green-200 flex items-start gap-2">
                             <span className="text-lg mt-0.5">✅</span>
-                            <div className="prose prose-invert max-w-none">
+                            <div className="prose prose-invert max-w-none text-green-200">
                               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                 {result.correctAnswer}
                               </ReactMarkdown>
                             </div>
                           </div>
                           {result.explanation && (
-                            <div className="bg-blue-900/30 p-3 rounded-lg border border-blue-500/20">
-                              <div className="prose prose-invert max-w-none prose-sm">
+                            <div className="bg-blue-900/40 p-3 rounded-lg border border-blue-500/30">
+                              <div className="prose prose-invert max-w-none prose-sm text-blue-50">
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                   {result.explanation}
                                 </ReactMarkdown>

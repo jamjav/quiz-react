@@ -63,48 +63,53 @@ export default function QuizApp() {
     )];
   }, [selectedMainTag, selectedLevel]);
 
-  // URL parameter handling
+  // Lectura de parámetros base de la URL: SOLO una vez al montar.
+  // (Antes dependía de [mainTags, levels, subTags], por lo que cada vez que
+  //  el usuario elegía tema/nivel/subtema el efecto re-corría y reseteaba
+  //  numQuestions/time a su valor por defecto — bug "elijo 60 y genera 10").
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    
-    // Helper function to safely parse integers
+
     const safeParseInt = (value, defaultValue) => {
       const num = parseInt(value);
       return !isNaN(num) && num > 0 ? num : defaultValue;
     };
 
-    // Set parameters with validation
     setNumQuestions(safeParseInt(urlParams.get('questions'), 10));
     const time = safeParseInt(urlParams.get('time'), 30);
     setTimeLeft(time);
     setTimeLeftInitial(time);
 
-    // Set main tag if valid
+    // Tema principal: mainTags ya está disponible al montar.
     const mainTagParam = urlParams.get('mainTag');
     if (mainTagParam && mainTags.includes(mainTagParam)) {
       setSelectedMainTag(mainTagParam);
     }
 
-    // Set level if valid
+    if (urlParams.get('start') === 'true') {
+      setShouldAutoStart(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Deep-link de nivel y subtemas: se aplican cuando las listas derivadas
+  // (levels/subTags) están disponibles. NO tocan numQuestions/time.
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+
     const levelParam = urlParams.get('level');
     if (levelParam && levels.includes(levelParam)) {
       setSelectedLevel(levelParam);
     }
 
-    // Set sub tags if valid
     const subTagsParam = urlParams.get('subTags');
     if (subTagsParam) {
-      const validSubTags = subTagsParam.split(',').filter(tag => subTags.includes(tag));
+      const validSubTags = subTagsParam.split(',').filter((tag) => subTags.includes(tag));
       if (validSubTags.length > 0) {
         setSelectedSubTags(validSubTags);
       }
     }
-
-    // Set auto start
-    if (urlParams.get('start') === 'true') {
-      setShouldAutoStart(true);
-    }
-  }, [mainTags, levels, subTags]);
+  }, [levels, subTags]);
 
   // Auto start handling
   useEffect(() => {
