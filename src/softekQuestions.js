@@ -9953,4 +9953,587 @@ export const softekQuestions = [
     group: GROUP,
     level: "Experto",
   },
+
+  // ========================================================================
+  // FUNDAMENTOS DE DISEÑO en niveles Junior/Senior
+  // (SOLID, KISS, DRY, YAGNI, patrones, antipatrones, GRASP, buenas prácticas)
+  // ========================================================================
+
+  // ---- Principios Complementarios de Diseño (KISS, DRY, YAGNI, antipatrones) ----
+  {
+    question: "¿Qué es el principio KISS?",
+    options: [
+      "Keep It Simple, Stupid: preferir soluciones simples y evitar la complejidad innecesaria",
+      "Un patrón de diseño creacional",
+      "Un algoritmo de ordenamiento",
+      "Una anotación de Spring",
+    ],
+    answer: 0,
+    explanation:
+      "KISS (Keep It Simple, Stupid) aboga por mantener el diseño lo más simple posible; la complejidad gratuita dificulta el mantenimiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es el principio DRY?",
+    options: [
+      "Don't Repeat Yourself: evitar duplicar lógica/conocimiento centralizándolo en un solo lugar",
+      "Un tipo de base de datos",
+      "Un framework de testing",
+      "Un protocolo de red",
+    ],
+    answer: 0,
+    explanation:
+      "DRY (Don't Repeat Yourself) busca una única fuente de verdad para cada pieza de conocimiento, reduciendo duplicación y errores de mantenimiento.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué recomienda el principio YAGNI?",
+    options: [
+      "You Aren't Gonna Need It: no implementar funcionalidad hasta que realmente se necesite",
+      "Implementar todo por adelantado",
+      "Duplicar la lógica para rapidez",
+      "Optimizar siempre al máximo",
+    ],
+    answer: 0,
+    explanation:
+      "YAGNI (You Aren't Gonna Need It) evita construir funcionalidad especulativa, reduciendo complejidad y esfuerzo innecesarios.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es un antipatrón de diseño?",
+    options: [
+      "Una solución común que parece buena pero resulta contraproducente a la larga",
+      "Un patrón de diseño recomendado",
+      "Un tipo de test unitario",
+      "Una anotación de Java",
+    ],
+    answer: 0,
+    explanation:
+      "Un antipatrón es una práctica recurrente que, pese a parecer una solución, genera más problemas que beneficios (deuda técnica).",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué describe el antipatrón 'God Object' (objeto todopoderoso)?",
+    options: [
+      "Una clase que concentra demasiadas responsabilidades y conoce/hace casi todo",
+      "Una clase inmutable",
+      "Una interfaz funcional",
+      "Un patrón creacional",
+    ],
+    answer: 0,
+    explanation:
+      "El God Object acumula responsabilidades y dependencias, volviéndose difícil de entender, probar y mantener; viola SRP.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es el 'código espagueti' (spaghetti code)?",
+    options: [
+      "Código con flujo de control enredado y sin estructura clara, difícil de seguir",
+      "Código muy optimizado",
+      "Un patrón de diseño",
+      "Un tipo de prueba de carga",
+    ],
+    answer: 0,
+    explanation:
+      "El spaghetti code carece de estructura y modularidad; su control de flujo enmarañado lo hace frágil y difícil de mantener.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué promueve 'Clean Code' (código limpio)?",
+    options: [
+      "Código legible, con nombres claros, funciones pequeñas y fácil de mantener",
+      "Código con el menor número de líneas sin importar la claridad",
+      "Comentar cada línea",
+      "Evitar las funciones",
+    ],
+    answer: 0,
+    explanation:
+      "Clean Code prioriza legibilidad y mantenibilidad: nombres significativos, funciones cortas y cohesivas, y mínima complejidad.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es el antipatrón 'Golden Hammer'?",
+    options: [
+      "Usar siempre la misma herramienta/solución para todo, aunque no sea la adecuada",
+      "Un patrón de concurrencia",
+      "Una técnica de refactorización",
+      "Un tipo de índice",
+    ],
+    answer: 0,
+    explanation:
+      "El Golden Hammer ('para un martillo, todo son clavos') aplica una solución conocida a problemas donde no encaja, por comodidad o sesgo.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué describe el antipatrón 'Big Ball of Mud'?",
+    options: [
+      "Un sistema sin arquitectura clara, con dependencias enredadas y límites difusos",
+      "Un patrón de microservicios",
+      "Una base de datos distribuida",
+      "Un pipeline de CI/CD",
+    ],
+    answer: 0,
+    explanation:
+      "El Big Ball of Mud es un sistema que creció sin estructura, con acoplamiento alto y sin fronteras claras, muy costoso de evolucionar.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es la 'deuda técnica' (technical debt)?",
+    options: [
+      "El costo futuro de atajos o malas decisiones de diseño tomadas hoy",
+      "Un préstamo para comprar servidores",
+      "Un tipo de patrón de diseño",
+      "El costo de las licencias",
+    ],
+    answer: 0,
+    explanation:
+      "La deuda técnica es el sobrecosto futuro (más esfuerzo, más bugs) que acarrean los atajos o diseños deficientes si no se refactorizan.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué busca el principio de separación de responsabilidades (Separation of Concerns)?",
+    options: [
+      "Dividir el sistema en partes con responsabilidades bien delimitadas e independientes",
+      "Poner toda la lógica en una sola clase",
+      "Duplicar la lógica por módulo",
+      "Eliminar las interfaces",
+    ],
+    answer: 0,
+    explanation:
+      "La separación de responsabilidades reduce el acoplamiento aislando cada preocupación (UI, negocio, datos) en módulos distintos.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Por qué se desaconseja la optimización prematura?",
+    options: [
+      "Añade complejidad antes de saber si es necesaria, perjudicando legibilidad y mantenibilidad",
+      "Porque siempre mejora el rendimiento",
+      "Porque es obligatoria en Java",
+      "Porque elimina los tests",
+    ],
+    answer: 0,
+    explanation:
+      "Optimizar sin evidencia (medición) suele complicar el código sin beneficio real; primero correcto y claro, luego optimizar lo que un profiler señale.",
+    subtheme: "Principios Complementarios de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- SOLID ----
+  {
+    question: "¿Qué es SOLID?",
+    options: [
+      "Un acrónimo de cinco principios de diseño orientado a objetos para código mantenible",
+      "Un patrón de diseño creacional",
+      "Un framework de Java",
+      "Un tipo de base de datos",
+    ],
+    answer: 0,
+    explanation:
+      "SOLID agrupa cinco principios (SRP, OCP, LSP, ISP, DIP) que guían hacia diseños OO flexibles, mantenibles y desacoplados.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué establece el principio de responsabilidad única (SRP)?",
+    options: [
+      "Una clase debe tener una sola razón para cambiar (una única responsabilidad)",
+      "Una clase debe implementar muchas interfaces",
+      "Las clases no deben tener métodos",
+      "Toda clase debe ser final",
+    ],
+    answer: 0,
+    explanation:
+      "SRP (Single Responsibility) dice que cada clase/módulo debe encargarse de una sola cosa, teniendo una única razón para cambiar.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué establece el principio abierto/cerrado (OCP)?",
+    options: [
+      "El software debe estar abierto a extensión pero cerrado a modificación",
+      "Las clases deben ser siempre modificables",
+      "No se permite la herencia",
+      "Todo debe ser público",
+    ],
+    answer: 0,
+    explanation:
+      "OCP (Open/Closed) busca extender el comportamiento (p. ej. con polimorfismo) sin alterar el código existente ya probado.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué establece el principio de sustitución de Liskov (LSP)?",
+    options: [
+      "Los subtipos deben poder sustituir a su tipo base sin romper el comportamiento esperado",
+      "Las subclases no pueden existir",
+      "Toda clase debe ser abstracta",
+      "Las interfaces no se pueden implementar",
+    ],
+    answer: 0,
+    explanation:
+      "LSP (Liskov Substitution) exige que un objeto de una subclase pueda usarse donde se espera la superclase sin alterar la corrección.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué establece el principio de segregación de interfaces (ISP)?",
+    options: [
+      "Es mejor tener interfaces específicas y pequeñas que una interfaz grande y general",
+      "Toda clase debe implementar una única interfaz enorme",
+      "Las interfaces deben evitarse",
+      "Las interfaces deben tener estado",
+    ],
+    answer: 0,
+    explanation:
+      "ISP (Interface Segregation) evita obligar a implementar métodos que no se usan; mejor varias interfaces cohesivas y específicas.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué establece el principio de inversión de dependencias (DIP)?",
+    options: [
+      "Depender de abstracciones, no de implementaciones concretas",
+      "Depender siempre de clases concretas",
+      "Eliminar las interfaces",
+      "No usar inyección de dependencias",
+    ],
+    answer: 0,
+    explanation:
+      "DIP (Dependency Inversion) indica que los módulos de alto nivel y los de bajo nivel deben depender de abstracciones, no al revés.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué problema ayuda a evitar aplicar bien el SRP?",
+    options: [
+      "Clases enormes y acopladas que cambian por muchos motivos y son difíciles de mantener",
+      "Que existan interfaces",
+      "Que haya polimorfismo",
+      "Que el código compile",
+    ],
+    answer: 0,
+    explanation:
+      "Respetar SRP evita clases 'que hacen de todo' (God Objects), reduciendo el impacto de los cambios y facilitando las pruebas.",
+    subtheme: "SOLID",
+    group: GROUP,
+    level: "Senior",
+  },
+
+  // ---- Patrones de Diseño ----
+  {
+    question: "¿Qué es un patrón de diseño?",
+    options: [
+      "Una solución reutilizable y probada a un problema recurrente de diseño de software",
+      "Una librería de Java",
+      "Un tipo de base de datos",
+      "Un comando de Git",
+    ],
+    answer: 0,
+    explanation:
+      "Un patrón de diseño describe una solución general y reutilizable a un problema común, con un vocabulario compartido entre desarrolladores.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué categorías de patrones definió la 'Gang of Four' (GoF)?",
+    options: [
+      "Creacionales, estructurales y de comportamiento",
+      "Simples, medios y complejos",
+      "Frontend, backend y base de datos",
+      "Públicos, privados y protegidos",
+    ],
+    answer: 0,
+    explanation:
+      "El GoF clasificó los patrones en creacionales (creación de objetos), estructurales (composición) y de comportamiento (interacción).",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es el patrón Singleton?",
+    options: [
+      "Garantiza que una clase tenga una única instancia y un punto de acceso global a ella",
+      "Crea muchas instancias en paralelo",
+      "Divide una clase en varias",
+      "Convierte interfaces incompatibles",
+    ],
+    answer: 0,
+    explanation:
+      "El Singleton (creacional) asegura una sola instancia de una clase; útil pero puede dificultar el testing si se abusa de él.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué resuelve el patrón Factory Method?",
+    options: [
+      "Delegar la creación de objetos a subclases, desacoplando al cliente de las clases concretas",
+      "Garantizar una única instancia",
+      "Notificar cambios a observadores",
+      "Adaptar una interfaz a otra",
+    ],
+    answer: 0,
+    explanation:
+      "El Factory Method (creacional) define una interfaz para crear objetos, dejando que las subclases decidan qué clase concreta instanciar.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué permite el patrón Strategy?",
+    options: [
+      "Encapsular algoritmos intercambiables y seleccionarlos en tiempo de ejecución",
+      "Crear una única instancia",
+      "Componer objetos en árboles",
+      "Serializar objetos",
+    ],
+    answer: 0,
+    explanation:
+      "El Strategy (comportamiento) define una familia de algoritmos intercambiables, permitiendo variar el comportamiento sin cambiar al cliente.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite el patrón Observer?",
+    options: [
+      "Notificar automáticamente a múltiples objetos cuando el estado de otro cambia",
+      "Crear una única instancia",
+      "Adaptar interfaces incompatibles",
+      "Dividir un objeto grande",
+    ],
+    answer: 0,
+    explanation:
+      "El Observer (comportamiento) establece una dependencia uno-a-muchos: al cambiar el sujeto, sus observadores son notificados, base de lo event-driven.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite el patrón Decorator?",
+    options: [
+      "Añadir responsabilidades a un objeto dinámicamente envolviéndolo, sin modificar su clase",
+      "Garantizar una sola instancia",
+      "Crear familias de objetos",
+      "Notificar observadores",
+    ],
+    answer: 0,
+    explanation:
+      "El Decorator (estructural) envuelve un objeto para agregarle comportamiento en runtime, una alternativa flexible a la herencia.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué permite el patrón Adapter?",
+    options: [
+      "Hacer que dos interfaces incompatibles trabajen juntas mediante un envoltorio traductor",
+      "Crear una única instancia",
+      "Encapsular algoritmos",
+      "Notificar cambios de estado",
+    ],
+    answer: 0,
+    explanation:
+      "El Adapter (estructural) traduce la interfaz de una clase a otra que el cliente espera, permitiendo integrar componentes incompatibles.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué resuelve el patrón Builder?",
+    options: [
+      "Construir objetos complejos paso a paso, separando la construcción de la representación",
+      "Garantizar una única instancia",
+      "Adaptar interfaces",
+      "Notificar observadores",
+    ],
+    answer: 0,
+    explanation:
+      "El Builder (creacional) arma objetos complejos por pasos, útil cuando hay muchos parámetros o configuraciones opcionales.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué encapsula el patrón Repository?",
+    options: [
+      "El acceso a datos, ofreciendo una abstracción tipo colección sobre la persistencia",
+      "La creación de hilos",
+      "La notificación de eventos",
+      "La configuración del pipeline",
+    ],
+    answer: 0,
+    explanation:
+      "El Repository abstrae el almacenamiento tras una interfaz orientada al dominio, desacoplando la lógica de negocio de los detalles de persistencia.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué ofrece el patrón Facade?",
+    options: [
+      "Una interfaz simplificada y única sobre un subsistema complejo",
+      "Múltiples instancias de una clase",
+      "Un algoritmo intercambiable",
+      "Una traducción de interfaces",
+    ],
+    answer: 0,
+    explanation:
+      "El Facade (estructural) expone una interfaz sencilla que oculta la complejidad de un subsistema, reduciendo el acoplamiento del cliente.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué es la Inyección de Dependencias (Dependency Injection) como patrón?",
+    options: [
+      "Proveer las dependencias de un objeto desde afuera en lugar de que él las cree",
+      "Crear una única instancia global",
+      "Duplicar la lógica de creación",
+      "Eliminar las interfaces",
+    ],
+    answer: 0,
+    explanation:
+      "La DI entrega las colaboraciones ya construidas (por un contenedor o manualmente), favoreciendo el desacoplamiento y la testeabilidad (base de Spring).",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué resuelve el patrón Template Method?",
+    options: [
+      "Definir el esqueleto de un algoritmo dejando pasos concretos a las subclases",
+      "Crear una única instancia",
+      "Adaptar interfaces",
+      "Notificar observadores",
+    ],
+    answer: 0,
+    explanation:
+      "El Template Method (comportamiento) fija la estructura de un algoritmo en la clase base y delega ciertos pasos a las subclases.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué es el patrón MVC (Modelo-Vista-Controlador)?",
+    options: [
+      "Un patrón que separa datos (modelo), presentación (vista) y lógica de control (controlador)",
+      "Un patrón creacional de objetos",
+      "Un algoritmo de ordenamiento",
+      "Un tipo de base de datos",
+    ],
+    answer: 0,
+    explanation:
+      "MVC separa responsabilidades: el modelo gestiona datos, la vista los presenta y el controlador coordina la interacción, mejorando la mantenibilidad.",
+    subtheme: "Patrones de Diseño",
+    group: GROUP,
+    level: "Junior",
+  },
+
+  // ---- GRASP ----
+  {
+    question: "¿Qué es GRASP en diseño orientado a objetos?",
+    options: [
+      "Un conjunto de principios para asignar responsabilidades a clases y objetos",
+      "Un framework de pruebas",
+      "Un patrón creacional",
+      "Un comando de Maven",
+    ],
+    answer: 0,
+    explanation:
+      "GRASP (General Responsibility Assignment Software Patterns) guía cómo repartir responsabilidades entre clases para lograr buen diseño OO.",
+    subtheme: "GRASP",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué busca el principio de 'bajo acoplamiento' (Low Coupling)?",
+    options: [
+      "Minimizar las dependencias entre clases/módulos para que los cambios tengan poco impacto",
+      "Maximizar las dependencias",
+      "Unir toda la lógica en una clase",
+      "Eliminar las interfaces",
+    ],
+    answer: 0,
+    explanation:
+      "El bajo acoplamiento reduce la interdependencia entre componentes, facilitando el cambio, la reutilización y las pruebas.",
+    subtheme: "GRASP",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué busca el principio de 'alta cohesión' (High Cohesion)?",
+    options: [
+      "Que cada clase tenga responsabilidades relacionadas y enfocadas en un propósito claro",
+      "Que una clase haga de todo",
+      "Que no haya métodos",
+      "Que todo sea estático",
+    ],
+    answer: 0,
+    explanation:
+      "La alta cohesión agrupa en una clase responsabilidades afines y bien enfocadas, lo que mejora la claridad y el mantenimiento.",
+    subtheme: "GRASP",
+    group: GROUP,
+    level: "Junior",
+  },
+  {
+    question: "¿Qué propone el patrón GRASP 'Experto en Información' (Information Expert)?",
+    options: [
+      "Asignar una responsabilidad a la clase que tiene la información necesaria para cumplirla",
+      "Asignar todo al controlador",
+      "Crear una clase única para todo",
+      "Delegar siempre a una interfaz",
+    ],
+    answer: 0,
+    explanation:
+      "Information Expert asigna la responsabilidad a quien posee los datos requeridos, favoreciendo encapsulamiento y bajo acoplamiento.",
+    subtheme: "GRASP",
+    group: GROUP,
+    level: "Senior",
+  },
+  {
+    question: "¿Qué rol cumple el patrón GRASP 'Controller'?",
+    options: [
+      "Coordinar y delegar las operaciones del sistema recibidas desde la capa de presentación",
+      "Almacenar los datos persistentes",
+      "Renderizar la interfaz",
+      "Crear una única instancia",
+    ],
+    answer: 0,
+    explanation:
+      "El Controller recibe los eventos del sistema y los delega a los objetos de dominio, separando la presentación de la lógica de negocio.",
+    subtheme: "GRASP",
+    group: GROUP,
+    level: "Senior",
+  },
 ];
